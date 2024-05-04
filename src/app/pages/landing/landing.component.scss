@@ -579,3 +579,20 @@
 app-floating-arrow {
   cursor: pointer;
 }
+
+.flexd{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cardd{
+  width: 30%;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+  p{
+    font-size: 14px !important;
+  }
+}
