@@ -1,0 +1,147 @@
+<div class="email-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Email Marketing</h2>
+    <p>
+      Generative AI Email Marketing Services Platform – Disciplined email
+      messaging with Highest Return on Investment
+    </p>
+    <p>AI Tailored Email Campaigns for Maximum Engagement</p>
+    <p>
+      Zyper transforms email marketing with advanced AI-driven services. Our
+      tech sets up a complete end to end email marketing platform, that creates
+      powerful emails for email marketing, and manages campaigns that drive
+      significant ROI. Whether it's through direct mailing or sophisticated
+      marketing automations, our platform is designed to enhance customer
+      engagement and retention.
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>Why Zyper's Email Solutions Stand Out</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Intuitive Email Marketing Templates:</span> Jumpstart your
+            campaigns with generative AI driven email marketing templates,
+            suitable for every drip campaign and direct mail marketing strategy.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Dynamic Email Content Creation:</span> Our generative AI
+            crafts personalized messaging and images, creating a unique email
+            marketing format that works with your target customers.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Powerful Email Marketing Software:</span> Zyper machine
+            learning models and API infrastructure is linked to the best email
+            marketing programs and email blast programs to reach your customers
+            effectively.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Strategic Email Lists and Advertising:</span> Utilize your
+            curated email marketing lists and targeted email marketing
+            advertising to connect with the right audience.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section" *ngIf="show_more == true">
+      <h2>Our Comprehensive Email Marketing Tools</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Email Automation Excellence:</span> Set up automated email
+            sequences that effectively communicate special offers, services, and
+            more with our email automation AI module
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Zyper's Commitment to Your Growth</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Expert Email Marketing Agency Platform:</span> As a
+            comprehensive email marketing firm, Zyper provides end-to-end
+            management from email campaign setup to execution and analysis.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Top Email Marketing Services:</span> Ranked among the top
+            email marketing services, Zyper offers the best email marketing
+            service tailored to your business needs.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Innovative Email Campaigns:</span> From drip email campaigns
+            to massive email blasts, our platform delivers the best email blast
+            services for impactful results.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Affordable and Effective:</span> With competitive pricing on
+            par with Mailer Lite and other platforms, get the best value for
+            your investment.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Launch Your Successful Email Marketing Campaign Today</h2>
+      <p>
+        Ready to tap into one of the highest ROI marketing channels? Start using
+        today – Create your profile , upload your list and send your first email
+        campaign.
+      </p>
+    </div>
+    <div class="buttons">
+      <button (click)="ShowMore()">
+        <p *ngIf="!show_more">Show More <i class="bi bi-arrow-down"></i></p>
+        <p *ngIf="show_more">Show Less <i class="bi bi-arrow-up"></i></p>
+      </button>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

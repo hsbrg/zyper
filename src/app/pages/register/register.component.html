@@ -1,0 +1,336 @@
+<app-cookieconsent></app-cookieconsent>
+<div class="contact-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="contact-navbar">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="header">
+    <div class="top">
+      <h3 class="mb-4">Enter to Start Using</h3>
+      <!-- <p>Any question or remarks? Just write us a message!</p> -->
+    </div>
+    <div class="contact-card">
+      <!-- <div class="left">
+          <h4>Contact Information</h4>
+          <div class="info">
+            <p>
+              <i class="bi bi-telephone-fill"></i>
+              <span>
+                <p><span>USA</span> +1 331 230 7437</p>
+                <p><span>INDIA</span> +91 8826594369</p>
+              </span>
+            </p>
+            <p><i class="bi bi-envelope"></i> <span>contactus@zyper.ai</span></p>
+            <p>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span
+                >San Francisco 166 Geary Str STE 1500 San Francisco, CA 94108
+                United States</span
+              >
+            </p>
+          </div>
+          <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </div>
+        </div> -->
+      <div class="right">
+        <div class="form">
+          <form [formGroup]="contactForm">
+            <div class="mb-3">
+              <label for="firstname" class="form-label"
+                >First Name<span
+                  class="error"
+                  *ngIf="firstName && firstName.invalid && firstName.touched"
+                  >*required</span
+                ></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                formControlName="firstName"
+                placeholder="Enter Your First Name"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="lastname" class="form-label"
+                >Last Name<span
+                  class="error"
+                  *ngIf="lastName && lastName.invalid && lastName.touched"
+                  >*required</span
+                ></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                formControlName="lastName"
+                placeholder="Enter Your Last Name"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label"
+                >Email<span
+                  class="error"
+                  *ngIf="email && email.invalid && email.touched"
+                  >*Please enter valid email address</span
+                ></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                formControlName="email"
+                placeholder="Enter Your Email"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label mb-2"
+                >Contact Number<span
+                  class="error"
+                  *ngIf="phone && phone.invalid && phone.touched"
+                  >*Invalid contact number</span
+                ></label
+              >
+              <div class="d-sm-flex gap-2 phone-code">
+                  <p-dropdown
+                    [options]="countryDialCodes"
+                    optionLabel="name"
+                    [filter]="true"
+                    filterBy="code"
+                    [showClear]="true"
+                    placeholder="Select a Country"
+                    (onChange)="selectCountryCode($event)"
+                  >
+                    <ng-template pTemplate="selectedItem" let-selectedOption>
+                      <div class="flex align-items-center gap-2">
+                        <div>
+                          {{ selectedOption.dial_code }}({{
+                            selectedOption.code
+                          }})
+                        </div>
+                      </div>
+                    </ng-template>
+                    <ng-template let-country pTemplate="item">
+                      <div class="flex align-items-center gap-2">
+                        <div>{{ country.dial_code }}({{ country.code }})</div>
+                      </div>
+                    </ng-template>
+                  </p-dropdown>
+                
+                <!-- <select
+                  class="phone-code"
+                  id="phone-code"
+                  (change)="selectCountryCode($event)"
+                  placeholder="Country Code"
+                >
+                  <option value="" disabled selected>Select Code</option>
+                  <option
+                    *ngFor="let countryCode of countryDialCodes"
+                    value="{{ countryCode.dial_code }}"
+                  >
+                    {{ countryCode.dial_code }}({{ countryCode.code }})
+                  </option>
+                </select> -->
+
+                <input
+                  type="text"
+                  class="form-control w-100"
+                  id="phone"
+                  formControlName="phone"
+                  placeholder="Enter Your Phone"
+                  (input)="onPhoneChange($event)"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label"
+                >Company<span
+                  class="error"
+                  *ngIf="company && company.invalid && company.touched"
+                  >*required</span
+                ></label
+              >
+              <input
+                class="form-control"
+                id="message"
+                rows="1"
+                formControlName="company"
+                placeholder="Company"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="country" class="form-label mb-2"
+                >Country<span
+                  class="error"
+                  *ngIf="country && country.invalid && country.touched"
+                  >*required</span
+                ></label
+              >
+              <select
+                class="form-select"
+                id="country"
+                formControlName="country"
+                placeholder="Country"
+                (change)="selectCountry($event)"
+              >
+                <option value="" disabled selected>Select Country</option>
+                <option
+                  *ngFor="let country of countryList"
+                  value="{{ country.name }}"
+                >
+                  {{ country.name }}
+                </option>
+              </select>
+              <!-- <input
+                class="form-control"
+                id="country"
+                rows="1"
+                formControlName="country"
+                placeholder="Country"
+              /> -->
+            </div>
+            <div class="mb-3">
+              <label for="state" class="form-label mb-2"
+                >State<span
+                  class="error"
+                  *ngIf="state && state.invalid && state.touched"
+                  >*required</span
+                ></label
+              >
+              <select
+                class="form-select"
+                id="state"
+                formControlName="state"
+                placeholder="State"
+                *ngIf="stateList.length > 0"
+              >
+                <option value="" disabled selected>Select State</option>
+
+                <option
+                  *ngFor="let state of stateList"
+                  value="{{ state.name }}"
+                >
+                  <span>
+                    {{ state.name }}
+                  </span>
+                </option>
+
+                <option value="" *ngIf="country && country.invalid" disabled>
+                  Please select country
+                </option>
+                
+
+              </select>
+              <input
+                class="form-control"
+                id="statelistinput"
+                rows="1"
+                formControlName="state"
+                placeholder="State"
+                *ngIf="stateList.length === 0 && country"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label"
+                >Address<span
+                  class="error"
+                  *ngIf="address && address.invalid && address.touched"
+                  >*required</span
+                ></label
+              >
+              <textarea
+                name=""
+                id="address"
+                cols="3"
+                rows="2"
+                class="form-control"
+                formControlName="address"
+                placeholder="Address"
+              ></textarea>
+              <!-- <input
+                class="form-control"
+                id="address"
+                rows="1"
+                formControlName="address"
+                placeholder="Address"
+              /> -->
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label"
+                >Set Your Password<span
+                  class="error"
+                  *ngIf="password && password.invalid && password.touched"
+                  >*required</span
+                ></label
+              >
+              <input
+                class="form-control"
+                id="password"
+                rows="1"
+                formControlName="password"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="button">
+              <button
+                type="submit"
+                class="submit-button"
+                (click)="submit($event)"
+              >
+                Select Services
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

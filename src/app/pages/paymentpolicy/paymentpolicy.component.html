@@ -1,0 +1,184 @@
+<div class="legal-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="legal-navbar">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="legal-header">
+    <h3>Payment Cancellation and Refund Policies</h3>
+    <!-- <p>Protecting Your Privacy and Data Security</p> -->
+  </div>
+  <div class="legal-content">
+    <h2 class="paymentpolicy-header">Payment Policy</h2>
+    <div class="legal">
+      <h4>Payment Terms</h4>
+      <p>
+        <span>
+          Subscription fees are due in advance and must be paid on the
+          subscription start date. This includes monthly, quarterly, or annual
+          payments as per the chosen subscription plan.
+        </span>
+
+        <br />
+
+        <span>
+          We accept payments through Stripe and Razorpay gateways including
+          through credit card, debit card, direct transfer and UPI. Please note
+          subscription fees shall be charged annually or monthly depending on
+          package chosen, and performance marketing fee shall be charged on a
+          weekly basis, as per percentage of ad spend managed in the chosen
+          contract. Taxes and other regulatory payments are extra.
+        </span>
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Price Changes</h4>
+      <p>
+        <span>
+          We reserve the right to modify the subscription prices. Any price
+          changes will be announced at least 30 days before they take effect.
+        </span>
+        <br />
+        <span>
+          Continued use of the service after the price change comes into effect
+          constitutes your agreement to pay the modified amount.
+        </span>
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Billing Information</h4>
+      <p>
+        <span>
+          You are responsible for providing current, complete, and accurate
+          billing and contact information. You must promptly update all
+          information to keep your billing account current, complete, and
+          accurate (such as a change in billing address, credit card number, or
+          credit card expiration date).
+        </span>
+        <br />
+        <span>
+          We are not responsible for any service interruptions that may result
+          from outdated or incorrect billing information.
+        </span>
+      </p>
+    </div>
+
+    <h2 class="paymentpolicy-header">Cancellation Policy</h2>
+    <div class="legal">
+      <h4>Subscription Cancellation by User</h4>
+      <p>
+        <span>
+          You may cancel your subscription at any time. Your cancellation will
+          take effect at the end of the current paid term.
+        </span>
+        <br />
+        <span>
+          If you cancel your subscription, the cancellation will become
+          effective at the end of the current billing cycle. You will not
+          receive a refund for any remaining period of your subscription.
+        </span>
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Termination by Company</h4>
+      <p>
+        <span>
+          We reserve the right to suspend or terminate your subscription and/or
+          access to our services if you fail to comply with our terms and
+          policies or if payments are not made on time.
+        </span>
+        <br />
+        <span>
+          A pro-rata refund will be provided in cases where we terminate the
+          service without cause.
+        </span>
+      </p>
+    </div>
+
+    <h2 class="paymentpolicy-header">Refund Policy</h2>
+    <div class="legal">
+      <h4>Refund Conditions</h4>
+      <p>
+        <span>
+          We offer a 7 day money back guarantee for new subscribers. If you are
+          dissatisfied with our service and have not used the service
+          excessively, you can cancel within the first 7 days and receive a full
+          refund.
+        </span>
+        <br />
+        <span>
+          After the guarantee period ends, refunds are generally not provided.
+          However, we may consider a refund on a case-by-case basis if
+          exceptional circumstances apply.
+        </span>
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Process for Requesting a Refund</h4>
+      <p>
+        <span>
+          To request a refund, please contact our support team through
+          <a href="mailto:contactus@zyper.ai">contactus&#64;zyper.ai</a>. Provide
+          your account information, subscription details, and a brief
+          explanation of your reason for requesting a refund.
+        </span>
+
+        <br />
+        <span>
+          Refund requests must be submitted within a specified period after the
+          billing date, usually within 7 days.
+        </span>
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Refund Exceptions</h4>
+      <p>
+        No refunds are available for special offers, discounted subscriptions,
+        or promotional pricing unless otherwise specified.
+      </p>
+    </div>
+    <p>
+      These templates are a good starting point but make sure to tailor them to
+      your specific business needs and consult with legal counsel to ensure
+      compliance with local laws and international regulations.
+    </p>
+  </div>
+  <div class="legal-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

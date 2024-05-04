@@ -1,0 +1,147 @@
+<div class="social-media-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Social Media Management</h2>
+    <p>
+      AI-Driven Social Media Management Agency Services: Elevate Your Brand on
+      Social Platforms
+    </p>
+    <p>
+      Our cutting-edge AI social media marketing agency specializes in
+      leveraging artificial intelligence to amplify your online presence. We
+      offer comprehensive social media agency marketing services tailored for
+      small and medium businesses
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>Tailored SMM Marketing Agency Solutions</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Creative Content Generation:</span> Our AI technology crafts
+            visually stunning post creatives and writes engaging content,
+            ensuring your brand stands out on Instagram, Facebook, and TikTok.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Strategic Posting Schedule:</span> We manage your social media
+            firm's presence by scheduling posts at optimal times for maximum
+            engagement.
+          </li>
+          <li>
+            <span>Promoted Ads Expertise:</span> As a facebook ads agency and a
+            broader social media ad agency, we excel at creating promoted and
+            paid ads that convert.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section">
+      <h2>Our Promise to Your Business</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Targeted Social Media Campaigns:</span> Whether you're a local
+            storefront or an online service, our 'social media marketing near
+            me' approach targets your audience with precision.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Comprehensive Management Services:</span> As the premier AI
+            social media management companies, we offer end-to-end solutions
+            from content creation to campaign analytics.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Performance-Driven Facebook Advertising:</span> Our Facebook
+            advertising agency services crafts campaigns that resonate with your
+            target demographic, ensuring high ROI.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>TikTok Agency Innovation:</span> Stay ahead of the curve by
+            leveraging the viral potential of TikTok with our dedicated TikTok
+            agency services.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section">
+      <h2>Why Choose Us?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>SEO in Social Media:</span> Our AI strategies integrate SEO in
+            social media, automatically for every customer, enhancing your
+            social reach and awareness.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Digital Marketing for Social Media Excellence:</span> We
+            bridge digital marketing in social media to deliver cohesive and
+            compelling marketing narratives.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Social Media Marketing for Small Business:</span> Our services
+            are designed to empower small businesses on social media with
+            enterprise agency-level expertise at a fraction of the cost.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Customizable Agency Packages:</span> Choose from a variety of
+            social media agency packages that suit your business needs and
+            budget.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section">
+      <h2>Start Using Zyper Social Media Services Today</h2>
+      <p>
+        Don't miss the opportunity to transform your business's social media
+        presence with our AI-based management and marketing services. Login,
+        enter your profile and start. No consultations, no discussions required.
+      </p>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,171 @@
+<div class="website-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Free Website Build in 24 Hours</h2>
+    <p>Instant AI-Powered Web Development with Zyper</p>
+    <p>
+      Zyper's cutting-edge generative AI technology meets web design. Our
+      AI-driven platform delivers immediate website solutions, revolutionizing
+      the traditional web development process. Embrace the future of website
+      creation with our intelligent and automated services that creates your
+      website using your inputs on style , target customers and services ,
+      instantaneously
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>AI-Driven Website Creation Services</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Web Developers Near Me:</span> Utilizing the latest in AI, our
+            system instantly generates fully functional, responsive websites
+            that are tailored to your specific business requirements and area
+            near you
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Top-rated Website Builder:</span> Zyper.ai is a top rates
+            website development solution for all types of websites for SMBs –
+            Generate a basic 6 page website immediately , or more sophisticated
+            websites within one week of development time
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Design Company Websites with AI Creatives:</span> Experience
+            unique AI-generated designs that set your brand apart, making your
+            company's online presence truly one-of-a-kind. We access the worlds
+            largest image databases and image generation AI technology to ensure
+            your website creatives are unique and cater to your audience and
+            services
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Best AI Website Design for Small Businesses:</span> Our
+            platform is especially suited for small businesses, providing
+            top-tier web building solutions without the need for extensive
+            resources or time. No need to look for web developers, web
+            freelancers or design agencies- Simply enter your business profile
+            and generate your website
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section" *ngIf="show_more == true">
+      <h2>Front-end Web Development and Beyond</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Responsive Web Development:</span> We guarantee a
+            mobile-friendly experience, with AI ensuring your site adapts
+            perfectly to any device.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Cost-effective and Efficient Web Solutions:</span> Our
+            platform offers cost-effective solutions that don't compromise on
+            quality or efficiency, using fully automated generative AI
+            capabilities
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Free Business Site Builder:</span> Access our AI site builder
+            services for free and watch as it instantly crafts a professional
+            online presence for your small business.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Affordable Websites for Small Businesses:</span> We
+            democratize web design, offering cost-effective solutions that don't
+            compromise on quality or efficiency, using fully automated
+            generative AI capabilities
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Full-stack Web Development:</span> Our AI handles all aspects
+            of web development, from client-side to server-side, with precision
+            and speed.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Why Opt for Zyper's Web development Solution?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Immediate Delivery:</span> Say goodbye to waiting times. Our
+            AI delivers your website as soon as you input your requirements.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>SEO-Optimized:</span> Each site is optimized ensuring your
+            business ranks well on search engines.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>No Hidden Costs:</span> Enjoy clear and upfront pricing with
+            no hidden fees, providing you with 'website development costs'
+            transparency.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Continuous AI Support:</span> Our platform continuously learns
+            and adapts, offering ongoing improvements and updates to keep your
+            site at the cutting edge.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span
+              >Start using Zyper.ai and propel your business to the forefront of
+              the digital age with instant, AI-generated websites that impress,
+              engage, and convert. Get started today and witness the power of AI
+              in web development.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button (click)="ShowMore()">
+        <p *ngIf="!show_more">Show More <i class="bi bi-arrow-down"></i></p>
+        <p *ngIf="show_more">Show Less <i class="bi bi-arrow-up"></i></p>
+      </button>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,155 @@
+<div class="performance-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Performance marketing and PPC</h2>
+    <p>
+      Our AI revolutionizes Paid Ads and PPC marketing – Upto 100% more return
+      on Marketing investment
+    </p>
+    <p>
+      Zyper Ai automatically sets up campaogns, distributes budgets and
+      optimizes creatives and content for Unmatched PPC Performance Discover how
+      Zyper.ai, a leading PPC agency, leverages generative AI to transform your
+      online advertising strategy. Our cutting-edge AI technology delivers up to
+      100% better ROI compared to traditional PPC agencies.
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>Why Choose Zyper.ai?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Advanced AI Optimization:</span> Utilize our AI and ML models
+            for smart campaign structures and real-time optimization
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Cost-Effective Campaigns:</span>
+            We are atleast 50% cheaper than traditional paid marketing agencies
+            , with much better returns on investment
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Comprehensive Platform Coverage:</span>
+            From Google to Facebook and Instagram, manage all your paid
+            campaigns under one roof.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Local to Global Reach: </span>
+            Whether you're looking for 'digital marketing companies near me' or
+            a platform to manage your ads, Zyper does it all from setting up
+            campaigns, assigning budgets and 24X7 optimization for best returns
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Affordable and transparent Pricing : </span>
+            Zyper charges a much smaller percent of spend to create, design and
+            manage campaigns, due to its cutting edge generative AI technology
+            and integrations into the best optimization features.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section">
+      <h2>Our Services</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Creatives That Convert: </span>
+            Engage your audience with AI-designed creatives tailored to your
+            brand's message.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Google Ads, Meta Ads, Instagram ads Set Up: </span>
+            AI tech performs as your Google ads agency and Google PPC
+            specialists and ensures continual performance
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Social Media Mastery: </span>
+            Extend your reach with digital marketing for social media, crafted
+            by access to the best creative databases, optimized search terms and
+            display ads
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section">
+      <h2><span>W</span>hy Opt for Zyper's Web development Solution?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Enhanced Ad Efficiency: </span>
+            Our AI-driven approach means higher conversion rates and effective
+            budget allocation.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Targeted Advertising: </span>
+            Reach the right audience with precision targeting, whether through
+            PPC, social media, or Google ads pay per click.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Transparent Reporting: </span>
+            Stay informed with clear analytics and performance dashboard that
+            demystify your campaign's success.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Full-Spectrum Support: </span>
+            From PPC management to digital advertising firms' expertise, we
+            provide comprehensive services for every need.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section">
+      <h2>Ready to Elevate Your Digital Marketing?</h2>
+      <p>
+        Join the ranks of satisfied businesses and experience the power of
+        Zyper.ai's AI-powered PPC management. Login and Begin Using Zyper.ai ‘s
+        ppc services.
+      </p>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

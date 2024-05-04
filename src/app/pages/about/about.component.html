@@ -1,0 +1,142 @@
+<app-cookieconsent></app-cookieconsent>
+<div class="about-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <section class="about-navbar">
+    <app-navbar-two></app-navbar-two>
+  </section>
+  <section class="header">
+    <div class="left">
+      <h2>Our Culture</h2>
+      <p>
+        Zyper’s culture is nimble ,aware and entirely committed to using
+        generative AI technology to help our thousands of customers across the
+        world grow better
+      </p>
+    </div>
+    <div class="right">
+      <img src="assets/images/about_3.jpg" alt="" />
+    </div>
+  </section>
+  <section class="mission-story">
+    <div class="mission">
+      <div class="left">
+        <h2>
+          Our Mission: Make Growth Marketing Painless, Seamless and Easily
+          Accessible
+        </h2>
+        <p>
+          We want to remove all friction at the vertices of creative design,
+          copy content, marketing tools and ad platforms and have a unified
+          generative ai driven platform that does not require any technology or
+          marketing expertise to use, for our thousands of customers across the
+          globe
+        </p>
+      </div>
+      <div class="right">
+        <img src="assets/images/about_1.jpg" alt="" />
+      </div>
+    </div>
+    <div class="story">
+      <div class="left">
+        <img src="assets/images/about_2.jpg" alt="" />
+      </div>
+      <div class="right">
+        <h2>Our Story</h2>
+        <p>
+          Swati Gupta Our founder, Carnegie Mellon Alum and Comp Sc. Undergrad,
+          spent over 10 years building her previous ecommerce startup –
+          industrybuying.com. She experienced first hand the friction when
+          trying to create a unified smoothly running marketing machine for
+          digital growth, despite availability of hundreds of marketing tools.
+          The friction existed due to creative design , copy editing, marketing
+          tools and ad platforms being siloed. With generative AI technology
+          able to generate copy, creatives and machine learning models able to
+          optimize performance, she was able to transform marketing to be a
+          smooth efficient integrated and lean machine
+        </p>
+        <p>
+          The conviction that SMBs across the world need the same generative AI
+          first, seamless marketing experience that is unfettered by hunting for
+          creative designers, integrating tools, searching for performance
+          marketers and stitching together these silos, led her to found
+          Zyper.ai
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="connect">
+    <h2>Connect at One of Our Locations</h2>
+    <div class="connect-card">
+      <div class="cards">
+        <div class="top">
+          <img src="assets/images/usa.png" alt="" class="icon" />
+          <p class="address">
+            San Francisco <br />
+            166 Geary Str STE 1500 San Francisco, CA 94108 United States
+          </p>
+        </div>
+        <div class="mail">
+          <i class="bi bi-envelope"></i> <span>contactus&#64;zyper.ai</span>
+        </div>
+        <div class="whatsapp">
+          <i class="bi bi-whatsapp"></i> <span>+1 331 230 7437</span>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="top">
+          <img src="assets/images/india.png" alt="" class="icon" />
+          <p class="address">
+            New Delhi
+            <br />
+            A4/1 Vasant Vihar , New Delhi 110057
+          </p>
+        </div>
+        <div class="mail">
+          <i class="bi bi-envelope"></i> <span>contactus&#64;zyper.ai</span>
+        </div>
+        <div class="whatsapp">
+          <i class="bi bi-whatsapp"></i> <span>+91 9667238666</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

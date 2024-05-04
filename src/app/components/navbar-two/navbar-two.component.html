@@ -1,0 +1,174 @@
+<div class="nav-container" [ngClass]="{ 'active-navbar': scrolled == true }">
+  <nav class="navbar bg-transparent p-0" [class.navbar-expand]="isCollapsed">
+    <div
+      class="container-fluid bottombar-web m-0 p-0 sticky-top"
+      id="bottombar-web"
+    >
+      <a class="navbar-brand" href="/">
+        <img id="ecell-logo" src="assets/images/logo.png" alt="" />
+      </a>
+      <div class="combine d-flex justify-content-center align-items-center">
+        <!-- <a *ngIf="mobile" id="apply-now" routerLink="/reg">Apply Now</a> -->
+        <button
+          class="navbar-toggler no-hightlight"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav links me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a routerLink="/landing">Home</a>
+          </li>
+          <li class="dropdown">
+            <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
+              Services &nbsp;<i class="bi bi-caret-down-fill"></i>
+            </p>
+            <div class="idropdown-content" *ngIf="isDropdownVisible">
+              <a routerLink="/services/performance" class="text-reset"
+                >Performance marketing and PPC</a
+              >
+              <a routerLink="/services/social-media" class="text-reset"
+                >Social Media Management</a
+              >
+              <a routerLink="/services/bussiness" class="text-reset"
+                >Business & Maps Listings</a
+              >
+              <a routerLink="/services/whatsapp-marketing" class="text-reset"
+                >Whatsapp Marketing</a
+              >
+              <a routerLink="/services/email-marketing" class="text-reset"
+                >Email Marketing</a
+              >
+              <a routerLink="/services/website-build" class="text-reset"
+                >Free Website Build in 24 Hours</a
+              >
+
+              <a routerLink="/services/seo" class="text-reset"
+                >Search engine Optimization</a
+              >
+            </div>
+          </li>
+          <!-- <li class="nav-item">
+              <a href="sponsor">SPONSORS</a>
+            </li> -->
+          <li class="nav-item">
+            <a routerLink="/pricing">pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="/ai-technology">Ai technology</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/knowledge-center">knowledge center</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact">contact us</a>
+          </li>
+        </ul>
+        <ul class="buttons m-0">
+          <li class="nav-item">
+            <a id="apply-now" routerLink="/login">Start Using</a>
+          </li>
+          <li class="nav-item">
+            <a id="apply-now" routerLink="/reg">Watch Demo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid navbar-mobile m-0 p-0">
+      <a class="navbar-brand" href="/">
+        <img id="ecell-logo" src="assets/images/logo.png" alt="" />
+      </a>
+      <div class="combine d-flex justify-content-center align-items-center">
+        <!-- <a *ngIf="mobile" id="apply-now" routerLink="/reg">Apply Now</a> -->
+        <button
+          class="navbar-toggler no-hightlight"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse pb-3" id="navbarSupportedContent">
+        <ul class="navbar-nav links me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a routerLink="/landing">Home</a>
+          </li>
+
+          <li class="dropdown">
+            <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
+              Services &nbsp;<i class="bi bi-caret-down-fill"></i>
+            </p>
+            <div class="idropdown-content" *ngIf="isDropdownVisible">
+              <a routerLink="/services/website-build" class="text-reset"
+                >Free Website Build in 24 Hours</a
+              >
+              <a routerLink="/services/bussiness" class="text-reset"
+                >Business & Maps Listings</a
+              >
+              <a routerLink="/services/performance" class="text-reset"
+                >Performance marketing and PPC</a
+              >
+              <a routerLink="/services/social-media" class="text-reset"
+                >Social Media Management</a
+              >
+              <a routerLink="/services/seo" class="text-reset"
+                >Search engine Optimization</a
+              >
+              <a routerLink="/services/whatsapp-marketing" class="text-reset"
+                >Whatsapp Marketing</a
+              >
+              <a routerLink="/services/email-marketing" class="text-reset"
+                >Email Marketing</a
+              >
+            </div>
+          </li>
+          <!-- <li class="nav-item">
+              <a href="sponsor">SPONSORS</a>
+            </li> -->
+          <li class="nav-item">
+            <a routerLink="/pricing">pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/knowledge-center">knowledge center</a>
+          </li>
+          <li class="nav-item">
+            <a href="/ai-technology">ai technology</a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="/contact">contact us</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact">customers</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about">About</a>
+          </li>
+        </ul>
+        <ul class="buttons m-0">
+          <li class="nav-item">
+            <a id="apply-now" href="reg">Watch Demo</a>
+          </li>
+          <li class="nav-item">
+            <a id="apply-now" href="reg">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

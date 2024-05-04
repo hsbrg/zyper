@@ -1,0 +1,146 @@
+<div class="seo-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Search engine Optimization</h2>
+    <p>
+      Premier SEO Firm: Elevate Your Digital Presence with Zyper SEO Services
+    </p>
+    <p>AI Run Expert SEO Optimization for Forward-Thinking Companies</p>
+    <p>
+      Our AI based leading SEO agency services propel your business to the top
+      of search rankings. Our AI-driven SEO optimization services approach
+      ensures your website and social media content are fully optimized to meet
+      and exceed Google SEO guidelines. Our models continuously monitor your
+      page health, adherence to technical SEO guidelines, use of unique content
+      and performance of crawling infrastructure.
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>Comprehensive Search Engine Optimization Companies</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>AI-Driven Keyword Research:</span> Our AI models discover the
+            most searched terms through real time API linkages, and ensure your
+            content resonates with your audience and search engines alike.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Tailored SEO Services Near Me:</span> Local businesses can now
+            amplify their digital presence with our 'SEO company near me'
+            approach for targeted, community-based SEO strategies.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Innovative Search Optimization Companies:</span> As an AI
+            search optimization agency platform our technology creates
+            SEO-friendly content and visuals that captivate and convert.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section">
+      <h2>Why Choose Zyper's SEO Optimization Agency platform?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Search Engine Optimization Experts:</span> Our AI replaces the
+            best teams of SEO optimization consultants and provides cutting-edge
+            SEO optimisation agency services.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Best SEO Companies:</span> Recognized as one of the best SEO
+            agencies, Zyper platform has the most competitive SEO price points
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Top SEO Provider:</span> We pride ourselves on delivering
+            results that speak for themselves, solidifying our reputation as the
+            best rated SEO company.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Our Search Engine Optimization Agency's Promise</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Best Search Engine Optimization Companies:</span> We're
+            consistently ranked among the best search engine optimization
+            companies for our commitment to excellence and innovation in SEO
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Custom SEO Solutions:</span> From small startups to large
+            corporations, our search engine optimisation companies provide
+            bespoke services that cater to your unique business needs.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Highest Rated SEO Companies:</span> Our portfolio of
+            successful campaigns and satisfied clients showcases why we are the
+            highest rated SEO companies and the best search engine optimisation
+            company.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Your Journey to the Top Begins Here</h2>
+      <p>
+        Join the ranks of businesses that have witnessed transformative growth
+        with Zyper's SEO services. Contact us today and partner with a search
+        engine optimization consultant dedicated to elevating your online
+        visibility and success.
+      </p>
+    </div>
+    <div class="buttons">
+      <button (click)="ShowMore()">
+        <p *ngIf="!show_more">Show More <i class="bi bi-arrow-down"></i></p>
+        <p *ngIf="show_more">Show Less <i class="bi bi-arrow-up"></i></p>
+      </button>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

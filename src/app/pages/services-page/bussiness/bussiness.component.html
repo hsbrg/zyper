@@ -1,0 +1,179 @@
+<div class="business-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Business & Maps Listings</h2>
+    <p>
+      Boost Your Business Visibility with Zyper.ai's Listing Management Services
+    </p>
+    <p>
+      Elevate your business's online presence with Zyper.ai – the ultimate
+      AI-powered solution for instant business and map listings. Our autonomous
+      AI technology seamlessly integrates with major directories, ensuring your
+      business is listed and visible on Google My Business, Apple Maps, Uber
+      Maps, Bing Maps, and more
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>One-Stop AI Solution for Business Listings</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Google My Business Listing Made Easy:</span> <br />
+            Zyper.ai automates the creation of your Google listing, making your
+            business immediately discoverable to millions.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Comprehensive Google Listing Management:</span> <br />
+            From your 'google my business account' to 'google verify my
+            business,' our AI handles it all, keeping your details up-to-date
+            and accurate.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Maximize Visibility on My Business Google Page:</span> <br />
+            Enhance your business's credibility and reach with a well-managed
+            listing that stands out.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Effortless Bing Places Integration:</span> <br />
+            Our service includes 'bing for places' and 'bing business' listings,
+            expanding your visibility across multiple platforms.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section">
+      <h2>Expand Your Reach on Map Listings</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Google Maps Advertising:</span> <br />
+            Leverage the power of location-based marketing with Zyper.ai
+            managing your presence on Google Maps.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Manage Business on Google and Beyond:</span> <br />
+            Not only do we manage your Google presence, but we also ensure your
+            business is listed on Apple Maps, Uber Maps, and Bing Maps.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Accurate Business Directory Listings:</span> <br />
+            We maintain consistent and precise information across all business
+            directories and 'business listings.’
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section">
+      <h2>Streamlined Business Registration and Claiming Process</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Register My Business with Google:</span> <br />
+            Zyper.ai streamlines the registration process, instantly adding your
+            business to Google and other directories.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Claim My Business on Google:</span> <br />
+            Our AI assists you in claiming your existing listings, ensuring you
+            have full control over your business information.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Local Business Directory Listings:</span> <br />
+            We make sure your business is featured in 'local business directory'
+            and 'local business listing' sites for enhanced community reach.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-five section">
+      <h2>AI-Driven SEO for Google My Business</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>SEO for Google My Business:</span> <br />
+            Our AI not only lists your business but optimizes it for SEO,
+            helping you rank higher in search results.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-six section">
+      <h2>Why Choose Zyper.ai?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Instant Account Creation:</span> <br />
+            Say goodbye to manual entries. Our AI instantly creates accounts,
+            making your business visible on all relevant platforms, using your
+            customized inputs on target customers, your branding, style and
+            regional characteristics.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Discoverable Everywhere:</span> <br />
+            With Zyper.ai, your business will be found where your customers are
+            looking, from 'google business pages' to 'local business directory
+            listing.'
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>API Linkages for Real-Time Updates:</span> <br />
+            Our sophisticated API linkages ensure real-time updates across all
+            platforms, keeping your listings current and consistent.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Effortless Listing Management:</span> <br />
+            Our dashboard provides a centralized control panel for 'google my
+            business dashboard' and other listings, simplifying management.
+            Unlock the full potential of your business with Zyper.ai's AI-driven
+            listings management
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

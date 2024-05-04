@@ -1,0 +1,76 @@
+<app-cookieconsent></app-cookieconsent>
+<div class="ai-technology">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="ai-navbar">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="content">
+    <div class="header">
+      <h1>AI Technology</h1>
+      <p>
+        Zyper Marketing Language framework - API, Prompts Modules & Technology
+        Map. <br />
+        Each node is a Zyper prompt language module developed to generate
+        uniform, best output for specific marketing purpose, further optimized
+        at sector and category level
+      </p>
+      <img src="assets/images/ai_tech.jpg" alt="" />
+      <a href="assets/images/ai_tech.jpg" download>
+        <!-- download icon bootstrap -->
+        Download <i class="bi bi-download"></i>
+      </a>
+    </div>
+    <div class="smb">
+      <p>
+        Zyper Ai Layers Take SMB Input, use advanced AI infrastructure to
+        generate creative& copy, and deploy on all chosen customer marketing
+        channels
+      </p>
+      <img src="assets/images/tech_2.png" alt="" />
+      <a href="assets/images/tech_2.png" download>
+        <!-- download icon bootstrap -->
+        Download <i class="bi bi-download"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>

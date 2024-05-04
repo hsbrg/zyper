@@ -1,0 +1,222 @@
+<app-cookieconsent></app-cookieconsent>
+<div class="contact-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="contact-navbar">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="header">
+    <div class="top">
+      <p>Any question or remarks? Just write us a message!</p>
+    </div>
+    <div class="contact-card">
+      <div class="left">
+        <h4>Contact</h4>
+        <div class="info">
+          <p>
+            <i class="bi bi-telephone-fill"></i>
+            <span>
+              <p><span class="fw-bold">USA</span> +1 331 230 7437</p>
+              <p><span class="fw-bold">INDIA</span> +91 9667238666</p>
+            </span>
+          </p>
+          <p><i class="bi bi-envelope"></i> <span>contactus&#64;zyper.ai</span></p>
+          <!-- <p>
+            <i class="bi bi-geo-alt-fill"></i>
+            <span class="d-flex flex-column gap-1">
+              <span>
+                <span class="fw-bold">USA</span>
+                San Francisco 166 Geary Str STE 1500 San Francisco, CA 94108
+                United States</span
+              >
+              <span>
+                <span class="fw-bold">INDIA</span>
+                New Delhi A4/1 Vasant Vihar , New Delhi 110057</span
+              >
+            </span>
+          </p> -->
+        </div>
+        <div class="icons">
+          <a
+            style="text-decoration: none"
+            href="https://www.facebook.com/profile.php?id=61557429225829"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a style="text-decoration: none" href="https://twitter.com/zyper_ai"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a
+            style="text-decoration: none"
+            href="https://www.instagram.com/zyper.ai/"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            style="text-decoration: none"
+            href="https://www.linkedin.com/in/zyper-ai/"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="form">
+          <form [formGroup]="contactForm">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="name" class="form-label"
+                    >First Name<span
+                      class="error"
+                      *ngIf="
+                        firstName && firstName.invalid && firstName.touched
+                      "
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    formControlName="firstName"
+                    placeholder="Enter Your First Name"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="name" class="form-label"
+                    >Last Name<span
+                      class="error"
+                      *ngIf="lastName && lastName.invalid && lastName.touched"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    formControlName="lastName"
+                    placeholder="Enter Your Last Name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Email<span
+                      class="error"
+                      *ngIf="email && email.invalid && email.touched"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    formControlName="email"
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="phone" class="form-label"
+                    >Phone<span
+                      class="error"
+                      *ngIf="phone && phone.invalid && phone.touched"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    formControlName="phone"
+                    placeholder="Enter Your Phone"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label"
+                >Subject<span
+                  class="error"
+                  *ngIf="subject && subject.invalid && subject.touched"
+                  >*</span
+                ></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                formControlName="subject"
+                placeholder="Enter Your Subject"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label"
+                >Message<span
+                  class="error"
+                  *ngIf="message && message.invalid && message.touched"
+                  >*</span
+                ></label
+              >
+              <textarea
+                class="form-control"
+                id="message"
+                rows="1"
+                maxrows="5"
+                formControlName="message"
+                placeholder="Write Your Message ..."
+              ></textarea>
+            </div>
+            <div class="button">
+              <button type="submit" class="submit-button" (click)="submit()">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

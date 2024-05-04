@@ -1,0 +1,168 @@
+<div class="legal-container">
+    <div class="float-footer">
+        Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+      </div>
+      <div class="float-icons">
+        <button (click)="SwitchWhatsappState()">
+          <img
+            src="assets/images/whatsapp_icon.png"
+            alt=""
+            *ngIf="!activeWhatsapp"
+          />
+          <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0);"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+          <div class="details">
+            <div class="img">
+              <img src="assets/images/logo.png" alt="" />
+            </div>
+            <p>
+              Welcome to Zyper.Ai <br />
+              Scan the QR code
+            </p>
+          </div>
+          <div class="qr_code">
+            <img src="assets/images/zyper.png" alt="" />
+          </div>
+          <p>
+            <span> OR</span> <br />
+            <a
+              href="https://wa.me/+919667238666"
+              class="text-decoration-underline"
+              target="_blank"
+              >click here to start chat</a
+            >
+          </p>
+        </div>
+      </div>
+  <div class="legal-navbar">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="legal-header">
+    <h3>Privacy Policy</h3>
+    <p>Protecting Your Privacy and Data Security</p>
+  </div>
+  <div class="legal-content">
+    <div class="legal">
+      <h4>Privacy Policy of Zyper.ai</h4>
+      <p>
+        Welcome to Zyper.ai ("us", "we", or "our"). We are committed to
+        protecting the privacy and security of your personal information. This
+        Privacy Policy outlines the types of information we collect from you and
+        how we use, disclose, and protect that information.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Information Collection</h4>
+      <p>
+        <span>Personal Information:</span>
+        We collect personal information that you voluntarily provide to us, such
+        as your name, email address, postal address, phone number, and payment
+        details when you register, make a purchase, or otherwise interact with
+        our services.
+      </p>
+      <p>
+        <span>Usage Information:</span>
+        We collect information about your interactions with our website,
+        including IP addresses, browser type, language, access times, pages
+        viewed, and the links you click.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Use of Information</h4>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide, maintain, and improve our services;</li>
+        <li>
+          Process transactions and send you related information, including
+          confirmations and invoices;
+        </li>
+        <li>
+          Communicate with you about products, services, offers, and provide
+          news and information we think will be of interest to you;
+        </li>
+        <li>
+          Monitor and analyze trends, usage, and activities in connection with
+          our services.
+        </li>
+      </ul>
+    </div>
+    <div class="legal">
+      <h4>Information Sharing and Disclosure</h4>
+      <p>
+        <span>Service Providers:</span>
+        We may share your information with third-party service providers who
+        perform services on our behalf, including payment processing, data
+        analysis, email delivery, hosting services, and customer service.
+      </p>
+      <p>
+        <span>Legal Compliance:</span>
+        We may disclose information about you if required to do so by law or in
+        the good faith belief that such action is necessary to comply with state
+        and federal laws or respond to a court order, judicial or other
+        government subpoena, or warrant.
+      </p>
+      <p>
+        <span>Merger or Acquisition:</span>
+        In the event we are involved in a merger, acquisition, or sale of
+        assets, your personal information may be transferred as part of that
+        transaction.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Cookies and Tracking Technologies</h4>
+      <p>
+        <span>Cookies:</span>
+        We use cookies to collect information about your browsing behavior,
+        preferences, and interactions with our website to enhance your user
+        experience.
+      </p>
+      <p>
+        <span>Analytics:</span>
+        We utilize analytics services by third parties to collect information
+        regarding visitor behavior on our website. These analytics services do
+        not identify individual users or associate your IP address with any
+        other data held by them.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Data Security</h4>
+      <p>
+        We implement appropriate technical and organizational measures to
+        protect the personal information we collect and process about you.
+        Despite our efforts, no website, database, or system is completely
+        secure or "hacker proof." You are also responsible for taking reasonable
+        steps to protect your personal information against unauthorized
+        disclosure or misuse.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Your Privacy Rights</h4>
+      <p>
+        Depending on your location, you may have the right to access, correct,
+        delete, or transfer your personal information we hold. Please contact us
+        to exercise these rights.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Changes to This Privacy Policy</h4>
+      <p>
+        We may update this policy from time to time in order to reflect, for
+        example, changes to our practices or for other operational, legal, or
+        regulatory reasons.
+      </p>
+    </div>
+    <div class="legal">
+      <h4>Contact Us</h4>
+      <p>
+        If you have any questions or concerns about this Privacy Policy or our
+        practices, please contact us at:
+      </p>
+      <a href="mailto:'contactus@zyper.ai">contactus&#64;zyper.ai</a>
+    </div>
+  </div>
+  <div class="legal-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

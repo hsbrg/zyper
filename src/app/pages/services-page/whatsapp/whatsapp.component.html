@@ -1,0 +1,165 @@
+<div class="whatsapp-container">
+  <div class="float-footer">
+    Delivering Generative AI Marketing Performance To Small Businesses Worldwide
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="hero-section">
+    <h2>Whatsapp Marketing</h2>
+    <p>Generative AI WhatsApp Marketing Services</p>
+    <p>
+      Transform Your Customer Engagement with AI-Powered WhatsApp Message
+      Marketing
+    </p>
+    <p>
+      Zyper's advanced WhatsApp marketing messages services platform combines
+      the efficiency of WhatsApp bulk message software with the intelligence of
+      generative AI to create personalized promotional campaigns that resonate
+      with your target customers.
+    </p>
+    <div class="buttons">
+      <button routerLink="/login">Start Using</button>
+      <button routerLink="/reg">Watch Demo</button>
+    </div>
+    <app-floating-arrow></app-floating-arrow>
+  </div>
+  <div class="content-container">
+    <div class="section-two section">
+      <h2>Why Choose Zyper for WhatsApp Marketing?</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>WhatsApp Bulk SMS Software:</span> Send bulk WhatsApp messages
+            effortlessly, reaching out to your audience en masse without
+            compromising on the personal touch.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>WhatsApp Promotional Messages:</span> Our WhatsApp marketing
+            software creates compelling advertising campaigns, designed to
+            engage and get customer engagement
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>High-Impact WhatsApp Advertising:</span> Utilize WhatsApp for
+            advertising to tap into high open and click rates, far surpassing
+            traditional SMS or email.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Free WhatsApp Bulk Sender:</span> Get started with our
+            WhatsApp bulk message sender software, offering a cost-effective
+            entry point into WhatsApp marketing tools.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Comprehensive Bulk WhatsApp Marketing:</span> With Zyper, your
+            bulk WhatsApp marketing strategy becomes a seamless part of your
+            digital marketing efforts.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Customized WhatsApp Campaigns:</span> Our WhatsApp campaigns
+            are tailored to your business needs, ensuring each message strikes a
+            chord with your target audience.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-three section">
+      <h2>Detailed WhatsApp Marketing Service Features</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Targeted Imagery:</span> Leverage the latest image-generating
+            AI technology and an extensive database of stock images to create
+            visuals that capture attention within WhatsApp bulk messages.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>ROI-Driven Campaigns:</span> Our WhatsApp advertising campaign
+            and WhatsApp ad campaign strategies are designed to deliver higher
+            ROI, making the most of your marketing budget.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Versatile Marketing Tools:</span> From the best WhatsApp
+            marketing software to free tools, we provide a range of options to
+            scale your campaigns as your business grows.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Trusted WhatsApp Marketing Agency:</span> As a leading
+            WhatsApp marketing agency, Zyper is committed to delivering
+            marketing excellence through innovative WhatsApp business promotion
+            messages.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Customizable WhatsApp Marketing Strategy for Every Business</h2>
+      <div class="content">
+        <ul>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Bulk WhatsApp Service Provider:</span> Our services cater to
+            businesses of all sizes, ensuring you have the support of a
+            dedicated bulk WhatsApp service provider.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Engagement and Retention:</span> Use WhatsApp marketing bulk
+            techniques to keep your customers informed, engaged, and connected
+            with your brand.
+          </li>
+          <li data-aos="zoom-in-up" data-aos-duration="1000">
+            <span>Competitive WhatsApp Marketing Software Price:</span> Zyper
+            offers transparent pricing, ensuring you get premium service without
+            any hidden costs.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-four section" *ngIf="show_more == true">
+      <h2>Start Your WhatsApp Promotion Journey Today</h2>
+      <p>
+        Ready to harness the power of the best WhatsApp bulk message sender and
+        marketing campaign tools? Contact Zyper to discover how our WhatsApp
+        marketing company can revolutionize your digital communication strategy.
+      </p>
+    </div>
+    <div class="buttons">
+      <button (click)="ShowMore()">
+        <p *ngIf="!show_more">Show More <i class="bi bi-arrow-down"></i></p>
+        <p *ngIf="show_more">Show Less <i class="bi bi-arrow-up"></i></p>
+      </button>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

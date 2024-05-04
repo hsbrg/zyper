@@ -1,0 +1,168 @@
+<div class="contact-container">
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/qr_code.webp" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a href="">click here</a> to start chat
+      </p>
+    </div>
+  </div>
+  <div class="contact-navbar">
+    <app-navbar-two />
+  </div>
+  <div class="header">
+    <div class="top">
+      <h1 class="mb-4">Login</h1>
+      <!-- <p>Any question or remarks? Just write us a message!</p> -->
+    </div>
+    <div class="contact-card">
+      <!-- <div class="left">
+          <h4>Contact Information</h4>
+          <div class="info">
+            <p>
+              <i class="bi bi-telephone-fill"></i>
+              <span>
+                <p><span>USA</span> +1 331 230 7437</p>
+                <p><span>INDIA</span> +91 8826594369</p>
+              </span>
+            </p>
+            <p><i class="bi bi-envelope"></i> <span>contactus@zyper.ai</span></p>
+            <p>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span
+                >San Francisco 166 Geary Str STE 1500 San Francisco, CA 94108
+                United States</span
+              >
+            </p>
+          </div>
+          <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </div>
+        </div> -->
+      <div class="right">
+        <div class="form">
+          <form [formGroup]="contactForm">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Email<span
+                      class="error"
+                      *ngIf="email && email.invalid && email.touched"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    formControlName="email"
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >Password<span
+                      class="error"
+                      *ngIf="password && password.invalid && password.touched"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    class="form-control"
+                    id="password"
+                    rows="1"
+                    type="password"
+                    formControlName="password"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <button type="submit" class="submit-button" (click)="submit()">
+                Submit
+              </button>
+            </div>
+            <p class="no-account text-white">
+              Don't have an account? <a routerLink="/reg">Register</a>
+            </p>
+            <div class="text" style="text-align: center; margin: 1rem 0">
+              <h2 style="color: white">OR</h2>
+            </div>
+            <div class="googlebtn">
+              <!-- <div id="g_id_onload"
+     data-client_id="936355299625-1nvlu58j15fs7rqdusrtpapftsmsq9gn.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="https://api.zyper.ai/crm/verifytoken/"
+     data-nonce=""
+     data-auto_select="true"
+     data-itp_support="true">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div> -->
+
+              <div
+                id="g_id_onload"
+                data-client_id="936355299625-1nvlu58j15fs7rqdusrtpapftsmsq9gn.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleCredentialResponse"
+                data-itp_support="true"
+              ></div>
+
+              <div
+                class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left"
+              ></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-footer">
+    <app-footer></app-footer>
+  </div>
+</div>

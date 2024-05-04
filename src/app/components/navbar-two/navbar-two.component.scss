@@ -1,0 +1,266 @@
+.nav-container {
+  color: white;
+  font-family: var(--font_mona_sans);
+  // width: 100%;
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+
+    .bottombar-web {
+      min-height: 60px;
+      padding: 0 20px !important;
+      background-color: var(--bg-color1);
+    }
+    #bottombar-web {
+      transition: all 0.3s ease;
+    }
+    .navbar-mobile {
+      // height: 80px;
+      padding: 10px 20px !important;
+      background-color: var(--bg-color1);
+    }
+    #ecell-logo {
+      height: 40px;
+      width: auto;
+    }
+    .combine {
+      .navbar-toggler,
+      .navbar-toggler:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .collapse {
+      // height: 100%;
+    }
+    ul.links {
+      // height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-right: 20px;
+
+      @media screen and (max-width: 1252px) {
+        gap: 10px;
+        padding-right: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+
+      li.nav-item {
+        height: 100%;
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          font-size: 14px;
+          text-decoration: none;
+          color: white;
+          text-transform: capitalize;
+          cursor: pointer;
+          user-select: none;
+
+          @media screen and (max-width: 1050px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      li.dropdown {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        height: 100%;
+        user-select: none;
+        // &:hover .dropdown-content {
+        //   display: block;
+        // }
+
+        p {
+          font-size: 14px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          @media screen and (max-width: 1252px) {
+            font-size: 16px;
+          }
+        }
+        .dropbtn {
+          color: white;
+          text-transform: capitalize;
+          cursor: pointer;
+        }
+        .idropdown-content {
+          // display: none;
+          position: absolute;
+          background-color: var(--bg-color1);
+          // min-width: 180px;
+          width: 400px;
+          box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.562);
+          z-index: 1;
+          border-radius: 3px;
+          left: 0px;
+          top: 45px;
+
+          
+
+          @media screen and (max-width: 1252px){
+            // width: 300px;
+            top: 26px;
+            left: -150%;
+          }
+          @media  screen and (max-width: 478px) {
+            width: 250px;
+            left: -70%;
+          }
+          // bottom: 0px;
+          a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover {
+              background-color: var(--bg-color2);
+            }
+          }
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #243137;
+          min-width: 100px;
+          box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.562);
+          z-index: 1;
+          border-radius: 3px;
+          right: 0;
+
+          a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    ul.buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 1252px) {
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 !important;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        background: var(--text-color1);
+        box-shadow: 0px 0px 2px var(--bg-color2);
+        a {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+          // padding;
+        }
+      }
+    }
+  }
+}
+.nav-container hr {
+  height: 2px !important;
+  width: 100%;
+  color: var(--golden-color);
+  margin: 5px;
+  opacity: 1;
+}
+
+// .nav-container #navbarSupportedContent .dropdown:hover .dropdown-content,
+// .nav-container .combine .dropdown:hover .dropdown-content {
+//   display: block;
+// }
+// .nav-container #navbarSupportedContent .dropdown:hover .idropdown-content,
+// .nav-container .combine .dropdown:hover .idropdown-content {
+//   display: block;
+// }
+.nav-container .bi {
+  color: white;
+  font-size: 2rem;
+}
+.nav-container .bi-caret-down-fill {
+  color: white;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-container #navbarSupportedContent ul {
+    gap: 5px;
+  }
+  .nav-container #navbarSupportedContent .profile-dropdown {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav-container .combine .dropdown {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav-container {
+    background-color: var(--green-color);
+    color: white;
+    // padding: 0 20px;
+    width: 100vw;
+
+    // .navbar-mobile {
+    //   padding: 0 20px !important;
+    // }
+  }
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    padding: 0;
+  }
+}
+.active-navbar {
+  background-color: var(--bg-color1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.562);
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav-container {
+    box-shadow: 0 1.5px 15px rgba(0, 0, 0, 0.404);
+  }
+  .topbar-web {
+    display: none;
+  }
+  .bottombar-web {
+    display: none;
+  }
+}
