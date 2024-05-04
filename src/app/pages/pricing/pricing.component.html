@@ -41,14 +41,18 @@
     <app-navbar-two></app-navbar-two>
   </div>
   <div class="headerbar">
-    <h3>Zyper.ai</h3>
+    <h3 class="mb-3">Zyper.ai</h3>
     <!-- <p>
       Everything you need to scale your business bundled and discounted
       <span>See bundles</span>
     </p> -->
   </div>
   <div class="pricing-tab">
-    <p>Monthly</p>
+    <div class="tab-content">
+      <div class="monthly tab" [ngClass]="{'active-tab': !annually}" (click)="togglePricingOption($event)">Monthly</div>
+      <div class="annually tab" [ngClass]="{'active-tab': annually}" (click)="togglePricingOption($event)">Annually</div>
+    </div>
+    <!-- <p>Monthly</p>
     <input
       type="checkbox"
       name=""
@@ -56,7 +60,7 @@
       (change)="togglePricingOption($event)"
       [(ngModel)]="annually"
     />
-    <p>Annually</p>
+    <p>Annually</p> -->
   </div>
   <div class="pricing-table">
     <section class="monthly" *ngIf="annually == false">
@@ -67,13 +71,13 @@
             <div class="price-content">
               <p class="">
                 <span class="dollar">$</span>
-                <span class="price fs-1"> {{ monthly_freePriceMonthly }}</span>
+                <span class="price"> {{ monthly_freePriceMonthly }}</span>
               </p>
               <p>/month</p>
             </div>
           </div>
 
-          <button class="mt-4" routerLink="/comingsoon">Start</button>
+          <button class="" routerLink="/comingsoon">Start</button>
         </div>
         <div class="content-container">
           <div class="content">
@@ -317,15 +321,15 @@
           <h3>Free Always</h3>
           <div class="price-content-container">
             <div class="price-content">
-              <p class="pt-4">
+              <p class="">
                 <span class="dollar">$</span>
-                <span class="price fs-1"> {{ monthly_freePriceMonthly }}</span>
+                <span class="price"> {{ monthly_freePriceMonthly }}</span>
               </p>
               <p>/month</p>
             </div>
           </div>
 
-          <button class="mt-4" routerLink="/comingsoon">Start</button>
+          <button class="" routerLink="/comingsoon">Start</button>
         </div>
         <div class="content-container">
           <div class="content">

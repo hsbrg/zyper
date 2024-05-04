@@ -466,7 +466,7 @@ export class PricingComponent implements OnInit {
     this.roundOffPrices();
   }
   togglePricingOption(event: any) {
-    this.annually = event.target.checked;
+    this.annually = !this.annually;
     this.cookieService.set('annuallySelected', this.annually.toString());
   }
   roundOffPrices() {
