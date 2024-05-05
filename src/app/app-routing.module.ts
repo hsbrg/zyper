@@ -22,6 +22,9 @@ import { SeoComponent } from './pages/services-page/seo/seo.component';
 import { WhatsappComponent } from './pages/services-page/whatsapp/whatsapp.component';
 import { EmailComponent } from './pages/services-page/email/email.component';
 import { SocialMediaComponent } from './pages/services-page/social-media/social-media.component';
+import { AgencyComponent } from './pages/agency/agency.component';
+import { SmbComponent } from './pages/smb/smb.component';
+import { FreelanceComponent } from './pages/freelance/freelance.component';
 
 
 
@@ -30,6 +33,18 @@ const routes: Routes = [
   {
     path: 'landing',
     component: LandingComponent,
+  },
+  {
+    path: 'agency',
+    component: AgencyComponent,
+  },
+  {
+    path: 'smb',
+    component: SmbComponent,
+  },
+  {
+    path: 'freelancer',
+    component: FreelanceComponent,
   },
   {
     path: '',

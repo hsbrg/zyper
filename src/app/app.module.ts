@@ -32,6 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DropdownModule } from 'primeng/dropdown';
+import { FreelanceComponent } from './pages/freelance/freelance.component';
+import { SmbComponent } from './pages/smb/smb.component';
+import { AgencyComponent } from './pages/agency/agency.component';
 
 
 @NgModule({
@@ -61,7 +64,10 @@ import { DropdownModule } from 'primeng/dropdown';
     CookieconsentComponent,
     FloatingArrowComponent,
     NavbarTwoComponent,
-    FooterComponent
+    FooterComponent,
+    FreelanceComponent,
+    SmbComponent,
+    AgencyComponent
   ],
   imports: [
     BrowserModule,
