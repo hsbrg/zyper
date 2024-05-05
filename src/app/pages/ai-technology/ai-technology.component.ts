@@ -8,9 +8,14 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AiTechnologyComponent implements OnInit {
   activeWhatsapp: boolean = false;
+  showLoader: boolean = false;
   constructor(private meta: Meta) {}
 
   ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
     this.meta.updateTag({
       name: 'description',
       content:

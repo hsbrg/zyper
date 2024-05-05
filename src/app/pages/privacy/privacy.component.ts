@@ -6,11 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent implements OnInit {
-
   activeWhatsapp: boolean = false;
+  showLoader: boolean = false;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
+  }
   SwitchWhatsappState() {
     this.activeWhatsapp = !this.activeWhatsapp;
   }

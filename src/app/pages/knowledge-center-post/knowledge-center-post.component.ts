@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class KnowledgeCenterPostComponent implements OnInit {
   activeWhatsapp: boolean = false;
+  showLoader: boolean = false;
   blogId: any;
   blogs: any = blogs;
   blog: any = {};
@@ -16,6 +17,10 @@ export class KnowledgeCenterPostComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
     this.route.params.subscribe((params) => {
       const id = params['id'];
       this.blogId = id.split(':')[1];

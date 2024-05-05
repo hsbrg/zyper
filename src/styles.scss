@@ -15,6 +15,14 @@
   --font_popins: "Poppins", sans-serif;
   --font_mona_sans: "Mona-Sans", sans-serif;
 }
+.loader{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 @font-face {
   font-family: "Mona-Sans";

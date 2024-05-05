@@ -107,14 +107,12 @@
           left: 0px;
           top: 45px;
 
-          
-
-          @media screen and (max-width: 1252px){
+          @media screen and (max-width: 1252px) {
             // width: 300px;
             top: 26px;
             left: -150%;
           }
-          @media  screen and (max-width: 478px) {
+          @media screen and (max-width: 478px) {
             width: 250px;
             left: -70%;
           }
@@ -164,16 +162,16 @@
         margin: 20px 0 !important;
       }
       li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         list-style: none;
-        width: 150px;
-        height: 40px;
-        text-align: center;
-        background: var(--text-color1);
-        box-shadow: 0px 0px 2px var(--bg-color2);
         a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          text-align: center;
+          background: var(--text-color1);
+          box-shadow: 0px 0px 2px var(--bg-color2);
           color: black;
           text-decoration: none;
           font-weight: 500;

@@ -9,11 +9,17 @@ import Swal from 'sweetalert2';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  showLoader: boolean = false;
   activeWhatsapp: boolean = false;
   formdata = new FormData();
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
+  }
 
   contactForm = new FormGroup({
     firstName: new FormControl('', [Validators.required]),

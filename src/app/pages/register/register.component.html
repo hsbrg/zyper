@@ -1,5 +1,9 @@
-<app-cookieconsent></app-cookieconsent>
-<div class="contact-container">
+<div class="loader" *ngIf="showLoader">
+  <div class="spinner-border" role="status"></div>
+</div>
+
+<div class="contact-container" *ngIf="!showLoader">
+  <app-cookieconsent></app-cookieconsent>
   <div class="float-footer">
     Delivering Generative AI Marketing Performance To Small Businesses Worldwide
   </div>
@@ -135,31 +139,31 @@
                 ></label
               >
               <div class="d-sm-flex gap-2 phone-code">
-                  <p-dropdown
-                    [options]="countryDialCodes"
-                    optionLabel="name"
-                    [filter]="true"
-                    filterBy="code"
-                    [showClear]="true"
-                    placeholder="Select a Country"
-                    (onChange)="selectCountryCode($event)"
-                  >
-                    <ng-template pTemplate="selectedItem" let-selectedOption>
-                      <div class="flex align-items-center gap-2">
-                        <div>
-                          {{ selectedOption.dial_code }}({{
-                            selectedOption.code
-                          }})
-                        </div>
+                <p-dropdown
+                  [options]="countryDialCodes"
+                  optionLabel="name"
+                  [filter]="true"
+                  filterBy="code"
+                  [showClear]="true"
+                  placeholder="Select a Country"
+                  (onChange)="selectCountryCode($event)"
+                >
+                  <ng-template pTemplate="selectedItem" let-selectedOption>
+                    <div class="flex align-items-center gap-2">
+                      <div>
+                        {{ selectedOption.dial_code }}({{
+                          selectedOption.code
+                        }})
                       </div>
-                    </ng-template>
-                    <ng-template let-country pTemplate="item">
-                      <div class="flex align-items-center gap-2">
-                        <div>{{ country.dial_code }}({{ country.code }})</div>
-                      </div>
-                    </ng-template>
-                  </p-dropdown>
-                
+                    </div>
+                  </ng-template>
+                  <ng-template let-country pTemplate="item">
+                    <div class="flex align-items-center gap-2">
+                      <div>{{ country.dial_code }}({{ country.code }})</div>
+                    </div>
+                  </ng-template>
+                </p-dropdown>
+
                 <!-- <select
                   class="phone-code"
                   id="phone-code"
@@ -262,8 +266,6 @@
                 <option value="" *ngIf="country && country.invalid" disabled>
                   Please select country
                 </option>
-                
-
               </select>
               <input
                 class="form-control"

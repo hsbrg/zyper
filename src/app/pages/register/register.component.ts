@@ -1,9 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { parsePhoneNumber } from 'libphonenumber-js';
+import { CookieService } from 'ngx-cookie-service';
+import { getWindow } from 'ssr-window';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +16,7 @@ import { parsePhoneNumber } from 'libphonenumber-js';
 })
 export class RegisterComponent implements OnInit {
   activeWhatsapp: boolean = false;
+  showLoader: boolean = false;
   countryList: any = [];
   stateList: any = [];
   countryDialCodes: any = [];
@@ -21,11 +25,26 @@ export class RegisterComponent implements OnInit {
   selectedDialCode: any = '';
 
   formdata = new FormData();
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private cookieService: CookieService,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
   ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
     this.getCountries();
     this.getCountryCode();
+    if (!this.cookieService.get('reg_reloaded')) {
+      this.cookieService.set('reg_reloaded', 'no reload');
+      this.document.location.reload();
+    } else {
+      this.cookieService.delete('reg_reloaded');
+    }
   }
 
   contactForm = new FormGroup({
@@ -126,6 +145,9 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
+
+
+
 
   submit(e: any) {
     e.preventDefault();

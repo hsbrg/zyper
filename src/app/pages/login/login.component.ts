@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, Injectable } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { jwtDecode } from 'jwt-decode';
 import { Route, Router } from '@angular/router';
 import { LoginserviceService } from '../loginservice.service';
-import { ssrWindow } from 'ssr-window';
+import { getWindow, ssrWindow } from 'ssr-window';
+import { CookieService } from 'ngx-cookie-service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -14,10 +16,28 @@ import { ssrWindow } from 'ssr-window';
 })
 export class LoginComponent implements OnInit {
   activeWhatsapp: boolean = false;
+  showLoader: boolean = false;
   formdata = new FormData();
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private cookieService: CookieService,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+    if (!this.cookieService.get('login_reloaded')) {
+      this.cookieService.set('login_reloaded', 'no reload');
+      this.document.location.reload();
+    } else {
+      this.cookieService.delete('login_reloaded');
+    }
+     this.showLoader = true;
+     getWindow().addEventListener('load', () => {
+       this.showLoader = false;
+     });
+  }
 
   contactForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -57,7 +77,7 @@ export class LoginComponent implements OnInit {
   }
 }
 
-(ssrWindow as any).handleCredentialResponse = (
+(getWindow() as any).handleCredentialResponse = (
   response: any,
   myService: LoginserviceService
 ) => {
@@ -93,10 +113,10 @@ async function fetchdata(logindata: any) {
 
   if (responsebody.success) {
     Swal.fire(responsebody.status);
-    window.location.replace('/comingsoon');
+    getWindow().location.replace('/comingsoon');
   } else {
     Swal.fire(responsebody.status);
-    window.location.replace('/reg');
+    getWindow().location.replace('/reg');
   }
 
   return response;

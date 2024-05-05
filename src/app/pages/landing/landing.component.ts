@@ -7,9 +7,14 @@ import { Meta } from '@angular/platform-browser';
 })
 export class LandingComponent implements OnInit {
   activeWhatsapp: boolean = false;
+  showLoader: boolean = false;
 
   constructor(private meta: Meta) {}
   ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
   }
 
   SwitchWhatsappState() {

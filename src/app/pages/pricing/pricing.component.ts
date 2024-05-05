@@ -10,6 +10,7 @@ import { getWindow } from 'ssr-window';
   styleUrls: ['./pricing.component.scss'],
 })
 export class PricingComponent implements OnInit {
+  showLoader: boolean = false;
   monthlyServices: any = monthly;
   annuallyServices: any = annually;
 
@@ -65,6 +66,10 @@ export class PricingComponent implements OnInit {
   annually: boolean = false;
 
   ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
     this.meta.updateTag({
       name: 'description',
       content:

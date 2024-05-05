@@ -8,6 +8,7 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./knowledge-center.component.scss'],
 })
 export class KnowledgeCenterComponent implements OnInit {
+  showLoader: boolean = false;
   activeWhatsapp: boolean = false;
 
   blogs: any;
@@ -15,6 +16,10 @@ export class KnowledgeCenterComponent implements OnInit {
   constructor(private http: HttpClient, private meta: Meta) {}
 
   ngOnInit(): void {
+    this.showLoader = true;
+    window.addEventListener('load', () => {
+      this.showLoader = false;
+    });
     this.http.get<any>('https://api.zyper.ai/crm/getblogs/').subscribe((res) => {
       const data: any = res;
       this.blogs = res.blogs
