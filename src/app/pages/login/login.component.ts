@@ -26,17 +26,16 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-   
     if (!this.cookieService.get('login_reloaded')) {
       this.cookieService.set('login_reloaded', 'no reload');
       this.document.location.reload();
     } else {
       this.cookieService.delete('login_reloaded');
     }
-     this.showLoader = true;
-     getWindow().addEventListener('load', () => {
-       this.showLoader = false;
-     });
+    this.showLoader = true;
+    getWindow().addEventListener('load', () => {
+      this.showLoader = false;
+    });
   }
 
   contactForm = new FormGroup({
@@ -64,10 +63,10 @@ export class LoginComponent implements OnInit {
         const data: any = res;
         if (data.success) {
           Swal.fire(data.status);
-          this.router.navigateByUrl('/comingsoon');
+          // this.router.navigateByUrl('/comingsoon');
         } else {
           Swal.fire(data.status);
-          this.router.navigateByUrl('/reg');
+          // this.router.navigateByUrl('/reg');
         }
       });
   }

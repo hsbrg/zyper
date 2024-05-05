@@ -1,0 +1,7 @@
+{
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "python.analysis.autoFormatStrings": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
