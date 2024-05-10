@@ -6,7 +6,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 50px 0 0 0;
+  padding: 70px 0 0 0;
   font-family: var(--font_mona_sans);
   background-color: var(--text-color1);
   // color: var(--text-color);
@@ -174,7 +174,7 @@
         .header {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
           // padding: 25px 0;
           background-color: var(--bg-color2);
@@ -182,6 +182,13 @@
           color: var(--white-color);
           // min-height: 307px;
           height: 250px;
+          padding: 25px 20px 20px;
+
+          .price-content-container{
+            height: 100%;
+            display: flex;
+          }
+          
           h3 {
             font-size: 18px;
             text-align: center;
@@ -359,6 +366,46 @@
           }
         }
       }
+    }
+  }
+  .agencies-container{
+    margin-top: 50px;
+    width: 95%;
+    max-width: 443px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--bg-color1);
+
+    @media screen and (max-width: 576px){
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 400px){
+      padding: 20px 10px;
+    }
+
+    p{
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-color1);
+      text-align: center;
+    }
+    button{
+      padding: 10px 20px;
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: var(--text-color1);
+      color: var(--bg-color1);
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 0 5px var(--bg-color2);
+      border-radius: 5px;
+    
     }
   }
   .footer {

@@ -10,7 +10,6 @@ import { getWindow } from 'ssr-window';
   styleUrls: ['./pricing.component.scss'],
 })
 export class PricingComponent implements OnInit {
-  showLoader: boolean = false;
   monthlyServices: any = monthly;
   annuallyServices: any = annually;
 
@@ -66,10 +65,6 @@ export class PricingComponent implements OnInit {
   annually: boolean = false;
 
   ngOnInit(): void {
-    this.showLoader = true;
-    window.addEventListener('load', () => {
-      this.showLoader = false;
-    });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -585,21 +580,21 @@ let monthly = [
       },
       {
         name: 'Business Listings',
-        description: 'Google business Listing',
+        description: 'Google Business Listing (GMB)',
         checked: true,
         weight: 0,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        description: '2 posts per month - design content and posting included',
+        description: '2 posts per month on Instagram, All Inclusive',
         checked: true,
         weight: 0,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '-',
+        description: 'None',
         checked: false,
         uncheckable: true,
         weight: 0,
@@ -607,7 +602,7 @@ let monthly = [
       },
       {
         name: 'Social Media (Ads)',
-        description: '-',
+        description: 'None',
         checked: false,
         uncheckable: true,
         weight: 0,
@@ -615,7 +610,7 @@ let monthly = [
       },
       {
         name: 'Email Marketing',
-        description: '1 email design per week ** + 1000 emails per months',
+        description: '2 email campaigns per month',
         checked: true,
         weight: 0,
         monthly: true,
@@ -630,8 +625,7 @@ let monthly = [
       },
       {
         name: 'Whastapp Marketing',
-        description:
-          '1 whatsapp campaign per week includes design and content ***',
+        description: '2 whatsapp campaigns per month',
         checked: false,
         uncheckable: true,
         weight: 0,
@@ -644,7 +638,7 @@ let monthly = [
       {
         name: 'Website Development',
         price: '$899',
-        description: 'for a 10 page static website',
+        description: 'for a 10 page website',
         checked: true,
         weight: 899,
         fixed: true,
@@ -652,30 +646,29 @@ let monthly = [
       {
         name: 'Business Listings',
         price: '$19.99',
-        description: '/ month for one location - 5 listings',
+        description: ' /month - Google Business Listing, Apple Maps, Bing Maps',
         checked: true,
         weight: 19.99,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$69',
-        description:
-          '/ month for design, content and post for 8 posts per month',
+        price: '$68',
+        description: ' /month for 10 posts - Instagram, Facebook and Linkedin',
         checked: true,
-        weight: 69,
+        weight: 68,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '20% of spend [ upto budget $5000 / month ]',
+        description: '20% of monthly  spend of upto $5000',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '20% of spend [ upto budget $5000 / month ]',
+        description: '20% of monthly  spend of upto $5000',
         checked: true,
         weight: 0,
         variable: true,
@@ -683,8 +676,7 @@ let monthly = [
       {
         name: 'Email Marketing',
         price: '$29.99',
-        description:
-          '/ month 2000 emails per month + 4 custom email designs + content',
+        description: ' / month for 5 email campaigns',
         checked: true,
         weight: 29.99,
         monthly: true,
@@ -693,8 +685,7 @@ let monthly = [
       {
         name: 'Whastapp Marketing',
         price: '$39.99',
-        description:
-          '/ month for single user, 5 whatsapp marketing campaigns to select contact list - includes complete campaign design. Sending fees to Meta extra',
+        description: '/month  for 5 whatsapp marketing campaigns',
         checked: true,
         weight: 39.99,
         monthly: true,
@@ -723,21 +714,21 @@ let monthly = [
       {
         name: 'Social Media (Posts)',
         price: '$99',
-        description: '/ month for design content and post 16 posts per month',
+        description: '/month for 20 posts - Instagram, Facebook and Linkedin',
         checked: true,
         weight: 99,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '15% of spend [ $5000-$10000 per month ]',
+        description: '16% of monthly spend between  [$5000-$10000]',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '15% of spend [ $5000-$10000 per month ]',
+        description: '16% of monthly spend between  [$5000-$10000]',
         checked: true,
         weight: 0,
         variable: true,
@@ -745,8 +736,7 @@ let monthly = [
       {
         name: 'Email Marketing',
         price: '$49.99',
-        description:
-          '/ month 10000 emails per month + 12 custom email design + content',
+        description: '/month for 15 email campaigns',
         checked: true,
         weight: 49.99,
         monthly: true,
@@ -755,7 +745,7 @@ let monthly = [
         name: 'SEO Services',
         price: '$499',
         description:
-          '/ month - Monthly Audit + performance + keyword research + crawl infrastructure + 2 fresh landing pages per month',
+          '/month - Monthly perfomance and keyword Audit, 2 fresh landing pages / mo. with keyword research linked content ',
         checked: true,
         weight: 499,
         monthly: true,
@@ -763,8 +753,7 @@ let monthly = [
       {
         name: 'Whastapp Marketing',
         price: '$55.99',
-        description:
-          '/ month for 10 whatsapp campaigns to select contact list - includes complete content design . Sending fees to meta extra',
+        description: '/month for 10 whatsapp campaigns',
         checked: true,
         weight: 55.99,
         monthly: true,
@@ -782,7 +771,7 @@ let monthly = [
       {
         name: 'Business Listings',
         price: '$49.99',
-        description: '/ month - upto 10 locations, 10 listings',
+        description: '/month - upto 10 locations, 10 listings',
         checked: true,
         weight: 49.99,
         monthly: true,
@@ -791,21 +780,21 @@ let monthly = [
         name: 'Social Media (Posts)',
         price: '$199',
         description:
-          '/ month for design , content and posting of 30 posts / month',
+          '/month for 40 posts - Instagram, Facebook, Linkedin, Tiktok',
         checked: true,
         weight: 199,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '12% of spend [ budget > $10,000 per month ]',
+        description: '12% of monthly spend greater than $10,000 per month',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '12% of spend [ budget > $10,000 per month ]',
+        description: '12% of monthly spend greater than $10,000 per month',
         checked: true,
         weight: 0,
         variable: true,
@@ -813,8 +802,7 @@ let monthly = [
       {
         name: 'Email Marketing',
         price: '$129.99',
-        description:
-          '/ month 25000 emails per month + 30 email design + content',
+        description: '/month For 30 email campaigns',
         checked: true,
         weight: 129.99,
         monthly: true,
@@ -823,7 +811,7 @@ let monthly = [
         name: 'SEO Services',
         price: '$899',
         description:
-          '/ month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
+          '/month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
         checked: true,
         weight: 899,
         monthly: true,
@@ -831,8 +819,7 @@ let monthly = [
       {
         name: 'Whastapp Marketing',
         price: '$129.99',
-        description:
-          '/ month for 30 whastapp campaigns for select contact list - includes complete campaign design . Sending fees to meta extra',
+        description: '/month for 30 whastapp campaigns',
         checked: true,
         weight: 129.99,
         monthly: true,
@@ -854,21 +841,21 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        description: 'Google business Listing',
+        description: 'Google Business Listing (GMB)',
         checked: true,
         weight: 0,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        description: '2 posts per month - design content and posting included',
+        description: '2 posts per month on Instagram, All Inclusive',
         checked: true,
         weight: 0,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '-',
+        description: 'None',
         checked: false,
         checkable: false,
         weight: 0,
@@ -876,7 +863,7 @@ const annually = [
       },
       {
         name: 'Social Media (Ads)',
-        description: '-',
+        description: 'None',
         checked: false,
         checkable: false,
         weight: 0,
@@ -884,7 +871,7 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        description: '1 email design per week ** + 1000 emails per months',
+        description: '2 email campaigns per month',
         checked: true,
         weight: 0,
         monthly: true,
@@ -899,8 +886,7 @@ const annually = [
       },
       {
         name: 'Whastapp Marketing',
-        description:
-          '1 whatsapp campaign per week includes design and content ***',
+        description: '2 whatsapp campaigns per month',
         checked: false,
         checkable: false,
         weight: 0,
@@ -912,16 +898,16 @@ const annually = [
     basicServices: [
       {
         name: 'Website Development',
-        price: '$899',
+        price: '$699',
         description: 'for a 10 page static website',
         checked: true,
-        weight: 899,
+        weight: 699,
         fixed: true,
       },
       {
         name: 'Business Listings',
         price: '$15.99',
-        description: '/ month for one location - 5 listings',
+        description: '/month - Google Business Listing, Apple Maps, Bing Maps',
         checked: true,
         weight: 15.99,
         monthly: true,
@@ -929,22 +915,21 @@ const annually = [
       {
         name: 'Social Media (Posts)',
         price: '$49',
-        description:
-          '/ month for design, content and post for 10 posts per month',
+        description: '/month for 10 posts - Instagram, Facebook and Linkedin',
         checked: true,
         weight: 49,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '18% of spend [ upto budget $5000 / month ]',
+        description: '18% of monthly  spend of upto $5000',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '18% of spend [ upto budget $5000 / month ]',
+        description: '18% of monthly  spend of upto $5000',
         checked: true,
         weight: 0,
         variable: true,
@@ -953,17 +938,16 @@ const annually = [
         name: 'Email Marketing',
         price: '$25.99',
         description:
-          '/ month 2000 emails per month + 5 custom email designs + content',
+          '/month 2000 emails per month + 5 custom email designs + content',
         checked: true,
         weight: 25.99,
         monthly: true,
       },
-      { name: 'SEO Services', description: 'None', checked: true, weight: 2 },
+      { name: 'SEO Services', description: 'None', checked: true, weight: 0 },
       {
         name: 'Whastapp Marketing',
         price: '$26.99',
-        description:
-          '/ month for 5 whatsapp marketing campaigns to select contact list - includes complete campaign design. Sending fees to Meta extra',
+        description: '/month for 5 whatsapp marketing campaigns',
         checked: true,
         weight: 26.99,
         monthly: true,
@@ -984,7 +968,7 @@ const annually = [
       {
         name: 'Business Listings',
         price: '$25.99',
-        description: '/ month - 2 locations - 10 listings',
+        description: '/month - 2 locations - 10 listings',
         checked: true,
         weight: 25.99,
         monthly: true,
@@ -992,21 +976,21 @@ const annually = [
       {
         name: 'Social Media (Posts)',
         price: '$79',
-        description: '/ month for design content and post 20 posts per month',
+        description: '/month for design content and post 20 posts per month ',
         checked: true,
         weight: 79,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '14% of spend [ $5000-$10000 per month ]',
+        description: '14% of monthly spend between  $5000-$10000',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '14% of spend [ $5000-$10000 per month ]',
+        description: '14% of monthly spend between  $5000-$10000',
         checked: true,
         weight: 0,
         variable: true,
@@ -1014,26 +998,24 @@ const annually = [
       {
         name: 'Email Marketing',
         price: '$45.99',
-        description:
-          '/ month 10000 emails per months + 20 custom email design + content',
+        description: '/month for 15 email campaigns',
         checked: true,
         weight: 45.99,
         monthly: true,
       },
       {
         name: 'SEO Services',
-        price: '$299',
+        price: '$399',
         description:
-          '/ month - Monthly Audit + performance + keyword research + crawl infrastructure + 2 fresh landing pages per month',
+          '/month - Monthly perfomance and keyword Audit, 2 fresh landing pages / mo. with keyword research linked content',
         checked: true,
-        weight: 299,
+        weight: 399,
         monthly: true,
       },
       {
         name: 'Whastapp Marketing',
         price: '$45.99',
-        description:
-          'for 10 whatsapp campaigns to select contact list - includes complete content design . Sending fees to meta extra',
+        description: 'month for 10 whatsapp campaigns',
         checked: true,
         weight: 45.99,
         monthly: true,
@@ -1050,58 +1032,56 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        price: '$39.99',
-        description: '/ month - upto 10 locations, 10 listings',
+        price: '$49.99',
+        description: '/month - upto 10 locations, 10 listings ',
         checked: true,
-        weight: 39.99,
+        weight: 49.99,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$179',
+        price: '$199',
         description:
-          '/ month for design , content and posting of 30 posts / month',
+          '/month for 40 posts - Instagram, Facebook, Linkedin, Tiktok',
         checked: true,
-        weight: 179,
+        weight: 199,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '10% of spend [ budget > $10,000 per month ]',
+        description: '12% of monthly spend greater than $10,000 per month',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '10% of spend [ budget > $10,000 per month ]',
+        description: '12% of monthly spend greater than $10,000 per month',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Email Marketing',
-        price: '$109.99',
-        description:
-          '/ month 25000 emails per months + 40 email design + content',
+        price: '$129.99',
+        description: '/month For 30 email campaigns',
         checked: true,
-        weight: 109.99,
+        weight: 129.99,
         monthly: true,
       },
       {
         name: 'SEO Services',
-        price: '$699',
+        price: '$899',
         description:
-          '/ month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
+          '/month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
         checked: true,
-        weight: 699,
+        weight: 899,
         monthly: true,
       },
       {
         name: 'Whastapp Marketing',
-        price: '$79.99',
-        description:
-          '/ month for 30 whastapp campaigns for select contact list - includes complete campaign design . Sending fees to meta extra',
+        price: '$129.99',
+        description: '/month for 30 whastapp campaigns',
         checked: true,
         weight: 79.99,
         monthly: true,

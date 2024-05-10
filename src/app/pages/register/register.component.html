@@ -143,7 +143,7 @@
                   [options]="countryDialCodes"
                   optionLabel="name"
                   [filter]="true"
-                  filterBy="code"
+                  filterBy="dial_code"
                   [showClear]="true"
                   placeholder="Select a Country"
                   (onChange)="selectCountryCode($event)"
@@ -300,6 +300,35 @@
                 formControlName="address"
                 placeholder="Address"
               /> -->
+            </div>
+            <div class="mb-3">
+              <label for="smb" class="form-label">
+                Are u a freelancer agency or smb ?<span
+                  class="error"
+                  *ngIf="password && password.invalid && password.touched"
+                  >*required</span
+                >
+              </label>
+              <div class="input-container">
+                <div class="inputs">
+                  <input
+                    name="smb"
+                    formControlName="freelancer_or_smb"
+                    type="radio"
+                    value="yes"
+                  />
+                  <span>yes</span>
+                </div>
+                <div class="inputs">
+                  <input
+                    name="smb"
+                    formControlName="freelancer_or_smb"
+                    type="radio"
+                    value="no"
+                  />
+                  <span>no</span>
+                </div>
+              </div>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label"

@@ -40,7 +40,8 @@
       position: relative;
       z-index: 2;
 
-      h2 {
+      h2,
+      .are_you {
         font-size: 60px;
         margin-bottom: 20px;
         font-weight: 600;
@@ -56,6 +57,9 @@
           font-size: 40px;
         }
       }
+      // .are_you{
+      //   color: var(--accent-color1) !important;
+      // }
       p {
         font-size: 22px;
         text-align: center;
@@ -71,10 +75,6 @@
         }
       }
 
-      .are_you {
-        font-size: 24px;
-      }
-
       .flexd {
         display: flex;
         justify-content: center;
@@ -87,46 +87,49 @@
         .cardd {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-end;
           flex-direction: column;
           padding: 20px;
           background-color: white;
           min-width: 300px;
           width: 30%;
+          border-radius: 5px;
           @media screen and (max-width: 576px) {
             width: 95%;
           }
           p {
-            font-size: 14px !important;
+            font-size: 17px !important;
             color: black;
             box-shadow: none;
             text-shadow: none !important;
           }
-        }
-      }
 
-      .buttons {
-        margin-top: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+          .buttons {
+            width: 100%;
+            margin-top: 0px !important;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
 
-        button {
-          background-color: var(--bg-color2);
-          color: var(--white-color);
-          padding: 10px;
-          width: 250px;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 0 10px var(--accent-color1);
-          // &:hover {
-          //   background-color: var(--accent-color1);
-          //   color: var(--text-color2);
-          // }
+            button {
+              background-color: var(--bg-color2);
+              color: var(--white-color);
+              padding: 10px;
+              width: 100%;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              border-radius: 8px;
+              box-shadow: 0 0 10px var(--bg-color2);
+              // &:hover {
+              //   background-color: var(--accent-color1);
+              //   color: var(--text-color2);
+              // }
+            }
+          }
         }
       }
     }

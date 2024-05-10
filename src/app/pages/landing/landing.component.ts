@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { ssrWindow } from 'ssr-window';
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -7,14 +9,10 @@ import { Meta } from '@angular/platform-browser';
 })
 export class LandingComponent implements OnInit {
   activeWhatsapp: boolean = false;
-  showLoader: boolean = false;
 
   constructor(private meta: Meta) {}
   ngOnInit(): void {
-    this.showLoader = true;
-    window.addEventListener('load', () => {
-      this.showLoader = false;
-    });
+  
   }
 
   SwitchWhatsappState() {

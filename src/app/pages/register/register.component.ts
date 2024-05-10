@@ -56,6 +56,7 @@ export class RegisterComponent implements OnInit {
     country: new FormControl('', [Validators.required]),
     state: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
+    freelancer_or_smb: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
 
@@ -89,6 +90,10 @@ export class RegisterComponent implements OnInit {
 
   get address() {
     return this.contactForm.get('address');
+  }
+
+  get freelancer_or_smb() {
+    return this.contactForm.get('freelancer_or_smb');
   }
 
   get password() {
@@ -185,6 +190,10 @@ export class RegisterComponent implements OnInit {
       this.formdata.append(
         'address',
         this.contactForm.get('address')!.value ?? ''
+      );
+      this.formdata.append(
+        'freelancer_or_smb',
+        this.contactForm.get('freelancer_or_smb')!.value ?? ''
       );
       this.formdata.append(
         'password',
