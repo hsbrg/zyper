@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
         const data: any = res;
         if (data.success) {
           Swal.fire(data.status);
-          // this.router.navigateByUrl('/comingsoon');
+          this.router.navigateByUrl('/comingsoon');
         } else {
           Swal.fire(data.status);
           // this.router.navigateByUrl('/reg');
