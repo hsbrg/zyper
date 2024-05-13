@@ -199,6 +199,10 @@ export class RegisterComponent implements OnInit {
         'password',
         this.contactForm.get('password')!.value ?? ''
       );
+      this.formdata.append(
+        'state',
+        this.contactForm.get('state')!.value ?? ''
+      );
 
       this.http
         .post<any>('https://api.zyper.ai/crm/buildprofile/', this.formdata)
