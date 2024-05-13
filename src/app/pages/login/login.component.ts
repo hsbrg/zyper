@@ -23,7 +23,12 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private cookieService: CookieService,
     @Inject(DOCUMENT) private document: Document
-  ) {}
+  ) {
+    // this.showLoader = true;
+    // getWindow().addEventListener('load', () => {
+    //   this.showLoader = false;
+    // });
+  }
 
   ngOnInit(): void {
     if (!this.cookieService.get('login_reloaded')) {
@@ -32,10 +37,6 @@ export class LoginComponent implements OnInit {
     } else {
       this.cookieService.delete('login_reloaded');
     }
-    this.showLoader = true;
-    getWindow().addEventListener('load', () => {
-      this.showLoader = false;
-    });
   }
 
   contactForm = new FormGroup({

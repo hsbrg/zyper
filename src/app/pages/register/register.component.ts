@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { parsePhoneNumber } from 'libphonenumber-js';
 import { CookieService } from 'ngx-cookie-service';
-import { getWindow } from 'ssr-window';
+import { getWindow, ssrWindow } from 'ssr-window';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -33,12 +33,9 @@ export class RegisterComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.showLoader = true;
-    window.addEventListener('load', () => {
-      this.showLoader = false;
-    });
     this.getCountries();
     this.getCountryCode();
+  
     if (!this.cookieService.get('reg_reloaded')) {
       this.cookieService.set('reg_reloaded', 'no reload');
       this.document.location.reload();
@@ -150,9 +147,6 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-
-
-
 
   submit(e: any) {
     e.preventDefault();
