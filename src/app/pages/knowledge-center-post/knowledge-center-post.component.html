@@ -52,7 +52,7 @@
           By <span>{{ blog.author }}</span> on {{ blog.dateadded }}
         </div>
         <img src="https://api.zyper.ai{{ blog.coverphoto }}" alt="" />
-        <p class="description" [innerHTML]="blog.content"></p>
+        <div class="description" [innerHTML]="blog.content"></div>
       </div>
     </div>
   </div>

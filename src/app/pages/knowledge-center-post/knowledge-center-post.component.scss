@@ -91,10 +91,11 @@
           object-fit: cover;
           margin-top: 20px;
         }
-        p.description {
+        div.description {
           font-size: 18px;
-          max-lines: 1;
-          overflow: hidden;
+          word-wrap: break-word;
+          // max-lines: 1;
+          // overflow: hidden;
           margin-top: 20px;
         }
       }
