@@ -127,7 +127,7 @@ const routes: Routes = [
     component: KnowledgeCenterPostComponent,
   },
   {
-    path: 'comingsoon',
+    path: 'demo',
     component: ComingsoonComponent,
   },
 ];

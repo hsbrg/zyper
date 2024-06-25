@@ -41,30 +41,30 @@ export class LoginComponent implements OnInit {
 
   contactForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
+    // password: new FormControl('', [Validators.required]),
   });
 
   get email() {
     return this.contactForm.get('email');
   }
 
-  get password() {
-    return this.contactForm.get('password');
-  }
+  // get password() {
+  //   return this.contactForm.get('password');
+  // }
 
   submit() {
     this.formdata.append('email', this.contactForm.get('email')!.value ?? '');
-    this.formdata.append(
-      'password',
-      this.contactForm.get('password')!.value ?? ''
-    );
+    // this.formdata.append(
+    //   'password',
+    //   this.contactForm.get('password')!.value ?? ''
+    // );
     this.http
       .post<any>('https://api.zyper.ai/crm/login/', this.formdata)
       .subscribe((res) => {
         const data: any = res;
         if (data.success) {
           Swal.fire(data.status);
-          this.router.navigateByUrl('/comingsoon');
+          this.router.navigateByUrl('/demo');
         } else {
           Swal.fire(data.status);
           // this.router.navigateByUrl('/reg');
@@ -113,7 +113,7 @@ async function fetchdata(logindata: any) {
 
   if (responsebody.success) {
     Swal.fire(responsebody.status);
-    getWindow().location.replace('/comingsoon');
+    getWindow().location.replace('/demo');
   } else {
     Swal.fire(responsebody.status);
     getWindow().location.replace('/reg');
