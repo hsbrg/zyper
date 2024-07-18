@@ -1,131 +1,151 @@
-.coming-soon-container{
-    .float-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-        font-size: 15px;
-        background-color: var(--bg-color1);
-        text-align: center;
-        color: white;
-        padding: 10px 0;
+.coming-soon-container {
+  .float-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    font-size: 15px;
+    background-color: var(--bg-color1);
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+  }
+  .float-icons {
+    color: #ffffff;
+    top: calc(97% - 130px);
+    left: calc(97% - 56px);
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      img {
+        width: 56px;
+        height: 56px;
       }
-      .float-icons {
-        color: #ffffff;
-        top: calc(97% - 130px);
+      i {
+        top: calc(97% - 140px);
         left: calc(97% - 56px);
         position: fixed;
-        z-index: 100;
-        display: flex;
-        gap: 15px;
-        // gap: 10px;
-        flex-direction: column;
-    
-        button {
-          background: transparent;
-          border: none;
-          outline: none;
-          padding: 0;
-          img {
-            width: 56px;
-            height: 56px;
-            // margin: 10px;
-          }
-          i {
-            top: calc(97% - 140px);
-            left: calc(97% - 56px);
-            position: fixed;
-            font-size: 56px;
-            color: #fff;
-          }
-        }
-        .whatsapp-popup {
-          position: fixed;
-          bottom: 160px;
-          right: 40px;
-          // height: 310px;
-          width: 250px;
-          padding: 10px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          background: var(--bg-color1);
-          .details {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            .img {
-              width: 50px;
-              height: 50px;
-              padding: 10px;
-              border-radius: 50%;
-              background-color: white;
-              img {
-                width: 100%;
-                height: 100%;
-              }
-            }
-            p {
-              color: white;
-              font-size: 14px;
-              margin-bottom: 0;
-              text-align: center;
-            }
-          }
-          .qr_code {
-            display: flex;
-            width: 100%;
-            // height: 100%;
-            padding: 10px;
-            background-color: white;
-            img {
-              width: 100%;
-              // height: 100%;
-            }
-          }
-          p {
-            color: white;
-            font-size: 14px;
-            margin-bottom: 0;
-            text-align: center;
-            a {
-              color: white;
-              text-decoration: none;
-              font-size: 14px;
-              // font-family: var(--font_bebas_neue);
-              transition: all 0.2s ease-in-out;
-            }
-            span {
-              font-size: 18px;
-              font-weight: 600;
-            }
-          }
-        }
+        font-size: 56px;
+        color: #fff;
       }
-      .coming-soon-navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-        background-color: var(--bg-color1);
-      }
-      .content{
+    }
+    .whatsapp-popup {
+      position: fixed;
+      bottom: 160px;
+      right: 40px;
+      width: 250px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--bg-color1);
+      .details {
         display: flex;
-        justify-content: center;
         align-items: center;
+        gap: 20px;
+        .img {
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+          border-radius: 50%;
+          background-color: white;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p {
+          color: white;
+          font-size: 14px;
+          margin-bottom: 0;
+          text-align: center;
+        }
+      .waitlist-h1 {
+        color: rgb(75, 2, 2);
+        font-size: 20000px;
+        margin-top: 10px;
+      }
+      }
+      .qr_code {
+        display: flex;
         width: 100%;
-        position: relative;
-        background-color: black;
-        height: 100vh;
-        // height: 400px;
-
-        video{
-            max-width: 500px;
-            width: 95%;
-            aspect-ratio: 1/1;
-            object-fit: contain;
+        padding: 10px;
+        background-color: white;
+        img {
+          width: 100%;
         }
       }
+      p {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 0;
+        text-align: center;
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 14px;
+          transition: all 0.2s ease-in-out;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .coming-soon-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--bg-color1);
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    height: 100vh;
+
+    video {
+      max-width: 500px;
+      width: 95%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+    }
+  }
+
+  .coming-soon-text h1,
+  .beta-launch-text h1 {
+    color: #eee9e6; /* Change text color */
+    font-size: 2.5rem; /* Change font size */
+    font-family: 'Arial', sans-serif; /* Change font style */
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Add some margin */
+  }
+
+  /* Additional styling if needed */
+  .beta-launch-text {
+   /* Background color */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  .coming-soon-text {
+   /* Background color */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+  }
 }

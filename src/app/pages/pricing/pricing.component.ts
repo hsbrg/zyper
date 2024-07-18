@@ -97,10 +97,10 @@ export class PricingComponent implements OnInit {
         // Check if the property exists and if it's a string before replacing
         if (typeof service[key].weight === 'string') {
           if (service[key].fixed) {
-            totalFixedPrice += parseFloat(service[key].weight.replace('$', ''));
+            totalFixedPrice += parseFloat(service[key].weight.replace('Rs', ''));
           } else if (service[key].monthly) {
             totalMonthlyPrice += parseFloat(
-              service[key].weight.replace('$', '')
+              service[key].weight.replace('Rs.', '')
             );
           }
         } else {
@@ -245,7 +245,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_freePriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_freePriceMonthly += parseFloat(service.weight);
@@ -253,7 +253,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_freePriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_freePriceMonthly += parseFloat(service.weight);
@@ -272,7 +272,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_basicPriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_basicPriceMonthly += parseFloat(service.weight);
@@ -280,7 +280,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_basicPriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_basicPriceMonthly += parseFloat(service.weight);
@@ -299,7 +299,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_growthPriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_growthPriceMonthly += parseFloat(service.weight);
@@ -307,7 +307,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_growthPriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_growthPriceMonthly += parseFloat(service.weight);
@@ -324,7 +324,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_fastPriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_fastPriceMonthly += parseFloat(service.weight);
@@ -332,7 +332,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_fastPriceMonthly += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_fastPriceMonthly += parseFloat(service.weight);
@@ -363,7 +363,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_freePriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_freePriceAnnually += parseFloat(service.weight);
@@ -371,7 +371,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_freePriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_freePriceAnnually += parseFloat(service.weight);
@@ -390,7 +390,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_basicPriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_basicPriceAnnually += parseFloat(service.weight);
@@ -398,7 +398,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_basicPriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_basicPriceAnnually += parseFloat(service.weight);
@@ -419,7 +419,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_growthPriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_growthPriceAnnually += parseFloat(service.weight);
@@ -427,7 +427,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_growthPriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_growthPriceAnnually += parseFloat(service.weight);
@@ -446,7 +446,7 @@ export class PricingComponent implements OnInit {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_fastPriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.fixed_fastPriceAnnually += parseFloat(service.weight);
@@ -454,7 +454,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_fastPriceAnnually += parseFloat(
-              service.weight.replace('$', '')
+              service.weight.replace('Rs', '')
             );
           } else {
             this.monthly_fastPriceAnnually += parseFloat(service.weight);
@@ -637,26 +637,26 @@ let monthly = [
     basicServices: [
       {
         name: 'Website Development',
-        price: '$899',
+        price: 'Rs. 74,999',
         description: 'for a 10 page website',
         checked: true,
-        weight: 899,
+        weight: 74999,
         fixed: true,
       },
       {
         name: 'Business Listings',
-        price: '$19.99',
+        price: 'Rs.1699',
         description: ' /month - Google Business Listing, Apple Maps, Bing Maps',
         checked: true,
-        weight: 19.99,
+        weight: 1699,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$68',
+        price: 'Rs.5699',
         description: ' /month for 10 posts - Instagram, Facebook and Linkedin',
         checked: true,
-        weight: 68,
+        weight: 5699,
         monthly: true,
       },
       {
@@ -675,19 +675,19 @@ let monthly = [
       },
       {
         name: 'Email Marketing',
-        price: '$29.99',
+        price: 'Rs.2499',
         description: ' / month for 5 email campaigns',
         checked: true,
-        weight: 29.99,
+        weight: 2499,
         monthly: true,
       },
       { name: 'SEO Services', description: 'None', checked: true, weight: 0 },
       {
         name: 'Whastapp Marketing',
-        price: '$39.99',
+        price: 'Rs.3399',
         description: '/month  for 5 whatsapp marketing campaigns',
         checked: true,
-        weight: 39.99,
+        weight: 3399,
         monthly: true,
       },
     ],
@@ -696,27 +696,27 @@ let monthly = [
     growthServices: [
       {
         name: 'Website Development',
-        price: '$1999',
+        price: '169999',
         description:
           'for basic ecommerce website or static website with 15 pages',
         checked: true,
-        weight: 1999,
+        weight: 169999,
         fixed: true,
       },
       {
         name: 'Business Listings',
-        price: '$29.99',
+        price: 'Rs.2499',
         description: '/ month - 2 locations - 10 listings',
         checked: true,
-        weight: 29.99,
+        weight: 2499,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$99',
+        price: 'Rs.8299',
         description: '/month for 20 posts - Instagram, Facebook and Linkedin',
         checked: true,
-        weight: 99,
+        weight: 8299,
         monthly: true,
       },
       {
@@ -728,34 +728,34 @@ let monthly = [
       },
       {
         name: 'Social Media (Ads)',
-        description: '16% of monthly spend between  [$5000-$10000]',
+        description: '16% of monthly spend between  [$420000-$840000]',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Email Marketing',
-        price: '$49.99',
+        price: 'Rs.4199',
         description: '/month for 15 email campaigns',
         checked: true,
-        weight: 49.99,
+        weight: 4199,
         monthly: true,
       },
       {
         name: 'SEO Services',
-        price: '$499',
+        price: 'Rs.41999',
         description:
           '/month - Monthly perfomance and keyword Audit, 2 fresh landing pages / mo. with keyword research linked content ',
         checked: true,
-        weight: 499,
+        weight: 41999,
         monthly: true,
       },
       {
         name: 'Whastapp Marketing',
-        price: '$55.99',
+        price: 'Rs.4699',
         description: '/month for 10 whatsapp campaigns',
         checked: true,
-        weight: 55.99,
+        weight: 4699,
         monthly: true,
       },
     ],
@@ -770,19 +770,19 @@ let monthly = [
       },
       {
         name: 'Business Listings',
-        price: '$49.99',
+        price: 'Rs.4199',
         description: '/month - upto 10 locations, 10 listings',
         checked: true,
-        weight: 49.99,
+        weight: 4199,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$199',
+        price: 'Rs.16649',
         description:
           '/month for 40 posts - Instagram, Facebook, Linkedin, Tiktok',
         checked: true,
-        weight: 199,
+        weight: 16649,
         monthly: true,
       },
       {
@@ -801,27 +801,27 @@ let monthly = [
       },
       {
         name: 'Email Marketing',
-        price: '$129.99',
+        price: 'Rs.10899',
         description: '/month For 30 email campaigns',
         checked: true,
-        weight: 129.99,
+        weight: 10899,
         monthly: true,
       },
       {
         name: 'SEO Services',
-        price: '$899',
+        price: 'Rs.75199',
         description:
           '/month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
         checked: true,
-        weight: 899,
+        weight: 75199,
         monthly: true,
       },
       {
         name: 'Whastapp Marketing',
-        price: '$129.99',
+        price: 'Rs.10899',
         description: '/month for 30 whastapp campaigns',
         checked: true,
-        weight: 129.99,
+        weight: 10899,
         monthly: true,
       },
     ],
@@ -898,7 +898,7 @@ const annually = [
     basicServices: [
       {
         name: 'Website Development',
-        price: '$699',
+        price: 'Rs. 58499',
         description: 'for a 10 page static website',
         checked: true,
         weight: 699,
@@ -906,7 +906,7 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        price: '$15.99',
+        price: 'Rs.1399',
         description: '/month - Google Business Listing, Apple Maps, Bing Maps',
         checked: true,
         weight: 15.99,
@@ -936,20 +936,20 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        price: '$25.99',
+        price: 'Rs.2199',
         description:
           '/month 2000 emails per month + 5 custom email designs + content',
         checked: true,
-        weight: 25.99,
+        weight: 2199,
         monthly: true,
       },
       { name: 'SEO Services', description: 'None', checked: true, weight: 0 },
       {
         name: 'Whastapp Marketing',
-        price: '$26.99',
+        price: 'Rs.2299',
         description: '/month for 5 whatsapp marketing campaigns',
         checked: true,
-        weight: 26.99,
+        weight: 2299,
         monthly: true,
       },
     ],
@@ -958,27 +958,27 @@ const annually = [
     growthServices: [
       {
         name: 'Website Development',
-        price: '$1999',
+        price: 'Rs.167999',
         description:
           'for basic ecommerce website or static website with 15 pages',
         checked: true,
-        weight: 1999,
+        weight: 167999,
         fixed: true,
       },
       {
         name: 'Business Listings',
-        price: '$25.99',
+        price: 'Rs.2199',
         description: '/month - 2 locations - 10 listings',
         checked: true,
-        weight: 25.99,
+        weight: 2199,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$79',
+        price: 'Rs.6699',
         description: '/month for design content and post 20 posts per month ',
         checked: true,
-        weight: 79,
+        weight: 6699,
         monthly: true,
       },
       {
@@ -997,27 +997,27 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        price: '$45.99',
+        price: 'Rs.3899',
         description: '/month for 15 email campaigns',
         checked: true,
-        weight: 45.99,
+        weight: 3899,
         monthly: true,
       },
       {
         name: 'SEO Services',
-        price: '$399',
+        price: 'Rs.33999',
         description:
           '/month - Monthly perfomance and keyword Audit, 2 fresh landing pages / mo. with keyword research linked content',
         checked: true,
-        weight: 399,
+        weight: 33999,
         monthly: true,
       },
       {
         name: 'Whastapp Marketing',
-        price: '$45.99',
+        price: 'Rs.3899',
         description: 'month for 10 whatsapp campaigns',
         checked: true,
-        weight: 45.99,
+        weight: 3899,
         monthly: true,
       },
     ],
@@ -1032,19 +1032,19 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        price: '$49.99',
+        price: '$3899',
         description: '/month - upto 10 locations, 10 listings ',
         checked: true,
-        weight: 49.99,
+        weight: 3899,
         monthly: true,
       },
       {
         name: 'Social Media (Posts)',
-        price: '$199',
+        price: '16999',
         description:
           '/month for 40 posts - Instagram, Facebook, Linkedin, Tiktok',
         checked: true,
-        weight: 199,
+        weight: 16999,
         monthly: true,
       },
       {
@@ -1063,7 +1063,7 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        price: '$129.99',
+        price: 'Rs.10999',
         description: '/month For 30 email campaigns',
         checked: true,
         weight: 129.99,
@@ -1071,7 +1071,7 @@ const annually = [
       },
       {
         name: 'SEO Services',
-        price: '$899',
+        price: 'Rs.74999',
         description:
           '/month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
         checked: true,
@@ -1080,7 +1080,7 @@ const annually = [
       },
       {
         name: 'Whastapp Marketing',
-        price: '$129.99',
+        price: 'Rs.10999',
         description: '/month for 30 whastapp campaigns',
         checked: true,
         weight: 79.99,
