@@ -100,7 +100,7 @@ export class PricingComponent implements OnInit {
             totalFixedPrice += parseFloat(service[key].weight.replace('Rs', ''));
           } else if (service[key].monthly) {
             totalMonthlyPrice += parseFloat(
-              service[key].weight.replace('Rs.', '')
+              service[key].weight.replace('₹', '')
             );
           }
         } else {
@@ -637,7 +637,7 @@ let monthly = [
     basicServices: [
       {
         name: 'Website Development',
-        price: 'Rs. 74,999',
+        price: '₹ 74,999',
         description: 'for a 10 page website',
         checked: true,
         weight: 74999,
@@ -645,7 +645,7 @@ let monthly = [
       },
       {
         name: 'Business Listings',
-        price: 'Rs.1699',
+        price: '₹1699',
         description: ' /month - Google Business Listing, Apple Maps, Bing Maps',
         checked: true,
         weight: 1699,
@@ -653,7 +653,7 @@ let monthly = [
       },
       {
         name: 'Social Media (Posts)',
-        price: 'Rs.5699',
+        price: '₹5699',
         description: ' /month for 10 posts - Instagram, Facebook and Linkedin',
         checked: true,
         weight: 5699,
@@ -675,7 +675,7 @@ let monthly = [
       },
       {
         name: 'Email Marketing',
-        price: 'Rs.2499',
+        price: '₹2499',
         description: ' / month for 5 email campaigns',
         checked: true,
         weight: 2499,
@@ -684,7 +684,7 @@ let monthly = [
       { name: 'SEO Services', description: 'None', checked: true, weight: 0 },
       {
         name: 'Whastapp Marketing',
-        price: 'Rs.3399',
+        price: '₹3399',
         description: '/month  for 5 whatsapp marketing campaigns',
         checked: true,
         weight: 3399,
@@ -705,7 +705,7 @@ let monthly = [
       },
       {
         name: 'Business Listings',
-        price: 'Rs.2499',
+        price: '₹2499',
         description: '/ month - 2 locations - 10 listings',
         checked: true,
         weight: 2499,
@@ -713,7 +713,7 @@ let monthly = [
       },
       {
         name: 'Social Media (Posts)',
-        price: 'Rs.8299',
+        price: '₹8299',
         description: '/month for 20 posts - Instagram, Facebook and Linkedin',
         checked: true,
         weight: 8299,
@@ -735,7 +735,7 @@ let monthly = [
       },
       {
         name: 'Email Marketing',
-        price: 'Rs.4199',
+        price: '₹4199',
         description: '/month for 15 email campaigns',
         checked: true,
         weight: 4199,
@@ -743,7 +743,7 @@ let monthly = [
       },
       {
         name: 'SEO Services',
-        price: 'Rs.41999',
+        price: '₹41999',
         description:
           '/month - Monthly perfomance and keyword Audit, 2 fresh landing pages / mo. with keyword research linked content ',
         checked: true,
@@ -752,7 +752,7 @@ let monthly = [
       },
       {
         name: 'Whastapp Marketing',
-        price: 'Rs.4699',
+        price: '₹4699',
         description: '/month for 10 whatsapp campaigns',
         checked: true,
         weight: 4699,
@@ -770,7 +770,7 @@ let monthly = [
       },
       {
         name: 'Business Listings',
-        price: 'Rs.4199',
+        price: '₹4199',
         description: '/month - upto 10 locations, 10 listings',
         checked: true,
         weight: 4199,
@@ -778,7 +778,7 @@ let monthly = [
       },
       {
         name: 'Social Media (Posts)',
-        price: 'Rs.16649',
+        price: '₹16649',
         description:
           '/month for 40 posts - Instagram, Facebook, Linkedin, Tiktok',
         checked: true,
@@ -801,7 +801,7 @@ let monthly = [
       },
       {
         name: 'Email Marketing',
-        price: 'Rs.10899',
+        price: '₹10899',
         description: '/month For 30 email campaigns',
         checked: true,
         weight: 10899,
@@ -809,7 +809,7 @@ let monthly = [
       },
       {
         name: 'SEO Services',
-        price: 'Rs.75199',
+        price: '₹75199',
         description:
           '/month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
         checked: true,
@@ -818,7 +818,7 @@ let monthly = [
       },
       {
         name: 'Whastapp Marketing',
-        price: 'Rs.10899',
+        price: '₹10899',
         description: '/month for 30 whastapp campaigns',
         checked: true,
         weight: 10899,
@@ -898,7 +898,7 @@ const annually = [
     basicServices: [
       {
         name: 'Website Development',
-        price: 'Rs. 58499',
+        price: '₹ 58499',
         description: 'for a 10 page static website',
         checked: true,
         weight: 699,
@@ -906,7 +906,7 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        price: 'Rs.1399',
+        price: '₹1399',
         description: '/month - Google Business Listing, Apple Maps, Bing Maps',
         checked: true,
         weight: 15.99,
@@ -936,7 +936,7 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        price: 'Rs.2199',
+        price: '₹2199',
         description:
           '/month 2000 emails per month + 5 custom email designs + content',
         checked: true,
@@ -946,7 +946,7 @@ const annually = [
       { name: 'SEO Services', description: 'None', checked: true, weight: 0 },
       {
         name: 'Whastapp Marketing',
-        price: 'Rs.2299',
+        price: '₹2299',
         description: '/month for 5 whatsapp marketing campaigns',
         checked: true,
         weight: 2299,
@@ -958,7 +958,7 @@ const annually = [
     growthServices: [
       {
         name: 'Website Development',
-        price: 'Rs.167999',
+        price: '₹167999',
         description:
           'for basic ecommerce website or static website with 15 pages',
         checked: true,
@@ -967,7 +967,7 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        price: 'Rs.2199',
+        price: '₹2199',
         description: '/month - 2 locations - 10 listings',
         checked: true,
         weight: 2199,
@@ -975,7 +975,7 @@ const annually = [
       },
       {
         name: 'Social Media (Posts)',
-        price: 'Rs.6699',
+        price: '₹6699',
         description: '/month for design content and post 20 posts per month ',
         checked: true,
         weight: 6699,
@@ -997,7 +997,7 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        price: 'Rs.3899',
+        price: '₹3899',
         description: '/month for 15 email campaigns',
         checked: true,
         weight: 3899,
@@ -1005,7 +1005,7 @@ const annually = [
       },
       {
         name: 'SEO Services',
-        price: 'Rs.33999',
+        price: '₹33999',
         description:
           '/month - Monthly perfomance and keyword Audit, 2 fresh landing pages / mo. with keyword research linked content',
         checked: true,
@@ -1014,7 +1014,7 @@ const annually = [
       },
       {
         name: 'Whastapp Marketing',
-        price: 'Rs.3899',
+        price: '₹3899',
         description: 'month for 10 whatsapp campaigns',
         checked: true,
         weight: 3899,
@@ -1063,7 +1063,7 @@ const annually = [
       },
       {
         name: 'Email Marketing',
-        price: 'Rs.10999',
+        price: '₹10999',
         description: '/month For 30 email campaigns',
         checked: true,
         weight: 129.99,
@@ -1071,7 +1071,7 @@ const annually = [
       },
       {
         name: 'SEO Services',
-        price: 'Rs.74999',
+        price: '₹74999',
         description:
           '/month - Monthly Audit + performance + keyword research + crawl infrastructure + 5 fresh landing pages per month based on keyword research + competitor keywords',
         checked: true,
@@ -1080,7 +1080,7 @@ const annually = [
       },
       {
         name: 'Whastapp Marketing',
-        price: 'Rs.10999',
+        price: '₹10999',
         description: '/month for 30 whastapp campaigns',
         checked: true,
         weight: 79.99,
