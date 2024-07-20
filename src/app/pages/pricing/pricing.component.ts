@@ -4,6 +4,7 @@ import { Meta } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 import { getWindow } from 'ssr-window';
 
+
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
@@ -13,7 +14,9 @@ export class PricingComponent implements OnInit {
   monthlyServices: any = monthly;
   annuallyServices: any = annually;
 
+
   activeWhatsapp: boolean = false;
+
 
   monthly_freePriceMonthly: any =
     this.cookieService.get('monthly_freePriceMonthly') || 0;
@@ -23,6 +26,7 @@ export class PricingComponent implements OnInit {
     this.cookieService.get('monthly_growthPriceMonthly') || 0;
   monthly_fastPriceMonthly: any =
     this.cookieService.get('monthly_fastPriceMonthly') || 0;
+
 
   // fixed price in monthly section
   fixed_freePriceMonthly: any =
@@ -34,6 +38,7 @@ export class PricingComponent implements OnInit {
   fixed_fastPriceMonthly: any =
     this.cookieService.get('fixed_fastPriceMonthly') || 0;
 
+
   // monthly services price in annually section
   monthly_freePriceAnnually: any =
     this.cookieService.get('monthly_freePriceAnnually') || 0;
@@ -43,6 +48,7 @@ export class PricingComponent implements OnInit {
     this.cookieService.get('monthly_growthPriceAnnually') || 0;
   monthly_fastPriceAnnually: any =
     this.cookieService.get('monthly_fastPriceAnnually') || 0;
+
 
   // fixed price in annually section
   fixed_freePriceAnnually: any =
@@ -54,6 +60,7 @@ export class PricingComponent implements OnInit {
   fixed_fastPriceAnnually: any =
     this.cookieService.get('fixed_fastPriceAnnually') || 0;
 
+
   constructor(
     private meta: Meta,
     private elementRef: ElementRef,
@@ -63,6 +70,7 @@ export class PricingComponent implements OnInit {
     // monthly services price in monthly section
   }
   annually: boolean = false;
+
 
   ngOnInit(): void {
     this.meta.updateTag({
@@ -77,6 +85,7 @@ export class PricingComponent implements OnInit {
     });
     // this.annually = cookieService.get('annuallySelected') === 'true';
 
+
     this.calculatePriceOnLoad();
     // console.log(this.monthlyServices);
   }
@@ -88,16 +97,18 @@ export class PricingComponent implements OnInit {
     let totalFixedPrice = 0;
     let totalMonthlyPrice = 0;
 
+
     if (service[index].variable !== undefined) {
       service[index].variable = !service[index].variable;
     }
+
 
     for (let key in service) {
       if (service[key].checked) {
         // Check if the property exists and if it's a string before replacing
         if (typeof service[key].weight === 'string') {
           if (service[key].fixed) {
-            totalFixedPrice += parseFloat(service[key].weight.replace('Rs', ''));
+            totalFixedPrice += parseFloat(service[key].weight.replace('₹', ''));
           } else if (service[key].monthly) {
             totalMonthlyPrice += parseFloat(
               service[key].weight.replace('₹', '')
@@ -112,6 +123,7 @@ export class PricingComponent implements OnInit {
         }
       }
     }
+
 
     // Update the total price variable based on the service type
     if (isMonthly) {
@@ -204,7 +216,9 @@ export class PricingComponent implements OnInit {
       }
     }
 
+
     this.roundOffPrices();
+
 
     // Save the status of the selected services in local storage
     if (isMonthly) {
@@ -226,26 +240,30 @@ export class PricingComponent implements OnInit {
     this.monthly_growthPriceMonthly = 0;
     this.monthly_fastPriceMonthly = 0;
 
+
     // for fixed services in monthly section
     this.fixed_freePriceMonthly = 0;
     this.fixed_basicPriceMonthly = 0;
     this.fixed_growthPriceMonthly = 0;
     this.fixed_fastPriceMonthly = 0;
 
+
     // this.freePriceMonthly = 0;
     // this.basicPriceMonthly = 0;
     // this.growthPriceMonthly = 0;
     // this.fastPriceMonthly = 0;
 
+
     this.monthlyServices[0].freeServices.forEach((service: any) => {
       this.monthly_freePriceMonthly = parseFloat(this.monthly_freePriceMonthly);
       this.fixed_freePriceMonthly = parseFloat(this.fixed_freePriceMonthly);
+
 
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_freePriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_freePriceMonthly += parseFloat(service.weight);
@@ -253,7 +271,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_freePriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_freePriceMonthly += parseFloat(service.weight);
@@ -262,17 +280,19 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     this.monthlyServices[1].basicServices.forEach((service: any) => {
       this.monthly_basicPriceMonthly = parseFloat(
         this.monthly_basicPriceMonthly
       );
       this.fixed_basicPriceMonthly = parseFloat(this.fixed_basicPriceMonthly);
 
+
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_basicPriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_basicPriceMonthly += parseFloat(service.weight);
@@ -280,7 +300,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_basicPriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_basicPriceMonthly += parseFloat(service.weight);
@@ -289,17 +309,19 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     this.monthlyServices[2].growthServices.forEach((service: any) => {
       this.monthly_growthPriceMonthly = parseFloat(
         this.monthly_growthPriceMonthly
       );
       this.fixed_growthPriceMonthly = parseFloat(this.fixed_growthPriceMonthly);
 
+
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_growthPriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_growthPriceMonthly += parseFloat(service.weight);
@@ -307,7 +329,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_growthPriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_growthPriceMonthly += parseFloat(service.weight);
@@ -316,15 +338,17 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     this.monthlyServices[3].fastServices.forEach((service: any) => {
       this.monthly_fastPriceMonthly = parseFloat(this.monthly_fastPriceMonthly);
       this.fixed_fastPriceMonthly = parseFloat(this.fixed_fastPriceMonthly);
+
 
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_fastPriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_fastPriceMonthly += parseFloat(service.weight);
@@ -332,7 +356,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_fastPriceMonthly += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_fastPriceMonthly += parseFloat(service.weight);
@@ -341,11 +365,13 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     // for annually services in monthly section
     this.monthly_freePriceAnnually = 0;
     this.monthly_basicPriceAnnually = 0;
     this.monthly_growthPriceAnnually = 0;
     this.monthly_fastPriceAnnually = 0;
+
 
     // for fixed services in monthly section
     this.fixed_freePriceAnnually = 0;
@@ -353,17 +379,19 @@ export class PricingComponent implements OnInit {
     this.fixed_growthPriceAnnually = 0;
     this.fixed_fastPriceAnnually = 0;
 
+
     this.annuallyServices[0].freeServices.forEach((service: any) => {
       this.monthly_freePriceAnnually = parseFloat(
         this.monthly_freePriceAnnually
       );
       this.fixed_freePriceAnnually = parseFloat(this.fixed_freePriceAnnually);
 
+
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_freePriceAnnually += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_freePriceAnnually += parseFloat(service.weight);
@@ -371,7 +399,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_freePriceAnnually += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_freePriceAnnually += parseFloat(service.weight);
@@ -380,17 +408,19 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     this.annuallyServices[1].basicServices.forEach((service: any) => {
       this.monthly_basicPriceAnnually = parseFloat(
         this.monthly_basicPriceAnnually
       );
       this.fixed_basicPriceAnnually = parseFloat(this.fixed_basicPriceAnnually);
 
+
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_basicPriceAnnually += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_basicPriceAnnually += parseFloat(service.weight);
@@ -398,7 +428,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_basicPriceAnnually += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_basicPriceAnnually += parseFloat(service.weight);
@@ -406,6 +436,7 @@ export class PricingComponent implements OnInit {
         }
       }
     });
+
 
     this.annuallyServices[2].growthServices.forEach((service: any) => {
       this.monthly_growthPriceAnnually = parseFloat(
@@ -415,11 +446,12 @@ export class PricingComponent implements OnInit {
         this.fixed_growthPriceAnnually
       );
 
+
       if (service.checked) {
         if (service.fixed) {
           if (typeof service.weight === 'string') {
             this.fixed_growthPriceAnnually += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.fixed_growthPriceAnnually += parseFloat(service.weight);
@@ -427,7 +459,7 @@ export class PricingComponent implements OnInit {
         } else if (service.monthly) {
           if (typeof service.weight === 'string') {
             this.monthly_growthPriceAnnually += parseFloat(
-              service.weight.replace('Rs', '')
+              service.weight.replace('₹', '')
             );
           } else {
             this.monthly_growthPriceAnnually += parseFloat(service.weight);
@@ -436,11 +468,13 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     this.annuallyServices[3].fastServices.forEach((service: any) => {
       this.monthly_fastPriceAnnually = parseFloat(
         this.monthly_fastPriceAnnually
       );
       this.fixed_fastPriceAnnually = parseFloat(this.fixed_fastPriceAnnually);
+
 
       if (service.checked) {
         if (service.fixed) {
@@ -463,6 +497,7 @@ export class PricingComponent implements OnInit {
       }
     });
 
+
     this.roundOffPrices();
   }
   togglePricingOption(event: any) {
@@ -478,10 +513,12 @@ export class PricingComponent implements OnInit {
     );
     this.monthly_fastPriceMonthly = Math.round(this.monthly_fastPriceMonthly);
 
+
     this.fixed_freePriceMonthly = Math.round(this.fixed_freePriceMonthly);
     this.fixed_basicPriceMonthly = Math.round(this.fixed_basicPriceMonthly);
     this.fixed_growthPriceMonthly = Math.round(this.fixed_growthPriceMonthly);
     this.fixed_fastPriceMonthly = Math.round(this.fixed_fastPriceMonthly);
+
 
     this.monthly_freePriceAnnually = Math.round(this.monthly_freePriceAnnually);
     this.monthly_basicPriceAnnually = Math.round(
@@ -492,10 +529,12 @@ export class PricingComponent implements OnInit {
     );
     this.monthly_fastPriceAnnually = Math.round(this.monthly_fastPriceAnnually);
 
+
     this.fixed_freePriceAnnually = Math.round(this.fixed_freePriceAnnually);
     this.fixed_basicPriceAnnually = Math.round(this.fixed_basicPriceAnnually);
     this.fixed_growthPriceAnnually = Math.round(this.fixed_growthPriceAnnually);
     this.fixed_fastPriceAnnually = Math.round(this.fixed_fastPriceAnnually);
+
 
     // Save rounded prices in local storage
     this.cookieService.set(
@@ -515,6 +554,7 @@ export class PricingComponent implements OnInit {
       this.monthly_fastPriceMonthly.toString()
     );
 
+
     this.cookieService.set(
       'fixed_freePriceMonthly',
       this.fixed_freePriceMonthly.toString()
@@ -532,6 +572,7 @@ export class PricingComponent implements OnInit {
       this.fixed_fastPriceMonthly.toString()
     );
 
+
     this.cookieService.set(
       'monthly_freePriceAnnually',
       this.monthly_freePriceAnnually.toString()
@@ -548,6 +589,7 @@ export class PricingComponent implements OnInit {
       'monthly_fastPriceAnnually',
       this.monthly_fastPriceAnnually.toString()
     );
+
 
     this.cookieService.set(
       'fixed_freePriceAnnually',
@@ -567,6 +609,7 @@ export class PricingComponent implements OnInit {
     );
   }
 }
+
 
 let monthly = [
   {
@@ -637,7 +680,7 @@ let monthly = [
     basicServices: [
       {
         name: 'Website Development',
-        price: '₹ 74,999',
+        price: '₹74,999',
         description: 'for a 10 page website',
         checked: true,
         weight: 74999,
@@ -661,14 +704,14 @@ let monthly = [
       },
       {
         name: 'PPC Paid marketing',
-        description: '20% of monthly  spend of upto $5000',
+        description: '20% of monthly  spend of upto ₹420000',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '20% of monthly  spend of upto $5000',
+        description: '20% of monthly  spend of upto ₹420000',
         checked: true,
         weight: 0,
         variable: true,
@@ -696,7 +739,7 @@ let monthly = [
     growthServices: [
       {
         name: 'Website Development',
-        price: '169999',
+        price: '₹169999',
         description:
           'for basic ecommerce website or static website with 15 pages',
         checked: true,
@@ -721,14 +764,14 @@ let monthly = [
       },
       {
         name: 'PPC Paid marketing',
-        description: '16% of monthly spend between  [$5000-$10000]',
+        description: '16% of monthly spend between  [₹420000-₹840000]',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '16% of monthly spend between  [$420000-$840000]',
+        description: '16% of monthly spend between  [₹420000-₹840000]',
         checked: true,
         weight: 0,
         variable: true,
@@ -787,14 +830,14 @@ let monthly = [
       },
       {
         name: 'PPC Paid marketing',
-        description: '12% of monthly spend greater than $10,000 per month',
+        description: '12% of monthly spend greater than ₹10,000 per month',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '12% of monthly spend greater than $10,000 per month',
+        description: '12% of monthly spend greater than ₹10,000 per month',
         checked: true,
         weight: 0,
         variable: true,
@@ -828,6 +871,7 @@ let monthly = [
   },
 ];
 
+
 const annually = [
   {
     freeServices: [
@@ -835,6 +879,7 @@ const annually = [
         name: 'Website Development',
         description: '4 page basic website *',
         checked: true,
+
 
         weight: 0,
         fixed: true,
@@ -914,22 +959,22 @@ const annually = [
       },
       {
         name: 'Social Media (Posts)',
-        price: '$49',
+        price: '₹4200',
         description: '/month for 10 posts - Instagram, Facebook and Linkedin',
         checked: true,
-        weight: 49,
+        weight: 4200,
         monthly: true,
       },
       {
         name: 'PPC Paid marketing',
-        description: '18% of monthly  spend of upto $5000',
+        description: '18% of monthly  spend of upto ₹420000',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '18% of monthly  spend of upto $5000',
+        description: '18% of monthly  spend of upto ₹420000',
         checked: true,
         weight: 0,
         variable: true,
@@ -983,14 +1028,14 @@ const annually = [
       },
       {
         name: 'PPC Paid marketing',
-        description: '14% of monthly spend between  $5000-$10000',
+        description: '14% of monthly spend between  ₹420000-₹840000',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '14% of monthly spend between  $5000-$10000',
+        description: '14% of monthly spend between  ₹420000-₹840000',
         checked: true,
         weight: 0,
         variable: true,
@@ -1032,7 +1077,7 @@ const annually = [
       },
       {
         name: 'Business Listings',
-        price: '$3899',
+        price: '₹3899',
         description: '/month - upto 10 locations, 10 listings ',
         checked: true,
         weight: 3899,
@@ -1040,7 +1085,7 @@ const annually = [
       },
       {
         name: 'Social Media (Posts)',
-        price: '16999',
+        price: '₹16999',
         description:
           '/month for 40 posts - Instagram, Facebook, Linkedin, Tiktok',
         checked: true,
@@ -1049,14 +1094,14 @@ const annually = [
       },
       {
         name: 'PPC Paid marketing',
-        description: '12% of monthly spend greater than $10,000 per month',
+        description: '12% of monthly spend greater than ₹840000 per month',
         checked: true,
         weight: 0,
         variable: true,
       },
       {
         name: 'Social Media (Ads)',
-        description: '12% of monthly spend greater than $10,000 per month',
+        description: '12% of monthly spend greater than ₹840000 per month',
         checked: true,
         weight: 0,
         variable: true,
@@ -1089,3 +1134,6 @@ const annually = [
     ],
   },
 ];
+
+
+

@@ -1,7 +1,7 @@
 <app-cookieconsent></app-cookieconsent>
 <div class="pricing-container">
   <div class="float-footer">
-    100% AI Platform that Fully Runs your Marketing to Deliver Superior Results
+    100% AI Platform that Fully Runs your Marketing to Deliver Superior Results
   </div>
   <div class="float-icons">
     <button (click)="SwitchWhatsappState()">
@@ -70,12 +70,13 @@
           <div class="price-content-container">
             <div class="price-content">
               <p class="">
-                <span class="dollar">$</span>
+                <span class="dollar">₹</span>
                 <span class="price"> {{ monthly_freePriceMonthly }}</span>
               </p>
               <p>/month</p>
             </div>
           </div>
+
 
           <button class="" routerLink="/demo">Start</button>
         </div>
@@ -315,6 +316,7 @@
       </div>
     </section>
 
+
     <section class="annually" *ngIf="annually == true">
       <div class="free cards">
         <div class="header">
@@ -328,6 +330,7 @@
               <p>/month</p>
             </div>
           </div>
+
 
           <button class="" routerLink="/demo">Start</button>
         </div>
@@ -595,3 +598,6 @@
     <app-footer></app-footer>
   </div>
 </div>
+
+
+

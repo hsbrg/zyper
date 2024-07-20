@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
   {
     path: 'landing',
-    component: LandingComponent,
+    component: SmbComponent,
   },
   {
     path: 'agency',
@@ -48,7 +48,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: LandingComponent,
+    component: SmbComponent,
   },
   {
     path: 'footer',
