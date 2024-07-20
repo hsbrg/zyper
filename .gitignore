@@ -42,4 +42,8 @@ testem.log
 Thumbs.db
 
 
-/deploy.sh
+deploy.sh
+browser/* 
+server/*
+3rdpartylicenses.txt
+prerendered-routes.json
