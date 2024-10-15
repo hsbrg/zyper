@@ -9,6 +9,7 @@ import { ssrWindow, getWindow } from 'ssr-window';
 export class NavbarTwoComponent implements OnInit {
   isCollapsed = false;
   isDropdownVisible = false;
+  isPricingDropdownVisible =false
   constructor() {}
 
   ngOnInit(): void {
@@ -43,6 +44,12 @@ export class NavbarTwoComponent implements OnInit {
 
   toggleDropdown() {
     this.isDropdownVisible = !this.isDropdownVisible;
+    this.isPricingDropdownVisible =false
+    // console.log(this.isDropdownVisible);
+  }
+    priceingtoggleDropdown() {
+      this.isPricingDropdownVisible = !this.isPricingDropdownVisible;
+      this.isDropdownVisible =false
     // console.log(this.isDropdownVisible);
   }
 }

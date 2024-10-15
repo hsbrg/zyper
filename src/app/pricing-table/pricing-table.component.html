@@ -1,0 +1,603 @@
+<app-cookieconsent></app-cookieconsent>
+<div class="pricing-container">
+  <div class="float-footer">
+    100% AI Platform that Fully Runs your Marketing to Deliver Superior Results
+  </div>
+  <div class="float-icons">
+    <button (click)="SwitchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0);"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919667238666"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="pricing-navbar">
+    <app-navbar-two></app-navbar-two>
+  </div>
+  <div class="headerbar">
+    <!-- <h3 class="mb-3">Zyper.ai</h3> -->
+    <!-- <p>
+      Everything you need to scale your business bundled and discounted
+      <span>See bundles</span>
+    </p> -->
+  </div>
+  <div class="pricing-tab">
+    <div class="tab-content">
+      <div class="monthly tab" [ngClass]="{'active-tab': !annually}" (click)="togglePricingOption($event)">Monthly</div>
+      <div class="annually tab" [ngClass]="{'active-tab': annually}" (click)="togglePricingOption($event)">Annually</div>
+    </div>
+    <!-- <p>Monthly</p>
+    <input
+      type="checkbox"
+      name=""
+      id=""
+      (change)="togglePricingOption($event)"
+      [(ngModel)]="annually"
+    />
+    <p>Annually</p> -->
+  </div>
+  <div class="pricing-table">
+    <section class="monthly" *ngIf="annually == false">
+      <div class="free cards">
+        <div class="header">
+          <h3>Free Always</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p class="">
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_freePriceMonthly }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+          </div>
+
+
+          <button class="" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let free of monthlyServices[0].freeServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                  *ngIf="free.uncheckable"
+                    [(ngModel)]="free.checked"
+                    type="checkbox"
+                    disabled="true"
+                    (change)="
+                      calculatePrice(i, monthlyServices[0].freeServices, true)
+                    "
+                  />
+                  <input
+                  *ngIf="!free.uncheckable"
+                    [(ngModel)]="free.checked"
+                    type="checkbox"
+                    disabled="true"
+                    (change)="
+                      calculatePrice(i, monthlyServices[0].freeServices, true)
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ free.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="free.price">{{ free.price }}</span>
+                  {{ free.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">* Select/Deselect to update pricing</p>
+        </div>
+      </div>
+      <!-- <div class="basic cards">
+        <div class="header">
+          <h3>Basic Marketing</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_basicPriceMonthly }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+            <div class="vline"></div>
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ fixed_basicPriceMonthly }}</span>
+              </p>
+              <p>one time cost</p>
+            </div>
+          </div>
+          <div class="variable_cost">
+            <div *ngFor="let basic of monthlyServices[1].basicServices">
+              <span *ngIf="basic.variable">+{{ basic.name }}</span>
+            </div>
+          </div>
+          <button class="mt-4" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let basic of monthlyServices[1].basicServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                    [(ngModel)]="basic.checked"
+                    type="checkbox"
+                    (change)="
+                      calculatePrice(i, monthlyServices[1].basicServices, true)
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ basic.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="basic.price">{{
+                    basic.price
+                  }}</span>
+                  {{ basic.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">* Select/Deselect to update pricing</p>
+        </div>
+      </div> -->
+      <div class="growth cards">
+        <div class="header">
+          <h3>Growth Marketing</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_growthPriceMonthly }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+            <div class="vline"></div>
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ fixed_growthPriceMonthly }}</span>
+              </p>
+              <p>one time cost</p>
+            </div>
+          </div>
+          <div class="variable_cost">
+            <div *ngFor="let growth of monthlyServices[2].growthServices">
+              <span *ngIf="growth.variable">+{{ growth.name }}</span>
+            </div>
+          </div>
+          <button class="mt-4" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let growth of monthlyServices[2].growthServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                    [(ngModel)]="growth.checked"
+                    type="checkbox"
+                    (change)="
+                      calculatePrice(i, monthlyServices[2].growthServices, true)
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ growth.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="growth.price">{{
+                    growth.price
+                  }}</span>
+                  {{ growth.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">
+            * <span class="fw-bold">2 Users </span> <br />
+            ** Select/Deselect to update pricing
+          </p>
+        </div>
+      </div>
+      <!-- <div class="fast cards">
+        <div class="header">
+          <h3>Fast Scaleup</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_fastPriceMonthly }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+            <div class="vline"></div>
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ fixed_fastPriceMonthly }}</span>
+              </p>
+              <p>one time cost</p>
+            </div>
+          </div>
+          <div class="variable_cost">
+            <div *ngFor="let fast of monthlyServices[3].fastServices">
+              <span *ngIf="fast.variable">+{{ fast.name }}</span>
+            </div>
+          </div>
+          <button class="mt-4" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let fast of monthlyServices[3].fastServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                    [(ngModel)]="fast.checked"
+                    type="checkbox"
+                    (change)="
+                      calculatePrice(i, monthlyServices[3].fastServices, true)
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ fast.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="fast.price">{{ fast.price }}</span>
+                  {{ fast.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">
+            * <span class="fw-bold">4 Users </span> <br />
+            ** Select/Deselect to update pricing
+          </p>
+        </div>
+      </div> -->
+    </section>
+
+
+    <section class="annually" *ngIf="annually == true">
+      <div class="free cards">
+        <div class="header">
+          <h3>Free Always</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p class="">
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_freePriceMonthly }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+          </div>
+
+
+          <button class="" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let free of annuallyServices[0].freeServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <!-- <input
+                    [(ngModel)]="free.checked"
+                    type="checkbox"
+                    disabled="true"
+                    (change)="
+                      calculatePrice(i, annuallyServices[0].freeServices, false)
+                    "
+                  /> -->
+                  <input
+                  *ngIf="free.uncheckable"
+                    [(ngModel)]="free.checked"
+                    type="checkbox"
+                    disabled="true"
+                    (change)="
+                      calculatePrice(i, annuallyServices[0].freeServices, false)
+                    "
+                  />
+                  <input
+                  *ngIf="!free.uncheckable"
+                    [(ngModel)]="free.checked"
+                    type="checkbox"
+                    disabled="true"
+                    (change)="
+                      calculatePrice(i, annuallyServices[0].freeServices, false)
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ free.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="free.price">{{ free.price }}</span>
+                  {{ free.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">* Select/Deselect to update pricing</p>
+        </div>
+      </div>
+      <!-- <div class="basic cards">
+        <div class="header">
+          <h3>Basic Marketing</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_basicPriceAnnually }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+            <div class="vline"></div>
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ fixed_basicPriceAnnually }}</span>
+              </p>
+              <p>one time cost</p>
+            </div>
+          </div>
+          <div class="variable_cost">
+            <div *ngFor="let basic of annuallyServices[1].basicServices">
+              <span *ngIf="basic.variable">+{{ basic.name }}</span>
+            </div>
+          </div>
+          <button class="mt-4" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let basic of annuallyServices[1].basicServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                    [(ngModel)]="basic.checked"
+                    type="checkbox"
+                    (change)="
+                      calculatePrice(
+                        i,
+                        annuallyServices[1].basicServices,
+                        false
+                      )
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ basic.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="basic.price">{{
+                    basic.price
+                  }}</span>
+                  {{ basic.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">* Select/Deselect to update pricing</p>
+        </div>
+      </div> -->
+      <div class="growth cards">
+        <div class="header">
+          <h3>Growth Marketing</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_growthPriceAnnually }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+            <div class="vline"></div>
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ fixed_growthPriceAnnually }}</span>
+              </p>
+              <p>one time cost</p>
+            </div>
+          </div>
+          <div class="variable_cost">
+            <div *ngFor="let growth of annuallyServices[2].growthServices">
+              <span *ngIf="growth.variable">+{{ growth.name }}</span>
+            </div>
+          </div>
+          <button class="mt-4" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let growth of annuallyServices[2].growthServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                    [(ngModel)]="growth.checked"
+                    type="checkbox"
+                    (change)="
+                      calculatePrice(
+                        i,
+                        annuallyServices[2].growthServices,
+                        false
+                      )
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ growth.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="growth.price">{{
+                    growth.price
+                  }}</span>
+                  {{ growth.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">
+            * <span class="fw-bold">2 Users </span> <br />
+            ** Select/Deselect to update pricing
+          </p>
+        </div>
+      </div>
+      <!-- <div class="fast cards">
+        <div class="header">
+          <h3>Fast Scaleup</h3>
+          <div class="price-content-container">
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ monthly_fastPriceAnnually }}</span>
+              </p>
+              <p>/month</p>
+            </div>
+            <div class="vline"></div>
+            <div class="price-content">
+              <p>
+                <span class="dollar">₹</span>
+                <span class="price"> {{ fixed_fastPriceAnnually }}</span>
+              </p>
+              <p>one time cost</p>
+            </div>
+          </div>
+          <div class="variable_cost">
+            <div *ngFor="let fast of annuallyServices[3].fastServices">
+              <span *ngIf="fast.variable">+{{ fast.name }}</span>
+            </div>
+          </div>
+          <button class="mt-4" routerLink="/demo">Start</button>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <div
+              class="point d-flex"
+              *ngFor="
+                let fast of annuallyServices[3].fastServices;
+                let i = index
+              "
+            >
+              <div class="top">
+                <label class="checkbox-container">
+                  <input
+                    [(ngModel)]="fast.checked"
+                    type="checkbox"
+                    (change)="
+                      calculatePrice(i, annuallyServices[3].fastServices, false)
+                    "
+                  />
+                  <div class="checkmark"></div>
+                </label>
+                <p>{{ fast.name }}</p>
+              </div>
+              <div class="bottom">
+                <p>
+                  <span class="price" *ngIf="fast.price">{{ fast.price }}</span>
+                  {{ fast.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="note">
+            * <span class="fw-bold">4 Users </span> <br />
+            ** Select/Deselect to update pricing
+          </p>
+        </div>
+      </div> -->
+    </section>
+  </div>
+  <div class="agencies-container">
+    <div class="agencies">
+      <p>Custom pricing for agencies and freelancers</p>
+      <button routerLink="/reg">
+        Click to Schedule
+      </button>
+    </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>
+
+
+

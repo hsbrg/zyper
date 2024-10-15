@@ -35,6 +35,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FreelanceComponent } from './pages/freelance/freelance.component';
 import { SmbComponent } from './pages/smb/smb.component';
 import { AgencyComponent } from './pages/agency/agency.component';
+import { PricingTableComponent } from './pricing-table/pricing-table.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { AgencyComponent } from './pages/agency/agency.component';
     FooterComponent,
     FreelanceComponent,
     SmbComponent,
-    AgencyComponent
+    AgencyComponent,
+    PricingTableComponent
   ],
   imports: [
     BrowserModule,

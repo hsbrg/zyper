@@ -25,6 +25,7 @@ import { SocialMediaComponent } from './pages/services-page/social-media/social-
 import { AgencyComponent } from './pages/agency/agency.component';
 import { SmbComponent } from './pages/smb/smb.component';
 import { FreelanceComponent } from './pages/freelance/freelance.component';
+import { PricingTableComponent } from './pricing-table/pricing-table.component';
 
 
 
@@ -97,6 +98,10 @@ const routes: Routes = [
   {
     path: 'pricing',
     component: PricingComponent,
+  },
+   {
+    path: 'pricing/gmb',
+    component: PricingTableComponent,
   },
   {
     path: 'about',

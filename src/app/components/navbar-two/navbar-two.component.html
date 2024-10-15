@@ -55,12 +55,29 @@
               >
             </div>
           </li>
+           <li class="dropdown">
+            <p class="dropbtn m-0 p-0" (click)="priceingtoggleDropdown()">
+              Pricing &nbsp;<i class="bi bi-caret-down-fill"></i>
+            </p>
+            <div class="idropdown-content" *ngIf="isPricingDropdownVisible">
+              <a routerLink="/pricing/gmb" class="text-reset"
+                >Google Business Profile</a
+              >
+              <a routerLink="/pricing" class="text-reset"
+                >Google ads setup  </a
+              >
+         
+              <!-- <a routerLink="/services/website-build" class="text-reset"
+                >Free Website Build in 24 Hours</a
+              > -->
+
+             
+            </div>
+          </li>
           <!-- <li class="nav-item">
               <a href="sponsor">SPONSORS</a>
             </li> -->
-          <li class="nav-item">
-            <a routerLink="/pricing" class="text-reset">Pricing</a>
-          </li>
+        
           <li class="nav-item">
             <a routerLink="/ai-technology">AI Technology</a>
           </li>
@@ -139,8 +156,24 @@
           <!-- <li class="nav-item">
               <a href="sponsor">SPONSORS</a>
             </li> -->
-          <li class="nav-item">
-            <a routerLink="/pricing">pricing</a>
+          <li class="dropdown">
+            <p class="dropbtn m-0 p-0" (click)="priceingtoggleDropdown()">
+              Pricing &nbsp;<i class="bi bi-caret-down-fill"></i>
+            </p>
+            <div class="idropdown-content" *ngIf="isPricingDropdownVisible">
+              <a routerLink="/pricing/gmb" class="text-reset"
+                >Google Business Profile</a
+              >
+              <a routerLink="/pricing" class="text-reset"
+                >Google ads setup  </a
+              >
+         
+              <!-- <a routerLink="/services/website-build" class="text-reset"
+                >Free Website Build in 24 Hours</a
+              > -->
+
+             
+            </div>
           </li>
 
           <li class="nav-item">
