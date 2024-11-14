@@ -1,0 +1,150 @@
+<div class="resources-third-container">
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- resources third page HERO SECTION -->
+    <app-hero-section title="SIMPLIFY Your Web Tracking with Google Tag Manager"
+        description="Manage and deploy marketing tags on your website or mobile app without modifying the codebase.With GTM, you can easily add and update Google Ads, Google Analytics, Floodlight, and non-Google tags from the GTM user interface."
+        buttonText="GET STARTED" [socialLinks]="[
+        { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+        { icon: 'linkedin', url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all' },
+        {
+          icon: 'facebook',
+          url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+        },
+        {
+          icon: 'twitter',
+          url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+        }
+      ]"></app-hero-section>
+
+    <!-- resources third section - GTM -->
+    <div class="resources-third-GTM">
+        <h1 class="resources-third-GTM-title">What is Google Tag Manager?</h1>
+        <p class="resources-third-GTM-desc">Google Tag Manager (GTM) is a free tool that allows you to manage and deploy
+            marketing tags (snippets of code or
+            tracking pixels) on your website or mobile app without modifying the codebase. With GTM, you can easily add
+            and
+            update
+            Google Ads, Google Analytics, Floodlight, and non-Google tags from the GTM user interface.</p>
+    </div>
+
+    <!-- resources third section - GTM required -->
+    <div class="resources-third-GTM-required">
+        <h1 class="resources-third-GTM-required-title">What Is Google Tag Manager Required?</h1>
+        <ul class="resources-third-GTM-required-steps">
+            <li>Ease of Use: No need to involve developers for every tag update.</li>
+            <li>Efficiency: Faster deployment of tracking codes.</li>
+            <li>Flexibility: Test and debug tags before they go live.</li>
+            <li>Consolidation: Manage all your tags in one place.</li>
+            <li>Performance: Improve page load times by asynchronously loading tags.</li>
+        </ul>
+    </div>
+
+    <!-- resources third page - SETUP GUIDE -->
+    <div class="setup-guide-GTM">
+        <div class="guide-container-GTM">
+            <!-- Basic Steps Section -->
+            <div class="guide-section-GTM">
+                <h2 class="guide-section-GTM-title">Basic Steps to Set Up Google Tag Manager</h2>
+                <ul class="guide-section-GTM-steps">
+                    <li>Create a GTM Account: Sign up at tag manager.google.com using your Google account.</li>
+                    <li>Install the GTM Code on Your WEbsite: Add the provided container sinppet to every page of your
+                        website.</li>
+                    <li>Configure Tags: Set up tags for Google Analytics, Ads, or any third-party services.</li>
+                    <li>Set Up Triggers: Define when and where your tags should fire.</li>
+                    <li>Publish Your Container: Once everything is set up, publish your container to make it live.</li>
+                </ul>
+
+            </div>
+
+            <!-- Challenges and Pitfalls Section -->
+            <div class="challenges-section-GTM">
+                <h2 class="challenges-section-GTM-title">Challenges and Pitfalls</h2>
+                <ul class="challenges-section-GTM-steps">
+                    <li>Improper Tag Firing: Misconfigured triggers can lead to tags not firing correctly.</li>
+                    <li>Version Control: Without careful management, you might overwrite important changes</li>
+                    <li>Debugging Issues: Identifying which tag is causing issues can be complex.</li>
+                    <li>Overloading Tags: Too many tags can slow down your website.</li>
+                </ul>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="resources-help-section-GTM">
+                <h2 class="resources-help-section-GTM-title">Resources to get help</h2>
+                <h6 class="resources-help-section-GTM-sub-title">Setting up GTM can be overwhelming, Thankfully, there
+                    are
+                    resources to guide you:</h6>
+                <ul class="resources-help-section-GTM-steps">
+                    <li>Google's Offical Documentation: Comprehensive guides and tutorials.</li>
+                    <li>Community Forums: Platforms like Stack Overflow for community support.</li>
+                    <li>Professional Services: For personalized assistance, consider expert services.</li>
+                </ul>
+            </div>
+            <!-- Enable Google Tag Manager Section -->
+            <div class="enable-GTM-section">
+                <h2 class="enable-GTM-title">Enable Google Tag Manager</h2>
+                <h6 class="enable-GTM-sub-title">Zyper.ai has automated AI enabled Google Tag Set Up We save you hours
+                    of effort to set up tags,
+                    events and publish tags onto
+                    your website. All you need is a master google tag manager container created on your site to get
+                    started. </h6>
+                <ul class="enable-GTM-steps">
+                    <li>Crawl your website to identify conversion events : Zyper.ai identifies events such as click demo
+                        button , fill lead form, order online .</li>
+                    <li>Creates tags and publishes them for each event - Zyper automatically creates tags against each
+                        even you want to track , and run your
+                        ads on.</li>
+                    <li>Links variables and values to each tag - Automatically takes desired values and variables for
+                        each tag and passes them to ad platforms.</li>
+                    <li>Creates new events – Whenever you wish to create a new tag, all you have to do is login to
+                        zyper, pick the url and click create
+                        and publish tag.</li>
+                </ul>
+            </div>
+
+            <!-- Conclusion Section -->
+            <div class="conclusion-section">
+                <h2>Conclusion</h2>
+                <p>Integrating Google Tag Manager with your Shopify store is a powerful way to enhance your tracking
+                    capabilities and gain deeper insights
+                    into customer behavior. By following the steps outlined above, you can set up GTM, create events and
+                    tags, and avoid common pitfalls.
+                    With proper implementation, you'll be better equipped to make data-driven decisions that drive sales
+                    and
+                    growth..</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

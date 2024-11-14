@@ -1,0 +1,235 @@
+<div class="resources-sixth-container">
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
+
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <!-- resources fifith page HERO SECTION -->
+  <app-hero-section
+    title="Unlock the Full Potential of 
+    Amazon Advertising with 
+    Our Advanced AI
+    Platform"
+    description="Are you looking to elevate your Amazon advertising game? Zyper.ai Amazon
+    Advertising Agency powered by advanced AI is 
+    here to help you maximize your
+    Return on Ad Spend (ROAS) and outperform the competition."
+    buttonText="GET STARTED"
+    [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"
+  ></app-hero-section>
+
+  <!-- Basics of Amazon Ads -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">Basics of Amazon Ads</h1>
+    <h6>
+      Amazon Ads allow businesses to showcase their products to millions of
+      potential customers. Understanding the fundamentals is crucial.
+    </h6>
+    <h6>Case Study:</h6>
+    <ul class="common-section-required-steps">
+      <ol>
+        Client: Mid-sized retailer struggling with visibility.
+      </ol>
+      <ol>
+        Solution: Utilized our Amazon Advertising AI.
+      </ol>
+      <ol>
+        Result: Achieved a 35% increase in product impressions within the first
+        month.
+      </ol>
+    </ul>
+  </div>
+
+  <!-- Setting Up Amazon Ads and Conversion Events -->
+  <section class="common-section-structure">
+    <h1 class="common-section-title">
+      Setting Up Amazon Ads and Conversion Events
+    </h1>
+    <h6>Proper setup is essential for tracking and optimizing campaigns.</h6>
+
+    <div class="client-success-container">
+      <h6 class="client-success" id="client-success">Client Success:</h6>
+      <ul class="client-success-container-steps">
+        <ol>
+          Challenge: Low conversion rates.
+        </ol>
+        <ol>
+          Action: As an Amazon PPC AI Agency, our AI restructured ad campaigns
+          and set up precise conversion tracking.
+        </ol>
+        <ol>
+          Result:Experienced a 20% boost in conversions and gained clearer
+          insights into customer behavior , from setting up conversion events
+          that went beyond just purchase, and captured the entire funnel
+        </ol>
+      </ul>
+    </div>
+
+    <div class="example-trip-container">
+      <h6 class="example-trip" id="example-trip">Example Tip in Action:</h6>
+      <ul class="example-trip-container-steps">
+        <ol>
+          Before: Generic ad groups with broad targeting.
+        </ol>
+        <ol>
+          After: Segmented campaigns by product category and implemented
+          detailed conversion events, leading to higher relevance and
+          performance.
+        </ol>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Integrating Amazon Feed into Ads -->
+  <section class="common-section-structure">
+    <h1 class="common-section-title">Integrating Amazon Feed into Ads</h1>
+    <h6>
+      Integrating your product feed ensures that your ads are always up-to-date.
+    </h6>
+    <h6>Case Study:</h6>
+    <ul class="common-section-required-steps">
+      <ol>
+        Issue: Manual updates led to outdated product information.
+      </ol>
+      <ol>
+        Solution: Zyper.ai auto Integrates Amazon feed into Amazon ads, so
+        pricing, product and features are always up to date.
+      </ol>
+    </ul>
+    <h6>Benefits:</h6>
+    <ul class="common-section-required-steps">
+      <li>Real-Time Updates: Product information was always current.</li>
+      <li>
+        Increased Sales: Achieved a 25% increase in sales due to accurate
+        listings.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Optimizing Amazon SEO Keywords -->
+  <section class="common-section-structure">
+    <h1 class="common-section-title">Optimizing Amazon SEO Keywords</h1>
+    <h6>
+      Keywords are the backbone of successful Amazon campaigns. Our Amazon PPC
+      keyword API specializes in optimizing Amazon SEO keywords to ensure ads
+      are served for highest intent keywords
+    </h6>
+    <h5 class="benchmark">Benchmark:</h5>
+    <p class="benchmark-text">
+      Companies optimizing their Amazon SEO keywords can see up to a 50%
+      increase in search impressions on amazon.
+    </p>
+  </section>
+
+  <!-- Common Challenges Faced -->
+  <section class="section challenges">
+    <h1 class="section-title">Common Challenges Faced</h1>
+    <p class="section-text">
+      Navigating Amazon’s advertising platform can be complex. Common challenges
+      include:
+    </p>
+    <ul class="section-list">
+      <li>High Competition: Leads to increased ad costs.</li>
+      <li>Keyword Bidding Wars: Makes maintaining ROI difficult.</li>
+      <li>Limited Data Visibility: Hinders optimization efforts.</li>
+      <li>
+        Inability to use all optimization features available to maximize return
+        on ad spend.
+      </li>
+    </ul>
+    <p class="section-solution">
+      <strong>Our Solution:</strong> As your trusted Amazon Advertising
+      Specialists, we use advanced AI to analyze bid data, search impression
+      share, competitor product rankings, and customer buying behavior to
+      overcome these hurdles.
+    </p>
+  </section>
+
+  <!-- Tips to Maximize ROAS on Amazon Ads -->
+  <section class="section roas-tips">
+    <h1 class="section-title">Tips to Maximize ROAS on Amazon Ads</h1>
+    <ul class="tips-list">
+      <li>
+        <strong>1. Leverage High-Intent Keywords</strong><br />
+        <span class="example">Example:</span> Product description
+        recommendations to incorporate high intent keywords into product feed.
+      </li>
+      <li>
+        <strong>2. Optimize Product Listings</strong><br />
+        <span class="benchmark">Benchmark:</span> Optimized listings can improve
+        conversion rates by up to 15%.
+      </li>
+      <li>
+        <strong>3. Monitor and Adjust Bids</strong><br />
+        <span class="result">Result:</span> Regular bid adjustments led a client
+        to reduce ad spend by 10% while maintaining sales volume.
+      </li>
+      <li>
+        <strong>4. Utilize Negative Keywords</strong><br />
+        <span class="outcome">Outcome:</span> Excluding irrelevant searches
+        improved another client’s ROAS by 25%.
+      </li>
+    </ul>
+  </section>
+
+  <!-- How Zyper.ai Maximizes Performance -->
+  <section class="section zyper-performance">
+    <h1 class="section-title">How Zyper.ai Maximizes Performance</h1>
+    <p class="section-text">
+      Imagine having all these tasks automated and optimized continuously. Our
+      AI-driven platform serves as your personal Amazon Advertising Consultant,
+      handling every aspect of your Amazon advertising.
+    </p>
+  </section>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

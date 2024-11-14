@@ -1,0 +1,46 @@
+<div class="hero-section">
+    <div class="content">
+        <!-- Hero Title -->
+        <h1 class="hero-title">
+            <ng-container *ngIf="isMainTitle; else defaultTitle">
+                Boost Your Business with Our <span class="highlight">AI-Driven</span> Google My Business Management
+                Platform
+            </ng-container>
+            <ng-template #defaultTitle>
+                {{ title }} <span class="highlight">{{ highlightedText }}</span>
+            </ng-template>
+        </h1>
+
+        <!-- Description -->
+        <p [ngClass]="isMainTitle ? 'description-2' : 'description'">
+            {{ description }}
+        </p>
+
+        <!-- Trial Text and CTA Button -->
+        <!-- <p class="trial-text">{{ trialText }}</p> -->
+        <button class="cta-button" (click)="navigateToLink()">
+            {{ buttonText }}
+        </button>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+        <div class="social-links-container">
+            <ng-container *ngFor="let link of socialLinks">
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="social-link"
+                    [attr.aria-label]="link.icon + ' link'">
+                    <img [src]="getIconPath(link.icon)" [alt]="link.icon + ' icon'" class="social-icon">
+                </a>
+            </ng-container>
+        </div>
+
+        <div>
+            <!-- Floating Help Button -->
+            <button class="floating-button" aria-label="Help">
+                <i class="fas fa-question"></i>
+            </button>
+        </div>
+    </div>
+
+
+</div>

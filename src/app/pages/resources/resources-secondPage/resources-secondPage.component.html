@@ -1,0 +1,232 @@
+<div class="resources-second-container">
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <app-hero-section title="How to Integrate Google Tag Manager with Your Shopify Store" description="Enhance your e-commerce analytics and conversion tracking by seamlessly integrating Google Tag Manager 
+        with Shopify. Follow our comprehensive guide to set up events, tags, and avoid common pitfalls."
+        buttonText="GET STARTED" [socialLinks]="[
+        { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+        { icon: 'linkedin', url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all' },
+        {
+          icon: 'facebook',
+          url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+        },
+        {
+          icon: 'twitter',
+          url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+        }
+      ]"></app-hero-section>
+
+    <!-- resources second - INTRODUCTION -->
+    <div class="resources-second-intro">
+        <h1 class="resources-second-intro-title">Introduction</h1>
+        <p class="resources-second-intro-desc">If you're running a Shopify store, understanding customer behavior is
+            crucial for
+            optimizing your sales funnel and marketing
+            strategies. Integrating Google Tag Manager with Shopify allows you to manage all your tracking codes in one
+            place, enabling
+            advanced analytics and conversion tracking. In this guide, we'll walk you through the steps to add Google
+            Tag Manager to
+            Shopify, create events and tags, and provide resources to help you along the way.</p>
+    </div>
+
+    <!-- resources second section -->
+    <div class="resources-second-section">
+        <h1 class="resources-second-section-title">What Is Google Tag Manager
+            and Shopify Integration?</h1>
+        <p class="resources-second-section-desc">Google Tag Manager (GTM) is a free tool that lets you manage and deploy
+            marketing tags (snippets of code or tracking pixels)
+            on your website without editing the code directly. When you integrate Google Tag Manager in Shopify, you can
+            add, edit, and
+            manage multiple tags like Google Analytics, Google Ads conversion tracking, and third-party tags from one
+            dashboard.</p>
+    </div>
+
+    <app-feature-cards heading="Why Is the Integration Required?" [cards]="[
+      {
+        title: 'Simplified Tag Management',
+        description: 'Manage all your tags through GTM instead of manually editing your Shopify theme code.'
+      },
+      {
+        title: 'Enhanced Conversion Tracking',
+        description: 'Set up advanced conversion tracking, such as tracking add-to-cart events and purchases.'
+      },
+      {
+        title: 'Improved Data Accuracy',
+        description: 'Centralized tag management reduces errors, ensuring accurate and reliable data.'
+      },
+      {
+        title: 'Flexibility and Scalability',
+        description: 'Easily add new tags or modify existing ones as your Shopify store grows.'
+      },
+    ]"></app-feature-cards>
+
+    <!-- SETUP GUIDE -->
+    <div class="setup-guide">
+        <div class="guide-container">
+            <!-- Basic Steps Section -->
+            <div class="guide-section">
+                <h2 class="guide-section-title">Basic Steps to Set Up Google Tag Manager on Shopify</h2>
+                <div class="steps">
+                    <div class="step">
+                        <h3>Create a Google Tag Manager Account</h3>
+                        <ul class="numbered-steps">
+                            <li>Go to Google Tag Manager and create a new account</li>
+                            <li>Set up a new container for your Shopify store</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Get Your GTM Container Code</h3>
+                        <ul class="plain-steps">
+                            <li>After creating the container, you'll receive two code snippets to be installed</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Add Google Tag Manager Code to Shopify</h3>
+                        <ul class="numbered-steps">
+                            <li>Log in to Shopify Admin:
+                                <ul class="plain-steps">
+                                    <li>Navigate to Online Store > Themes.</li>
+                                </ul>
+                                <ul class="plain-steps">
+                                    <li>Click on Actions > Edit code of your active theme.</li>
+                                </ul>
+                            </li>
+
+                            <li> Add GTM Code to the &lt;head&gt; Section:
+                                <ul class="plain-steps">
+                                    <li>In the Layout folder, open theme.liquid. o Locate the &lt;head&gt; tag./</li>
+                                </ul>
+                                <ul class="plain-steps">
+                                    <li>Paste the first GTM code snippet right after the opening &lt;head&gt; tag.</li>
+                                </ul>
+                            </li>
+
+                            <li> Add GTM Code to the &lt;body&gt; tag.
+                                <ul class="plain-steps">
+                                    <li>Still in theme.liquid, locate the opening &lt;body&gt; tag./</li>
+                                </ul>
+                                <ul class="plain-steps">
+                                    <li>Paste the second GTM code snippet immediately after the opening &lt;head&gt;
+                                        tag.</li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Save Changes</h3>
+                        <ul class="plain-steps">
+                            <li>Click Save to apply the changes to your Shopify theme</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Set Up Tags and Triggers in GTM</h3>
+                        <ul class="plain-steps">
+                            <li>In your GTM dashboard, you can now create new tags, triggers, and variables. </li>
+                            <li>For example, set up Google Analytics 4, Google Ads converison tracking, or custom event
+                                tracking.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <h3>Test Your Implementation</h3>
+                        <ul class="numbered-steps">
+                            <li>Use GTM's Preview and Debug mode to ensure tags are firing correctly</li>
+                            <li>Check real-time reports in Google Analytics to verify data reception.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenges and Pitfalls Section -->
+            <div class="challenges-section">
+                <h2>Challenges and Pitfalls</h2>
+                <ul class="plain-steps">
+                    <li>Theme Updates Overwriting GTM Code: Updating or changing your SHopify theme may overwrite the
+                        GTM code.</li>
+                    <li>Incorrect Code Placement: Placing the GTM code snippets incorrectly can prevent tags from
+                        firing. Ensure they're placed immediately after the &lt;head&gt; and &lt;body&gt; tags.</li>
+                    <li>Duplicate Tracking: Existing tracking codes embedded in your theme or apps may cause duplicate
+                        data. Remove or disable redundant tracking codes.</li>
+                    <li>Limited Data Layer: Shopify's default data layer is limited. For advanced tracking, you might
+                        need to implement a custom data layer, which can be complex.</li>
+                    <li>Cookie Consent Compliance: ensure your tracking complies with GDPR and other privacy
+                        regulations, especially when using cookies.</li>
+                </ul>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="resources-help-section">
+                <h2>Resources to get help</h2>
+                <ul class="numbered-steps">
+                    <li>Official Google Tag Manager Documentation: Google Tag Manager Help Center.</li>
+                    <li>Shopify Help Center: Adding Google Tag Manager to Shopify.</li>
+                    <li> Community Forums:
+                        <ul class="plain-steps">
+                            <li>Shopify Community</li>
+                        </ul>
+                        <ul class="plain-steps">
+                            <li>Google Tag Manager Community</li>
+                        </ul>
+                    </li>
+                    <li> Tutorials and Guides:
+                        <ul class="plain-steps">
+                            <li>Search for "How to Install Google Tag Manager on Shopify" on reputable blogs and YouTube
+                                channels for step-by-step tutorials.</li>
+                        </ul>
+                    </li>
+                    <li> Third-Party Apps:
+                        <ul class="plain-steps">
+                            <li>Explore the Shopify App Store for apps that assist with Google Tag Manager Integration.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Conclusion Section -->
+            <div class="conclusion-section">
+                <h2>Conclusion</h2>
+                <p>Integrating Google Tag Manager with your Shopify store is a powerful way to enhance your tracking
+                    capabilities and gain deeper insights
+                    into customer behavior. By following the steps outlined above, you can set up GTM, create events and
+                    tags, and avoid common pitfalls.
+                    With proper implementation, you'll be better equipped to make data-driven decisions that drive sales
+                    and
+                    growth..</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

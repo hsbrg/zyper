@@ -1,0 +1,61 @@
+.resources-seventh-container {
+  width: 100%;
+
+  .section {
+    padding: 6rem 4rem 0rem 4rem;
+
+    &-title {
+      font-size: 72px;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    &-text {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .tips-list {
+      list-style-type: none;
+      padding-left: 0rem !important;
+      font-size: 1rem;
+      line-height: 1.6;
+
+      li {
+        margin-bottom: 1rem;
+        font-weight: 400;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-seventh-container {
+    .section {
+      padding: 4rem 2rem 0rem 2rem;
+
+      &-title {
+        font-size: 48px;
+      }
+
+      &-text {
+        font-size: 0.875rem; 
+        line-height: 1.4;
+      }
+
+      .tips-list {
+        font-size: 0.875rem;
+        line-height: 1.4;
+
+        li {
+          margin-bottom: 0.8rem; 
+        }
+      }
+    }
+  }
+}

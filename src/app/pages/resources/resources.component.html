@@ -1,0 +1,77 @@
+<div class="resources-main-container">
+    <!-- TOP BAR -->
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <!-- FLOAT ICONS -->
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- RESOURCES SECTION -->
+    <div class="resources-section">
+        <h1 class="resources-title">
+            Resources
+        </h1>
+        <div class="resources-slider-container">
+            <div class="resources-slider-track">
+                <div class="resources-slide" routerLink="/resources-firstPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 1">
+                </div>
+                <div class="resources-slide" routerLink="/resources-secondPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 2">
+                </div>
+                <div class="resources-slide" routerLink="/resources-thirdPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 3">
+                </div>
+                <div class="resources-slide" routerLink="/resources-fourthPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 4">
+                </div>
+                <div class="resources-slide" routerLink="/resources-fifthPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 5">
+                </div>
+                <div class="resources-slide" routerLink="/resources-sixthPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 6">
+                </div>
+                <div class="resources-slide" routerLink="/resources-seventhPage">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 7">
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="resources-social-links">
+            <ng-container *ngFor="let link of socialLinks">
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="resources-social-link">
+                    <img src="assets/images/svg/{{link.icon}}.svg" class="resources-social-icon">
+                </a>
+            </ng-container>
+        </div>
+        <button class="floating-button" aria-label="Help">
+            <i class="fas fa-question"></i>
+        </button>
+    </div>
+</div>

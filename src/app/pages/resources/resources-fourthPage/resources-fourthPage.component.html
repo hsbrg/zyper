@@ -1,0 +1,209 @@
+<div class="resources-fourth-container">
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- resources fourth page HERO SECTION -->
+    <app-hero-section title="Boost Your Business with Our
+    AI-Driven Google My Business Management Platform" description="Boost Your Business Visibility with Our
+        AI-Driven Google my Business
+        Management Platform." buttonText="GET STARTED" [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"></app-hero-section>
+
+    <!-- resources fourth setup Optimized - GMB profile -->
+    <div class="resources-fourth-setup-optimized">
+        <h1 class="resources-fourth-setup-optimized-title">
+            Setting Up an Optimized Google My Business Profile
+        </h1>
+        <h6>
+            Creating a strong first Impression is crucial. Our AI platform ensures
+            that your GMB profile is set up correctly, incorporating essential details
+            that help potential customers find your business.
+        </h6>
+        <ul class="resources-fourth-setup-optimized-required-steps">
+            <li>Claiming your GMB listing.</li>
+            <li>Verifying your business.</li>
+            <li>Choosing the right categories.</li>
+            <li>Adding NAP (Name, Address, Phone Number) information.</li>
+        </ul>
+        <h6>
+            Why and optimized GMB profile matters for local SEO: Our AI-driven
+            platform helps business rank higher in Google Maps and local searches,
+            ensuring you stand out to nearby customers.
+        </h6>
+    </div>
+
+    <!-- resources GMb fields Optimize -->
+    <div class="resources-fourth-setup-optimized-GMB-fields">
+        <h1 class="resources-fourth-setup-optimized-GMB-title">
+            Enriching All Available Fields on GMB
+        </h1>
+        <h6>
+            A fully optimized GMB profile performs significantly better than
+            incomplete listings. Our AI platform ensures every field is enriched with
+            relevant, optimized information:
+        </h6>
+        <ul class="resources-fourth-setup-optimized-GMB-fields-required-steps">
+            <li>Business description with keywords.</li>
+            <li>Operating hours and special hours.</li>
+            <li>Photos and videos for visual engagement.</li>
+            <li>Services and product listings.</li>
+        </ul>
+    </div>
+
+    <!-- GMB features by business type -->
+    <div class="gmb-features">
+        <h1 class="common-title">GMB Features by Business Type</h1>
+        <div class="features-table">
+            <div class="table-row">
+                <div class="cell">Business Type</div>
+                <div class="cell">Recommended GMB Features</div>
+            </div>
+            <div class="table-row">
+                <div class="cell">Restaurants</div>
+                <div class="cell">Menu integration, reservation links, photos of dishes</div>
+            </div>
+            <div class="table-row">
+                <div class="cell">Retail Stores</div>
+                <div class="cell">Product listings, special offers, photos of storefront</div>
+            </div>
+            <div class="table-row">
+                <div class="cell">Home Repair Services</div>
+                <div class="cell">Service listings, direct call button, booking integration</div>
+            </div>
+            <div class="table-row">
+                <div class="cell">Medical/Health Services</div>
+                <div class="cell">Appointment booking, Q&A section, reviews</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Mistakes in GMB Management -->
+    <div class="common-section-structure">
+        <h1 class="common-section-title">
+            Common Mistakes in GMB Management
+        </h1>
+        <h6>
+            Avoid costly errors that can harm your visibility on Google. Our AI platform helps business avoid these
+            common mistakes.
+        </h6>
+        <ul class="common-section-required-steps">
+            <li>Inconsistent NAP info across the web</li>
+            <li>Ignoring negative reviews or failing to respond</li>
+            <li>Not keeping business hours updated</li>
+            <li>Not utilizing the Google Posts feature</li>
+        </ul>
+    </div>
+
+    <!-- Leveraging Review Responses to Generate More Traffic -->
+    <div class="common-section-structure">
+        <h1 class="common-section-title">
+            Leveraging Review Responses
+            to Generate More Traffic
+        </h1>
+        <h6>
+            Your customer reviews are more than just feedback—they are opportunities to attract new
+            customers. Our AI platform helps you craft responses that:
+        </h6>
+        <ul class="common-section-required-steps">
+            <li>Boost Your GMB ranking.</li>
+            <li>Show Customers you care about their feedback.</li>
+            <li>Use positive reviews to build trust and credibility.</li>
+            <li>Address negative reviews to protect your reputation.</li>
+        </ul>
+    </div>
+
+    <!-- Google My Business Posts to Attract More Traffic -->
+    <div class="common-section-structure">
+        <h1 class="common-section-title">
+            Google My Business Posts to
+            Attract More Traffic
+        </h1>
+        <h6>
+            Utilizing the “Make a Post” feature on GMB is an underused tool for generating traffic. Our
+            AI platform helps you create engaging posts that:
+        </h6>
+        <ul class="common-section-required-steps">
+            <li>Announce promotions, special events, or updates</li>
+            <li>Feature new products or services</li>
+            <li>Link back to your website to drive traffic</li>
+            <li>Include call-to-actions like "Call Now," "Buy," or "Learn More"</li>
+        </ul>
+    </div>
+
+    <!-- Competitive Analysis with Google My Business -->
+    <div class="common-section-structure">
+        <h1 class="common-section-title">
+            Competitive Analysis with
+            Google My Business
+        </h1>
+        <h6>
+            Understanding what your competitors are doing on GMB can give you a strategic edge. Our
+            AI platform provides detailed competitive analysis, including:
+        </h6>
+        <ul class="common-section-required-steps">
+            <li>Which categories they're ranking for</li>
+            <li>How they handle customer reviews</li>
+            <li>Types of posts and content they're using</li>
+        </ul>
+    </div>
+
+    <!-- GMB Profile Analytics -->
+    <div class="common-section-structure">
+        <h1 class="common-section-title">
+            GMB Profile Analytics
+        </h1>
+        <h6>
+            Tracking your GMB performance is essential for continuous improvement. Our AI platform
+            offers in-depth GMB analytics, helping you understand:
+        </h6>
+        <ul class="common-section-required-steps">
+            <li>How customers are finding your listing</li>
+            <li>Which posts and photos are driving the most engagement</li>
+            <li>Conversion rates from clicks, calls, and website visits</li>
+            <li>Monthly reports on your GMB traffic and interactions</li>
+        </ul>
+    </div>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

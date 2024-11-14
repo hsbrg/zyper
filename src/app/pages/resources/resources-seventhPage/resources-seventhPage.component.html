@@ -1,0 +1,234 @@
+<div class="resources-seventh-container">
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
+
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <!-- resources seventh page HERO SECTION -->
+  <app-hero-section
+    title="Mastering Keyword Selection
+    for Your Ad Campaigns: 
+    A Comprehensive
+    Guide"
+    description="In the competitive world of digital advertising, finding the correct keywords for your
+    campaign is crucial for reaching your target audience and 
+    maximizing your return on
+    investment. The right keywords ensure your ads appear to the right people at the
+    right time, increasing the likelihood of 
+    conversions. Thisguide will delve into
+    strategies for selecting effective keywords that improve audience relevance,
+    targeting, and search volume."
+    buttonText="GET STARTED"
+    [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"
+  ></app-hero-section>
+
+  <!-- resources seventh page SECTION 1 -->
+  <section class="section relevance">
+    <h1 class="section-title">
+      Improve Audience Relevance by Focusing on Long-Tail Keywords
+    </h1>
+    <ul class="tips-list">
+      <li>
+        <strong>Why General Keywords Aren't Always the best Choice</strong
+        ><br />
+        General keywords like “electrician near me” are highly competitive and
+        often come with a hefty price tag due to their high search volumes.
+        While they may attract a broad audience, they can also lead to lower
+        conversion rates because they are not specific enough to capture users
+        with immediate purchasing intent.
+      </li>
+      <li>
+        <strong>The Power of Long-Tail Keywords </strong><br />
+        Long-tail keywords are longer, more specific phrases that users are more
+        likely to use when they are closer to making a decision. These keywords
+        have lower search volumes but are less competitive and more
+        cost-effective. They attract users who are looking for exactly what you
+        offer, increasing the chances of conversion.
+      </li>
+      <li>
+        <strong>Examples of Long-Tail Keywords: </strong><br />
+        “Install ceiling fan Roswell GA”
+        <br />
+        ”Replace faulty light switch Alpharetta”
+        <br />
+        “24/7 emergency electrical repair Milton”
+        <br />
+        How to Identify Effective Long-Tail Keywords Use Keyword Research Tools:
+        Utilize tools like Google Keyword Planner, SEMrush, or Ahrefs to find
+        long-tail keywords relevant to your services. Analyze Customer Queries:
+        Look at the language your customers use when inquiring about services to
+        identify common phrases. Monitor Competitors: See what keywords your
+        competitors are targeting and find opportunities to differentiate.
+      </li>
+    </ul>
+  </section>
+
+  <!-- resources seventh page SECTION 2 -->
+  <section class="section location">
+    <h1 class="section-title">Enhance Targeting with Location Modifiers</h1>
+    <ul class="tips-list">
+      <li>
+        <strong>The Importance of Location in Keywords </strong><br />
+        Even if you have set your location settings in your ad platform, adding
+        geographical identifiers directly into your keywords can significantly
+        improve targeting. It reinforces your local presence and helps search
+        engines match your ads with users in specific areas.
+      </li>
+      <li>
+        <strong>Examples of Keywords with Location Modifiers: </strong>
+        <br />
+        “Licensed electrician in Sandy Springs” <br />
+        “Electrical panel upgrade services in Johns Creek” <br />
+        “Emergency electrical repair near Dunwoody”
+      </li>
+      <li>
+        <strong>Benefits of Using Location Modifiers </strong><br />
+        Increased Local Visibility: Your ads are more likely to appear to users
+        searching for services in your area.
+        <br />
+        Better Ad Relevance: Users see that you operate in their specific
+        location, increasing trust and the likelihood of engagement. Competitive
+        Advantage: Less competition compared to broader keywords, leading to
+        lower costs per click.
+      </li>
+    </ul>
+  </section>
+
+  <!-- resources seventh page SECTION 3 -->
+  <section class="section customer-needs">
+    <h1 class="section-title">
+      Boost Search Volume by Targeting Customer Needs and Pain Points
+    </h1>
+    <ul class="tips-list">
+      <li>
+        <strong>Understanding Your Customer’s Problems </strong><br />
+        Think beyond the services you offer and focus on the issues your
+        potential customers are trying to solve. By targeting keywords related
+        to common problems, you attract users actively seeking solutions.
+      </li>
+      <li>
+        <strong>Examples of Problem-Focused Keywords: </strong>
+        <br />
+        “Troubleshoot electrical problems in older homes” <br />
+        “How to fix flickering lights” <br />”Safe methods to wire outdoor
+        outlets”
+      </li>
+      <li>
+        <strong>Strategies to Discover Pain Point Keywords </strong>
+        <br />Customer Feedback: Collect feedback from past clients about the
+        issues they faced. <br />Online Forums and Social Media: Browse
+        platforms where people discuss electrical problems to identify common
+        concerns. <br />Industry Research: Stay updated on common issues in your
+        industry through trade publications and news.
+      </li>
+    </ul>
+  </section>
+
+  <!-- resources seventh page SECTION 4 -->
+  <section class="section additional-tips">
+    <h1 class="section-title">
+      Additional Tips for Effective Keyword Selection
+    </h1>
+    <ul class="tips-list">
+      <li>
+        <strong>Leverage Seasonal Trends and Events</strong><br />
+        Consider how seasonal changes or local events might affect the services
+        people need. For example, “Electrical safety inspection before winter in
+        Atlanta” can be a timely keyword.
+      </li>
+      <li>
+        <strong>Use Negative Keywords </strong><br />
+        Implement negative keywords to prevent your ads from showing up in
+        irrelevant searches, saving budget and improving ad performance.
+        Examples of Negative Keywords:
+        <br />
+        “DIY electrical repair” <br />
+        “Electrical engineering jobs” <br />
+        “Free electrical services”
+      </li>
+      <li>
+        <strong>Regularly Review and Optimize Your Keyword List </strong><br />
+        Keyword performance can change over time. Regularly analyze your
+        campaign data to identify which keywords are driving results and adjust
+        your strategy accordingly.
+      </li>
+    </ul>
+  </section>
+
+  <section class="section keyword-tools">
+    <h1 class="section-title">Utilize Keyword Research Tools and Resources</h1>
+    <p class="section-text">
+      Google Trends: Explore trending searches in your area to capitalize on
+      popular topics.
+      <br />Answer The Public: Discover questions people are asking related to
+      your services. <br />Moz Keyword Explorer: Find and prioritize high-impact
+      keywords.
+    </p>
+  </section>
+
+  <section class="section conclusion">
+    <h1 class="section-title">Conclusion</h1>
+    <p class="section-text">
+      Selecting the correct keywords for your ad campaign is a dynamic process
+      that requires ongoing attention and adjustment. By focusing on long-tail
+      keywords, incorporating location modifiers, and targeting customer needs
+      and pain points, you can significantly enhance your campaign&#39;s
+      effectiveness. Remember, the goal is not just to attract clicks but to
+      attract the right clicks—users who are ready to engage with your services.
+      Tailoring your keyword strategy to match user intent and search behavior
+      is the key to achieving higher conversion rates and maximizing your
+      advertising investment.
+    </p>
+  </section>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

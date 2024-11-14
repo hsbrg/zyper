@@ -1,0 +1,72 @@
+.resources-fifith-container {
+  // common- section strucutre
+  .common-section-structure {
+    max-width: 1920px;
+    width: 100% !important;
+    padding: 3rem 4rem 3.75rem 4rem !important;
+
+    .common-section-title {
+      width: 85% !important;
+      max-width: 100%;
+      font-size: 4.5rem;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+    }
+
+    .common-section-required-steps {
+      padding-left: 2.6rem;
+    }
+    .common-section-required-steps > li {
+      width: fit-content;
+      max-width: 1000px;
+    }
+    h6 {
+      width: 1000px;
+      max-width: 100%;
+      font-weight: normal;
+      padding-left: 1.3rem;
+    }
+
+    .common-section-description {
+      width: 95% !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-fifith-container {
+    .common-section-structure {
+      padding: 2rem 1.5rem 2.5rem 1.5rem !important;
+
+      .common-section-title {
+        width: 100% !important;
+        font-size: 2.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.1rem;
+      }
+
+      .common-section-required-steps {
+        padding-left: 1.5rem;
+      }
+
+      .common-section-required-steps > li {
+        max-width: 100%;
+        font-size: 1rem;
+      }
+
+      h6 {
+        width: 100%;
+        padding-left: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .common-section-description {
+        width: 100% !important;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

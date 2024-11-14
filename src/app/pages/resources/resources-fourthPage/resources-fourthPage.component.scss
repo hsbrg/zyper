@@ -1,0 +1,234 @@
+.resources-fourth-container {
+  // common class
+  .common-title {
+    width: 1200px;
+    max-width: 100%;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  // common- section strucutre
+  .common-section-structure {
+    max-width: 1920px;
+    width: 100% !important;
+    padding: 3rem 4rem 3.75rem 4rem !important;
+    margin: 0 auto;
+
+    .common-section-title {
+      width: 960px;
+      max-width: 100%;
+      font-size: 4.5rem;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .common-section-required-steps {
+      padding-left: 2.6rem;
+    }
+
+    h6 {
+      width: 1200px;
+      max-width: 100%;
+      font-weight: normal;
+      padding-left: 1.3rem;
+    }
+  }
+
+  .resources-fourth-setup-optimized {
+    max-width: 1920px;
+    width: 100% !important;
+    padding: 7.75rem 4rem 3.75rem !important;
+    margin: 0 auto;
+
+    .resources-fourth-setup-optimized-title {
+      width: 960px;
+      max-width: 100%;
+      font-size: 4.5rem;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .resources-fourth-setup-optimized-required-steps {
+      padding-left: 2.6rem;
+    }
+
+    h6 {
+      width: 1200px;
+      max-width: 100%;
+      font-weight: normal;
+      padding-left: 1.3rem;
+    }
+  }
+
+  .resources-fourth-setup-optimized-GMB-fields {
+    padding: 0 4rem 3.75rem 4rem !important;
+
+    .resources-fourth-setup-optimized-GMB-title {
+      width: 1000px;
+      max-width: 100%;
+      font-size: 4.5rem;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    .resources-fourth-setup-optimized-GMB-fields-required-steps {
+      padding-left: 2.6rem;
+    }
+    h6 {
+      width: 1200px;
+      max-width: 100%;
+      font-weight: normal;
+      padding-left: 1.4rem;
+    }
+  }
+
+  .gmb-features {
+    padding: 0 4.9rem 3.75rem 4.9rem !important;
+  }
+
+  .gmb-features {
+    .features-table {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow: hidden;
+
+      .table-row {
+        display: flex;
+        gap: 2rem !important;
+        background-color: inherit;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:first-child {
+          font-weight: normal !important;
+        }
+      }
+
+      .cell {
+        min-width: 245px !important;
+        max-width: 550px !important;
+        height: 91px;
+        background: #d9d9d9;
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+
+        &:first-child {
+          flex: 0 0 245px;
+          background: #d9d9d9;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .resources-fourth-container {
+    .common-title {
+      width: 100%;
+      font-size: 2.5rem; 
+      margin-bottom: 1.5rem;
+    }
+
+    .common-section-structure {
+      padding: 2rem 1.2rem !important;
+      .common-section-title {
+        width: 100%;
+        font-size: 2.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .common-section-required-steps {
+        padding-left: 1.5rem;
+      }
+
+      h6 {
+        width: 100%;
+        padding-left: 0.5rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .resources-fourth-setup-optimized {
+      padding: 4rem 1.2rem !important;
+
+      .resources-fourth-setup-optimized-title {
+        width: 100%;
+        font-size: 2.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .resources-fourth-setup-optimized-required-steps {
+        padding-left: 1.5rem;
+      }
+
+      h6 {
+        width: 100%;
+        padding-left: 0.5rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .resources-fourth-setup-optimized-GMB-fields {
+      padding: 4rem 1.2rem !important;
+
+
+      .resources-fourth-setup-optimized-GMB-title {
+        width: 100%;
+        font-size: 2.5rem;
+        padding-left: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .resources-fourth-setup-optimized-GMB-fields-required-steps {
+        padding-left: 1.5rem;
+      }
+
+      h6 {
+        width: 100%;
+        padding-left: 0.5rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .gmb-features {
+      padding: 4rem 1.2rem !important;
+      .features-table {
+        width: 100%; 
+        gap: 1rem;
+
+        .table-row {
+          flex-direction: column; 
+          gap: 1rem;
+          font-size: 0.875rem;
+        }
+
+        .cell {
+          min-width: 100% !important;
+          max-width: 100% !important;
+          height: auto;
+          padding: 1rem;
+          font-size: 0.875rem;
+          gap: 1rem;
+
+          &:first-child {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}

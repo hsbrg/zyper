@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +39,17 @@ import { FreelanceComponent } from './pages/freelance/freelance.component';
 import { SmbComponent } from './pages/smb/smb.component';
 import { AgencyComponent } from './pages/agency/agency.component';
 import { PricingTableComponent } from './pricing-table/pricing-table.component';
-
+import { ResourcesComponent } from './pages/resources/resources.component';
+import { ResourcesFirstComponent } from './pages/resources/resources-firstPage/resources-firstPage.component';
+import { ResourcesSecondComponent } from './pages/resources/resources-secondPage/resources-secondPage.component';
+import { ResourcesThirdComponent } from './pages/resources/resources-thirdPage/resources-thirdPage.component';
+import { ResourcesFourthComponent } from './pages/resources/resources-fourthPage/resources-fourthPage.component';
+import { ResourcesFifthComponent } from './pages/resources/resources-fifthPage/resources-fifthPage.component';
+import { ResourcesSixthComponent } from './pages/resources/resources-sixthPage/resources-sixthPage.component';
+import { ResourcesSeventhComponent } from './pages/resources/resources-seventhPage/resources-seventhPage.component';
+import { FeatureCardsComponent } from './components/feature-cards/feature-cards.component';
+import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { TopBarComponent } from './components/hero-section/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +69,17 @@ import { PricingTableComponent } from './pricing-table/pricing-table.component';
     GetzyperComponent,
     KnowledgeCenterComponent,
     KnowledgeCenterPostComponent,
+    ResourcesComponent,
+    ResourcesFirstComponent,
+    ResourcesSecondComponent,
+    ResourcesThirdComponent,
+    ResourcesFourthComponent,
+    ResourcesFifthComponent,
+    ResourcesSixthComponent,
+    ResourcesSeventhComponent,
+    FeatureCardsComponent,
+    HeroSectionComponent,
+    TopBarComponent,
     LegalComponent,
     LoginComponent,
     PaymentpolicyComponent,
@@ -69,7 +93,7 @@ import { PricingTableComponent } from './pricing-table/pricing-table.component';
     FreelanceComponent,
     SmbComponent,
     AgencyComponent,
-    PricingTableComponent
+    PricingTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,11 +102,9 @@ import { PricingTableComponent } from './pricing-table/pricing-table.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    DropdownModule
+    DropdownModule,
   ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,302 @@
+.resources-third-container {
+  .resources-third-GTM {
+    max-width: 1920px;
+    width: 100% !important;
+    padding: 9rem 3.75rem 4.25rem 3.75rem !important;
+    margin: 0 auto;
+
+    .resources-third-GTM-title {
+      width: fit-content;
+      font-size: 4.5rem;
+      padding-left: 1rem;
+      font-weight: 700;
+    }
+    .resources-third-GTM-desc {
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      padding-left: 1.2rem;
+      // font-weight: 300;
+      font-weight: 400;
+    }
+  }
+
+  .resources-third-GTM-required {
+    max-width: 1920px;
+    width: 100% !important;
+    padding: 1rem 3.75rem 4rem 3.75rem !important;
+    margin: 0 auto;
+
+    .resources-third-GTM-required-title {
+      width: 960px;
+      max-width: 100%;
+      font-size: 4.5rem;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    .resources-third-GTM-required-steps {
+      counter-reset: main-counter;
+      list-style: none;
+      padding-left: 1.5rem;
+    }
+
+    .resources-third-GTM-required-steps > li {
+      position: relative;
+      counter-increment: main-counter;
+      margin-bottom: 0.5rem;
+      color: #666;
+      line-height: 1.5;
+      width: fit-content;
+    }
+
+    .resources-third-GTM-required-steps > li::before {
+      content: counter(main-counter) ". ";
+      font-weight: bold;
+      color: #333;
+      margin-right: 0.5rem;
+      width: fit-content;
+    }
+  }
+
+  .setup-guide-GTM {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+
+    .guide-container-GTM {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4rem;
+
+      .conclusion-section {
+        margin: 3rem 0 6rem 0;
+        max-width: 100%;
+      }
+      .conclusion-section h2 {
+        font-size: 4.5rem !important;
+        font-weight: bold;
+      }
+
+      .conclusion-section p {
+        font-size: 1.125rem;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .guide-section-GTM-title {
+        font-size: 4.5rem !important;
+        padding-left: 1rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 2rem;
+        width: 800px;
+        max-width: 100%;
+      }
+
+      .guide-section-GTM-steps {
+        counter-reset: main-counter;
+        list-style: none;
+        padding-left: 1.5rem;
+      }
+
+      .guide-section-GTM-steps > li {
+        position: relative;
+        width: fit-content;
+        counter-increment: main-counter;
+        margin-bottom: 0.5rem;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .guide-section-GTM-steps > li::before {
+        content: counter(main-counter) ". ";
+        font-weight: bold;
+        width: fit-content;
+        color: #333;
+        margin-right: 0.5rem;
+      }
+
+      .challenges-section-GTM,
+      .resources-help-section-GTM {
+        margin-top: 3rem;
+      }
+
+      .challenges-section-GTM .challenges-section-GTM-title {
+        font-size: 4.5rem !important;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        width: 800px;
+        max-width: 100%;
+      }
+
+      .challenges-section-GTM-steps {
+        counter-reset: main-counter;
+        list-style: none;
+        padding-left: 1.5rem;
+      }
+
+      .challenges-section-GTM-steps > li {
+        position: relative;
+        counter-increment: main-counter;
+        margin-bottom: 0.5rem;
+        width: fit-content;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .challenges-section-GTM-steps > li::before {
+        content: counter(main-counter) ". ";
+        font-weight: bold;
+        color: #333;
+        width: fit-content;
+        margin-right: 0.5rem;
+      }
+
+      .resources-help-section-GTM .resources-help-section-GTM-title {
+        font-size: 4.5rem !important;
+        font-weight: bold;
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        width: 800px;
+        max-width: 100%;
+      }
+
+      .resources-help-section-GTM .resources-help-section-GTM-sub-title {
+        padding-left: 1.5rem;
+        width: 720px;
+        max-width: 100%;
+      }
+
+      .resources-help-section-GTM-steps {
+        counter-reset: main-counter;
+        list-style: none;
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .resources-help-section-GTM-steps > li {
+        position: relative;
+        counter-increment: main-counter;
+        margin-bottom: 0.5rem;
+        color: #666;
+        line-height: 1.5;
+        width: fit-content;
+      }
+
+      .resources-help-section-GTM-steps > li::before {
+        content: counter(main-counter) ". ";
+        font-weight: bold;
+        color: #333;
+        margin-right: 0.5rem;
+        width: fit-content;
+      }
+
+      .enable-GTM-section .enable-GTM-title {
+        font-size: 4.5rem !important;
+        font-weight: bold;
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        width: 1200px;
+        max-width: 100%;
+      }
+
+      .enable-GTM-section .enable-GTM-sub-title {
+        padding-left: 1.5rem;
+        width: 1000px;
+        max-width: 100%;
+      }
+
+      .resources-help-section-GTM-steps {
+        counter-reset: main-counter;
+        list-style: none;
+        padding-left: 1.5rem;
+      }
+
+      .enable-GTM-steps {
+        counter-reset: main-counter;
+        list-style: none;
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .enable-GTM-steps > li {
+        position: relative;
+        counter-increment: main-counter;
+        margin-bottom: 0.5rem;
+        color: #666;
+        line-height: 1.5;
+        width: fit-content;
+      }
+
+      .enable-GTM-steps > li::before {
+        content: counter(main-counter) ". ";
+        font-weight: bold;
+        color: #333;
+        margin-right: 0.5rem;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-third-container {
+    .resources-third-GTM {
+      padding: 4rem 1.5rem !important;
+
+      .resources-third-GTM-title {
+        font-size: 2.5rem;
+        padding-left: 0.5rem;
+      }
+      .resources-third-GTM-desc {
+        font-size: 1rem;
+        padding-left: 0.8rem;
+      }
+    }
+
+    .resources-third-GTM-required {
+      padding: 1rem 1.5rem !important;
+
+      .resources-third-GTM-required-title {
+        font-size: 2.5rem;
+        padding-left: 0.5rem;
+      }
+      .resources-third-GTM-required-steps {
+        padding-left: 1rem;
+      }
+    }
+
+    .setup-guide-GTM {
+      .guide-container-GTM {
+        padding: 0 1.5rem;
+
+        .conclusion-section h2,
+        .guide-section-GTM-title,
+        .challenges-section-GTM .challenges-section-GTM-title,
+        .resources-help-section-GTM .resources-help-section-GTM-title,
+        .enable-GTM-section .enable-GTM-title {
+          font-size: 2.5rem !important;
+          padding-left: 0.5rem;
+          width: 100%;
+        }
+
+        .conclusion-section p,
+        .guide-section-GTM-steps > li,
+        .challenges-section-GTM-steps > li,
+        .resources-help-section-GTM-steps > li,
+        .enable-GTM-steps > li {
+          font-size: 1rem;
+          padding-left: 1rem;
+        }
+
+        .resources-help-section-GTM .resources-help-section-GTM-sub-title,
+        .enable-GTM-section .enable-GTM-sub-title {
+          width: 100%;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}

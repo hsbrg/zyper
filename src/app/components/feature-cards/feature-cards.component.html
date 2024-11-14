@@ -1,0 +1,14 @@
+<section class="feature-cards">
+    <div class="feature-cards-container">
+        <div class="feature-cards-header">
+            <h2 class="feature-cards-heading">{{heading}}</h2>
+            <p class="feature-cards-subheading" *ngIf="subheading">{{ subheading }}</p>
+        </div>
+        <div class="feature-cards-grid">
+            <div class="feature-card" id="feature-card" *ngFor="let card of cards">
+                <h3 class="feature-card-title">{{ card.title }}</h3>
+                <p class="feature-card-description">{{ card.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>

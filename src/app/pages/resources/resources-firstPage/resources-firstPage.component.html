@@ -1,0 +1,103 @@
+<div class="resources-first-container">
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
+
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+          start chat</a>
+      </p>
+    </div>
+  </div>
+  <!-- HERO SECTION -->
+  <app-hero-section title="REVOLUTIONIZE Your 
+    Google Tag Management with" highlightedText="AI"
+    description="Unlock the full potential of your website with our AI-driven Google Tag Manager platform.Say goodbye to manual setups and embrace automated, intelligent tagging that enhances your digital marketing strategy."
+    buttonText="GET STARTED" [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      { icon: 'linkedin', url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all' },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"></app-hero-section>
+
+  <app-feature-cards heading="Why Choose Our AI-Powered Solution?"
+    subheading="Transform your Website Analytics! Leverage artificial intelligence to detect user interactions automatically, integrate third party events seamlessly and enhance your data-driven decisions."
+    [cards]="[
+      {
+        title: 'Auto Google Tag Manager Setup',
+        description:
+          'Streamline your tag management process with automated setup tailored to your needs.'
+      },
+      {
+        title: 'AI-Driven Conversion Event Setting',
+        description:
+          'Let our AI detect and set up conversion events effortlessly.'
+      },
+      {
+        title: 'Auto Conversion Event Setting',
+        description:
+          'Gain real-time insights with automated event tracking on your website.'
+      },
+      {
+        title: 'AI-Driven Event Tag Creation',
+        description:
+          'Optimize your installation experience with intelligent tag creation.'
+      },
+      {
+        title: 'Affordable Integrations',
+        description:
+          'Access top-tier Google Tag Manager integrations without breaking the bank.'
+      }
+    ]"></app-feature-cards>
+
+  <!-- OUR SERVICES -->
+  <app-feature-cards heading="Our Services via Zyper.ai" [cards]="[
+      {
+        title: 'Google Tag Manager Services',
+        description:
+          'Comprehensive solutions for all your tagging needs.'
+      },
+      {
+        title: 'Google Tag Manager Consulting',
+        description:'Expert advice to optimize your current setup.'
+      },
+      {
+        title: 'Set Up Google Tag Manager',
+        description:
+          'Quick and effcient setup Services.'
+      },
+      {
+        title: 'Google Tag Manager Agency',
+        description:'Full-service management for your tagging and analytics.'
+      }
+    ]"></app-feature-cards>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

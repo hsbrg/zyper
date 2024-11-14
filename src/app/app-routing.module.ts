@@ -8,6 +8,10 @@ import { AiTechnologyComponent } from './pages/ai-technology/ai-technology.compo
 import { NavbarTwoComponent } from './components/navbar-two/navbar-two.component';
 import { KnowledgeCenterPostComponent } from './pages/knowledge-center-post/knowledge-center-post.component';
 import { KnowledgeCenterComponent } from './pages/knowledge-center/knowledge-center.component';
+import { ResourcesComponent } from './pages/resources/resources.component';
+import { ResourcesFirstComponent } from './pages/resources/resources-firstPage/resources-firstPage.component';
+import { ResourcesSecondComponent } from './pages/resources/resources-secondPage/resources-secondPage.component';
+import { ResourcesThirdComponent } from './pages/resources/resources-thirdPage/resources-thirdPage.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ComingsoonComponent } from './pages/comingsoon/comingsoon.component';
@@ -26,8 +30,10 @@ import { AgencyComponent } from './pages/agency/agency.component';
 import { SmbComponent } from './pages/smb/smb.component';
 import { FreelanceComponent } from './pages/freelance/freelance.component';
 import { PricingTableComponent } from './pricing-table/pricing-table.component';
-
-
+import { ResourcesFourthComponent } from './pages/resources/resources-fourthPage/resources-fourthPage.component';
+import { ResourcesFifthComponent } from './pages/resources/resources-fifthPage/resources-fifthPage.component';
+import { ResourcesSixthComponent } from './pages/resources/resources-sixthPage/resources-sixthPage.component';
+import { ResourcesSeventhComponent } from './pages/resources/resources-seventhPage/resources-seventhPage.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -99,13 +105,45 @@ const routes: Routes = [
     path: 'pricing',
     component: PricingComponent,
   },
-   {
+  {
     path: 'pricing/gmb',
     component: PricingTableComponent,
   },
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'resources',
+    component: ResourcesComponent,
+  },
+  {
+    path: 'resources-firstPage',
+    component: ResourcesFirstComponent,
+  },
+  {
+    path: 'resources-secondPage',
+    component: ResourcesSecondComponent,
+  },
+  {
+    path: 'resources-thirdPage',
+    component: ResourcesThirdComponent,
+  },
+  {
+    path: 'resources-fourthPage',
+    component: ResourcesFourthComponent,
+  },
+  {
+    path: 'resources-fifthPage',
+    component: ResourcesFifthComponent,
+  },
+  {
+    path: 'resources-sixthPage',
+    component: ResourcesSixthComponent,
+  },
+  {
+    path: 'resources-seventhPage',
+    component: ResourcesSeventhComponent,
   },
   {
     path: 'contact',
