@@ -1,0 +1,180 @@
+<div class="resources-eighth-container">
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- resources eighth page HERO SECTION -->
+    <app-hero-section title="How to Calculate Your Break-Even Customer Acquisition Cost(CAC)" description="Understanding your Customer Acquisition Cost (CAC) is crucial for sustainable business
+    growth. Knowing your break-even CAC helps you 
+    determine how much you can spend to
+    acquire a new customer without incurring losses. This tutorial will guide you through
+    calculating your break-even CAC using profit percentage per customer and median revenue
+    values." buttonText="GET STARTED" [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"></app-hero-section>
+
+    <!-- resources eighth page SECTION 1 -->
+    <section class="section relevance">
+        <h1 class="section-title">
+            Understanding Key Concepts
+        </h1>
+        <ul class="tips-list">
+            <li>
+                <strong>What is Customer Acquisition Cost (CAC)?</strong><br />
+                Customer Acquisition Cost (CAC) is the average amount of money you spend to acquire a
+                new customer. This includes
+                marketing expenses, sales team salaries, advertising costs, and
+                any other expenses directly related to acquiring customers.
+            </li>
+            <li>
+                <strong>Median Revenue per Customer </strong><br />
+                The median revenue per customer is the middle value of all revenues generated per
+                customer when arranged in order. It
+                provides an idea of the typical revenue you can expect
+                from a single customer, minimizing the impact of outliers.
+            </li>
+            <li>
+                <strong>Profit Margin Percentage</strong><br />
+                Profit margin percentage is the portion of revenue that remains after all expenses have been deducted
+                from sales. It is calculated as Profit Margin Percentage = (Profit / Revenue) x 100%
+            </li>
+        </ul>
+    </section>
+
+    <!-- resources eighth page SECTION 2 -->
+    <section class="break-even-cac">
+        <h1 class="title">Calculating Break-Even CAC</h1>
+        <p class="intro">
+            To find your break-even CAC, you need to determine the maximum amount you can spend
+            to acquire a customer without making a loss. This is essentially the profit you make per
+            customer.
+        </p>
+
+        <div class="guide">
+            <h2 class="subtitle">Step-by-Step Guide</h2>
+            <ol>
+                <li>
+                    <strong>Calculate Median Revenue per Customer (R):</strong> Determine the median revenue generated
+                    per customer over a specific period.
+                </li>
+                <li>
+                    <strong>Determine Profit Margin Percentage (P%):</strong> Find out your profit margin percentage
+                    after accounting for all costs except the CAC.
+                </li>
+                <li>
+                    <strong>Calculate Profit per Customer (Profit):</strong> Use the formula:
+                    <code>Profit = R × (P% / 100)</code>.
+                </li>
+                <li>
+                    <strong>Break-Even CAC:</strong> The break-even CAC is equal to the profit per customer:
+                    <code>Break-Even CAC = Profit</code>.
+                </li>
+            </ol>
+        </div>
+
+        <div class="example">
+            <h2 class="subtitle">Practical Example</h2>
+            <p>
+                Let’s walk through an example to illustrate the calculation.
+            </p>
+            <p><strong>Scenario:</strong></p>
+            <ul>
+                <li>Median Revenue per Customer (R): $500</li>
+                <li>Profit Margin Percentage (P%): 20%</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+                <li>Calculate Profit per Customer: Profit = $500 × (20% / 100%) = $500 × 0.20 = $100</li>
+                <li>Determine Break-Even CAC: Break-Even CAC = Profit = $100</li>
+            </ol>
+        </div>
+
+        <div class="interpretation">
+            <h2 class="subtitle">Interpretation:</h2>
+            <p>
+                You can spend up to $100 to acquire a new customer without incurring a loss. Spending
+                more than $100 would mean you’re losing money on each new customer.
+            </p>
+        </div>
+    </section>
+
+    <!-- resources eighth page SECTION 3 -->
+    <section class="why-this-matters">
+        <h1 class="title">Why This Matters</h1>
+        <p class="text">
+            Understanding your break-even CAC allows you to:
+        </p>
+        <ul class="list">
+            <li>
+                <strong>Set Marketing Budgets Wisely:</strong> Allocate your marketing spend effectively without
+                overspending.
+            </li>
+            <li>
+                <strong>Price Products Appropriately:</strong> Ensure your pricing covers costs and desired profit
+                margins.
+            </li>
+            <li>
+                <strong>Evaluate Marketing Channels:</strong> Assess which channels provide customer acquisitions below
+                the break-even point.
+            </li>
+        </ul>
+    </section>
+
+    <!-- resources eighth page SECTION 4 -->
+    <section class="conclusion">
+        <h1 class="title">Conclusion</h1>
+        <p class="text">
+            Calculating your break-even CAC is essential for maintaining profitability. By knowing how much you can
+            afford to spend on acquiring a customer, you can make informed decisions about marketing strategies and
+            budget allocations. Regularly revisiting this calculation helps adapt to changes in market conditions,
+            costs, and customer behavior.
+        </p>
+        <p class="text">
+            ZYPER.AI is a leading AI-based marketing platform that replaces marketing agencies for small businesses.
+            Sign up and start running your marketing on Zyper.ai today!
+        </p>
+    </section>
+
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

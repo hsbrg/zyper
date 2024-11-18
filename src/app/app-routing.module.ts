@@ -34,6 +34,9 @@ import { ResourcesFourthComponent } from './pages/resources/resources-fourthPage
 import { ResourcesFifthComponent } from './pages/resources/resources-fifthPage/resources-fifthPage.component';
 import { ResourcesSixthComponent } from './pages/resources/resources-sixthPage/resources-sixthPage.component';
 import { ResourcesSeventhComponent } from './pages/resources/resources-seventhPage/resources-seventhPage.component';
+import { ResourcesEighthComponent } from './pages/resources/resources-eighthPage/resources-eighthPage.component';
+import { ResourcesNinthComponent } from './pages/resources/resources-ninthPage/resources-ninthPage.component';
+import { ResourcesTenthComponent } from './pages/resources/resources-tenthPage/resources-tenthPage.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -144,6 +147,18 @@ const routes: Routes = [
   {
     path: 'resources-seventhPage',
     component: ResourcesSeventhComponent,
+  },
+  {
+    path: 'resources-eighthPage',
+    component: ResourcesEighthComponent,
+  },
+  {
+    path: 'resources-ninthPage',
+    component: ResourcesNinthComponent,
+  },
+  {
+    path: 'resources-tenthPage',
+    component: ResourcesTenthComponent,
   },
   {
     path: 'contact',

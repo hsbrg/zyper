@@ -1,0 +1,344 @@
+<div class="resources-tenth-container">
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
+
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <!-- resources tenth page HERO SECTION -->
+  <app-hero-section
+    title="Structuring Your Facebook Ads 
+    Funnel To Maximize Output - Zyper’s
+    Funnel AI Engine Recommendations."
+    description="This planner provides a structured approach to managing a Facebook Ads funnel, detailing
+    best practices and benchmarks for 
+    Top of Funnel (ToF), Middle of Funnel (MoF), and
+    Bottom of Funnel (BoF) advertising. It also includes instructions for excluding purchasers in
+    retargeting and tips on when to start ads vs. organic sales and how often to optimize your
+    ads."
+    buttonText="GET STARTED"
+    [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"
+  ></app-hero-section>
+
+  <!-- Funnel Content Section -->
+  <div class="funnel-container">
+    <div class="funnel-section tof">
+      <h2>Top of Funnel (ToF) – Cold Audience</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Objective</th>
+            <th>Brand Awareness & Engagement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Audience Targeting</td>
+            <td>
+              Broad audiences, lookalike audiences (1–2%), interest-based
+              segments
+            </td>
+          </tr>
+          <tr>
+            <td>Ad Content</td>
+            <td>
+              Engaging visuals, short videos, or carousel ads focusing on brand
+              introduction and benefits
+            </td>
+          </tr>
+          <tr>
+            <td>Best Practices</td>
+            <td>
+              Ad Formats: Short-form videos (6–15 seconds), image ads, carousel
+              ads
+            </td>
+          </tr>
+          <tr>
+            <td>Benchmarks</td>
+            <td>
+              <ul>
+                <li>CTR: 1–3%</li>
+                <li>CPC: $0.50 – $2.00</li>
+                <li>Frequency: 1.5–2.5 (monitor ad fatigue)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Budget Allocation</td>
+            <td>50% of total budget</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="funnel-section mof">
+      <h2>Middle of Funnel (MoF) – Warm Audience (Retargeting)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Objective</th>
+            <th>Consideration & Engagement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Audience Targeting</td>
+            <td>
+              People who engaged with ToF ads, visited website, or followed on
+              social media
+            </td>
+          </tr>
+          <tr>
+            <td>Ad Content</td>
+            <td>
+              Testimonials, product demonstrations, case studies, educational
+              content
+            </td>
+          </tr>
+          <tr>
+            <td>Best Practices</td>
+            <td>
+              <ul>
+                <li>
+                  Ad Formats: Retargeting video ads, carousel ads, testimonials
+                </li>
+                <li>CTA: 'Shop Now' & 'Learn More' & 'See How It Works'</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Best Practices</td>
+            <td>
+              <ul>
+                <li>
+                  Facebook Ads Manager:Create a custom audience and exclude
+                  visitors to your 'thank you' page
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Benchmarks</td>
+            <td>
+              <ul>
+                <li>CTR: 1–3%</li>
+                <li>CPC: $0.50 – $2.00</li>
+                <li>Frequency: 1.5–2.5 (monitor ad fatigue)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Budget Allocation</td>
+            <td>50% of total budget</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="funnel-section bof">
+      <h2>Bottom of Funnel (BoF) – Hot Audience (Retargeting)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Objective</th>
+            <th>Conversion & Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Audience Targeting</td>
+            <td>
+              People who added items to their cart, spent time on product pages,
+              or are close to converting
+            </td>
+          </tr>
+          <tr>
+            <td>Ad Content</td>
+            <td>
+              Limited-time offers, discounts, free shipping, urgency-based ads
+            </td>
+          </tr>
+          <tr>
+            <td>Best Practices</td>
+            <td>
+              <ul>
+                <li>
+                  Ad Formats: Dynamic product ads, single image ads, carousel
+                  ads for abandoned cart
+                </li>
+                <li>CTA: 'Buy Now,' 'Get Offer,' 'Complete Your Purchase'</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Excluding Purchasers</td>
+            <td>
+              <ul>
+                <li>
+                  Facebook Ads Manager: Use the same method as MOF to exclude
+                  recent purchasers
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Benchmarks</td>
+            <td>
+              <ul>
+                <li>CTR: 3–6%</li>
+                <li>CPC: $0.20 – $1.00</li>
+                <li>Conversion Rate: 10–20%</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Budget Allocation</td>
+            <td>20% of total budget</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Additional Planning Guidelines</h2>
+      <ul>
+        <li>
+          <strong>1. When to Start Ads vs. Organic Sales</strong>
+          <ul>
+            <li>
+              <strong>Organic Sales First:</strong> Build a foundation of
+              organic engagement (e.g., 1-2 months of consistent social posting
+              and engagement).
+            </li>
+            <li>
+              <strong>When to Start Ads:</strong> Begin running ads when your
+              organic channels are consistently engaging your audience, and you
+              have a clear offer or product to promote.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>2. Excluding Purchasers in Retargeting Ads</strong>
+          <ul class="list-style-none">
+            <li><strong>Step-by-Step Instructions:</strong></li>
+            <ol>
+              1. Navigate to Facebook Ads Manager.
+            </ol>
+            <ol>
+              2. Go to Audiences > Create Audience > Custom Audience.
+            </ol>
+            <ol>
+              3. Select ‘Website Traffic.’
+            </ol>
+            <ol>
+              4. Set conditions to exclude people who visited your ‘thank you’
+              or ‘confirmation’ page.
+            </ol>
+            <ol>
+              5. Apply this audience exclusion to MoF and BoF campaigns.
+            </ol>
+          </ul>
+        </li>
+        <li>
+          <strong>3. Ad Optimization Frequency</strong>
+          <ul>
+            <li>
+              <strong>Adjust Ads Weekly:</strong> Review your ads weekly to
+              analyze performance metrics.
+            </li>
+            <li>
+              <strong>Ad Fatigue Management:</strong> If the frequency metric is
+              above 2.5, refresh ad creatives.
+            </li>
+            <li>
+              <strong>Testing New Creatives:</strong> Rotate in new creatives
+              every 2-3 weeks.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Monthly Funnel Review Checklist</h2>
+      <ul>
+        <li>
+          <strong>Analyze Performance:</strong> Check CTR, CPC, and conversion
+          rates for each funnel stage.
+        </li>
+        <li>
+          <strong>Optimize Audiences:</strong> Refine lookalike and retargeting
+          audiences based on performance.
+        </li>
+        <li>
+          <strong>Adjust Budget Allocation:</strong> Reallocate budget if
+          certain stages of the funnel are underperforming or if you see high
+          ROI in a specific area.
+        </li>
+        <li>
+          <strong>Review Ad Copy & Creatives:</strong> Ensure messaging is still
+          relevant and appealing to your audience.
+        </li>
+      </ul>
+      <p>
+        Zyper.ai AI Ad platform does all of this for you automatically and in
+        real-time, improving RoAS continually on all platforms through our
+        weekly and monthly funnel planner AI engine.
+        <a href="https://zyper-ai.vercel.app/subscription" target="_blank"
+          >Click here</a
+        >
+        to sign up and start using today.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

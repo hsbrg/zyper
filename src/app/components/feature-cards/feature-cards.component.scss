@@ -38,13 +38,13 @@
   .feature-cards-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 216px);
+    grid-template-columns: repeat(5, 213px);
     gap: 2.2rem;
-    margin: 0rem 1rem;
+    margin: 0rem auto;
 
     .feature-card {
-      width: 216px;
-      min-height: 355px;
+      width: 213px;
+      min-height: 250px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -87,7 +87,7 @@
     padding: 5rem 2rem;
 
     .feature-cards-grid {
-      grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(213px, 1fr));
       justify-content: center;
     }
   }
@@ -124,7 +124,7 @@
     }
 
     .feature-cards-grid {
-      grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(213px, 1fr));
     }
   }
 }

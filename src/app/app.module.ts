@@ -47,6 +47,9 @@ import { ResourcesFourthComponent } from './pages/resources/resources-fourthPage
 import { ResourcesFifthComponent } from './pages/resources/resources-fifthPage/resources-fifthPage.component';
 import { ResourcesSixthComponent } from './pages/resources/resources-sixthPage/resources-sixthPage.component';
 import { ResourcesSeventhComponent } from './pages/resources/resources-seventhPage/resources-seventhPage.component';
+import { ResourcesEighthComponent } from './pages/resources/resources-eighthPage/resources-eighthPage.component';
+import { ResourcesNinthComponent } from './pages/resources/resources-ninthPage/resources-ninthPage.component';
+import { ResourcesTenthComponent } from './pages/resources/resources-tenthPage/resources-tenthPage.component';
 import { FeatureCardsComponent } from './components/feature-cards/feature-cards.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { TopBarComponent } from './components/hero-section/top-bar/top-bar.component';
@@ -77,6 +80,9 @@ import { TopBarComponent } from './components/hero-section/top-bar/top-bar.compo
     ResourcesFifthComponent,
     ResourcesSixthComponent,
     ResourcesSeventhComponent,
+    ResourcesEighthComponent,
+    ResourcesNinthComponent,
+    ResourcesTenthComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,

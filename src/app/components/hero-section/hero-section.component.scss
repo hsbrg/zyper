@@ -1,11 +1,11 @@
 .hero-section {
-  min-height: calc(100vh - 90px);
-  max-height: 100% !important;
-  background-color: #2d2d2d !important;
+  min-height: 90vh;
+  height: 100%;
+  max-height: fit-content;
+  background-color: #2d2d2d;
   margin: 0 auto;
   padding: 40px 60px;
-  font-family: Montserrat;
-
+  font-family: "Montserrat";
   .content {
     color: #ffffff !important;
     display: flex;
@@ -21,14 +21,14 @@
 
   .hero-title {
     font-weight: 700;
-    font-size: 4.5rem !important;
+    font-size: 4.5rem;
     line-height: 1.2;
     margin: 2.8rem 0 0.5rem 0;
-    max-width: 80%;
+    max-width: 90%;
     text-rendering: optimizeLegibility;
 
     .highlight {
-      color: #3b82f6 !important;
+      color: #7a7ccb !important;
     }
   }
 
@@ -37,8 +37,8 @@
     font-size: 1.125rem;
     color: #9ca3af;
     max-width: 93%;
-    width: 80%;
-    margin: 1rem 118px;
+    width: 85%;
+    margin: 1rem;
     text-rendering: optimizeLegibility;
     text-align: center;
     line-height: 1.6;
@@ -53,7 +53,7 @@
   .cta-button {
     width: 12.8rem;
     height: 3.99rem;
-    background-color: #3b82f6;
+    background-color: #7a7ccb;
     color: #ffffff;
     font-size: 1.125rem;
     font-weight: 700;
@@ -65,16 +65,17 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #2563eb;
+      background-color: #7a7ccb;
     }
   }
 
   .social-links {
     width: 100%;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2rem 1rem;
+    margin: 1rem auto !important;
   }
 
   .social-links-container {
@@ -104,7 +105,7 @@
   }
 
   .floating-button {
-    background-color: #3b82f6;
+    background-color: #7a7ccb;
     color: #ffffff;
     width: 3rem;
     height: 3rem;
@@ -117,87 +118,102 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #2563eb;
+      background-color: #7a7ccb;
     }
   }
 }
 
-@media (max-width: 768px) {
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
   .hero-section {
-    height: fit-content !important;
-    padding: 40px 20px;
-  }
-}
+    padding: 50px 80px;
+    height: fit-content;
 
-// Medium devices (tablets, 768px and down)
-@media (max-width: 768px) {
-  .content {
-    width: 100% !important;
-
-    height: fit-content !important;
     .hero-title {
-      width: 100% !important;
-      font-size: 2.3rem !important;
-      margin: 1.2rem 0 !important;
-    }
-
-    .description,
-    .description-2 {
-      font-size: 1rem;
-      margin: 0.5rem auto;
+      font-size: 4.5rem !important; /* Maintain large title size */
     }
 
     .cta-button {
       width: 14rem;
-      height: 3.5rem;
-      font-size: 1rem;
+      height: 4rem;
+      font-size: 1.25rem;
     }
-  }
-  .social-links {
-    justify-content: center;
-    margin: 1rem 0;
-  }
-  .floating-button {
-    display: none;
   }
 }
 
-// Small devices (iPhone-width screens, 375px and down)
-@media (max-width: 565px) {
-  .content {
-    width: 100% !important;
-    padding: 10px 0px !important;
-    margin-right: 0px !important;
+/* Medium devices (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero-section {
+    height: fit-content;
+    padding: 40px 40px;
+    .hero-title {
+      font-size: 3.5rem;
+    }
+    .cta-button {
+      width: 13rem;
+      height: 3.5rem;
+      font-size: 1.125rem;
+    }
+    .description {
+      font-size: 1rem;
+      margin: 0.5rem auto;
+    }
+  }
+}
 
+/* Small devices (phones, 567px to 767px) */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 30px 20px !important;
+    height: fit-content;
     .hero-title {
       width: 100% !important;
       font-size: 2rem !important;
+      margin: 0 !important;
+      text-align: center !important;
+    }
+    .description {
+      font-size: 0.95rem;
+      max-width: 90%;
+      margin: 0.5rem auto;
+    }
+    .cta-button {
+      width: 12rem;
+      height: 3.5rem;
+      font-size: 1rem;
+    }
+    .social-links {
+      gap: 1.2rem;
+    }
+  }
+}
+
+/* Extra small devices (below 376px) */
+@media (max-width: 375px) {
+  .hero-section {
+    padding: 15px 10px;
+    height: fit-content;
+
+    .hero-title {
+      width: 100% !important;
+      font-size: 1.8rem !important;
+      margin: 0 !important;
     }
 
-    .description,
-    .description-2 {
-      font-size: 0.875rem;
-      margin: 0.5rem auto;
-      max-width: 85%;
+    .description {
+      font-size: 0.85rem;
+      max-width: 80%;
+      margin: 0.4rem auto;
     }
 
     .cta-button {
-      width: 12rem;
-      height: 3rem;
-      font-size: 0.9rem;
-      padding: 0.5rem 1.5rem;
+      width: 10.5rem;
+      height: 2.8rem;
+      font-size: 0.85rem;
     }
 
     .social-links {
-      gap: 1rem;
-      margin: 1rem 0;
+      gap: 0.8rem;
     }
-
-    // .floating-button {
-    //   width: 2.5rem;
-    //   height: 2.5rem;
-    //   bottom: 1rem;
-    //   right: 1rem;
-    // }
   }
 }

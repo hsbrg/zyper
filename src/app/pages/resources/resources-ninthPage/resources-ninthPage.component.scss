@@ -1,0 +1,282 @@
+$primary-color: #7a7ccb;
+$table-header-bg: #e0dbf6;
+$text-color: #333;
+
+.resources-ninth-container {
+  width: 100%;
+  background: #fff;
+
+  .zyper-ai-container {
+    width: 100%;
+    padding: 6rem 4.6rem 3rem 4.6rem !important;
+    h1 {
+      max-width: 1280px;
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 3.2rem !important;
+    }
+
+    .plan-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 3rem 0rem;
+
+      thead th {
+        font-family: var(--font_montserrat);
+        font-size: 1.8rem;
+      }
+
+      thead th,
+      tbody td {
+        width: 245px;
+        height: 165px;
+        text-align: center;
+        padding: 10px;
+        border: 1rem solid #fff;
+      }
+
+      thead th {
+        background-color: $primary-color;
+        color: white;
+        font-weight: bold;
+      }
+
+      tbody td {
+        background: $table-header-bg;
+      }
+
+      tbody tr:nth-child(even) td {
+        background: #f4f4f4;
+      }
+    }
+
+    .results,
+    .recommendations {
+      margin: 3rem 3rem;
+      padding: 3rem 0rem 1rem 0rem;
+
+      h2 {
+        font-size: 4.5rem;
+        font-weight: 700;
+        margin-bottom: 2.2rem;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .resources-ninth-container .zyper-ai-container {
+    padding: 4rem 3rem 2rem 3rem !important;
+    h1 {
+      font-size: 4rem;
+    }
+    .plan-table {
+      thead th,
+      tbody td {
+        width: 200px;
+        height: 140px;
+      }
+      thead th {
+        font-size: 1.6rem;
+      }
+    }
+    .results,
+    .recommendations {
+      margin: 2.5rem 2rem;
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .resources-ninth-container .zyper-ai-container {
+    padding: 3rem 2rem 1.5rem 2rem !important;
+    h1 {
+      font-size: 3.5rem;
+    }
+    .plan-table {
+      thead th,
+      tbody td {
+        width: 180px;
+        height: 120px;
+      }
+      thead th {
+        font-size: 1.4rem;
+      }
+    }
+    .results,
+    .recommendations {
+      margin: 2rem 1.5rem;
+      h2 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resources-ninth-container .zyper-ai-container {
+    padding: 2.5rem 1rem 1rem 1rem !important;
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 2rem !important;
+    }
+    .plan-table {
+      width: 100% !important;
+      margin: 1rem 0rem !important;
+      thead th,
+      tbody td {
+        width: 100px !important;
+        height: 100px !important;
+      }
+      thead th {
+        font-size: 1rem !important;
+      }
+    }
+    .results,
+    .recommendations {
+      margin: 1.5rem 1rem;
+      h2 {
+        font-size: 3rem;
+      }
+      ul li {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .resources-ninth-container .zyper-ai-container {
+    padding: 2.5rem 1rem 1rem 1rem !important;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem !important;
+    }
+
+    .plan-table {
+      width: 100% !important;
+      border-spacing: 0; /* Removes any spacing between table cells */
+      border-collapse: collapse; /* Ensures borders don't double-up */
+
+      thead th,
+      tbody td {
+        width: auto !important; /* Allows flexible widths for smaller screens */
+        height: auto !important; /* Ensures height adjusts dynamically */
+        font-size: 0.9rem; /* Ensures better readability on small devices */
+        padding: 8px; /* Adds padding for better spacing inside cells */
+        text-align: center; /* Centers the content */
+        word-wrap: break-word; /* Wraps long text in cells */
+        border: 0.3rem solid #fff !important;
+      }
+
+      thead th {
+        font-size: 1rem !important; /* Slightly larger font for headers */
+        background-color: #7a7ccb; /* Keeps header background consistent */
+        color: white; /* Ensures text is readable on the header */
+      }
+
+      tbody td {
+        font-size: 0.8rem; /* Slightly smaller font for table body */
+        background-color: #e0dbf6; /* Matches the table's theme */
+      }
+
+      tbody tr:nth-child(even) td {
+        background: #f4f4f4; /* Alternating row colors for clarity */
+      }
+    }
+
+    .results,
+    .recommendations {
+      margin: 1rem 0.5rem;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      ul li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .resources-ninth-container .zyper-ai-container {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem !important;
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem !important;
+    }
+
+    .table-container {
+      width: 100% !important;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0 !important;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .plan-table {
+        width: 100%;
+        min-width: 460px;
+        border-spacing: 0;
+        border-collapse: collapse;
+
+        thead th,
+        tbody td {
+          width: auto !important;
+          height: auto !important;
+          font-size: 0.8rem !important;
+          padding: 6px;
+          text-align: center;
+          word-wrap: break-word;
+          border: 1px solid #fff !important;
+        }
+
+        thead th {
+          font-size: 0.9rem !important;
+          background-color: $primary-color;
+          color: white;
+        }
+
+        tbody td {
+          background-color: $table-header-bg;
+          font-size: 0.75rem;
+        }
+
+        tbody tr:nth-child(even) td {
+          background: #f4f4f4;
+        }
+      }
+    }
+
+    .results,
+    .recommendations {
+      margin: 0.5rem 0 !important;
+
+      h2 {
+        font-size: 1.5rem !important;
+      }
+
+      ul li {
+        margin-bottom: 4px !important;
+      }
+    }
+  }
+}

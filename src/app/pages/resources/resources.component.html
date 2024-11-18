@@ -1,77 +1,173 @@
 <div class="resources-main-container">
-    <!-- TOP BAR -->
-    <app-top-bar buttonText="GET STARTED"></app-top-bar>
-    <app-cookieconsent></app-cookieconsent>
+  <!-- TOP BAR -->
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
 
-    <!-- FLOAT ICONS -->
-    <div class="float-icons">
-        <button (click)="switchWhatsappState()">
-            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
-            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
-        </button>
-        <i class="bi bi-chat" style="filter: opacity(0)"></i>
-        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
-            <div class="details">
-                <div class="img">
-                    <img src="assets/images/logo.png" alt="" />
-                </div>
-                <p>
-                    Welcome to Zyper.Ai <br />
-                    Scan the QR code
-                </p>
-            </div>
-            <div class="qr_code">
-                <img src="assets/images/zyper.png" alt="" />
-            </div>
-            <p>
-                <span> OR</span> <br />
-                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
-                    start chat</a>
-            </p>
+  <!-- FLOAT WHATSAPP ICONS -->
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+    </button>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
         </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
+          chat</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- RESOURCES SECTION -->
+  <div class="resources-section">
+    <h1 class="resources-title">Resources</h1>
+    <div class="resources-grid-container">
+      <div class="resources-grid-item" routerLink="/resources-firstPage">
+        <h2>Revolutionize your google tag management with AI</h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 1" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-secondPage">
+        <h2>How to integrate google tag manager with your Shopify store</h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 2" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-thirdPage">
+        <h2>Simplfy your web tracking withGoogle Tag Manager</h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 3" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-fourthPage">
+        <h2>
+          Boost your business with our AI-Driven Google My Business Management
+          platform
+        </h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 4" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-fifthPage">
+        <h2>Unlock the power of accurate google ads conversion event setup</h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 5" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-sixthPage">
+        <h2>
+          Unlock the full potential of amazon advertising with our advanced AI
+          platform
+        </h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 6" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-seventhPage">
+        <h2>
+          Mastering keyword selection for your ad campaigns : A comprehensive
+          guide
+        </h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 7" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-eighthPage">
+        <h2>
+          How to Calculate Your Break-Even Customer Acquisition Cost (CAC)
+        </h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 8" /> -->
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-ninthPage">
+        <h2>Zyper.ai Case Study for Pet Store Small Business Owner.</h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+      </div>
+      <div class="resources-grid-item" routerLink="/resources-tenthPage">
+        <h2>
+          Structuring Your Facebook Ads Funnel To Maximize Output - Zyper’s
+          Funnel AI Engine Recommendations.
+        </h2>
+        <div class="resources-grid-item-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </div>
+      </div>
     </div>
 
-    <!-- RESOURCES SECTION -->
-    <div class="resources-section">
-        <h1 class="resources-title">
-            Resources
-        </h1>
-        <div class="resources-slider-container">
-            <div class="resources-slider-track">
-                <div class="resources-slide" routerLink="/resources-firstPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 1">
-                </div>
-                <div class="resources-slide" routerLink="/resources-secondPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 2">
-                </div>
-                <div class="resources-slide" routerLink="/resources-thirdPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 3">
-                </div>
-                <div class="resources-slide" routerLink="/resources-fourthPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 4">
-                </div>
-                <div class="resources-slide" routerLink="/resources-fifthPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 5">
-                </div>
-                <div class="resources-slide" routerLink="/resources-sixthPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 6">
-                </div>
-                <div class="resources-slide" routerLink="/resources-seventhPage">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Slide 7">
-                </div>
-            </div>
-        </div>
-
-        <!-- SOCIAL LINKS -->
-        <div class="resources-social-links">
-            <ng-container *ngFor="let link of socialLinks">
-                <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="resources-social-link">
-                    <img src="assets/images/svg/{{link.icon}}.svg" class="resources-social-icon">
-                </a>
-            </ng-container>
-        </div>
-        <button class="floating-button" aria-label="Help">
-            <i class="fas fa-question"></i>
-        </button>
+    <!-- SOCIAL LINKS -->
+    <div class="resources-social-links">
+      <ng-container *ngFor="let link of socialLinks">
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="resources-social-link">
+          <img src="assets/images/svg/{{ link.icon }}.svg" class="resources-social-icon" />
+        </a>
+      </ng-container>
     </div>
+  </div>
+
+  <button class="floating-button" aria-label="Help">
+    <i class="fas fa-question"></i>
+  </button>
 </div>
