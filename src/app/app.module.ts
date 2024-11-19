@@ -50,6 +50,7 @@ import { ResourcesSeventhComponent } from './pages/resources/resources-seventhPa
 import { ResourcesEighthComponent } from './pages/resources/resources-eighthPage/resources-eighthPage.component';
 import { ResourcesNinthComponent } from './pages/resources/resources-ninthPage/resources-ninthPage.component';
 import { ResourcesTenthComponent } from './pages/resources/resources-tenthPage/resources-tenthPage.component';
+import { ResourcesEleventhComponent } from './pages/resources/resources-eleventhPage/resources-eleventhPage.component';
 import { FeatureCardsComponent } from './components/feature-cards/feature-cards.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { TopBarComponent } from './components/hero-section/top-bar/top-bar.component';
@@ -83,6 +84,7 @@ import { TopBarComponent } from './components/hero-section/top-bar/top-bar.compo
     ResourcesEighthComponent,
     ResourcesNinthComponent,
     ResourcesTenthComponent,
+    ResourcesEleventhComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,

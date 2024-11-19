@@ -37,6 +37,7 @@ import { ResourcesSeventhComponent } from './pages/resources/resources-seventhPa
 import { ResourcesEighthComponent } from './pages/resources/resources-eighthPage/resources-eighthPage.component';
 import { ResourcesNinthComponent } from './pages/resources/resources-ninthPage/resources-ninthPage.component';
 import { ResourcesTenthComponent } from './pages/resources/resources-tenthPage/resources-tenthPage.component';
+import { ResourcesEleventhComponent } from './pages/resources/resources-eleventhPage/resources-eleventhPage.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -159,6 +160,10 @@ const routes: Routes = [
   {
     path: 'resources-tenthPage',
     component: ResourcesTenthComponent,
+  },
+  {
+    path: 'resources-eleventhPage',
+    component: ResourcesEleventhComponent,
   },
   {
     path: 'contact',
