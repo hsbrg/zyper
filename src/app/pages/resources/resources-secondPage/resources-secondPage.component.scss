@@ -1,200 +1,290 @@
-.resources-second-intro {
-  max-width: 1920px;
-  width: 100% !important;
-  padding: 11.25rem 3.75rem 4.25rem 3.75rem !important;
-  margin: 0 auto;
-
-  .resources-second-intro-title {
-    width: fit-content;
-    font-size: 4.5rem;
-    font-weight: 700;
-  }
-  .resources-second-intro-desc {
+.resources-second-container {
+  .resources-second-intro,
+  .resources-second-section {
+    max-width: 1920px;
     width: 100%;
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    // font-weight: 300;
-    font-weight: 400;
-  }
-}
+    margin: 0 auto;
+    padding: 3rem 1rem;
 
-.resources-second-section {
-  max-width: 1920px;
-  width: 100% !important;
-  padding: 0rem 3.75rem 10rem 3.75rem !important;
-  margin: 0 auto;
+    @media (min-width: 768px) {
+      padding: 4rem 2rem;
+    }
 
-  .resources-second-section-title {
-    width: fit-content;
-    font-size: 4.5rem;
-    font-weight: 700;
+    @media (min-width: 1024px) {
+      padding: 5rem 3.75rem;
+    }
+
+    &-title {
+      width: fit-content;
+      font-size: 2.2rem;
+      font-weight: 700;
+
+      @media (min-width: 768px) {
+        font-size: 3.5rem !important;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 4.5rem;
+      }
+    }
+
+    &-desc {
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6;
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1.25rem;
+      }
+    }
   }
-  .resources-second-section-desc {
-    width: 100%;
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    // font-weight: 300;
-    font-weight: 400;
+
+  .resources-second-intro {
+    padding-top: 6rem;
+
+    @media (min-width: 768px) {
+      padding-top: 8rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: 11.25rem;
+    }
+  }
+
+  .resources-second-section {
+    padding-bottom: 5rem;
+
+    @media (min-width: 768px) {
+      padding-bottom: 7rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-bottom: 10rem;
+    }
   }
 }
 
 .setup-guide {
   width: 100%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   background-color: #fff;
-}
 
-.guide-container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 4rem;
-
-  .conclusion-section {
-    margin: 3rem 0 6rem 0;
-    max-width: 1400px;
-  }
-  .conclusion-section h2 {
-    font-size: 4.5rem !important;
-    font-weight: bold;
+  @media (min-width: 768px) {
+    padding: 3rem 0;
   }
 
-  .conclusion-section p {
-    font-size: 1.125rem;
-    color: #555;
-    line-height: 1.6;
+  @media (min-width: 1024px) {
+    padding: 4rem 0;
   }
-}
 
-.guide-section-title {
-  font-size: 4.5rem !important;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 2rem;
-  max-width: 1200px;
-}
+  .guide-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
 
-.steps {
-  counter-reset: step-counter;
-  max-width: 1200px;
+    @media (min-width: 768px) {
+      padding: 0 2rem;
+    }
 
-  .step {
-    position: relative;
-    // padding-left: 6.5rem !important;
-    margin-bottom: 2rem;
-    counter-increment: step-counter;
+    @media (min-width: 1024px) {
+      padding: 0 4rem;
+    }
 
-    h3 {
-      font-size: 1.875rem !important;
+    .conclusion-section {
+      margin: 2rem 0 3rem 0;
+      max-width: 1400px;
+
+      @media (min-width: 768px) {
+        margin: 2.5rem 0 4rem 0;
+      }
+
+      @media (min-width: 1024px) {
+        margin: 3rem 0 6rem 0;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: bold;
+
+        @media (min-width: 768px) {
+          font-size: 3.5rem;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 4.5rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+
+        @media (min-width: 768px) {
+          font-size: 1.0625rem;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 1.125rem;
+        }
+      }
     }
   }
-}
 
-.step h3::before {
-  content: "Step " counter(step-counter) ": ";
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: #333;
-  margin-right: 0.5rem;
-}
+  .guide-section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    max-width: 1200px;
 
-.numbered-steps {
-  counter-reset: main-counter;
-  list-style: none;
-  padding-left: 1.5rem;
-}
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+      margin-bottom: 1.75rem;
+    }
 
-.numbered-steps > li {
-  position: relative;
-  counter-increment: main-counter;
-  margin-bottom: 0.5rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-.numbered-steps > li::before {
-  content: counter(main-counter) ". ";
-  font-weight: bold;
-  color: #333;
-  margin-right: 0.5rem;
-}
-
-.plain-steps {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-.plain-steps > li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.plain-steps > li::before {
-  content: "○";
-  font-size: 1rem;
-  font-weight: bold;
-  color: #666;
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-}
-
-.challenges-section,
-.resources-help-section {
-  margin-top: 3rem;
-}
-
-.challenges-section h2 {
-  font-size: 4.5rem !important;
-  font-weight: bold;
-}
-
-.resources-help-section h2 {
-  font-size: 4.5rem !important;
-  font-weight: bold;
-}
-
-/* Media query for small devices (e.g., mobile screens) */
-@media (max-width: 768px) {
-  .resources-second-intro,
-  .resources-second-section,
-  .setup-guide {
-    padding: 2rem 1rem !important;
+    @media (min-width: 1024px) {
+      font-size: 4.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
-  .guide-container {
-    padding: 2rem 0rem !important;
-  }
+  .steps {
+    counter-reset: step-counter;
+    max-width: 1200px;
 
-  .resources-second-intro-title,
-  .resources-second-section-title,
-  .conclusion-section h2,
-  .guide-section-title,
-  .challenges-section h2,
-  .resources-help-section h2 {
-    font-size: 2.5rem !important;
-  }
+    .step {
+      position: relative;
+      margin-bottom: 1.5rem;
+      counter-increment: step-counter;
 
-  .resources-second-intro-desc,
-  .resources-second-section-desc,
-  .conclusion-section p,
-  .numbered-steps > li,
-  .plain-steps > li,
-  .steps .step h3 {
-    font-size: 1rem !important;
-    line-height: 1.4;
-  }
+      @media (min-width: 768px) {
+        margin-bottom: 1.75rem;
+      }
 
-  .guide-container {
-    padding: 0 2rem;
+      @media (min-width: 1024px) {
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+
+        @media (min-width: 768px) {
+          font-size: 1.675rem;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 1.875rem;
+        }
+
+        &::before {
+          content: "Step " counter(step-counter) ": ";
+          font-weight: bold;
+          color: #333;
+          margin-right: 0.5rem;
+        }
+      }
+    }
   }
 
   .numbered-steps,
   .plain-steps {
+    list-style: none;
     padding-left: 1rem;
+
+    @media (min-width: 768px) {
+      padding-left: 1.25rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 1.5rem;
+    }
+
+    > li {
+      position: relative;
+      margin-bottom: 0.5rem;
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.9375rem;
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1.0625rem;
+      }
+    }
   }
 
-  .steps .step {
-    margin-bottom: 1rem;
+  .numbered-steps {
+    counter-reset: main-counter;
+
+    > li {
+      counter-increment: main-counter;
+
+      &::before {
+        content: counter(main-counter) ". ";
+        font-weight: bold;
+        color: #333;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .plain-steps {
+    > li {
+      padding-left: 1.25rem;
+
+      &::before {
+        content: "○";
+        font-size: 0.875rem;
+        font-weight: bold;
+        color: #666;
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+
+        @media (min-width: 768px) {
+          font-size: 0.9375rem;
+        }
+
+        @media (min-width: 1024px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.challenges-section,
+.resources-help-section {
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 4.5rem;
+    }
   }
 }

@@ -1,13 +1,40 @@
 <div class="hero-top-bar">
     <div class="top-bar">
-        <div class="top-left">
+        <!-- Logo Section -->
+        <div class="top-left" [routerLink]="['/']">
             <img src="../../../../assets/images/svg/zyper-logo.svg" alt="logo" />
         </div>
-        <div class="top-right">
-            <!-- <p class="top-bar-trial-text">{{ trialText }}</p> -->
+
+        <!-- Hamburger Menu (Visible on Small Devices) -->
+        <div class="hamburger md:hidden" (click)="toggleSidebar()" aria-label="Toggle menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu hidden md:flex md:items-center space-x-5 text-white text-base font-light">
+            <li *ngFor="let item of navItems" class="hover:opacity-80 cursor-pointer" (click)="navigateTo(item.route)">
+                {{ item.name }}
+            </li>
+        </ul>
+
+        <!-- Sidebar -->
+        <div class="sidebar-mobile" [ngClass]="{ open: isSidebarOpen }">
+            <button class="close-btn" (click)="toggleSidebar()">✕</button>
+            <ul class="nav-menu">
+                <li *ngFor="let item of navItems" (click)="navigateTo(item.route)">{{ item.name }}</li>
+            </ul>
+        </div>
+
+        <!-- Button Section -->
+        <div class="top-right hidden md:flex">
             <button class="top-bar-button" (click)="navigateToLink()" aria-label="Help">
                 {{ buttonText }}
             </button>
         </div>
     </div>
 </div>
+
+<!-- Overlay -->
+<!-- <div *ngIf="isSidebarOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" (click)="toggleSidebar()"></div> -->

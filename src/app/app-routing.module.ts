@@ -118,52 +118,54 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
-    path: 'resources',
-    component: ResourcesComponent,
-  },
-  {
-    path: 'resources-firstPage',
-    component: ResourcesFirstComponent,
-  },
-  {
-    path: 'resources-secondPage',
-    component: ResourcesSecondComponent,
-  },
-  {
-    path: 'resources-thirdPage',
-    component: ResourcesThirdComponent,
-  },
-  {
-    path: 'resources-fourthPage',
-    component: ResourcesFourthComponent,
-  },
-  {
-    path: 'resources-fifthPage',
-    component: ResourcesFifthComponent,
-  },
-  {
-    path: 'resources-sixthPage',
-    component: ResourcesSixthComponent,
-  },
-  {
-    path: 'resources-seventhPage',
-    component: ResourcesSeventhComponent,
-  },
-  {
-    path: 'resources-eighthPage',
-    component: ResourcesEighthComponent,
-  },
-  {
-    path: 'resources-ninthPage',
-    component: ResourcesNinthComponent,
-  },
-  {
-    path: 'resources-tenthPage',
-    component: ResourcesTenthComponent,
-  },
-  {
-    path: 'resources-eleventhPage',
-    component: ResourcesEleventhComponent,
+    path: 'ai-marketing-resources',
+    children: [
+      { path: '', component: ResourcesComponent },
+      {
+        path: 'revolutionize-your-google-tag-management-with-ai',
+        component: ResourcesFirstComponent,
+      },
+      {
+        path: 'how-to-integrate-google-tag-manager-with-your-shopify-store',
+        component: ResourcesSecondComponent,
+      },
+      {
+        path: 'simplify-your-web-tracking-with-google-tag-manager',
+        component: ResourcesThirdComponent,
+      },
+      {
+        path: 'boost-your-business-with-our-ai-driven-google-my-business-management-platform',
+        component: ResourcesFourthComponent,
+      },
+      {
+        path: 'unlock-the-power-of-accurate-google-ads-conversion-event-setup',
+        component: ResourcesFifthComponent,
+      },
+      {
+        path: 'unlock-the-full-potential-of-amazon-advertising-with-our-advanced-ai-platform',
+        component: ResourcesSixthComponent,
+      },
+      {
+        path: 'mastering-keyword-selection-for-your-ad-campaigns-a-comprehensive-guide',
+        component: ResourcesSeventhComponent,
+      },
+      {
+        path: 'how-to-calculate-your-break-even-customer-acquisition-cost-cac',
+        component: ResourcesEighthComponent,
+      },
+      {
+        path: 'zyper-ai-case-study-for-pet-store-small-business-owner',
+        component: ResourcesNinthComponent,
+      },
+      {
+        path: 'structuring-your-facebook-ads-funnel-to-maximize-output-zypers-funnel-ai-engine-recommendations',
+        component: ResourcesTenthComponent,
+      },
+      {
+        path: 'small-business-marketing-budget-guide',
+        component: ResourcesEleventhComponent,
+      },
+    ],
   },
   {
     path: 'contact',

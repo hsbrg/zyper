@@ -4,11 +4,7 @@
 
   <div class="float-icons">
     <button (click)="switchWhatsappState()">
-      <img
-        src="assets/images/whatsapp_icon.png"
-        alt=""
-        *ngIf="!activeWhatsapp"
-      />
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
       <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
     </button>
     <i class="bi bi-chat" style="filter: opacity(0)"></i>
@@ -27,29 +23,21 @@
       </div>
       <p>
         <span> OR</span> <br />
-        <a
-          href="https://wa.me/+919266373451"
-          class="text-decoration-underline"
-          target="_blank"
-          >click here to start chat</a
-        >
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
+          chat</a>
       </p>
     </div>
   </div>
 
   <!-- resources eleventh page HERO SECTION -->
-  <app-hero-section
-    title="Small Business 
+  <app-hero-section title="Small Business 
     Marketing Budget 
-    Guide."
-    description="Allocating the right marketing budget is a critical decision for small businesses. With limited
+    Guide." description="Allocating the right marketing budget is a critical decision for small businesses. With limited
     resources, every dollar spent
      should bring a meaningful return. The tables below provide
     essential statistics to help small businesses navigate budget planning, 
     optimal channels,
-    expected returns on advertising, and profitability impact."
-    buttonText="GET STARTED"
-    [socialLinks]="[
+    expected returns on advertising, and profitability impact." buttonText="GET STARTED" [socialLinks]="[
       { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
       {
         icon: 'linkedin',
@@ -63,62 +51,138 @@
         icon: 'twitter',
         url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
       }
-    ]"
-  ></app-hero-section>
+    ]"></app-hero-section>
+
+  <!-- marketing-stats section  -->
+  <div class="marketing-stats-container">
+    <h2 class="stats-heading">
+      Key Marketing Statistics for Small Business Budgeting
+    </h2>
+    <table class="marketing-stats-table">
+      <thead>
+        <tr>
+          <th class="metric-column">Metric</th>
+          <th class="details-column">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Typical Marketing Budget Ranges</td>
+          <td>
+            <ul>
+              <li>
+                <strong>Low Spenders (66.3%):</strong> Less than $1,000 per
+                year, often micro-businesses or those new to marketing.
+              </li>
+              <li>
+                <strong>Moderate Spenders (20.6%):</strong> $1,000–$5,000 per
+                year, typically SMBs with a local customer base.
+              </li>
+              <li>
+                <strong>High Spenders (4.6%):</strong> $5,000–$10,000 annually,
+                usually competitive local markets or niche sectors.
+              </li>
+              <li>
+                <strong>Very High Spenders (8.5%):</strong> Over $10,000 per
+                year, common among e-commerce or growth-focused SMBs.
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Return on Advertising Spend (RoAS)</td>
+          <td>
+            <strong>RoAS Tracking Boosts Success (40%):</strong> SMBs tracking
+            RoAS report better alignment with profit goals.<br />
+            Typical RoAS Range: $2–$4 return per dollar spent; varies by
+            industry and strategy.
+          </td>
+        </tr>
+        <tr>
+          <td>Impact on Profit & Loss (P&L)</td>
+          <td>
+            <strong>Direct Sales Impact (60%):</strong> SMBs note that digital
+            marketing positively influences revenue.<br />
+            <strong>Tech-Driven Strategy Evolution (70%):</strong> Businesses
+            increasingly adjust budgets to adopt digital tools and trends.
+          </td>
+        </tr>
+        <tr>
+          <td>Social Media Impact on Growth</td>
+          <td>
+            <strong>Social Media Effectiveness (79%):</strong> Most small
+            businesses find success through social media.<br />
+            <strong>Brand Awareness Focus (71%):</strong> Social media primarily
+            boosts brand visibility over direct sales.
+          </td>
+        </tr>
+        <tr>
+          <td>Budgeting Trends for Growth</td>
+          <td>
+            <strong>Increase in Marketing Budgets (46%):</strong> Reflects a
+            push towards digital expansion and enhanced brand presence.<br />
+            <strong>Digital Marketing Emphasis (21%):</strong> Focused on
+            high-ROI areas like SEO, social media, and PPC ads.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="zyper-ai-container">
-    <h1>Zyper.ai generates detailed custom plan with expected performance</h1>
+    <h1>Marketing Budget and Performance Expectations by Business Type</h1>
     <div class="table-container">
       <table class="plan-table">
         <thead>
           <tr>
-            <th>Channel</th>
-            <th>Budget Allocation</th>
-            <th>CPL</th>
-            <th>Expected Leads</th>
-            <th>Goals</th>
+            <th>Business Type</th>
+            <th>Recommended Budget Range</th>
+            <th>Primary Marketing Channels</th>
+            <th>Expected Performance and RoAS</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>GMB Ads</td>
-            <td>600</td>
-            <td>5-8</td>
-            <td>75-120</td>
-            <td>Increase local foot traffic and service inquiries</td>
+            <td>Local Retail or Services</td>
+            <td>$1,000–$3,000 annually</td>
+            <td>Social Media, Google My Business, Local SEO</td>
+            <td>Moderate brand visibility, $2–$3 RoAS</td>
           </tr>
           <tr>
-            <td>Instagram & Facebook Ads</td>
-            <td>800</td>
-            <td>3-6</td>
-            <td>130-265</td>
-            <td>
-              Build brand awareness, drive appointment bookings, increase social
-              media engagement
-            </td>
+            <td>E-commerce Startups</td>
+            <td>$5,000–$10,000 annually</td>
+            <td>PPC, Social Media Ads, Content Marketing</td>
+            <td>Higher traffic, rapid ROI growth, $3–$4 RoAS</td>
           </tr>
           <tr>
-            <td>Google Search Ads</td>
-            <td>400</td>
-            <td>8-12</td>
-            <td>30-50</td>
-            <td>
-              Capture high-intent searchers ready to book a grooming service
-            </td>
+            <td>Professional Services</td>
+            <td>$3,000–$7,000 annually</td>
+            <td>SEO, Content Marketing, Email</td>
+            <td>Trust-building, steady client acquisition, $3 RoAS</td>
           </tr>
           <tr>
-            <td>Content Creation and organic social media</td>
-            <td>200</td>
-            <td>N/A</td>
-            <td>Organic Engagement</td>
-            <td>Increase brand awareness and engagement</td>
+            <td>Restaurants and Cafés</td>
+            <td>$1,000–$5,000 annually</td>
+            <td>Social Media, Local SEO, Influencer Marketing</td>
+            <td>Increased foot traffic, brand awareness, $2 RoAS</td>
           </tr>
           <tr>
-            <td>Email Marketing</td>
-            <td>minimal</td>
-            <td>N/A</td>
-            <td>Repeat Business</td>
-            <td>Drive repeat bookings and maintain customer relationships</td>
+            <td>Real Estate Agents</td>
+            <td>$5,000–$15,000 annually</td>
+            <td>PPC, Social Media, Email Marketing</td>
+            <td>High engagement, strong lead generation, $4 RoAS</td>
+          </tr>
+          <tr>
+            <td>Healthcare Providers</td>
+            <td>$3,000–$6,000 annually</td>
+            <td>SEO, Google Ads, Content Marketing</td>
+            <td>Sustained patient flow, $3 RoAS</td>
+          </tr>
+          <tr>
+            <td>Tech Startups</td>
+            <td>$10,000+ annually</td>
+            <td>PPC, Social Media, Influencer Marketing, SEO</td>
+            <td>Rapid growth focus, product awareness, $4–$5 RoAS</td>
           </tr>
         </tbody>
       </table>

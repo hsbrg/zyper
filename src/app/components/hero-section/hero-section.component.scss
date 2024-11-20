@@ -53,7 +53,8 @@
   .cta-button {
     width: 12.8rem;
     height: 3.99rem;
-    background-color: #7a7ccb;
+    background-color: #2a4b6f;
+    border: #2a4b6f;
     color: #ffffff;
     font-size: 1.125rem;
     font-weight: 700;
@@ -65,7 +66,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #7a7ccb;
+      background-color: #2a4b6f;
     }
   }
 
@@ -105,7 +106,7 @@
   }
 
   .floating-button {
-    background-color: #7a7ccb;
+    background-color: #2a4b6f;
     color: #ffffff;
     width: 3rem;
     height: 3rem;
@@ -118,19 +119,18 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #7a7ccb;
+      background-color: #2a4b6f;
     }
   }
 }
 
-/* Large devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .hero-section {
     padding: 50px 80px;
     height: fit-content;
 
     .hero-title {
-      font-size: 4.5rem !important; /* Maintain large title size */
+      font-size: 4.5rem !important;
     }
 
     .cta-button {
@@ -141,7 +141,6 @@
   }
 }
 
-/* Medium devices (tablets, 768px to 1199px) */
 @media (min-width: 768px) and (max-width: 1199px) {
   .hero-section {
     height: fit-content;
@@ -161,7 +160,6 @@
   }
 }
 
-/* Small devices (phones, 567px to 767px) */
 @media (max-width: 767px) {
   .hero-section {
     padding: 30px 20px !important;
@@ -188,7 +186,6 @@
   }
 }
 
-/* Extra small devices (below 376px) */
 @media (max-width: 375px) {
   .hero-section {
     padding: 15px 10px;

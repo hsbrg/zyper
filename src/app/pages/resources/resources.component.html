@@ -6,12 +6,10 @@
   <!-- FLOAT WHATSAPP ICONS -->
   <div class="float-icons">
     <button (click)="switchWhatsappState()">
-      <img
-        src="assets/images/whatsapp_icon.png"
-        alt=""
-        *ngIf="!activeWhatsapp"
-      />
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
     </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
     <div class="whatsapp-popup" *ngIf="activeWhatsapp">
       <div class="details">
         <div class="img">
@@ -27,270 +25,131 @@
       </div>
       <p>
         <span> OR</span> <br />
-        <a
-          href="https://wa.me/+919266373451"
-          class="text-decoration-underline"
-          target="_blank"
-          >click here to start chat</a
-        >
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
+          chat</a>
       </p>
     </div>
   </div>
 
-  <!-- RESOURCES SECTION -->
-  <div class="resources-section">
-    <h1 class="resources-title">Resources</h1>
-    <div class="resources-grid-container">
-      <div class="resources-grid-item" routerLink="/resources-firstPage">
-        <h2>Revolutionize your google tag management with AI</h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 1" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-secondPage">
-        <h2>How to integrate google tag manager with your Shopify store</h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 2" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-thirdPage">
-        <h2>Simplfy your web tracking withGoogle Tag Manager</h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 3" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-fourthPage">
-        <h2>
-          Boost your business with our AI-Driven Google My Business Management
-          platform
-        </h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 4" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-fifthPage">
-        <h2>Unlock the power of accurate google ads conversion event setup</h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 5" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-sixthPage">
-        <h2>
-          Unlock the full potential of amazon advertising with our advanced AI
-          platform
-        </h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 6" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-seventhPage">
-        <h2>
-          Mastering keyword selection for your ad campaigns : A comprehensive
-          guide
-        </h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 7" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-eighthPage">
-        <h2>
-          How to Calculate Your Break-Even Customer Acquisition Cost (CAC)
-        </h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-        <!-- <img src="/placeholder.svg?height=200&width=300" alt="Resource 8" /> -->
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-ninthPage">
-        <h2>Zyper.ai Case Study for Pet Store Small Business Owner.</h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-tenthPage">
-        <h2>
-          Structuring Your Facebook Ads Funnel To Maximize Output - Zyper’s
-          Funnel AI Engine Recommendations.
-        </h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-      </div>
-      <div class="resources-grid-item" routerLink="/resources-eleventhPage">
-        <h2>Small Business Marketing Budget Guide.</h2>
-        <div class="resources-grid-item-arrow">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M7 17L17 7" />
-            <path d="M7 7h10v10" />
-          </svg>
-        </div>
-      </div>
+  <div class="cube-background">
+    <div class="cube cube-1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
     </div>
-
-    <!-- SOCIAL LINKS -->
-    <div class="resources-social-links">
-      <ng-container *ngFor="let link of socialLinks">
-        <a
-          [href]="link.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="resources-social-link"
-        >
-          <img
-            src="assets/images/svg/{{ link.icon }}.svg"
-            class="resources-social-icon"
-          />
-        </a>
-      </ng-container>
+    <div class="cube cube-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-4">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-5">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-6">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-7">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-8">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-9">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-10">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
+    </div>
+    <div class="cube cube-11">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <path class="cube-face cube-face-front" d="M200,100 L350,175 L350,325 L200,250 Z" />
+        <path class="cube-face cube-face-side" d="M200,100 L50,175 L50,325 L200,250 Z" />
+        <path class="cube-face cube-face-top" d="M200,250 L350,325 L200,400 L50,325 Z" />
+        <path class="cube-edges" d="M200,100 L350,175 M350,325 L200,250 M200,250 L50,325" />
+      </svg>
     </div>
   </div>
+
+  <!-- RESOURCES SECTION -->
+  <section class="resources-section">
+    <div class="resources-container">
+      <h1 class="resources-title">Resources</h1>
+      <div class="resources-grid">
+        <a *ngFor="let card of resourceCards" class="resources-card"
+          [routerLink]="['/ai-marketing-resources', card.slug]">
+          <div class="resources-card-content">
+            <h2 class="resources-card-title">{{ card.title }}</h2>
+            <div class="resources-card-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="resources-social-links">
+        <ng-container *ngFor="let link of socialLinks">
+          <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="resources-social-link">
+            <img src="assets/images/svg/{{ link.icon }}.svg" alt="{{ link.icon }}" class="resources-social-icon" />
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </section>
 
   <button class="floating-button" aria-label="Help">
     <i class="fas fa-question"></i>
