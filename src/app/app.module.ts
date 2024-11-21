@@ -54,6 +54,7 @@ import { ResourcesEleventhComponent } from './pages/resources/resources-eleventh
 import { FeatureCardsComponent } from './components/feature-cards/feature-cards.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { TopBarComponent } from './components/hero-section/top-bar/top-bar.component';
+import { ResourcesTwelfthPageComponent } from './pages/resources/resources-twelfthPage/resources-twelfthPage.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { TopBarComponent } from './components/hero-section/top-bar/top-bar.compo
     ResourcesNinthComponent,
     ResourcesTenthComponent,
     ResourcesEleventhComponent,
+    ResourcesTwelfthPageComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,

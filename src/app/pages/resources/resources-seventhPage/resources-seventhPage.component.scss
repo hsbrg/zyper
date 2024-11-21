@@ -1,8 +1,10 @@
 .resources-seventh-container {
   width: 100%;
+  background-color: #d7e6ff;
 
   .section {
     padding: 6rem 4rem 0rem 4rem;
+  background-color: #d7e6ff;
 
     &-title {
       font-size: 72px;
@@ -44,7 +46,7 @@
       }
 
       &-text {
-        font-size: 0.875rem; 
+        font-size: 0.875rem;
         line-height: 1.4;
       }
 
@@ -53,7 +55,7 @@
         line-height: 1.4;
 
         li {
-          margin-bottom: 0.8rem; 
+          margin-bottom: 0.8rem;
         }
       }
     }

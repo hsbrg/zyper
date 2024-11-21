@@ -5,10 +5,13 @@ $text-color: #333;
 .resources-ninth-container {
   width: 100%;
   background: #fff;
+  background-color: #d7e6ff;
 
   .zyper-ai-container {
     width: 100%;
     padding: 6rem 4.6rem 3rem 4.6rem !important;
+    background-color: #d7e6ff;
+
     h1 {
       max-width: 1280px;
       font-size: 4.5rem;
@@ -21,6 +24,7 @@ $text-color: #333;
       border-collapse: collapse;
       margin: 3rem 0rem;
 
+
       thead th {
         font-family: var(--font_montserrat);
         font-size: 1.8rem;
@@ -32,7 +36,7 @@ $text-color: #333;
         height: 165px;
         text-align: center;
         padding: 10px;
-        border: 1rem solid #fff;
+        border: 1rem solid #d7e6ff;
       }
 
       thead th {
@@ -76,22 +80,28 @@ $text-color: #333;
 @media screen and (max-width: 1200px) {
   .resources-ninth-container .zyper-ai-container {
     padding: 4rem 3rem 2rem 3rem !important;
+
     h1 {
       font-size: 4rem;
     }
+
     .plan-table {
+
       thead th,
       tbody td {
         width: 200px;
         height: 140px;
       }
+
       thead th {
         font-size: 1.6rem;
       }
     }
+
     .results,
     .recommendations {
       margin: 2.5rem 2rem;
+
       h2 {
         font-size: 4rem;
       }
@@ -102,22 +112,28 @@ $text-color: #333;
 @media screen and (max-width: 992px) {
   .resources-ninth-container .zyper-ai-container {
     padding: 3rem 2rem 1.5rem 2rem !important;
+
     h1 {
       font-size: 3.5rem;
     }
+
     .plan-table {
+
       thead th,
       tbody td {
         width: 180px;
         height: 120px;
       }
+
       thead th {
         font-size: 1.4rem;
       }
     }
+
     .results,
     .recommendations {
       margin: 2rem 1.5rem;
+
       h2 {
         font-size: 3.5rem;
       }
@@ -128,34 +144,42 @@ $text-color: #333;
 @media screen and (max-width: 768px) {
   .resources-ninth-container .zyper-ai-container {
     padding: 2.5rem 1rem 1rem 1rem !important;
+
     h1 {
       font-size: 2.4rem;
       margin-bottom: 2rem !important;
     }
+
     .plan-table {
       width: 100% !important;
       margin: 1rem 0rem !important;
+
       thead th,
       tbody td {
         width: 100px !important;
         height: 100px !important;
       }
+
       thead th {
         font-size: 1rem !important;
       }
     }
+
     .results,
     .recommendations {
       margin: 1.5rem 1rem;
+
       h2 {
         font-size: 3rem;
       }
+
       ul li {
         margin-bottom: 8px;
       }
     }
   }
 }
+
 @media screen and (max-width: 576px) {
   .resources-ninth-container .zyper-ai-container {
     padding: 2.5rem 1rem 1rem 1rem !important;
@@ -167,33 +191,47 @@ $text-color: #333;
 
     .plan-table {
       width: 100% !important;
-      border-spacing: 0; /* Removes any spacing between table cells */
-      border-collapse: collapse; /* Ensures borders don't double-up */
+      border-spacing: 0;
+      /* Removes any spacing between table cells */
+      border-collapse: collapse;
+      /* Ensures borders don't double-up */
 
       thead th,
       tbody td {
-        width: auto !important; /* Allows flexible widths for smaller screens */
-        height: auto !important; /* Ensures height adjusts dynamically */
-        font-size: 0.9rem; /* Ensures better readability on small devices */
-        padding: 8px; /* Adds padding for better spacing inside cells */
-        text-align: center; /* Centers the content */
-        word-wrap: break-word; /* Wraps long text in cells */
-        border: 0.3rem solid #fff !important;
+        width: auto !important;
+        /* Allows flexible widths for smaller screens */
+        height: auto !important;
+        /* Ensures height adjusts dynamically */
+        font-size: 0.9rem;
+        /* Ensures better readability on small devices */
+        padding: 8px;
+        /* Adds padding for better spacing inside cells */
+        text-align: center;
+        /* Centers the content */
+        word-wrap: break-word;
+        /* Wraps long text in cells */
+        border: 0.3rem solid #d7e6ff !important;
       }
 
       thead th {
-        font-size: 1rem !important; /* Slightly larger font for headers */
-        background-color: #7a7ccb; /* Keeps header background consistent */
-        color: white; /* Ensures text is readable on the header */
+        font-size: 1rem !important;
+        /* Slightly larger font for headers */
+        background-color: #7a7ccb;
+        /* Keeps header background consistent */
+        color: white;
+        /* Ensures text is readable on the header */
       }
 
       tbody td {
-        font-size: 0.8rem; /* Slightly smaller font for table body */
-        background-color: #e0dbf6; /* Matches the table's theme */
+        font-size: 0.8rem;
+        /* Slightly smaller font for table body */
+        background-color: #e0dbf6;
+        /* Matches the table's theme */
       }
 
       tbody tr:nth-child(even) td {
-        background: #f4f4f4; /* Alternating row colors for clarity */
+        background: #f4f4f4;
+        /* Alternating row colors for clarity */
       }
     }
 
@@ -246,7 +284,8 @@ $text-color: #333;
           padding: 6px;
           text-align: center;
           word-wrap: break-word;
-          border: 1px solid #fff !important;
+          border: 1px solid #d7e6ff !important;
+          
         }
 
         thead th {

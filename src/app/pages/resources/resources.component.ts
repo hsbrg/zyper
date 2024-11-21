@@ -64,6 +64,10 @@ export class ResourcesComponent implements OnInit {
       title: 'Small Business Marketing Budget Guide',
       slug: 'small-business-marketing-budget-guide',
     },
+    {
+      title: 'Ultimate Guide to User-Generated Content (UGC) for Business Growth',
+      slug: 'ultimate-guide-to-user-generated-content-ugc-for-business-growth',
+    }
   ];
 
   // SOCIAL LINKS

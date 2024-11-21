@@ -1,0 +1,91 @@
+.resources-twelfth-container {
+  background-color: #d7e6ff;
+  .intro,
+  .benefits {
+    padding: 3rem 0rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .containerr {
+    padding: 6rem 4.75rem;
+    h1 {
+        width: 90%;
+      font-size: 4.5rem;
+      font-weight: bold;
+      margin-bottom: 1.6rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .started-with-ugc,
+    .legal-ethical-ugc,
+    .impl-ugc-strategy,
+    .strategies,
+    .techniques {
+      padding: 3rem 0rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .started-with-ugc {
+      h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+
+        .started-with-ugc-content {
+          h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    .legal-ethical-ugc {
+      h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    .impl-ugc-strategy {
+      h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+
+        .impl-ugc-strategy-content {
+          h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    .impl-ugc-strategy {
+      h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}

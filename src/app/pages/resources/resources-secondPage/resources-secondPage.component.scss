@@ -2,9 +2,10 @@
   .resources-second-intro,
   .resources-second-section {
     max-width: 1920px;
+    background-color: #D7E6FF;
     width: 100%;
     margin: 0 auto;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
 
     @media (min-width: 768px) {
       padding: 4rem 2rem;
@@ -47,6 +48,7 @@
 
   .resources-second-intro {
     padding-top: 6rem;
+    background-color: #D7E6FF;
 
     @media (min-width: 768px) {
       padding-top: 8rem;
@@ -65,7 +67,7 @@
     }
 
     @media (min-width: 1024px) {
-      padding-bottom: 10rem;
+      padding-bottom: 3rem;
     }
   }
 }
@@ -73,7 +75,7 @@
 .setup-guide {
   width: 100%;
   padding: 2rem 0;
-  background-color: #fff;
+    background-color: #D7E6FF;
 
   @media (min-width: 768px) {
     padding: 3rem 0;
