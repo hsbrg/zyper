@@ -18,7 +18,7 @@ export class TopBarComponent {
     { name: 'about', route: '/about' },
     { name: 'AI products', route: '/ai-products' },
     { name: 'resources', route: '/ai-marketing-resources' },
-    { name: 'pricing', route: '/pricing' },
+    { name: 'pricing', route: 'https://zyper-ai.vercel.app/subscription' },
     { name: 'contact us', route: '/contact' }
   ];
 
@@ -38,9 +38,16 @@ export class TopBarComponent {
   }
 
   navigateTo(route: string): void {
-    this.router.navigate([route]);
+    if (route.startsWith('https')) {
+      // Handle external URL
+      window.open(route, '_blank'); // Opens the URL in a new tab (_blank)
+    } else {
+      // Handle internal route
+      this.router.navigate([route]); 
+    }
     this.closeSidebar();
   }
+
 
   closeSidebar(): void {
     this.isSidebarOpen = false;

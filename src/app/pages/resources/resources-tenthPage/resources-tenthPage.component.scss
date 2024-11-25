@@ -4,9 +4,27 @@
     margin: 2.5rem 0;
     padding: 3rem;
 
+    .overview {
+      padding: 0rem 3rem;
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.125rem;
+      }
+    }
+
+    .funnel-stages {
+      padding: 0rem 3rem;
+      h3 {
+        font-size: 2rem;
+        margin: 2rem 0rem 1.5rem 0rem;
+      }
+    }
+
     .funnel-section {
-      width: 95%;
-      margin: 0 auto;
+      width: 100%;
+      // margin: 0 auto;
       margin-bottom: 40px;
       border-radius: 8px;
       background-color: #d7e6ff;
@@ -15,9 +33,9 @@
         font-size: 4.5rem;
         font-weight: bold;
         text-align: left;
-        width: 90%;
+        width: 100%;
         word-break: break-word;
-        margin-left: 0.5rem;
+        // margin-left: 0.5rem;
         margin-bottom: 2rem;
       }
 
@@ -81,7 +99,7 @@
         font-size: 4.5rem;
         font-weight: bold;
         text-align: left;
-        width: 90%;
+        width: 100%;
         word-break: break-word;
         margin-left: 0.5rem;
         margin-bottom: 2rem;

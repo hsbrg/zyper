@@ -7,10 +7,21 @@ $text-color: #333;
   background: #fff;
   background-color: #d7e6ff;
 
-  .zyper-ai-container {
+  #context {
     width: 100%;
     padding: 6rem 4.6rem 3rem 4.6rem !important;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem !important;
+    }
+  }
+
+  .zyper-ai-container {
+    width: 100%;
+    padding: 0rem 4.6rem;
     background-color: #d7e6ff;
+    margin-bottom: 6rem;
 
     h1 {
       max-width: 1280px;
@@ -23,7 +34,6 @@ $text-color: #333;
       width: 100%;
       border-collapse: collapse;
       margin: 3rem 0rem;
-
 
       thead th {
         font-family: var(--font_montserrat);
@@ -56,9 +66,11 @@ $text-color: #333;
 
     .results,
     .recommendations {
-      margin: 3rem 3rem;
       padding: 3rem 0rem 1rem 0rem;
+    }
 
+    .results,
+    .recommendations {
       h2 {
         font-size: 4.5rem;
         font-weight: 700;
@@ -86,7 +98,6 @@ $text-color: #333;
     }
 
     .plan-table {
-
       thead th,
       tbody td {
         width: 200px;
@@ -118,7 +129,6 @@ $text-color: #333;
     }
 
     .plan-table {
-
       thead th,
       tbody td {
         width: 180px;
@@ -285,7 +295,6 @@ $text-color: #333;
           text-align: center;
           word-wrap: break-word;
           border: 1px solid #d7e6ff !important;
-          
         }
 
         thead th {

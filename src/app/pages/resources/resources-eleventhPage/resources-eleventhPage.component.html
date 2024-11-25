@@ -4,7 +4,11 @@
 
   <div class="float-icons">
     <button (click)="switchWhatsappState()">
-      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
       <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
     </button>
     <i class="bi bi-chat" style="filter: opacity(0)"></i>
@@ -23,21 +27,29 @@
       </div>
       <p>
         <span> OR</span> <br />
-        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
-          chat</a>
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
       </p>
     </div>
   </div>
 
   <!-- resources eleventh page HERO SECTION -->
-  <app-hero-section title="Small Business 
+  <app-hero-section
+    title="Small Business 
     Marketing Budget 
-    Guide." description="Allocating the right marketing budget is a critical decision for small businesses. With limited
+    Guide."
+    description="Allocating the right marketing budget is a critical decision for small businesses. With limited
     resources, every dollar spent
      should bring a meaningful return. The tables below provide
     essential statistics to help small businesses navigate budget planning, 
     optimal channels,
-    expected returns on advertising, and profitability impact." buttonText="GET STARTED" [socialLinks]="[
+    expected returns on advertising, and profitability impact."
+    buttonText="GET STARTED"
+    [socialLinks]="[
       { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
       {
         icon: 'linkedin',
@@ -51,7 +63,42 @@
         icon: 'twitter',
         url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
       }
-    ]"></app-hero-section>
+    ]"
+  ></app-hero-section>
+
+  <div class="content-top content-common container">
+    <p>
+      Allocating the right marketing budget is a critical decision for small
+      businesses. With limited resources, every dollar spent should bring a
+      meaningful return. The tables below provide essential statistics to help
+      small businesses navigate budget planning, optimal channels, expected
+      returns on advertising, and profitability impact. Additionally, we outline
+      budget recommendations based on specific small business types and their
+      anticipated performance outcomes.
+    </p>
+    <p>
+      There are over 33 million businesses in the U.S., they spend 
+      <a
+        href="https://www.statista.com/topics/8972/marketing-in-the-united-states/"
+      >
+        <Strong>$481 billion</Strong>
+      </a>
+       a year on marketing. Ie Average American business
+      spends <strong>$14,575</strong> on marketing annually.
+    </p>
+    <p>
+      But this is a top-heavy figure. Most marketing spending comes from
+      <Strong> 14.9% to 18%</Strong> of all businesses (from sole
+      proprietorships to publicly held companies). By
+      comparison, <Strong>63.4%</Strong> of small businesses spend <Strong
+        >less than $1,000</Strong
+      > annually.
+    </p>
+    <p>
+      The average business spends <Strong>12.3%</Strong> percent of revenue on
+      marketing, with the median rate coming in at <Strong>10%</Strong>.
+    </p>
+  </div>
 
   <!-- marketing-stats section  -->
   <div class="marketing-stats-container">
@@ -186,6 +233,24 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <div class="content-end content-common">
+    <p>
+      By aligning budgets with typical industry spending patterns and proven
+      marketing channels, small businesses can set realistic performance
+      expectations. Tracking key metrics like RoAS and adapting to trends
+      (especially in social media and SEO) enables SMBs to maximize impact even
+      with limited resources. With a clear budget plan, small businesses can
+      enhance their brand presence, engage new customers, and ultimately drive
+      sustainable growth.
+    </p>
+    <div class="source">
+      <span>
+        <Strong> Source: </Strong>
+      </span>
+      <p>Upflip’s Small Business Marketing Budget Report</p>
     </div>
   </div>
 

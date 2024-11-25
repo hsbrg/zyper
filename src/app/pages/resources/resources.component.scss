@@ -1,5 +1,4 @@
 // optimized resources.component2.scss
-
 $primary-bg: #18181b;
 $card-bg: #ffffff;
 $primary-text: #ffffff;
@@ -12,7 +11,7 @@ $text-dark: #000000;
 $font-bebas: "Bebas Neue", sans-serif;
 
 // Cube Colors and Properties
-$cube-base-color: #8e8ee0;
+$cube-base-color: #2a4b6f;
 $cube-colors: (
   front: $cube-base-color,
   side: darken($cube-base-color, 10%),
@@ -50,7 +49,7 @@ $cube-sizes: (
       transition: all 0.3s ease;
 
       // Generate multiple cube variations
-      @for $i from 1 through 11 {
+      @for $i from 1 through 6 {
         &:nth-child(#{$i}) {
           animation: floatCube
             10s
@@ -262,7 +261,7 @@ $cube-sizes: (
       position: relative;
       height: 100%;
       padding: 1.5rem;
-      background: linear-gradient(135deg, #7a7ccb 0%, #7a7ccb 95%);
+      background: linear-gradient(135deg, #2a4b6f 0%, #2a4b6f 95%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -284,6 +283,14 @@ $cube-sizes: (
           opacity: 1;
           transform: translate(-50%, -50%) scale(1);
         }
+      }
+      .resources-card-date {
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 0.5rem;
+      }
+      .resources-card-content:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
     }
 
@@ -380,7 +387,7 @@ $cube-sizes: (
       transition: background-color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        background-color: #7a7ccb;
+        background-color: #2a4b6f;
         transform: translateY(-3px);
       }
     }
@@ -432,8 +439,8 @@ body {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background-color: #7a7ccb;
-  border: #7a7ccb;
+  background-color: #2a4b6f;
+  border: #2a4b6f;
   color: $primary-text;
   width: 3rem;
   height: 3rem;
@@ -444,6 +451,6 @@ body {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken(#7a7ccb, 10%);
+    background-color: darken(#2a4b6f, 10%);
   }
 }

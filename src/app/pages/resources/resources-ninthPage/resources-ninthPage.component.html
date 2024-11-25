@@ -1,42 +1,54 @@
 <div class="resources-ninth-container">
-    <app-top-bar buttonText="GET STARTED"></app-top-bar>
-    <app-cookieconsent></app-cookieconsent>
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
 
-    <div class="float-icons">
-        <button (click)="switchWhatsappState()">
-            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
-            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
-        </button>
-        <i class="bi bi-chat" style="filter: opacity(0)"></i>
-        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
-            <div class="details">
-                <div class="img">
-                    <img src="assets/images/logo.png" alt="" />
-                </div>
-                <p>
-                    Welcome to Zyper.Ai <br />
-                    Scan the QR code
-                </p>
-            </div>
-            <div class="qr_code">
-                <img src="assets/images/zyper.png" alt="" />
-            </div>
-            <p>
-                <span> OR</span> <br />
-                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
-                    start chat</a>
-            </p>
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
         </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
     </div>
+  </div>
 
-    <!-- resources ninth page HERO SECTION -->
-    <app-hero-section title="Zyper.ai Case Study for Pet Store Small Business Owner." description="You operate a local pet grooming salon with a limited marketing budget of $2000 per
+  <!-- resources ninth page HERO SECTION -->
+  <app-hero-section
+    title="Zyper.ai Case Study for Pet Store Small Business Owner."
+    description="You operate a local pet grooming salon with a limited marketing budget of $2000 per
     month. The objective is to increase brand 
     awareness in your area and generate more leads
     and in-store visits. You are considering online marketing channels such as Google My
     Business 
     (GMB) ads, Instagram, Facebook, Google Ads, and other potential strategies to
-    maximize the impact of your budget." buttonText="GET STARTED" [socialLinks]="[
+    maximize the impact of your budget."
+    buttonText="GET STARTED"
+    [socialLinks]="[
       { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
       {
         icon: 'linkedin',
@@ -50,99 +62,122 @@
         icon: 'twitter',
         url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
       }
-    ]"></app-hero-section>
+    ]"
+  ></app-hero-section>
 
-    <div class="zyper-ai-container">
-        <h1>Zyper.ai generates detailed custom plan with expected performance</h1>
-        <div class="table-container">
-            <table class="plan-table">
-                <thead>
-                    <tr>
-                        <th>Channel</th>
-                        <th>Budget Allocation</th>
-                        <th>CPL</th>
-                        <th>Expected Leads</th>
-                        <th>Goals</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>GMB Ads</td>
-                        <td>600</td>
-                        <td>5-8</td>
-                        <td>75-120</td>
-                        <td>Increase local foot traffic and service inquiries</td>
-                    </tr>
-                    <tr>
-                        <td>Instagram & Facebook Ads</td>
-                        <td>800</td>
-                        <td>3-6</td>
-                        <td>130-265</td>
-                        <td>
-                            Build brand awareness, drive appointment bookings, increase social
-                            media engagement
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Google Search Ads</td>
-                        <td>400</td>
-                        <td>8-12</td>
-                        <td>30-50</td>
-                        <td>
-                            Capture high-intent searchers ready to book a grooming service
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Content Creation and organic social media</td>
-                        <td>200</td>
-                        <td>N/A</td>
-                        <td>Organic Engagement</td>
-                        <td>Increase brand awareness and engagement</td>
-                    </tr>
-                    <tr>
-                        <td>Email Marketing</td>
-                        <td>minimal</td>
-                        <td>N/A</td>
-                        <td>Repeat Business</td>
-                        <td>Drive repeat bookings and maintain customer relationships</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  <section className="context" id="context">
+    <h2>Context Provided to Zyper from Customer Intake:</h2>
+    <p>
+      You operate a local pet grooming salon with a limited marketing budget of
+      $2000 per month. The objective is to increase brand awareness in your area
+      and generate more leads and in-store visits. You are considering online
+      marketing channels such as Google My Business (GMB) ads, Instagram,
+      Facebook, Google Ads, and other potential strategies to maximize the
+      impact of your budget.
+    </p>
+  </section>
 
-        <div class="results">
-            <h2>Estimated Total Results</h2>
-            <ul>
-                <li>Overall CPL: $5-$10 (average)</li>
-                <li>Total Expected Leads per Month: 235-435</li>
-                <li>
-                    Key Goals: Drive at least 30% increase in in-store visits, build a
-                    strong local brand presence, and ensure a steady stream of bookings.
-                </li>
-            </ul>
-        </div>
-
-        <div class="recommendations">
-            <h2>Additional Recommendations</h2>
-            <ul>
-                <li>
-                    Local SEO: Invest time in optimizing your website and GMB listing.
-                    Ensure you have accurate service descriptions, updated business hours,
-                    and positive reviews from clients.
-                </li>
-                <li>
-                    Referral Program: Encourage satisfied customers to refer friends,
-                    offering discounts or loyalty points.
-                </li>
-                <li>
-                    Community Involvement: Sponsor local pet events or collaborate with
-                    nearby pet stores for cross-promotion.
-                </li>
-            </ul>
-        </div>
+  <section class="zyper-ai-container">
+    <h1>Zyper.ai generates detailed custom plan with expected performance</h1>
+    <div class="table-container">
+      <table class="plan-table">
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Budget Allocation ($)</th>
+            <th>CPL ($)</th>
+            <th>Expected Leads</th>
+            <th>Goals</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GMB Ads</td>
+            <td>600</td>
+            <td>5-8</td>
+            <td>75-120</td>
+            <td>Increase local foot traffic and service inquiries</td>
+          </tr>
+          <tr>
+            <td>Instagram & Facebook Ads</td>
+            <td>800</td>
+            <td>3-6</td>
+            <td>130-265</td>
+            <td>
+              Build brand awareness, drive appointment bookings, increase social
+              media engagement
+            </td>
+          </tr>
+          <tr>
+            <td>Google Search Ads</td>
+            <td>400</td>
+            <td>8-12</td>
+            <td>30-50</td>
+            <td>
+              Capture high-intent searchers ready to book a grooming service
+            </td>
+          </tr>
+          <tr>
+            <td>Content Creation and organic social media</td>
+            <td>100</td>
+            <td>N/A</td>
+            <td>Organic Engagement</td>
+            <td>Increase brand awareness and engagement</td>
+          </tr>
+          <tr>
+            <td>Email Marketing</td>
+            <td>Minimal</td>
+            <td>N/A</td>
+            <td>Repeat Business</td>
+            <td>Drive repeat bookings and maintain customer relationships</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <footer>
-        <app-footer></app-footer>
-    </footer>
+    <div class="results">
+      <h2>Estimated Total Results</h2>
+      <ul>
+        <li><Strong>Overall CPL:</Strong> $5-$10 (average)</li>
+        <li><Strong>Total Expected Leads per Month:</Strong> 235-435</li>
+        <li>
+          <Strong>Key Goals:</Strong> Drive at least 30% increase in in-store
+          visits, build a strong local brand presence, and ensure a steady
+          stream of bookings.
+        </li>
+      </ul>
+    </div>
+
+    <div class="recommendations">
+      <h2>Additional Recommendations</h2>
+      <ul>
+        <li>
+          <Strong>Local SEO: </Strong> Invest time in optimizing your website
+          and GMB listing. Ensure you have accurate service descriptions,
+          updated business hours, and positive reviews from clients.
+        </li>
+        <li>
+          <Strong>Referral Program: </Strong>Encourage satisfied customers to
+          refer friends, offering discounts or loyalty points.
+        </li>
+        <li>
+          <Strong>Community Involvement: </Strong> Sponsor local pet events or
+          collaborate with nearby pet stores for cross-promotion.
+        </li>
+      </ul>
+    </div>
+
+    <section>
+      Looking to get a custom plan for your business? Click “Zyper, Please
+      Execute” to execute this plan including campaigns, accounts, ads and
+      budget setups and management. Sign up Todaty at
+      <a href="https://zyper-ai.vercel.app/subscription">
+        https://zyper-ai.vercel.app/subscription
+      </a>
+    </section>
+  </section>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>

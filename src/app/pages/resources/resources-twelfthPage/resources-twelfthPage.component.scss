@@ -1,5 +1,6 @@
 .resources-twelfth-container {
   background-color: #d7e6ff;
+
   .intro,
   .benefits {
     padding: 3rem 0rem;
@@ -8,8 +9,9 @@
 
   .containerr {
     padding: 6rem 4.75rem;
+
     h1 {
-        width: 90%;
+      width: 90%;
       font-size: 4.5rem;
       font-weight: bold;
       margin-bottom: 1.6rem;
@@ -40,52 +42,118 @@
       margin-bottom: 1.6rem;
     }
 
-    .started-with-ugc {
-      h1 {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 1.6rem;
-
-        .started-with-ugc-content {
-          h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 20px;
-          }
-        }
-      }
-    }
-
-    .legal-ethical-ugc {
-      h1 {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 1.6rem;
-      }
-    }
-
-    .impl-ugc-strategy {
-      h1 {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 1.6rem;
-
-        .impl-ugc-strategy-content {
-          h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 20px;
-          }
-        }
-      }
-    }
-
+    .started-with-ugc,
+    .legal-ethical-ugc,
     .impl-ugc-strategy {
       h1 {
         font-size: 4.5rem;
         font-weight: bold;
         margin-bottom: 1.6rem;
       }
+
+      .started-with-ugc-content,
+      .impl-ugc-strategy-content {
+        h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  // Media Queries for responsiveness
+  @media (max-width: 1200px) {
+    .containerr {
+      padding: 4rem 3rem;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .containerr {
+      padding: 3rem 2rem;
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .containerr {
+      padding: 2rem 1.5rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .containerr {
+      padding: 1.5rem 1rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .intro,
+    .benefits {
+      padding: 2rem 0;
+    }
+
+    .started-with-ugc,
+    .legal-ethical-ugc,
+    .impl-ugc-strategy,
+    .strategies,
+    .techniques {
+      padding: 2rem 0;
+    }
+    .started-with-ugc h1 {
+      font-size: 2.5rem !important;
+    }
+    .legal-ethical-ugc h1 {
+      font-size: 2.5rem !important;
+    }
+    .impl-ugc-strategy h1 {
+      font-size: 2.5rem !important;
     }
   }
 }

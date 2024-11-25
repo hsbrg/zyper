@@ -6,8 +6,36 @@ $text-color: #333;
   width: 100%;
   background: #d7e6ff;
 
+  .content-top,
+  .content-common {
+    padding: 5rem 0rem 0rem 0rem;
+    p {
+      font-size: 1.3rem !important;
+    }
+  }
+
+  .content-end {
+    padding: 5rem 4.75rem 0rem 4.75rem;
+    .source {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 2.4rem 0rem 3.5rem 0rem;
+      gap: 6px;
+
+      span {
+        font-size: 1.2rem !important;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-style: italic;
+      }
+    }
+  }
+
   .marketing-stats-container {
-    padding: 6rem 5vw; // Use vw for more fluid spacing
+    padding: 4rem 5vw; // Use vw for more fluid spacing
     background-color: #d7e6ff;
 
     .stats-heading {
@@ -89,7 +117,8 @@ $text-color: #333;
 
   .zyper-ai-container {
     width: 100%;
-    padding: 6rem 5vw;
+    height: fit-content;
+    padding: 6rem 5vw 0rem 5vw;
     background-color: #d7e6ff;
 
     h1 {
@@ -106,6 +135,7 @@ $text-color: #333;
 
       thead th,
       tbody td {
+        height: 175px !important;
         padding: 0.5rem;
         border: 0.3rem solid $table-header-bg;
         text-align: center;

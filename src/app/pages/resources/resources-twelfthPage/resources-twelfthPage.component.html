@@ -1,41 +1,53 @@
 <div class="resources-twelfth-container">
-    <app-top-bar buttonText="GET STARTED"></app-top-bar>
-    <app-cookieconsent></app-cookieconsent>
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
 
-    <div class="float-icons">
-        <button (click)="switchWhatsappState()">
-            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
-            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
-        </button>
-        <i class="bi bi-chat" style="filter: opacity(0)"></i>
-        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
-            <div class="details">
-                <div class="img">
-                    <img src="assets/images/logo.png" alt="" />
-                </div>
-                <p>
-                    Welcome to Zyper.Ai <br />
-                    Scan the QR code
-                </p>
-            </div>
-            <div class="qr_code">
-                <img src="assets/images/zyper.png" alt="" />
-            </div>
-            <p>
-                <span> OR</span> <br />
-                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
-                    start chat</a>
-            </p>
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
         </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
     </div>
+  </div>
 
-    <!-- resources eleventh page HERO SECTION -->
-    <app-hero-section title="Ultimate Guide to 
+  <!-- resources eleventh page HERO SECTION -->
+  <app-hero-section
+    title="Ultimate Guide to 
 User-Generated Content (UGC) 
-for Business Growth" description="This guide will outline how to generate and
+for Business Growth"
+    description="This guide will outline how to generate and
 strategically use UGC 
 to increase engagement, build credibility, and drive
-growth for small businesses." buttonText="GET STARTED" [socialLinks]="[
+growth for small businesses."
+    buttonText="GET STARTED"
+    [socialLinks]="[
       { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
       {
         icon: 'linkedin',
@@ -49,335 +61,409 @@ growth for small businesses." buttonText="GET STARTED" [socialLinks]="[
         icon: 'twitter',
         url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
       }
-    ]"></app-hero-section>
+    ]"
+  ></app-hero-section>
 
-    <div class="containerr">
-        <section class="intro">
-            <h1>What is UGC and Why It Matters?</h1>
-            <p>
-                <strong>Definition of UGC:</strong> User-generated content (UGC) refers
-                to any content created by users, such as photos, videos, reviews, and
-                testimonials, that promotes a brand in an organic way.
-            </p>
-            <p>
-                <strong>Why UGC is Vital:</strong> Consumers trust authentic content
-                from real users over branded advertising. According to a Nielsen report,
-                UGC is trusted 2.4 times more than traditional brand-created content.
-            </p>
-            <p>
-                <strong>Purpose of This Guide:</strong> This guide will outline how to
-                generate and strategically use UGC to increase engagement, build
-                credibility, and drive growth for small businesses.
-            </p>
-        </section>
-        <section class="benefits">
-            <h1>Understanding the Benefits of UGC</h1>
-            <div class="benefit">
-                <h3>1.1 Enhancing Brand Credibility and Trust</h3>
-                <p>
-                    <strong>Value of Authenticity:</strong> UGC serves as social proof,
-                    reassuring potential customers of your product's quality.
-                </p>
-                <p>
-                    <strong>Data Insight:</strong> A Stackla study in 2023 reported that
-                    79% of people say UGC highly influences their purchasing decisions.
-                </p>
-                <p>
-                    <strong>Real-Life Example:</strong> Sephora's 'Beauty Insider
-                    Community' allows customers to share unfiltered product reviews, which
-                    increases brand trust and customer loyalty.
-                </p>
-            </div>
-            <div class="benefit">
-                <h3>1.2 Cost-Effective Content Creation</h3>
-                <p>
-                    Reducing Marketing Costs: UGC minimizes the need for professionally
-                    created content.
-                </p>
-                <p>
-                    <strong>Example:</strong> GoPro relies heavily on UGC, with users
-                    sharing action footage captured on their cameras, which the company
-                    uses in marketing materials.
-                </p>
-                <p>
-                    <strong>Benefit:</strong> This approach reduces in-house production
-                    expenses and keeps content fresh.
-                </p>
-            </div>
-            <div class="benefit">
-                <h3>1.3 Increasing Engagement and Building Community</h3>
-                <p>
-                    Building a Community: Customers feel more connected to brands that
-                    feature their content.
-                </p>
-                <p>
-                    <strong>Data:</strong> Engagement rates are 28% higher when UGC is
-                    shared on social media (Adweek, 2022).
-                </p>
-                <p>
-                    <strong>Example:</strong> Starbucks' White Cup Contest encouraged
-                    customers to draw on their cups and share the results online, creating
-                    a surge in brand interaction and community spirit.
-                </p>
-            </div>
-            <div class="benefit">
-                <h3>1.4 SEO and Social Proof Benefits</h3>
-                <p>
-                    <strong>SEO Boost:</strong> Google and other search engines favor
-                    fresh, relevant content, making UGC beneficial for SEO.
-                </p>
-                <p>
-                    <strong>Enhanced Credibility:</strong> Bazaar voice found that 51% of
-                    consumers in the U.S. trust UGC more than content on company websites.
-                </p>
-                <p>
-                    <strong>Implementation Tip:</strong> Embed UGC on product pages and
-                    homepages to enhance SEO and build trust.
-                </p>
-            </div>
-        </section>
-        <section class="started-with-ugc">
-            <h1>Getting Started with UGC for Your Business</h1>
-            <div class="started-with-ugc-content">
-                <h3>2.1 Identifying Content Opportunities</h3>
-                <p>
-                    <strong>Opportunity Types:</strong> Unboxing videos, product reviews,
-                    customer testimonials, and lifestyle photos.
-                </p>
-                <p>
-                    <strong>Campaign Ideas:</strong> Photo contests, review incentives,
-                    hashtag challenges.
-                </p>
-                <p>
-                    <strong>Case Study:</strong> Coca-Cola's #ShareACoke campaign
-                    encouraged people to share personalized bottle photos, enhancing
-                    customer engagement and brand awareness.
-                </p>
-            </div>
-            <div class="started-with-ugc-content">
-                <h3>2.2 Creating a Branded Hashtag</h3>
-                <p>
-                    <strong>Choosing a Memorable Hashtag:</strong> Ensure your hashtag is
-                    unique, memorable, and relevant.
-                </p>
-                <p>
-                    <strong>Example:</strong> Lululemon's #TheSweatLife creates a
-                    community for fitness enthusiasts, encouraging them to share workouts
-                    and product photos.
-                </p>
-                <p>
-                    <strong>Best Practice:</strong> Include hashtags in all brand
-                    communication to increase visibility and participation.
-                </p>
-            </div>
-            <div class="started-with-ugc-content">
-                <h2>2.3 Building an Engaged Community</h2>
-                <p>
-                    <strong>Engagement Tips:</strong> Engage with your followers through
-                    comments, reposts, and direct messages to show appreciation.
-                </p>
-                <p>
-                    <strong>Example:</strong> Glossier's social media team actively
-                    interacts with their community, encouraging a loyal following that
-                    frequently generates content.
-                </p>
-                <p>
-                    <strong>Tip:</strong> Host community-building events, such as Q&As or
-                    live streams, to foster a more engaged customer base.
-                </p>
-            </div>
-        </section>
-        <section class="legal-ethical-ugc">
-            <h1>Legal and Ethical Aspects of UGC</h1>
-            <div class="legal-ethical-ugc-content">
-                <h3>3.1 Getting Permission and Rights</h3>
-                <p>
-                    <strong>Legal Obligations:</strong> Always obtain permission before
-                    using a customer's content.
-                </p>
-                <p>
-                    <strong>Consent Methods:</strong> Clear communication about
-                    permissions, direct messaging, or including terms with your branded
-                    hashtag.
-                </p>
-                <p>
-                    <strong>Example:</strong> Brands like Apple request rights before
-                    featuring customer photos in campaigns.
-                </p>
-            </div>
-            <div class="legal-ethical-ugc-content">
-                <h3>3.2 Ethical Use of UGC</h3>
-                <p>
-                    <strong>Transparency and Credit:</strong> Be clear about how you
-                    intend to use UGC and ensure proper attribution.
-                </p>
-                <p>
-                    <strong>Example:</strong> Patagonia credits creators on social media
-                    posts to honor their contributions.
-                </p>
-                <p>
-                    <strong>Avoiding Misuse:</strong> Never alter UGC in ways that
-                    misrepresent the original creator's intent, which could damage brand
-                    trust.
-                </p>
-            </div>
-        </section>
-        <section class="impl-ugc-strategy">
-            <h1>Implementing a UGC Strategy</h1>
-            <div class="impl-ugc-strategy-content">
-                <h3>4.1 Defining Campaign Goals</h3>
-                <p>
-                    <strong>Setting Clear Objective:</strong> Define whether your goals
-                    are to boost engagement, increase website traffic, or drive
-                    conversions.
-                </p>
-                <p>
-                    <strong>Metrics:</strong>Use engagement, reach, and conversion metrics
-                    to measure success.
-                </p>
-            </div>
-            <div class="impl-ugc-strategy-content">
-                <h3>4.2 Choosing the Right Channels</h3>
-                <p>
-                    <strong>Channel-Specific Strategies:</strong>Tailor your approach for
-                    each platform (e.g., Instagram, Facebook, TikTok).
-                </p>
-                <p>
-                    <strong>Example:</strong> Airbnb uses Instagram to display UGC photos
-                    from satisfied customers, enhancing their travel appeal.
-                </p>
-            </div>
-            <div class="impl-ugc-strategy-content">
-                <h3>4.3 Launching a UGC Campaign</h3>
-                <p>
-                    <strong>Campaigns Process:</strong> Start by sharing a branded hashtag
-                    and encourage customers to participate by offering incentives.
-                </p>
-                <p>
-                    <strong>Example:</strong> GoPro’s annual awards ask users to submit
-                    content for cash prizes, creating a library of valuable UGC.
-                </p>
-            </div>
-            <div class="impl-ugc-strategy-content">
-                <h3>4.4 Best Practices for Successful Campaigns</h3>
-                <p>
-                    <strong>Clear Instructions:</strong>: Be clear about what you want
-                    users to submit and how they should share it.
-                </p>
-                <p>
-                    <strong>Offer Rewards:</strong> Incentives like discounts, free
-                    products, or features can encourage participation.
-                </p>
-                <p>
-                    <strong>Engage with Users:</strong> Re post UGC on your channels to
-                    show appreciation and encourage further contributions.
-                </p>
-            </div>
-        </section>
-
-        <section class="intro">
-            <h1>Showcasing UGC in Your Marketing</h1>
-            <div class="content">
-                <h3>5.1 Displaying UGC on Your Website</h3>
-                <p><strong>Effective Placement:</strong> Embed UGC on homepages, product pages, and landing pages.</p>
-                <p><strong>Data Insight:</strong> Yotpo reports that UGC on product pages can increase purchase
-                    likelihood by
-                    50%.</p>
-                <p><strong>Example:</strong> Clothing brand Allbirds features customer reviews and photos, adding social
-                    proof
-                    and boosting conversions.</p>
-            </div>
-            <div class="content">
-                <h3>5.2 Leveraging UGC in Social Media and Ads</h3>
-                <p>UGC in Ads: Studies indicate that UGC ads have 4x higher click-through rates than traditional ads.
-                </p>
-                <p><strong>Example:</strong> Glossier's use of customer photos in ads boosts authenticity and
-                    engagement.</p>
-                <p><strong>Tip:</strong> Incorporate authentic captions that reflect real customer experiences.</p>
-            </div>
-            <div class="content">
-                <h3>5.3 Using UGC in Email Marketing</h3>
-                <p>UGC in Newsletters: Add UGC to newsletters and product announcements for a more personal touch.</p>
-                <p><strong>Example:</strong> Wayfair’s “customer spotlight” emails feature UGC showing products in real
-                    homes.
-                </p>
-                <p><strong>Benefit:</strong> Featuring customer photos or testimonials can boost email click-through
-                    rates.</p>
-                <p><strong>Engage with Users:</strong> Repost UGC on your channels to show appreciation and encourage
+  <div class="containerr">
+    <section class="intro">
+      <h1>What is UGC and Why It Matters?</h1>
+      <p>
+        <strong>Definition of UGC:</strong> User-generated content (UGC) refers
+        to any content created by users, such as photos, videos, reviews, and
+        testimonials, that promotes a brand in an organic way.
+      </p>
+      <p>
+        <strong>Why UGC is Vital:</strong> Consumers trust authentic content
+        from real users over branded advertising. According to a Nielsen report,
+        UGC is trusted 2.4 times more than traditional brand-created content.
+      </p>
+      <p>
+        <strong>Purpose of This Guide:</strong> This guide will outline how to
+        generate and strategically use UGC to increase engagement, build
+        credibility, and drive growth for small businesses.
+      </p>
+    </section>
+    <section class="benefits">
+      <h1>Understanding the Benefits of UGC</h1>
+      <div class="benefit">
+        <h3>1.1 Enhancing Brand Credibility and Trust</h3>
+        <p>
+          <strong>Value of Authenticity: </strong> UGC serves as social proof,
+          reassuring potential customers of your product's quality.
+        </p>
+        <p>
+          <strong>Data Insight: </strong> A Stackla study in 2023 reported that
+          79% of people say UGC highly influences their purchasing decisions.
+        </p>
+        <p>
+          <strong>Real-Life Example: </strong> Sephora's 'Beauty Insider
+          Community' allows customers to share unfiltered product reviews, which
+          increases brand trust and customer loyalty.
+        </p>
+      </div>
+      <div class="benefit">
+        <h3>1.2 Cost-Effective Content Creation</h3>
+        <p>
+          Reducing Marketing Costs: UGC minimizes the need for professionally
+          created content.
+        </p>
+        <p>
+          <strong>Example: </strong> GoPro relies heavily on UGC, with users
+          sharing action footage captured on their cameras, which the company
+          uses in marketing materials.
+        </p>
+        <p>
+          <strong>Benefit: </strong> This approach reduces in-house production
+          expenses and keeps content fresh.
+        </p>
+      </div>
+      <div class="benefit">
+        <h3>1.3 Increasing Engagement and Building Community</h3>
+        <p>
+          Building a Community: Customers feel more connected to brands that
+          feature their content.
+        </p>
+        <p>
+          <strong>Data: </strong> Engagement rates are 28% higher when UGC is
+          shared on social media (Adweek, 2022).
+        </p>
+        <p>
+          <strong>Example: </strong> Starbucks' White Cup Contest encouraged
+          customers to draw on their cups and share the results online, creating
+          a surge in brand interaction and community spirit.
+        </p>
+      </div>
+      <div class="benefit">
+        <h3>1.4 SEO and Social Proof Benefits</h3>
+        <p>
+          <strong>SEO Boost: </strong> Google and other search engines favor
+          fresh, relevant content, making UGC beneficial for SEO.
+        </p>
+        <p>
+          <strong>Enhanced Credibility: </strong> Bazaar voice found that 51% of
+          consumers in the U.S. trust UGC more than content on company websites.
+        </p>
+        <p>
+          <strong>Implementation Tip: </strong> Embed UGC on product pages and
+          homepages to enhance SEO and build trust.
+        </p>
+      </div>
+    </section>
+    <section class="started-with-ugc">
+      <h1>Getting Started with UGC for Your Business</h1>
+      <div class="started-with-ugc-content">
+        <h3>2.1 Identifying Content Opportunities</h3>
+        <p>
+          <strong>Opportunity Types: </strong> Unboxing videos, product reviews,
+          customer testimonials, and lifestyle photos.
+        </p>
+        <p>
+          <strong>Campaign Ideas: </strong> Photo contests, review incentives,
+          hashtag challenges.
+        </p>
+        <p>
+          <strong>Case Study: </strong> Coca-Cola's #ShareACoke campaign
+          encouraged people to share personalized bottle photos, enhancing
+          customer engagement and brand awareness.
+        </p>
+      </div>
+      <div class="started-with-ugc-content">
+        <h3>2.2 Creating a Branded Hashtag</h3>
+        <p>
+          <strong>Choosing a Memorable Hashtag: </strong> Ensure your hashtag is
+          unique, memorable, and relevant.
+        </p>
+        <p>
+          <strong>Example: </strong> Lululemon's #TheSweatLife creates a
+          community for fitness enthusiasts, encouraging them to share workouts
+          and product photos.
+        </p>
+        <p>
+          <strong>Best Practice: </strong> Include hashtags in all brand
+          communication to increase visibility and participation.
+        </p>
+      </div>
+      <div class="started-with-ugc-content">
+        <h2>2.3 Building an Engaged Community</h2>
+        <p>
+          <strong>Engagement Tips: </strong> Engage with your followers through
+          comments, reposts, and direct messages to show appreciation.
+        </p>
+        <p>
+          <strong>Example: </strong> Glossier's social media team actively
+          interacts with their community, encouraging a loyal following that
+          frequently generates content.
+        </p>
+        <p>
+          <strong>Tip: </strong> Host community-building events, such as Q&As or
+          live streams, to foster a more engaged customer base.
+        </p>
+      </div>
+    </section>
+    <section class="legal-ethical-ugc">
+      <h1>Legal and Ethical Aspects of UGC</h1>
+      <div class="legal-ethical-ugc-content">
+        <h3>3.1 Getting Permission and Rights</h3>
+        <p>
+          <strong>Legal Obligations: </strong> Always obtain permission before
+          using a customer's content.
+        </p>
+        <p>
+          <strong>Consent Methods: </strong> Clear communication about
+          permissions, direct messaging, or including terms with your branded
+          hashtag.
+        </p>
+        <p>
+          <strong>Example: </strong> Brands like Apple request rights before
+          featuring customer photos in campaigns.
+        </p>
+      </div>
+      <div class="legal-ethical-ugc-content">
+        <h3>3.2 Ethical Use of UGC</h3>
+        <p>
+          <strong>Transparency and Credit: </strong> Be clear about how you
+          intend to use UGC and ensure proper attribution.
+        </p>
+        <p>
+          <strong>Example: </strong> Patagonia credits creators on social media
+          posts to honor their contributions.
+        </p>
+        <p>
+          <strong>Avoiding Misuse: </strong> Never alter UGC in ways that
+          misrepresent the original creator's intent, which could damage brand
+          trust.
+        </p>
+      </div>
+    </section>
+    <section class="impl-ugc-strategy">
+      <h1>Implementing a UGC Strategy</h1>
+      <div class="impl-ugc-strategy-content">
+        <h3>4.1 Defining Campaign Goals</h3>
+        <p>
+          <strong>Setting Clear Objectives: </strong> Define whether your goals
+          are to boost engagement, increase website traffic, or drive
+          conversions.
+        </p>
+        <p>
+          <strong>Metrics: </strong>Use engagement, reach, and conversion metrics
+          to measure success.
+        </p>
+      </div>
+      <div class="impl-ugc-strategy-content">
+        <h3>4.2 Choosing the Right Channels</h3>
+        <p>
+          <strong>Channel-Specific Strategies: </strong>Tailor your approach for
+          each platform (e.g., Instagram, Facebook, TikTok).
+        </p>
+        <p>
+          <strong>Example: </strong> Airbnb uses Instagram to display UGC photos
+          from satisfied customers, enhancing their travel appeal.
+        </p>
+      </div>
+      <div class="impl-ugc-strategy-content">
+        <h3>4.3 Launching a UGC Campaign</h3>
+        <p>
+          <strong>Campaigns Process: </strong> Start by sharing a branded hashtag
+          and encourage customers to participate by offering incentives.
+        </p>
+        <p>
+          <strong>Example: </strong> GoPro’s annual awards ask users to submit
+          content for cash prizes, creating a library of valuable UGC.
+        </p>
+      </div>
+      <div class="impl-ugc-strategy-content">
+        <h3>4.4 Best Practices for Successful Campaigns</h3>
+        <p>
+          <strong>Clear Instructions: </strong>: Be clear about what you want
+          users to submit and how they should share it.
+        </p>
+        <p>
+          <strong>Offer Rewards: </strong> Incentives like discounts, free
+          products, or features can encourage participation.
+        </p>
+        <p>
+          <strong>Engage with Users: </strong> Repost UGC on your channels to
+          show appreciation and encourage further contributions.
+        </p>
+      </div>
+    </section>
+    <section class="intro">
+      <h1>Showcasing UGC in Your Marketing</h1>
+      <div class="content">
+        <h3>5.1 Displaying UGC on Your Website</h3>
+        <p>
+          <strong>Effective Placement: </strong> Embed UGC on homepages, product
+          pages, and landing pages.
+        </p>
+        <p>
+          <strong>Data Insight: </strong> Yotpo reports that UGC on product pages
+          can increase purchase likelihood by 50%.
+        </p>
+        <p>
+          <strong>Example:</strong> Clothing brand Allbirds features customer
+          reviews and photos, adding social proof and boosting conversions.
+        </p>
+      </div>
+      <div class="content">
+        <h3>5.2 Leveraging UGC in Social Media and Ads</h3>
+        <p>
+          <strong>UGC in Ads:</strong>Studies indicate that UGC ads have 4x
+          higher click-through rates than traditional ads.
+        </p>
+        <p>
+          <strong>Example: </strong> Glossier's use of customer photos in ads
+          boosts authenticity and engagement.
+        </p>
+        <p>
+          <strong>Tip: </strong> Incorporate authentic captions that reflect real
+          customer experiences.
+        </p>
+      </div>
+      <div class="content">
+        <h3>5.3 Using UGC in Email Marketing</h3>
+        <p>
+          <strong>UGC in Newsletters: </strong> Add UGC to newsletters and
+          product announcements for a more personal touch.
+        </p>
+        <p>
+          <strong>Example: </strong> Wayfair’s “customer spotlight” emails
+          feature UGC showing products in real homes.
+        </p>
+        <p>
+          <strong>Benefit: </strong> Featuring customer photos or testimonials
+          can boost email click-through rates.
+        </p>
+        <!-- <p><strong>Engage with Users:</strong> Repost UGC on your channels to show appreciation and encourage
                     further
-                    contributions.</p>
-            </div>
-        </section>
-        <section class="benefits">
-            <h1>Measuring the Impact of UGC on Your Business</h1>
-            <div class="content">
-                <h3>6.1 Key Metrics for UGC Campaigns</h3>
-                <p>Track Metrics: Monitor engagement rates, impressions, conversion rates, and ROI.</p>
-                <p>Brand Sentiment: Use tools like Hootsuite to track sentiment around your brand’s UGC.</p>
-            </div>
-            <div class="content">
-                <h3>6.2 Analyzing Data for Continuous Improvement</h3>
-                <p>Tools: Use Google Analytics and social media platform analytics to measure UGC performance.</p>
-                <p><strong>Tip:</strong> Identify high-performing content and replicate similar styles in future
-                    campaigns.</p>
-            </div>
-            <div class="content">
-                <h3>6.3 Learning from UGC Performance</h3>
-                <p>Refinement: Adjust campaigns based on data insights. For example, if photo posts perform best,
-                    emphasize
-                    image-based content.</p>
-                <p>Customer Feedback Loop: Survey customers who share UGC to understand how to improve future campaigns.
-                </p>
-            </div>
-        </section>
+                    contributions.</p> -->
+      </div>
+    </section>
+    <section class="benefits">
+      <h1>Measuring the Impact of UGC on Your Business</h1>
+      <div class="content">
+        <h3>6.1 Key Metrics for UGC Campaigns</h3>
+        <p>
+          <strong>Track Metrics: </strong> Monitor engagement rates, impressions,
+          conversion rates, and ROI.
+        </p>
+        <p>
+          <strong>Brand Sentiment: </strong> Use tools like Hootsuite to track
+          sentiment around your brand’s UGC.
+        </p>
+      </div>
+      <div class="content">
+        <h3>6.2 Analyzing Data for Continuous Improvement</h3>
+        <p>
+          <strong>Tools: </strong> Use Google Analytics and social media platform
+          analytics to measure UGC performance.
+        </p>
+        <p>
+          <strong>Tip: </strong> Identify high-performing content and replicate
+          similar styles in future campaigns.
+        </p>
+      </div>
+      <div class="content">
+        <h3>6.3 Learning from UGC Performance</h3>
+        <p>
+          <Strong>Refinement: </Strong> Adjust campaigns based on data insights.
+          For example, if photo posts perform best, emphasize image-based
+          content.
+        </p>
+        <p>
+          <Strong>Customer Feedback Loop: </Strong>Survey customers who share UGC
+          to understand how to improve future campaigns.
+        </p>
+      </div>
+    </section>
     <section class="strategies">
-        <h1>UGC Strategies for Different Industries</h1>
-        <div class="content">
-            <h3>7.1 Retail and E-commerce</h3>
-            <p>Example: Sephora's Beauty Insider Community shares makeup tutorials and product reviews, fostering a
-                loyal
-                community.</p>
-        </div>
-        <div class="content">
-            <h3>7.2 Hospitality and Travel</h3>
-            <p>Case Study: Airbnb’s UGC-focused campaigns showcase genuine customer experiences, driving more bookings.
-            </p>
-        </div>
-        <div class="content">
-            <h3>7.3 B2B and SaaS Companies</h3>
-            <p>Example: LinkedIn’s platform for testimonials and recommendations supports B2B companies in promoting
-                their
-                services through customer success stories.</p>
-        </div>
+      <h1>UGC Strategies for Different Industries</h1>
+      <div class="content">
+        <h3>7.1 Retail and E-commerce</h3>
+        <p>
+          Example: Sephora's Beauty Insider Community shares makeup tutorials
+          and product reviews, fostering a loyal community.
+        </p>
+      </div>
+      <div class="content">
+        <h3>7.2 Hospitality and Travel</h3>
+        <p>
+          Case Study: Airbnb’s UGC-focused campaigns showcase genuine customer
+          experiences, driving more bookings.
+        </p>
+      </div>
+      <div class="content">
+        <h3>7.3 B2B and SaaS Companies</h3>
+        <p>
+          <Strong>Example: </Strong>LinkedIn’s platform for testimonials and
+          recommendations supports B2B companies in promoting their services
+          through customer success stories.
+        </p>
+      </div>
     </section>
     <section class="techniques">
-        <h1>Advanced UGC Techniques</h1>
-        <div class="content">
-            <h3>8.1 UGC Automation with AI</h3>
-            <p>AI Curation: Platforms like Stackla use AI to curate UGC, categorizing content based on relevance and
-                sentiment.</p>
-            <p>Case Study: Adobe uses AI to identify, curate, and share UGC, leveraging user creativity while saving
-                time.
-            </p>
-        </div>
-        <div class="content">
-            <h3>8.2 Integrating UGC with Influencer Marketing</h3>
-            <p>Micro-Influencers: Work with smaller influencers to reach niche audiences with authentic content.</p>
-            <p>Example: Aerie’s #AerieREAL campaign features real customers as influencers, strengthening brand
-                credibility.
-            </p>
-        </div>
-        <div class="content">
-            <h3>8.3 UGC and Customer Loyalty Programs</h3>
-            <p>Rewarding UGC: Use loyalty programs to incentivize UGC creation.</p>
-            <p>Example: Starbucks encourages rewards members to share drink photos for a chance to be featured,
-                enhancing
-                loyalty.</p>
-        </div>
+      <h1>Advanced UGC Techniques</h1>
+      <div class="content">
+        <h3>8.1 UGC Automation with AI</h3>
+        <p>
+          <Strong>AI Curation: </Strong> Platforms like Stackla use AI to curate
+          UGC, categorizing content based on relevance and sentiment.
+        </p>
+        <p>
+          <Strong>Case Study: </Strong> Adobe uses AI to identify, curate, and
+          share UGC, leveraging user creativity while saving time.
+        </p>
+      </div>
+      <div class="content">
+        <h3>8.2 Integrating UGC with Influencer Marketing</h3>
+        <p>
+          <Strong>Micro-Influencers: </Strong>Work with smaller influencers to
+          reach niche audiences with authentic content.
+        </p>
+        <p>
+          <Strong>Example: </Strong> Aerie’s #AerieREAL campaign features real
+          customers as influencers, strengthening brand credibility.
+        </p>
+      </div>
+      <div class="content">
+        <h3>8.3 UGC and Customer Loyalty Programs</h3>
+        <p>
+          <Strong>Rewarding UGC: </Strong>Use loyalty programs to incentivize
+          UGC creation.
+        </p>
+        <p>
+          <Strong>Example: </Strong>Starbucks encourages rewards members to
+          share drink photos for a chance to be featured, enhancing loyalty.
+        </p>
+      </div>
     </section>
+    <!-- Conclusion  -->
+    <div class="content">
+      <h3>Conclusion: The Future of UGC for Small Businesses</h3>
+      <p>
+        <Strong>Emerging Trends: </Strong>Discuss future trends like AR and
+        AI-enhanced UGC to add interactivity and personalization.
+      </p>
+      <p>
+        <Strong>Final Insights: </Strong>UGC is integral to digital marketing
+        for building trust and engagement. It empowers brands to tap into
+        authentic customer experiences for growth.
+      </p>
+      <p>
+        <Strong>Call to Action: </Strong>Encourage readers to explore UGC today,
+        with support available from Zyper.ai’s AI platform.
+      </p>
     </div>
-
-    <footer>
-        <app-footer></app-footer>
-    </footer>
+    <div>
+      <Strong
+        >Zyper.ai&#39;s AI platform uses your UGC to run ads and posts all
+        across your digital presence, on its own. No human effort required – UGC
+        gets used daily and weekly to target the best customers for the most
+        growth. Signup today at
+        <a href="https://zyper.ai.">https://zyper.ai.</a></Strong
+      >
+    </div>
+  </div>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>

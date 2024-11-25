@@ -1,37 +1,49 @@
 <div class="resources-fifith-container">
-    <app-top-bar buttonText="GET STARTED"></app-top-bar>
-    <app-cookieconsent></app-cookieconsent>
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
 
-    <div class="float-icons">
-        <button (click)="switchWhatsappState()">
-            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
-            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
-        </button>
-        <i class="bi bi-chat" style="filter: opacity(0)"></i>
-        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
-            <div class="details">
-                <div class="img">
-                    <img src="assets/images/logo.png" alt="" />
-                </div>
-                <p>
-                    Welcome to Zyper.Ai <br />
-                    Scan the QR code
-                </p>
-            </div>
-            <div class="qr_code">
-                <img src="assets/images/zyper.png" alt="" />
-            </div>
-            <p>
-                <span> OR</span> <br />
-                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
-                    start chat</a>
-            </p>
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
         </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
     </div>
+  </div>
 
-    <!-- resources fifith page HERO SECTION -->
-    <app-hero-section title="Unlock the Power of Accurate Google Ads Conversion Event Setup" description="Choosing the right conversion event depends on the type of campaign you’re running and
-    what goals you have." buttonText="GET STARTED" [socialLinks]="[
+  <!-- resources fifith page HERO SECTION -->
+  <app-hero-section
+    title="Unlock the Power of Accurate Google Ads Conversion Event Setup"
+    description="Choosing the right conversion event depends on the type of campaign you’re running and
+    what goals you have."
+    buttonText="GET STARTED"
+    [socialLinks]="[
       { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
       {
         icon: 'linkedin',
@@ -45,46 +57,50 @@
         icon: 'twitter',
         url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
       }
-    ]"></app-hero-section>
+    ]"
+  ></app-hero-section>
 
-    <!-- Why Setting the Right Conversion Events is Critical for Google Ads -->
-    <div class="common-section-structure">
-        <h1 class="common-section-title">
-            Why Setting the Right Conversion Events is Critical for Google Ads
-        </h1>
-        <h6>
-            Setting up accurate conversion events in Google Ads is one of the most
-            critical steps to measure success and optimize ad performance. Without
-            proper conversion tracking, you won’t have a clear understanding of what
-            actions users take on your site after clicking your ads. This means you
-            could be wasting ad budget on non-converting traffic or missing out on key
-            opportunities to improve your campaigns.
-        </h6>
-        <h6>Key reasons for setting the right conversion events:</h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Maximize Return on Ad Spend (RoAS): You’ll understand which ads,
-                keywords, and campaigns are driving valuable actions.
-            </li>
-            <li>
-                Optimize for Business Goals: Setting conversion events aligned with your
-                business objectives ensures your campaigns are optimized for the right
-                actions, whether it’s purchases, lead forms, or app downloads.
-            </li>
-            <li>
-                Improve Bidding Efficiency: Conversion events enable automated bidding
-                strategies (like Target CPA or Target ROAS) to work more efficiently,
-                allowing AI algorithms to maximize conversions.
-            </li>
-        </ul>
-    </div>
+  <!-- Why Setting the Right Conversion Events is Critical for Google Ads -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">
+      Why Setting the Right Conversion Events is Critical for Google Ads
+    </h1>
+    <h6>
+      Setting up accurate conversion events in Google Ads is one of the most
+      critical steps to measure success and optimize ad performance. Without
+      proper conversion tracking, you won’t have a clear understanding of what
+      actions users take on your site after clicking your ads. This means you
+      could be wasting ad budget on non-converting traffic or missing out on key
+      opportunities to improve your campaigns.
+    </h6>
+    <h6>Key reasons for setting the right conversion events:</h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Maximize Return on Ad Spend (RoAS): You’ll understand which ads,
+        keywords, and campaigns are driving valuable actions.
+      </li>
+      <li>
+        Optimize for Business Goals: Setting conversion events aligned with your
+        business objectives ensures your campaigns are optimized for the right
+        actions, whether it’s purchases, lead forms, or app downloads.
+      </li>
+      <li>
+        Improve Bidding Efficiency: Conversion events enable automated bidding
+        strategies (like Target CPA or Target ROAS) to work more efficiently,
+        allowing AI algorithms to maximize conversions.
+      </li>
+    </ul>
+  </div>
 
-    <app-feature-cards heading="Types of Conversion Events 
+  <app-feature-cards
+    heading="Types of Conversion Events 
     to Set Up Based on Campaign 
-    Objectives" subheading="Choosing the right conversion event depends on the type of campaign you’re running and
+    Objectives"
+    subheading="Choosing the right conversion event depends on the type of campaign you’re running and
     what goals you have. Here are some 
     common types of conversion events and when to use
-    them:" [cards]="[
+    them:"
+    [cards]="[
       {
         title: 'Search Campaigns:',
         description:
@@ -112,166 +128,171 @@
         description:
           'Goal: Increase app installs or engagement. Events to Track: - App downloads-In-app purchases  - key engagement actions(e.g., level completion, feature usage).'
       }
-    ]"></app-feature-cards>
+    ]"
+  ></app-feature-cards>
 
-    <!-- What Conversion Events Need Google Tag Manager (GTM) & Which Don’t -->
-    <div class="common-section-structure">
-        <h1 class="common-section-title">
-            What Conversion Events Need Google Tag Manager (GTM) & Which Don’t
-        </h1>
-        <h6>
-            Google Tag Manager (GTM) is a powerful tool that helps deploy marketing
-            and analytics tags without modifying your site’s code. However, not every
-            conversion event requires GTM.
-        </h6>
-        <h6>Conversion Events Requiring GTM:</h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Complex user actions such as scroll depth, page engagement, or form
-                submissions (GTM can fire tags upon completion of these events).
-            </li>
-            <li>
-                Custom events not natively trackable in Google Ads (e.g., AJAX-based
-                form submissions).
-            </li>
-            <li>
-                Events requiring additional data (like custom event parameters) beyond
-                the basic pageview.
-            </li>
-        </ul>
-        <h6>Conversion Events That Don’t Require GTM:</h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Basic conversion actions like purchases, calls from ads, or app installs
-                that can be tracked directly through Google Ads or Google Analytics.
-            </li>
-            <li>
-                Google Ads account-level conversions such as goal completions from
-                Analytics.
-            </li>
-        </ul>
-    </div>
+  <!-- What Conversion Events Need Google Tag Manager (GTM) & Which Don’t -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">
+      What Conversion Events Need Google Tag Manager (GTM) & Which Don’t
+    </h1>
+    <h6>
+      Google Tag Manager (GTM) is a powerful tool that helps deploy marketing
+      and analytics tags without modifying your site’s code. However, not every
+      conversion event requires GTM.
+    </h6>
+    <h6>Conversion Events Requiring GTM:</h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Complex user actions such as scroll depth, page engagement, or form
+        submissions (GTM can fire tags upon completion of these events).
+      </li>
+      <li>
+        Custom events not natively trackable in Google Ads (e.g., AJAX-based
+        form submissions).
+      </li>
+      <li>
+        Events requiring additional data (like custom event parameters) beyond
+        the basic pageview.
+      </li>
+    </ul>
+    <h6>Conversion Events That Don’t Require GTM:</h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Basic conversion actions like purchases, calls from ads, or app installs
+        that can be tracked directly through Google Ads or Google Analytics.
+      </li>
+      <li>
+        Google Ads account-level conversions such as goal completions from
+        Analytics.
+      </li>
+    </ul>
+  </div>
 
-    <!-- Understanding Attribution Tracking in Conversion Events -->
-    <div class="common-section-structure">
-        <h1 class="common-section-title">
-            Understanding Attribution Tracking in Conversion Events
-        </h1>
-        <h6>
-            Attribution tracking is crucial to understanding how each marketing
-            touchpoint contributes to conversions. By default, Google Ads uses a
-            ‘last-click’ attribution model, but you can adjust this to better reflect
-            user behavior across multiple touchpoints.
-        </h6>
-        <h6>Types of Attribution Models Available :</h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Last Click: Credit goes to the last interaction before the conversion. .
-            </li>
-            <li>First Click: Credit goes to the first interaction. .</li>
-            <li>Linear: Equal credit to all touchpoints.</li>
-            <li>
-                Time Decay: More credit to interactions closer to the time of
-                conversion.
-            </li>
-            <li>
-                Position-Based: 40% credit to the first and last interactions, 20% to
-                the ones in between.
-            </li>
-            <li>
-                Data-Driven: Uses machine learning to determine which touchpoints are
-                most impactful.
-            </li>
-        </ul>
-        <h6>How Attribution Models Affect Campaign Optimization:</h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Different models provide insights into how early-stage actions, like
-                video views or blog visits, contribute to conversions. This helps you
-                adjust bids or budgets to emphasize the most effective touchpoints.
-            </li>
-        </ul>
-    </div>
+  <!-- Understanding Attribution Tracking in Conversion Events -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">
+      Understanding Attribution Tracking in Conversion Events
+    </h1>
+    <h6>
+      Attribution tracking is crucial to understanding how each marketing
+      touchpoint contributes to conversions. By default, Google Ads uses a
+      ‘last-click’ attribution model, but you can adjust this to better reflect
+      user behavior across multiple touchpoints.
+    </h6>
+    <h6>Types of Attribution Models Available :</h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Last Click: Credit goes to the last interaction before the conversion. .
+      </li>
+      <li>First Click: Credit goes to the first interaction. .</li>
+      <li>Linear: Equal credit to all touchpoints.</li>
+      <li>
+        Time Decay: More credit to interactions closer to the time of
+        conversion.
+      </li>
+      <li>
+        Position-Based: 40% credit to the first and last interactions, 20% to
+        the ones in between.
+      </li>
+      <li>
+        Data-Driven: Uses machine learning to determine which touchpoints are
+        most impactful.
+      </li>
+    </ul>
+    <h6>How Attribution Models Affect Campaign Optimization:</h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Different models provide insights into how early-stage actions, like
+        video views or blog visits, contribute to conversions. This helps you
+        adjust bids or budgets to emphasize the most effective touchpoints.
+      </li>
+    </ul>
+  </div>
 
-    <!-- Common Challenges When Setting Up Google Ads Conversion Events -->
-    <div class="common-section-structure">
-        <h1 class="common-section-title">
-            Common Challenges When Setting Up Google Ads Conversion Events
-        </h1>
-        <h6>
-            While setting up conversion events is essential, it’s not always
-            straightforward. Here are some common challenges businesses face:
-        </h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Tracking Gaps: Missing out on key conversion points because they aren’t
-                tagged properly (e.g., misconfigured forms or missing thank you pages).
-            </li>
-            <li>
-                Double Counting Conversions: Conversion events firing multiple times due
-                to improper trigger settings, leading to inaccurate reporting.
-            </li>
-            <li>
-                Cross-Device Attribution: Difficulty tracking users across devices or
-                platforms, which can skew results if not properly addressed.
-            </li>
-            <li>
-                GTM Setup Errors: Incorrect tag or trigger setup in Google Tag Manager
-                leading to missed conversion events.
-            </li>
-            <li>
-                Event Duplication in Analytics: Google Ads conversions may overlap with
-                Google Analytics goals if they’re not de-duplicated, inflating your
-                numbers.
-            </li>
-        </ul>
-    </div>
+  <!-- Common Challenges When Setting Up Google Ads Conversion Events -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">
+      Common Challenges When Setting Up Google Ads Conversion Events
+    </h1>
+    <h6>
+      While setting up conversion events is essential, it’s not always
+      straightforward. Here are some common challenges businesses face:
+    </h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Tracking Gaps: Missing out on key conversion points because they aren’t
+        tagged properly (e.g., misconfigured forms or missing thank you pages).
+      </li>
+      <li>
+        Double Counting Conversions: Conversion events firing multiple times due
+        to improper trigger settings, leading to inaccurate reporting.
+      </li>
+      <li>
+        Cross-Device Attribution: Difficulty tracking users across devices or
+        platforms, which can skew results if not properly addressed.
+      </li>
+      <li>
+        GTM Setup Errors: Incorrect tag or trigger setup in Google Tag Manager
+        leading to missed conversion events.
+      </li>
+      <li>
+        Event Duplication in Analytics: Google Ads conversions may overlap with
+        Google Analytics goals if they’re not de-duplicated, inflating your
+        numbers.
+      </li>
+    </ul>
+  </div>
 
-    <!-- Passing Parameter Values with Conversion Events for Better Insights -->
-    <div class="common-section-structure">
-        <h1 class="common-section-title">
-            Passing Parameter Values with Conversion Events for Better Insights
-        </h1>
-        <h6>
-            Passing dynamic values with your conversion events can help you track more
-            granular data and improve optimization efforts. For example, you can pass
-            values like order amounts, product types, or user IDs along with your
-            conversion event.
-        </h6>
-        <h6>Steps to Pass Parameter Values:</h6>
-        <ul class="common-section-required-steps">
-            <li>
-                Use Google Tag Manager: Set up custom event tracking using GTM where you
-                can define variables such as transaction value or product category.
-            </li>
-            <li>
-                URL Parameters in Campaigns: Ensure campaign URLs include UTM parameters
-                that can be captured in your Google Analytics or Ads account.
-            </li>
-            <li>
-                Link Google Analytics to Google Ads: This enables the passing of key
-                values like revenue, transaction IDs, and product information, allowing
-                for better reporting and bid optimization.
-            </li>
-        </ul>
-    </div>
+  <!-- Passing Parameter Values with Conversion Events for Better Insights -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">
+      Passing Parameter Values with Conversion Events for Better Insights
+    </h1>
+    <h6>
+      Passing dynamic values with your conversion events can help you track more
+      granular data and improve optimization efforts. For example, you can pass
+      values like order amounts, product types, or user IDs along with your
+      conversion event.
+    </h6>
+    <h6>Steps to Pass Parameter Values:</h6>
+    <ul class="common-section-required-steps">
+      <li>
+        Use Google Tag Manager: Set up custom event tracking using GTM where you
+        can define variables such as transaction value or product category.
+      </li>
+      <li>
+        URL Parameters in Campaigns: Ensure campaign URLs include UTM parameters
+        that can be captured in your Google Analytics or Ads account.
+      </li>
+      <li>
+        Link Google Analytics to Google Ads: This enables the passing of key
+        values like revenue, transaction IDs, and product information, allowing
+        for better reporting and bid optimization.
+      </li>
+    </ul>
+  </div>
 
-    <!-- Start Tracking Your Google Ads Conversions Correctly -->
-    <div class="common-section-structure">
-        <h1 class="common-section-title">
-            Start Tracking Your Google Ads Conversions Correctly
-        </h1>
-        <h6 class="common-section-description">
-            Setting up Google Ads conversion events correctly can be the key
-            difference between wasted ad spend and maximizing the impact of every
-            dollar. Ensure you have the right setup for your business goals, use the
-            appropriate tools like GTM where necessary, and understand how attribution
-            works to make informed decisions. Ready to optimize your Google Ads
-            campaigns for success? Start setting up your conversion events today!
-        </h6>
-    </div>
+  <!-- Start Tracking Your Google Ads Conversions Correctly -->
+  <div class="common-section-structure">
+    <h1 class="common-section-title">
+      Start Tracking Your Google Ads Conversions Correctly
+    </h1>
+    <h6 class="common-section-description">
+      Setting up Google Ads conversion events correctly can be the key
+      difference between wasted ad spend and maximizing the impact of every
+      dollar. Ensure you have the right setup for your business goals, use the
+      appropriate tools like GTM where necessary, and understand how attribution
+      works to make informed decisions. Ready to optimize your Google Ads
+      campaigns for success? Start setting up your conversion events today!
+    </h6>
+    <p>
+      Ready to optimize your Google Ads conversions? [Set up your conversion
+      tracking now!](#)
+    </p>
+  </div>
 
-    <footer>
-        <app-footer></app-footer>
-    </footer>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>

@@ -3,8 +3,8 @@
   background-color: #d7e6ff;
 
   .section {
-    padding: 6rem 4rem 0rem 4rem;
-  background-color: #d7e6ff;
+    padding: 3rem 4rem 2rem 4rem;
+    background-color: #d7e6ff;
 
     &-title {
       font-size: 72px;
@@ -33,6 +33,11 @@
         }
       }
     }
+  }
+
+  .section-conclusion {
+    margin: 1rem 0rem 12rem 0rem;
+    padding: 3rem 4rem 3rem 4rem;
   }
 }
 

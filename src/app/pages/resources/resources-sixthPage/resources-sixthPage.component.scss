@@ -1,11 +1,18 @@
 .resources-sixth-container {
-    background-color: #D7E6FF;
+  background-color: #d7e6ff;
 
   .common-section-structure {
     max-width: 1920px;
     width: 100%;
-    background-color: #D7E6FF;
+    background-color: #d7e6ff;
     padding: 6.5rem 4rem 0 4rem;
+
+    .intro {
+      p {
+        font-size: 1.3rem;
+        padding-left: 1.2rem;
+      }
+    }
 
     .common-section-title {
       width: 75%;
@@ -19,7 +26,15 @@
     h6 {
       width: 80% !important;
       max-width: 100%;
+      font-size: 1.3rem;
       font-weight: normal;
+      padding-left: 1.3rem;
+    }
+
+    #case {
+      max-width: 100%;
+      font-size: 1.3rem;
+      font-weight: 700;
       padding-left: 1.3rem;
     }
 
@@ -31,20 +46,24 @@
     }
     .benchmark-text {
       padding-left: 1.3rem;
+      font-size: 1.3rem;
     }
 
     .common-section-required-steps > ol {
-      padding-left: 0 !important;
+      padding-left: 0px !important;
+      font-size: 1.3rem;
     }
     .common-section-required-steps > li {
-      padding-left: 0 !important;
+      padding-left: 0px !important;
+      font-size: 1.3rem;
     }
 
     .client-success-container {
       .client-success {
         max-width: 100%;
+        font-size: 1.3rem;
+        font-weight: 700;
         padding-left: 1.3rem;
-        font-weight: 500 !important;
       }
 
       .client-success-container-steps {
@@ -52,6 +71,7 @@
 
         ol {
           width: 85%;
+          font-size: 1.3rem;
         }
       }
     }
@@ -68,6 +88,7 @@
 
         ol {
           width: 85%;
+          font-size: 1.3rem;
         }
       }
     }
@@ -76,7 +97,7 @@
   .section {
     margin-bottom: 3rem;
     padding: 3.5rem 4rem 0 4rem;
-    background-color: #D7E6FF;
+    background-color: #d7e6ff;
 
     &-title {
       width: 80%;
@@ -130,17 +151,52 @@
         }
       }
     }
+    .key-features {
+      p {
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+    }
+    .client-testimonial {
+      font-style: italic;
+      p {
+        font-size: 1.3rem;
+        span {
+          font-style: normal !important;
+        }
+      }
+    }
+    .amazon-adv-para {
+      font-size: 1.3rem;
+    }
+  }
+
+  .section-challenges,
+  .section-roas-tips {
+    margin-bottom: 3rem;
+    padding: 3.5rem 4rem 0 4rem;
+  }
+  .section-text {
+    font-size: 1.3rem;
+  }
+
+  .section-list,
+  .tips-list > li {
+    font-size: 1.3rem;
+  }
+  .section-solution {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 768px) {
   .resources-sixth-container {
     .common-section-structure {
-      padding: 4rem 2rem 0 2rem; 
+      padding: 4rem 2rem 0 2rem;
 
       .common-section-title {
-        width: 100%; 
-        font-size: 2.5rem; 
+        width: 100%;
+        font-size: 2.5rem;
         padding-left: 0.5rem;
         margin-bottom: 1.5rem;
       }
@@ -156,7 +212,7 @@
       .client-success-container .client-success,
       .example-trip-container #example-trip {
         padding-left: 0.5rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
 
       .client-success-container-steps ol,
