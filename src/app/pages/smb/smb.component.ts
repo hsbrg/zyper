@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class SmbComponent implements OnInit {
   activeWhatsapp: boolean = false;
 
-  constructor() {}
-  ngOnInit(): void {}
+  constructor() { }
+  ngOnInit(): void { }
 
   SwitchWhatsappState() {
     this.activeWhatsapp = !this.activeWhatsapp;
@@ -25,6 +25,10 @@ export class SmbComponent implements OnInit {
     }
   }
 
+  navigateToSub() {
+    window.location.href = 'https://zyper-ai.vercel.app/subscription';
+  }
+  
   products = [
     {
       title: 'Website Build & Launch',

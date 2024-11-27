@@ -20,13 +20,32 @@ export class ResourcesComponent implements OnInit {
   resourceCards: ResourceCard[] = [
     // { title: "fs", slug: "fdfds" },
     {
-      title: 'Ultimate Guide to User-Generated Content (UGC) for Business Growth',
-      slug: 'ultimate-guide-to-user-generated-content-ugc-for-business-growth',
+      title:
+        'Beyond Online Marketing Performance - Key Metrics To Ensure Maximum Profits from Customers and leads.',
+      slug: 'beyond-online-marketing-performance-key-metrics-to-ensure-maximum-profits',
     },
+
     {
       title: 'Small Business Marketing Budget Guide',
       slug: 'small-business-marketing-budget-guide',
     },
+
+
+    {
+      title:
+        'Comprehensive Guide on Feed Optimization for E-commerce Across Google, Meta, Instagram, and Amazon',
+      slug: 'feed-optimization-ecommerce-google-meta-instagram-amazon',
+    },
+
+
+
+    {
+      title:
+        'Ultimate Guide to User-Generated Content (UGC) for Business Growth',
+      slug: 'ultimate-guide-to-user-generated-content-ugc-for-business-growth',
+    },
+
+
     {
       title:
         "Structuring Your Facebook Ads Funnel To Maximize Output - Zyper's Funnel AI Engine Recommendations",
@@ -37,13 +56,13 @@ export class ResourcesComponent implements OnInit {
       slug: 'zyper-ai-case-study-for-pet-store-small-business-owner',
     },
     {
-      title: 'How to Calculate Your Break-Even Customer Acquisition Cost (CAC)',
-      slug: 'how-to-calculate-your-break-even-customer-acquisition-cost-cac',
-    },
-    {
       title:
         'Mastering keyword selection for your ad campaigns: A comprehensive guide',
       slug: 'mastering-keyword-selection-for-your-ad-campaigns-a-comprehensive-guide',
+    },
+    {
+      title: 'How to Calculate Your Break-Even Customer Acquisition Cost (CAC)',
+      slug: 'how-to-calculate-your-break-even-customer-acquisition-cost-cac',
     },
     {
       title:
@@ -51,13 +70,17 @@ export class ResourcesComponent implements OnInit {
       slug: 'unlock-the-full-potential-of-amazon-advertising-with-our-advanced-ai-platform',
     },
     {
+      title:
+        'Boost your business with our AI-Driven Google My Business Management platform',
+      slug: 'boost-your-business-with-our-ai-driven-google-my-business-management-platform',
+    },
+    {
       title: 'Unlock the power of accurate google ads conversion event setup',
       slug: 'unlock-the-power-of-accurate-google-ads-conversion-event-setup',
     },
     {
-      title:
-        'Boost your business with our AI-Driven Google My Business Management platform',
-      slug: 'boost-your-business-with-our-ai-driven-google-my-business-management-platform',
+      title: 'Digital marketing behavior of retail ecommerce categories',
+      slug: 'digital-marketing-behavior-retail-ecommerce-categories',
     },
     {
       title: 'Simplify your web tracking with Google Tag Manager',
@@ -90,7 +113,7 @@ export class ResourcesComponent implements OnInit {
     },
   ];
 
-  constructor(private meta: Meta) { }
+  constructor(private meta: Meta) {}
 
   ngOnInit(): void {
     this.showLoader = true;

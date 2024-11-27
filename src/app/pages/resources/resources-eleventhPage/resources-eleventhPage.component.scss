@@ -40,7 +40,6 @@ $text-color: #333;
 
     .stats-heading {
       font-size: clamp(2rem, 4vw, 4.5rem); // Fluid typography
-      width: 75%;
       max-width: 100%;
       font-weight: bold;
       color: $text-color;
@@ -60,10 +59,13 @@ $text-color: #333;
       tbody td {
         width: clamp(200px, 30%, 245px); // Flexible table column widths
         height: auto;
-        text-align: left;
         padding: 1rem;
         border: 0.5rem solid #d7e6ff;
         font-size: 1rem;
+      }
+
+      thead th {
+        text-align: center !important;
       }
 
       thead {
@@ -74,7 +76,7 @@ $text-color: #333;
           th {
             padding: 1rem 2rem;
             text-align: left;
-            font-size: clamp(1.2rem, 2.5vw, 2.125rem);
+            font-size: clamp(1.125rem, 2.5vw, 2.125rem);
             font-weight: bold;
           }
         }
@@ -90,7 +92,7 @@ $text-color: #333;
           }
 
           td {
-            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-size: clamp(0.9rem, 2vw, 1.125rem);
             color: $text-color;
 
             ul {
@@ -135,7 +137,8 @@ $text-color: #333;
 
       thead th,
       tbody td {
-        height: 175px !important;
+        // height: 120px !important;
+        height: 100px !important;
         padding: 0.5rem;
         border: 0.3rem solid $table-header-bg;
         text-align: center;
@@ -144,7 +147,7 @@ $text-color: #333;
       thead th {
         background-color: $primary-color;
         color: #fff;
-        font-size: clamp(1rem, 2.5vw, 1.8rem);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
         font-weight: bold;
       }
 
@@ -180,42 +183,50 @@ $text-color: #333;
         }
       }
     }
-  }
-}
 
-@media screen and (max-width: 430px) {
-  .resources-eleventh-container {
-    .zyper-ai-container {
-      padding: 2rem 2vw;
-
-      h1 {
-        font-size: 1.5rem !important;
-        text-align: left;
-        padding: 0rem 2vw;
-        margin-bottom: 0px !important;
-      }
-
-      .plan-table {
-        thead th,
-        tbody td {
-          font-size: 0.65rem;
-          padding: 0.3rem;
-        }
+    .content-end {
+      padding: 5rem 2.75rem 0rem 2.75rem;
+      #source {
+        padding: 0rem !important;
+        font-size: 0.9rem !important;
       }
     }
+  }
 
-    .marketing-stats-container {
-      .stats-heading {
-        width: 100% !important;
-        margin: 10px 6px !important;
-        font-size: 1.8rem !important;
+  @media screen and (max-width: 430px) {
+    .resources-eleventh-container {
+      .zyper-ai-container {
+        padding: 2rem 2vw;
+
+        h1 {
+          font-size: 1.5rem !important;
+          text-align: left;
+          padding: 0rem 2vw;
+          margin-bottom: 0px !important;
+        }
+
+        .plan-table {
+          thead th,
+          tbody td {
+            font-size: 0.65rem;
+            padding: 0.3rem;
+          }
+        }
       }
 
-      .marketing-stats-table {
-        thead th,
-        tbody td {
-          font-size: 0.65rem;
-          padding: 0.3rem;
+      .marketing-stats-container {
+        .stats-heading {
+          width: 100% !important;
+          margin: 10px 6px !important;
+          font-size: 1.8rem !important;
+        }
+
+        .marketing-stats-table {
+          thead th,
+          tbody td {
+            font-size: 0.65rem;
+            padding: 0.3rem;
+          }
         }
       }
     }

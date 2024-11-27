@@ -54,7 +54,10 @@ import { ResourcesEleventhComponent } from './pages/resources/resources-eleventh
 import { FeatureCardsComponent } from './components/feature-cards/feature-cards.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { TopBarComponent } from './components/hero-section/top-bar/top-bar.component';
-import { ResourcesTwelfthPageComponent } from './pages/resources/resources-twelfthPage/resources-twelfthPage.component';
+import { ResourcesTwelfthComponent, } from './pages/resources/resources-twelfthPage/resources-twelfthPage.component';
+import { ResourcesThirteenthComponent, } from './pages/resources/resources-thirteenthPage/resources-thirteenthPage.component';
+import { ResourcesFourteenthComponent, } from './pages/resources/resources-fourteenthPage/resources-fourteenthPage.component';
+import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteenthPage/resources.fifteenthPage.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +89,10 @@ import { ResourcesTwelfthPageComponent } from './pages/resources/resources-twelf
     ResourcesNinthComponent,
     ResourcesTenthComponent,
     ResourcesEleventhComponent,
-    ResourcesTwelfthPageComponent,
+    ResourcesTwelfthComponent,
+    ResourcesThirteenthComponent,
+    ResourcesFourteenthComponent,
+    ResourcesFifteenthComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,
@@ -117,4 +123,4 @@ import { ResourcesTwelfthPageComponent } from './pages/resources/resources-twelf
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
-    selector: 'app-resources-twelfthPage',
-    templateUrl: './resources-twelfthPage.component.html',
-    styleUrls: ['./resources-twelfthPage.component.scss'],
+    selector: 'app-resources-thirteenthPage',
+    templateUrl: './resources-fifteenthPage.component.html',
+    styleUrls: ['./resources-fifteenthPage.component.scss'],
 })
-export class ResourcesTwelfthComponent implements OnInit {
+export class ResourcesFifteenthComponent implements OnInit {
     activeWhatsapp: boolean = false;
     showLoader: boolean = false;
 

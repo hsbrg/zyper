@@ -1,0 +1,214 @@
+<div class="resources-thirteenth-container">
+  <app-top-bar buttonText="GET STARTED"></app-top-bar>
+  <app-cookieconsent></app-cookieconsent>
+
+  <!-- resources thirteenth page HERO SECTION -->
+  <app-hero-section
+    title="Beyond Online Marketing Performance - Key Metrics To Ensure Maximum
+Profits from Customers and leads."
+    description="Even if you are using online ad marketing to get leads and customers, keeping track of P&amp;L
+is essential to ensure your business is making money. Here are the key metrics that you
+should be tracking depending on the type of business."
+    buttonText="GET STARTED"
+    [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"
+  ></app-hero-section>
+
+  <div class="float-icons">
+    <button (click)="switchWhatsappState()">
+      <img
+        src="assets/images/whatsapp_icon.png"
+        alt=""
+        *ngIf="!activeWhatsapp"
+      />
+      <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+    </button>
+    <i class="bi bi-chat" style="filter: opacity(0)"></i>
+    <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+      <div class="details">
+        <div class="img">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p>
+          Welcome to Zyper.Ai <br />
+          Scan the QR code
+        </p>
+      </div>
+      <div class="qr_code">
+        <img src="assets/images/zyper.png" alt="" />
+      </div>
+      <p>
+        <span> OR</span> <br />
+        <a
+          href="https://wa.me/+919266373451"
+          class="text-decoration-underline"
+          target="_blank"
+          >click here to start chat</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <section class="resources-thirteenth-section">
+    <div class="resources-thirteenth-section-div">
+      <header>
+        <p>
+          Even if you are using online ad marketing to get leads and customers,
+          keeping track of P&L is essential to ensure your business is making
+          money. Here are the key metrics that you should be tracking depending
+          on the type of business.
+        </p>
+      </header>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Business Type</th>
+              <th>Key Metrics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>E-commerce</td>
+              <td>
+                <ul>
+                  <li>Conversion Rate</li>
+                  <li>Average Order Value (AOV)</li>
+                  <li>Cart Abandonment Rate</li>
+                  <li>Customer Acquisition Cost (CAC)</li>
+                  <li>Customer Lifetime Value (CLV)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Physical Retail Stores</td>
+              <td>
+                <ul>
+                  <li>Sales per Square Foot</li>
+                  <li>Foot Traffic</li>
+                  <li>Average Transaction Value</li>
+                  <li>Inventory Turnover</li>
+                  <li>Shrinkage Rate</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Health and Wellness Stores</td>
+              <td>
+                <ul>
+                  <li>Product Sales Mix</li>
+                  <li>Customer Retention Rate</li>
+                  <li>Appointment Booking Rate</li>
+                  <li>Upsell/Cross-sell Rate</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Plumbing & Construction Contractors</td>
+              <td>
+                <ul>
+                  <li>Job Profitability</li>
+                  <li>Bid-to-Win Ratio</li>
+                  <li>Labor Utilization Rate</li>
+                  <li>Change Order Frequency</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Medical & Veterinary Practices</td>
+              <td>
+                <ul>
+                  <li>Patient Volume</li>
+                  <li>Revenue per Patient</li>
+                  <li>Appointment No-Show Rate</li>
+                  <li>Procedure Mix</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Food Restaurants</td>
+              <td>
+                <ul>
+                  <li>Table Turnover Rate</li>
+                  <li>Average Check Size</li>
+                  <li>Food Cost Percentage</li>
+                  <li>Labor Cost Percentage</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Insurance Sellers</td>
+              <td>
+                <ul>
+                  <li>Policy Conversion Rate</li>
+                  <li>Premium per Policy</li>
+                  <li>Client Retention Rate</li>
+                  <li>Claims Ratio</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Real Estate Agents</td>
+              <td>
+                <ul>
+                  <li>Listings to Sales Ratio</li>
+                  <li>Average Commission per Sale</li>
+                  <li>Days on Market</li>
+                  <li>Lead Conversion Rate</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Legal & Professional Services</td>
+              <td>
+                <ul>
+                  <li>Billable Hours Ratio</li>
+                  <li>Average Revenue per Client</li>
+                  <li>Client Acquisition Cost</li>
+                  <li>Case or Project Completion Rate</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Entertainment &amp; Sports Venues</td>
+              <td>
+                <ul>
+                  <li>Ticket Sales Growth</li>
+                  <li>Average Revenue per Event</li>
+                  <li>Occupancy Rate</li>
+                  <li>Concession Sales per Attendee</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="content-bottom" id="content-bottom">
+        <p>Once you have assessed these metrics, you should ensure that your paid campaigns are
+        attracting the audience and leads that can help you maximize these metrics for extracting
+        the most profits from your business.</p>
+        <p>Zyper.ai’s custom Profitablity Services help our customers align their marketing to
+        maximize their profitability metrics. Click &lt;<a href="https://zyper-ai.vercel.app/subscription">https://zyper-ai.vercel.app/subscription</a> &gt; to
+        contact us and start using our platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

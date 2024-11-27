@@ -38,7 +38,10 @@ import { ResourcesEighthComponent } from './pages/resources/resources-eighthPage
 import { ResourcesNinthComponent } from './pages/resources/resources-ninthPage/resources-ninthPage.component';
 import { ResourcesTenthComponent } from './pages/resources/resources-tenthPage/resources-tenthPage.component';
 import { ResourcesEleventhComponent } from './pages/resources/resources-eleventhPage/resources-eleventhPage.component';
-import { ResourcesTwelfthPageComponent } from './pages/resources/resources-twelfthPage/resources-twelfthPage.component';
+import { ResourcesTwelfthComponent } from './pages/resources/resources-twelfthPage/resources-twelfthPage.component';
+import { ResourcesThirteenthComponent } from './pages/resources/resources-thirteenthPage/resources-thirteenthPage.component';
+import { ResourcesFourteenthComponent } from './pages/resources/resources-fourteenthPage/resources-fourteenthPage.component';
+import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteenthPage/resources.fifteenthPage.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -168,7 +171,19 @@ const routes: Routes = [
       },
       {
         path: 'ultimate-guide-to-user-generated-content-ugc-for-business-growth',
-        component: ResourcesTwelfthPageComponent,
+        component: ResourcesTwelfthComponent,
+      },
+      {
+        path: 'beyond-online-marketing-performance-key-metrics-to-ensure-maximum-profits',
+        component: ResourcesThirteenthComponent,
+      },
+      {
+        path: 'digital-marketing-behavior-retail-ecommerce-categories',
+        component: ResourcesFourteenthComponent,
+      },
+      {
+        path: 'feed-optimization-ecommerce-google-meta-instagram-amazon',
+        component: ResourcesFifteenthComponent,
       },
     ],
   },

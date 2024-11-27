@@ -1,0 +1,128 @@
+<div class="resources-fourteenth-container">
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <!-- resources fourteenth page HERO SECTION -->
+    <app-hero-section title="Digital marketing behavior of retail ecommerce categories." description="Digital marketing behavior of retail ecommerce categories – Zyper.ai dives into which category
+gets sales from which digital channel and what type of ads. Craft your digital marketing
+strategy today , using our insights, based on data across thousands of ecommerce sellers." buttonText="GET STARTED"
+        [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"></app-hero-section>
+
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <section class="resources-fourteenth-section">
+        <div class="intro-text">
+            Digital marketing behavior of retail ecommerce categories – Zyper.ai dives
+            into which category gets sales from which digital channel and what type of
+            ads. Craft your digital marketing strategy today, using our insights,
+            based on data across thousands of ecommerce sellers.
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-header">Sector</div>
+            <div class="grid-header">Digital Marketing Habits</div>
+            <div class="grid-header">Ad Platforms</div>
+            <div class="grid-header">Types of Ads</div>
+            <div class="grid-header">Instagram Store Usage</div>
+            <div class="grid-header">Average Selling Price</div>
+            <div class="grid-header">Primary Sales Channels</div>
+            <div class="grid-header">Major Sales Sources</div>
+            <div class="grid-header">Notes</div>
+
+            <ng-container *ngFor="let sector of sectors">
+                <div class="grid-item">{{ sector.name }}</div>
+                <div class="grid-item">{{ sector.marketingHabits }}</div>
+                <div class="grid-item">{{ sector.adPlatforms }}</div>
+                <div class="grid-item">{{ sector.adTypes }}</div>
+                <div class="grid-item">{{ sector.instagramUsage }}</div>
+                <div class="grid-item">{{ sector.avgPrice }}</div>
+                <div class="grid-item">{{ sector.primaryChannels }}</div>
+                <div class="grid-item">{{ sector.salesSources }}</div>
+                <div class="grid-item">{{ sector.notes }}</div>
+            </ng-container>
+        </div>
+
+        <div class="key-insights">
+            <h3>Key Insights</h3>
+            <ul>
+                <li *ngFor="let insight of keyInsights">
+                    <ng-container *ngIf="insight.includes(':'); else noColon">
+                        <span class="bold-text">{{ insight.split(':')[0] }}:</span>{{ insight.split(':')[1] }}
+                    </ng-container>
+                    <ng-template #noColon>
+                        {{ insight }}
+                    </ng-template>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <Strong>
+                        Primary Sales Channels:
+                    </Strong>
+                    <ol>
+                        <Strong>Amazon</Strong> is the leading channel in most sectors due to its extensive
+                        customer base and fulfillment services.
+                    </ol>
+                    <ol>
+                        <Strong>Instagram</Strong> drives significant sales in sectors where visual content
+                        and influencer marketing are impactful.
+                    </ol>
+                    <ol>
+                        <Strong>Google</Strong> is critical for product research and directs traffic to
+                        both Amazon and individual e-commerce websites.
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <Strong>Major Sales Sources: </Strong> The ranking (e.g., Amazon &gt; Google &gt; Instagram)
+                    indicates the
+                    relative contribution of each channel to sales within that sector.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

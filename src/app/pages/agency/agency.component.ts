@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AgencyComponent implements OnInit {
   activeWhatsapp: boolean = false;
 
-  constructor() {}
-  ngOnInit(): void {}
+  constructor() { }
+  ngOnInit(): void { }
 
   SwitchWhatsappState() {
     this.activeWhatsapp = !this.activeWhatsapp;
@@ -23,6 +23,10 @@ export class AgencyComponent implements OnInit {
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
+  }
+
+  navigateToSub() {
+    window.location.href = 'https://zyper-ai.vercel.app/subscription';
   }
 
   products = [

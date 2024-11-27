@@ -6,11 +6,7 @@
 
   <div class="float-icons">
     <button (click)="SwitchWhatsappState()">
-      <img
-        src="assets/images/whatsapp_icon.png"
-        alt=""
-        *ngIf="!activeWhatsapp"
-      />
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
       <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
     </button>
 
@@ -29,12 +25,8 @@
       </div>
       <p>
         <span> OR</span> <br />
-        <a
-          href="https://wa.me/+919266373451"
-          class="text-decoration-underline"
-          target="_blank"
-          >click here to start chat</a
-        >
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
+          chat</a>
       </p>
     </div>
   </div>
@@ -49,27 +41,28 @@
     <div class="hero-content">
       <h2 data-aos="zoom-in" data-aos-duration="1000">Zyper.ai</h2>
       <p data-aos="fade-right" data-aos-duration="1000">
-        Is a cutting edge 100% Generative AI Digital Marketing Platform that fully runs your Marketing, makes intelligent decisions and replaces manual teams
+        Is a cutting edge 100% Generative AI Digital Marketing Platform that fully runs your Marketing, makes
+        intelligent decisions, replacing manual teams.
       </p>
       <p data-aos="fade-left" data-aos-duration="1000">
-        Zyper grows your business 24X7, 365 days a year, Profitably and Predictably. It Never takes a break – Not on Holidays or post office hours
+        Zyper grows your business 24x7, 365 days a year, Profitably and Predictably. It Never takes a break – Not on
+        Holidays or post office hours
       </p>
       <p data-aos="fade-right" data-aos-duration="1000">
-        Delivers Upto 100% Better Return on Investment on Marketing Spend – Deploys Advanced Optimizations for the Smallest to Biggest Customers
+        Delivers Up to 100% Better Return on Investment on Marketing Spend – Deploys Advanced Optimizations for the
+        Smallest to Biggest Customers
       </p>
       <p data-aos="fade-left" data-aos-duration="1000">
         Offers Free Trial Across All Basic Services
       </p>
 
       <div class="buttons">
-        <button routerLink="/reg" data-aos="zoom-in" data-aos-duration="1500">
+        <button (click)="navigateToSub()" data-aos="zoom-in" data-aos-duration="1500">
           Start Using
         </button>
-        <button routerLink="/login" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
+        <button routerLink="/demo" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
       </div>
-      <app-floating-arrow
-        (click)="scrollToSection('focus-container')"
-      ></app-floating-arrow>
+      <app-floating-arrow (click)="scrollToSection('focus-container')"></app-floating-arrow>
     </div>
   </div>
   <div class="focus-container" id="focus-container">
@@ -78,17 +71,17 @@
         Focus on Core Business, Leave Marketing to Us
       </h2>
       <p data-aos="fade-right" data-aos-duration="1000">
-        Spending so much time finding and managing resources? Team, agencies, freelancers, Designers, PPC & SEO experts? – Zyper consolidates it all for You. Zyper has all services in one platform – Simply complete business profile, enter your budgets and leave the rest to Us
+        Spending so much time finding and managing resources? Team, agencies, freelancers, Designers, PPC & SEO experts?
+        – Zyper consolidates it all for You. Zyper has all services in one platform – Simply complete business profile,
+        enter your budgets and leave the rest to Us
       </p>
       <div class="buttons">
-        <button routerLink="/reg" data-aos="zoom-in" data-aos-duration="1500">
+        <button (click)="navigateToSub()" data-aos="zoom-in" data-aos-duration="1500">
           Start Using
         </button>
-        <button routerLink="/login" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
+        <button routerLink="/demo" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
       </div>
-      <app-floating-arrow
-        (click)="scrollToSection('deliver-container')"
-      ></app-floating-arrow>
+      <app-floating-arrow (click)="scrollToSection('deliver-container')"></app-floating-arrow>
     </div>
   </div>
   <div class="focus-container" id="focus-container">
@@ -97,65 +90,67 @@
         Delivers Upto 100% Better Return on Paid Ads Investments
       </h2>
       <p data-aos="fade-right" data-aos-duration="1000">
-        Zyper AI self optimizes RoAS (Return on Ad Spend) using entire suite of optimization tools available with Google, Facebook, Instagram, Tiktok and Listings, to deliver enterprise grade performance to even the smallest of Businesses
+        Zyper AI self optimizes RoAS (Return on Ad Spend) using entire suite of optimization tools available with
+        Google, Facebook, Instagram, Tiktok and Listings, to deliver enterprise grade performance to even the smallest
+        of Businesses
       </p>
       <div class="buttons">
-        <button routerLink="/reg" data-aos="zoom-in" data-aos-duration="1500">
+        <button (click)="navigateToSub()" data-aos="zoom-in" data-aos-duration="1500">
           Start Using
         </button>
-        <button routerLink="/login" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
+        <button routerLink="/demo" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
       </div>
-      <app-floating-arrow
-        (click)="scrollToSection('deliver-container')"
-      ></app-floating-arrow>
+      <app-floating-arrow (click)="scrollToSection('deliver-container')"></app-floating-arrow>
     </div>
   </div>
   <div class="deliver-container" id="deliver-container">
     <h2 data-aos="zoom-in" data-aos-duration="1000">
-        Quickest Website Build and Business Listings Setup for New Businesses & Startups
+      Quickest Website Build and Business Listings Setup for New Businesses & Startups
     </h2>
     <p data-aos="fade-right" data-aos-duration="1000">
-        Complete your profile in 30 minutes and Zyper generates website, that is ready to host within 24 hours. It enables Google business listings, Google maps listings and other  selected listings to make your business discoverable - Immediately. No need to set up multiple accounts and logins, everything enabled through a single login
+      Complete your profile in 30 minutes and Zyper generates website, that is ready to host within 24 hours. It enables
+      Google business listings, Google maps listings and other selected listings to make your business discoverable -
+      Immediately. No need to set up multiple accounts and logins, everything enabled through a single login
     </p>
     <div class="buttons">
-      <button routerLink="/reg" data-aos="zoom-in" data-aos-duration="1500">
+      <button (click)="navigateToSub()" data-aos="zoom-in" data-aos-duration="1500">
         Start Using
       </button>
-      <button routerLink="/login" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
+      <button routerLink="/demo" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
     </div>
-    <app-floating-arrow
-      (click)="scrollToSection('quickest-container')"
-    ></app-floating-arrow>
+    <app-floating-arrow (click)="scrollToSection('quickest-container')"></app-floating-arrow>
   </div>
   <div class="quickest-container" id="quickest-container">
     <h2 data-aos="zoom-in" data-aos-duration="1000">
-        Cross Channel Optimization of Budgets
+      Cross Channel Optimization of Budgets
     </h2>
     <p data-aos="fade-right" data-aos-duration="1000">
-        Zyper uses ML models to automatically direct marketing budgets towards the highest performing paid channels for selected industry and geography. It is able to decide how much of your marketing budget to put on Instagram or Google or other ad platforms,  based on advanced machine learning models, to deliver maximum impact
+      Zyper uses ML models to automatically direct marketing budgets towards the highest performing paid channels for
+      selected industry and geography. It is able to decide how much of your marketing budget to put on Instagram or
+      Google or other ad platforms, based on advanced machine learning models, to deliver maximum impact
     </p>
     <div class="buttons">
-      <button routerLink="/reg" data-aos="zoom-in" data-aos-duration="1500">
+      <button (click)="navigateToSub()" data-aos="zoom-in" data-aos-duration="1500">
         Start Using
       </button>
-      <button routerLink="/login" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
+      <button routerLink="/demo" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
     </div>
-    <app-floating-arrow
-      (click)="scrollToSection('cross-container')"
-    ></app-floating-arrow>
+    <app-floating-arrow (click)="scrollToSection('cross-container')"></app-floating-arrow>
   </div>
   <div class="cross-container" id="cross-container">
     <h2 data-aos="zoom-in" data-aos-duration="1000">
-        Superb Designs and Creatives, Tailored to Target Audience and Customers
+      Superb Designs and Creatives, Tailored to Target Audience and Customers
     </h2>
     <p data-aos="fade-right" data-aos-duration="1000">
-        Zyper APIs link to the largest stock designs, images and template databases worldwide, as well as to AI image & copy  generators, to discover and embed creative, unique designs tailored to your target customers, demographics and messaging, across all your marketing channels
+      Zyper APIs link to the largest stock designs, images and template databases worldwide, as well as to AI image &
+      copy generators, to discover and embed creative, unique designs tailored to your target customers, demographics
+      and messaging, across all your marketing channels
     </p>
     <div class="buttons">
-      <button routerLink="/reg" data-aos="zoom-in" data-aos-duration="1500">
+      <button (click)="navigateToSub()" data-aos="zoom-in" data-aos-duration="1500">
         Start Using
       </button>
-      <button routerLink="/login" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
+      <button routerLink="/demo" data-aos="zoom-in" data-aos-duration="1500">Watch Demo</button>
     </div>
     <!-- <app-floating-arrow
       (click)="scrollToSection('best-container')"

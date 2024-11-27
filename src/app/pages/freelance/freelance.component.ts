@@ -25,6 +25,11 @@ export class FreelanceComponent implements OnInit {
     }
   }
 
+  navigateToSub() {
+    window.location.href = 'https://zyper-ai.vercel.app/subscription';
+  }
+
+  
   products = [
     {
       title: 'Website Build & Launch',
