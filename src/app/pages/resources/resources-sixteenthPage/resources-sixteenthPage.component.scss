@@ -1,0 +1,150 @@
+.resources-sixteenth-container {
+  background-color: #d7e6ff;
+
+  .resources-sixteenth-section {
+    padding: 6.5rem 4.75rem;
+    background-color: #d7e6ff;
+  }
+
+  .common {
+    margin: 6rem 0rem !important;
+  }
+
+  .resources-sixteenth-section-header {
+    border-radius: 8px;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+      margin-bottom: 1.3rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.3rem;
+      font-weight: 700;
+    }
+
+    .content {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .steps {
+      padding-left: 0rem;
+      list-style-type: none;
+      font-size: 1.2rem;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1200px) {
+    .resources-sixteenth-section {
+      padding: 5rem 3.5rem;
+    }
+
+    .resources-sixteenth-section-header h1 {
+      font-size: 3rem;
+    }
+
+    .resources-sixteenth-section-header h2 {
+      font-size: 2.4rem;
+    }
+
+    .resources-sixteenth-section-header .content,
+    .resources-sixteenth-section-header .steps {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .resources-sixteenth-section {
+      padding: 4rem 2.5rem;
+    }
+
+    .resources-sixteenth-section-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .resources-sixteenth-section-header h2 {
+      font-size: 2rem;
+    }
+
+    .resources-sixteenth-section-header .content,
+    .resources-sixteenth-section-header .steps {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .resources-sixteenth-section {
+      padding: 3rem 1.5rem;
+    }
+
+    .resources-sixteenth-section-header h1 {
+      font-size: 2rem;
+    }
+
+    .resources-sixteenth-section-header h2 {
+      font-size: 1.8rem;
+    }
+
+    .resources-sixteenth-section-header .content,
+    .resources-sixteenth-section-header .steps {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .resources-sixteenth-section {
+      padding: 2rem 1rem;
+    }
+
+    .resources-sixteenth-section-header {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .content,
+      .steps {
+        font-size: 0.9rem;
+      }
+    }
+
+    .common {
+      margin: 4rem 0 !important;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .resources-sixteenth-section {
+      padding: 1.5rem 0.75rem;
+    }
+
+    .resources-sixteenth-section-header {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      .content,
+      .steps {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

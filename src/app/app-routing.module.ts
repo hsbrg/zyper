@@ -42,6 +42,7 @@ import { ResourcesTwelfthComponent } from './pages/resources/resources-twelfthPa
 import { ResourcesThirteenthComponent } from './pages/resources/resources-thirteenthPage/resources-thirteenthPage.component';
 import { ResourcesFourteenthComponent } from './pages/resources/resources-fourteenthPage/resources-fourteenthPage.component';
 import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteenthPage/resources.fifteenthPage.component';
+import { ResourcesSixteenthComponent } from './pages/resources/resources-sixteenthPage/resources-sixteenthPage.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -184,6 +185,10 @@ const routes: Routes = [
       {
         path: 'feed-optimization-ecommerce-google-meta-instagram-amazon',
         component: ResourcesFifteenthComponent,
+      },
+      {
+        path: "problem-solving-approach-ad-performance-conversion",
+        component: ResourcesSixteenthComponent,
       },
     ],
   },

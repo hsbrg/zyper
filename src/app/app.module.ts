@@ -53,11 +53,12 @@ import { ResourcesTenthComponent } from './pages/resources/resources-tenthPage/r
 import { ResourcesEleventhComponent } from './pages/resources/resources-eleventhPage/resources-eleventhPage.component';
 import { FeatureCardsComponent } from './components/feature-cards/feature-cards.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
-import { TopBarComponent } from './components/hero-section/top-bar/top-bar.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { ResourcesTwelfthComponent, } from './pages/resources/resources-twelfthPage/resources-twelfthPage.component';
 import { ResourcesThirteenthComponent, } from './pages/resources/resources-thirteenthPage/resources-thirteenthPage.component';
 import { ResourcesFourteenthComponent, } from './pages/resources/resources-fourteenthPage/resources-fourteenthPage.component';
 import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteenthPage/resources.fifteenthPage.component';
+import { ResourcesSixteenthComponent } from './pages/resources/resources-sixteenthPage/resources-sixteenthPage.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteen
     ResourcesThirteenthComponent,
     ResourcesFourteenthComponent,
     ResourcesFifteenthComponent,
+    ResourcesSixteenthComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,

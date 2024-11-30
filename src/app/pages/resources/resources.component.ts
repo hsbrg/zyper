@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 interface ResourceCard {
   title: string;
@@ -16,6 +18,13 @@ export class ResourcesComponent implements OnInit {
   activeWhatsapp: boolean = false;
   showLoader: boolean = false;
 
+  constructor(
+    private meta: Meta,
+    private title: Title,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
   // add the new card data from starting - (0th index)
   resourceCards: ResourceCard[] = [
     // { title: "fs", slug: "fdfds" },
@@ -24,28 +33,25 @@ export class ResourcesComponent implements OnInit {
         'Beyond Online Marketing Performance - Key Metrics To Ensure Maximum Profits from Customers and leads.',
       slug: 'beyond-online-marketing-performance-key-metrics-to-ensure-maximum-profits',
     },
-
     {
       title: 'Small Business Marketing Budget Guide',
       slug: 'small-business-marketing-budget-guide',
     },
-
-
+    {
+      title:
+        'Problem-Solving Approach for Improving Ad Performance and Conversion',
+      slug: 'problem-solving-approach-ad-performance-conversion',
+    },
     {
       title:
         'Comprehensive Guide on Feed Optimization for E-commerce Across Google, Meta, Instagram, and Amazon',
       slug: 'feed-optimization-ecommerce-google-meta-instagram-amazon',
     },
-
-
-
     {
       title:
         'Ultimate Guide to User-Generated Content (UGC) for Business Growth',
       slug: 'ultimate-guide-to-user-generated-content-ugc-for-business-growth',
     },
-
-
     {
       title:
         "Structuring Your Facebook Ads Funnel To Maximize Output - Zyper's Funnel AI Engine Recommendations",
@@ -113,28 +119,68 @@ export class ResourcesComponent implements OnInit {
     },
   ];
 
-  constructor(private meta: Meta) {}
-
   ngOnInit(): void {
-    this.showLoader = true;
+    this.showLoader = false;
     this.addDatesToCards();
+
+    // Subscribe to router events to detect route changes and update meta tags accordingly
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.updateMetaTags();
+      });
+
+    // Set the title of the page 0_0
+    this.setPageTitle('AI Marketing Resources | Zyper AI');
+
+    // Set dynamic meta tags for description, keywords, and robots
+    this.setMetaTags(
+      'Explore valuable AI marketing resources at Zyper AI. Access articles, tools, and guides to enhance your marketing strategies with artificial intelligence.',
+      'AI marketing, marketing resources, artificial intelligence marketing, zyper AI resources, AI tools, AI strategies, digital marketing, marketing automation'
+    );
 
     if (typeof window !== 'undefined') {
       window.addEventListener('load', () => {
         this.showLoader = false;
       });
     }
+  }
 
-    this.meta.updateTag({
-      name: 'description',
-      content:
-        'Zyper.ai provides AI enabled digital marketing for small businesses - PPC, paid marketing, social media, SEO, website building, google listings services',
-    });
-    this.meta.updateTag({
-      name: 'title',
-      content:
-        'Zyper.ai is a fully automated full stack AI-enabled marketing platform for small businesses',
-    });
+  /**
+   * Sets the title of the page dynamically.
+   * @param title - The title of the page to be set
+   */
+  private setPageTitle(title: string): void {
+    this.title.setTitle(title);
+  }
+
+  /**
+   * Updates the meta tags dynamically based on the current resource's slug
+   */
+  private updateMetaTags(): void {
+    const currentSlug = this.route.snapshot.paramMap.get('slug'); // Get the current slug from route params
+    const resource = this.resourceCards.find(
+      (card) => card.slug === currentSlug
+    );
+
+    if (resource) {
+      this.setPageTitle(`${resource.title} | Zyper AI`);
+      this.setMetaTags(
+        `${resource.title} - Learn more about how to optimize your strategy with valuable insights.`,
+        'digital marketing, online marketing, business growth, resource guide, Zyper AI'
+      );
+    }
+  }
+
+  /**
+   * Sets the meta tags dynamically for description, keywords, and robots.
+   * @param description - The description content for the meta tag
+   * @param keywords - The keywords content for the meta tag
+   */
+  private setMetaTags(description: string, keywords: string): void {
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ name: 'keywords', content: keywords });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
   }
 
   // Method to add sequential dates (Monday to Saturday) to cards

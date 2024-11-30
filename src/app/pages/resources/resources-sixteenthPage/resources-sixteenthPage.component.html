@@ -1,0 +1,230 @@
+<div class="resources-sixteenth-container">
+    <app-top-bar buttonText="GET STARTED"></app-top-bar>
+    <app-cookieconsent></app-cookieconsent>
+
+    <!-- resources sixteenth page HERO SECTION -->
+    <app-hero-section title="Problem-Solving Approach for Improving Ad Performance and Conversion."
+        description="Case Study for beauty products ecommerce seller." buttonText="GET STARTED" [socialLinks]="[
+      { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+      {
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/company/zyper-ai/posts/?feedView=all'
+      },
+      {
+        icon: 'facebook',
+        url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/'
+      },
+      {
+        icon: 'twitter',
+        url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai'
+      }
+    ]"></app-hero-section>
+
+    <div class="float-icons">
+        <button (click)="switchWhatsappState()">
+            <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
+            <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
+        </button>
+        <i class="bi bi-chat" style="filter: opacity(0)"></i>
+        <div class="whatsapp-popup" *ngIf="activeWhatsapp">
+            <div class="details">
+                <div class="img">
+                    <img src="assets/images/logo.png" alt="" />
+                </div>
+                <p>
+                    Welcome to Zyper.Ai <br />
+                    Scan the QR code
+                </p>
+            </div>
+            <div class="qr_code">
+                <img src="assets/images/zyper.png" alt="" />
+            </div>
+            <p>
+                <span> OR</span> <br />
+                <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to
+                    start chat</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="resources-sixteenth-section">
+        <section class="resources-sixteenth-section-header">
+            <h1>1. Analyze the Ad Targeting and Traffic Quality</h1>
+            <p class="content">
+                - <Strong>Review Target Audience: </Strong> Check the demographics,
+                interests, and behaviors of the targeted audience. Ensure they align
+                with the ideal customer profile for your beauty products.
+            </p>
+            <p class="content">
+                - <Strong>Assess Traffic Source: </Strong> Use Instagram Insights to
+                analyze where your traffic is coming from. Adjust targeting if traffic
+                quality seems low.
+            </p>
+            <p class="content">
+                - <Strong>Implement A/B Testing: </Strong> Test different audience
+                segments, including age, gender, location, and interests, to optimize
+                for engagement and conversions.
+            </p>
+        </section>
+
+        <section class="resources-sixteenth-section-header">
+            <h1>2. Evaluate Pricing Strategy</h1>
+            <p class="content">
+                <Strong>- Competitor Benchmarking: </Strong> Compare your prices with competitors offering similar
+                beauty
+                products. Ensure your pricing is competitive yet profitable.
+            </p>
+            <p class="content">
+                <Strong>- Conduct Perceived Value Analysis: </Strong> Determine if the price justifies the perceived
+                value of
+                your product. Consider offering bundle deals or discounts to increase the perceived value.
+                Or Increasing price to generate exclusivity / feeling that customer cannot get the products
+                elsewhere
+            </p>
+            <p class="content">
+                <Strong>- Collect Customer Feedback: </Strong> Ask current customers if they find your pricing
+                reasonable.
+                Use polls or surveys on Instagram Stories to gather input.
+            </p>
+        </section>
+
+        <section class="resources-sixteenth-section-header">
+            <h1>3. Enhance Ad Creatives</h1>
+            <p class="content">
+                <Strong>- Focus on High-Quality Visuals: </Strong> Invest in professional, eye-catching images or videos
+                that
+                showcase your products effectively.
+            </p>
+            <p class="content">
+                <Strong>- Incorporate User-Generated Content (UGC): </Strong>Use customer reviews, testimonials, and
+                before-and-after images to build trust and authenticity.
+            </p>
+            <p class="content">
+                <Strong>- Create Engaging Ad Copy: </Strong> Ensure your ad copy addresses customer pain points and
+                highlights product benefits. Use clear calls to action (CTAs) to drive conversions.
+            </p>
+        </section>
+
+        <section class="resources-sixteenth-section-header">
+            <h1>4. Optimize Product Landing Pages</h1>
+            <p class="content">
+                <Strong>- Improve Landing Page Design: </Strong>Ensure your website or product landing page is mobile-
+                friendly, fast-loading, and has a clean design.
+            </p>
+            <p class="content">
+                <Strong>- Highlight Key Selling Points: </Strong>
+                Use bullet points to emphasize unique product features and
+                benefits. Include customer reviews for social proof.
+            </p>
+            <p class="content">
+                <Strong>- Simplify the Checkout Process: </Strong> Reduce the number of steps required to complete a
+                purchase and ensure a secure, hassle-free checkout.
+            </p>
+        </section>
+
+        <section class="resources-sixteenth-section-header">
+            <h1>5. Leverage Social Proof and Trust Signals</h1>
+            <p class="content">
+                <Strong>- Showcase Reviews and Testimonials:</Strong> Display user reviews prominently on your landing
+                page and in your ads to increase credibility.
+            </p>
+            <p class="content">
+                <Strong>- Use Influencer Partnerships: </Strong>Collaborate with beauty influencers to reach a broader
+                audience and build trust.
+            </p>
+        </section>
+
+        <section class="resources-sixteenth-section-header">
+            <h1>6. Measure and Analyze Performance</h1>
+            <p class="content">
+                <Strong>- Track Key Metrics:</Strong> Regularly monitor metrics such as click-through rate (CTR),
+                conversion
+                rate, and cost per acquisition (CPA) to gauge ad performance.
+            </p>
+            <p class="content">
+                <Strong>- Set Up Conversion Tracking:</Strong>Ensure you have proper conversion tracking to measure the
+                effectiveness of each campaign.
+            </p>
+            <p class="content">
+                <Strong>- Review and Adjust: </Strong> Use data insights to adjust your strategy. For instance, if a
+                particular ad
+                set isn’t converting, analyze and refine it.
+            </p>
+        </section>
+
+        <section class="resources-sixteenth-section-header common">
+            <h2>Structured Approach Summary:</h2>
+            <ul class="steps">
+                <li>
+                    <Strong>Step 1: Review and Optimize Ad Targeting</Strong><br />
+                    <ol>
+                        - Identify your ideal customer persona.
+                    </ol>
+
+                    <ol>
+                        - Run A/B tests to refine audience targeting
+                    </ol>
+                </li>
+                <li>
+                    <Strong>Step 2: Adjust Pricing Strategy</Strong><Br />
+                    <ol>
+                        - Benchmark against competitors.
+                    </ol>
+                    <ol>
+                        - Collect customer feedback on pricing.
+                    </ol>
+                </li>
+                <li>
+                    <Strong>Step 3: Improve Ad Creatives</Strong><br />
+                    <ol>
+                        - Use high-quality images and videos.
+                    </ol>
+                    <ol>
+                        - Leverage user-generated content and engaging ad copy.
+                    </ol>
+                </li>
+                <li>
+                    <Strong>Step 4: Optimize Landing Pages</Strong><br />
+                    <ol>
+                        - Ensure mobile optimization.
+                    </ol>
+                    <ol>
+                        - Simplify the checkout process.
+                    </ol>
+                </li>
+                <li>
+                    <Strong>Step 5: Incorporate Social Proof </Strong><br>
+
+                    <ol>
+                        - Highlight reviews and collaborate with influencers.
+                    </ol>
+                </li>
+                <li>
+                    <Strong>
+                        Step 6: Monitor, Analyze, and Refine
+
+                    </Strong><br>
+
+                    <ol>
+                        - Track performance metrics and make data-driven decisions.
+                    </ol>
+
+                </li>
+            </ul>
+        </section>
+
+        <section class="resources-sixteenth-section-header common">
+            <h2>Zyper.ai AI Ad Platform Solution:</h2>
+
+            <p class="content">
+                Zyper.ai AI Ad platform does all of this for you automatically and in
+                real-time, improving RoAS continually on all ad platforms through our
+                weekly and monthly traffic-to-orders conversion engine.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>
