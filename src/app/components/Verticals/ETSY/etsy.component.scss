@@ -1,0 +1,381 @@
+// Variables
+$primary-color: #4a90e2;
+$secondary-color: #34c759;
+$text-color: #333;
+$background-color: #f8f9fa;
+$white: #ffffff;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+@mixin responsive-font($min-size, $max-size, $min-width: $breakpoint-sm, $max-width: $breakpoint-xl) {
+  font-size: calc(#{$min-size} + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-width}) / #{strip-unit($max-width - $min-width)}));
+
+  @media (max-width: #{$min-width}) {
+    font-size: $min-size;
+  }
+  @media (min-width: #{$max-width}) {
+    font-size: $max-size;
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+.etsy-platform {
+  padding: 5rem 3.75rem;
+  font-family: var(--font_inter) !important;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 2rem 1rem; // Reduce padding on smaller screens
+  }
+
+  // Hero section
+  .hero {
+    text-align: center;
+    margin: 5rem 0rem !important;
+
+    @media (max-width: $breakpoint-md) {
+      margin: 2rem 0rem !important; // Reduce margin on smaller screens
+    }
+
+    .hero-description {
+      @include responsive-font(1rem, 1.5rem); // Responsive font size
+      margin: 4rem 0rem;
+
+      @media (max-width: $breakpoint-md) {
+        margin: 2rem 0rem; // Reduce margin on smaller screens
+      }
+    }
+
+    .action-buttons {
+      @include flex-center;
+      gap: 15px;
+
+      @media (max-width: $breakpoint-sm) {
+        flex-direction: column; // Stack buttons vertically on small screens
+        align-items: stretch;
+      }
+
+      .btn {
+        @include button($primary-color, $white);
+
+        &.btn-secondary {
+          @include button($white, $primary-color);
+          border: 1px solid $primary-color;
+        }
+      }
+    }
+  }
+
+  // Why AI section
+  .why-etsy {
+    margin: 5rem 0rem !important;
+
+    @media (max-width: $breakpoint-md) {
+      margin: 3rem 0rem !important; // Reduce margin on smaller screens
+    }
+
+    h2 {
+      @include responsive-font(2rem, 4.3rem); // Responsive font size
+      font-weight: 600;
+      text-align: left;
+      margin: 3rem 0rem;
+      padding: 3rem 0rem;
+
+      @media (max-width: $breakpoint-md) {
+        margin: 1.5rem 0rem;
+        padding: 1.5rem 0rem;
+      }
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr; // Single column on smaller screens
+      }
+
+      .stat-item {
+        background-color: $white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          @include responsive-font(1.1rem, 1.3rem); // Responsive font size
+          color: $primary-color;
+          margin-bottom: 10px;
+        }
+
+        p {
+          @include responsive-font(0.9rem, 1rem); // Responsive font size
+        }
+
+        .highlight {
+          color: $secondary-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // Services section
+  .services {
+    margin: 5rem 0rem !important;
+
+    @media (max-width: $breakpoint-md) {
+      margin: 3rem 0rem !important; // Reduce margin on smaller screens
+    }
+
+    h2 {
+      @include responsive-font(2rem, 4.3rem); // Responsive font size
+      font-weight: 600;
+      margin: 3rem 0rem;
+      padding: 3rem 0rem;
+      text-align: left;
+
+      @media (max-width: $breakpoint-md) {
+        margin: 1.5rem 0rem;
+        padding: 1.5rem 0rem;
+      }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr; // Single column on smaller screens
+      }
+
+      .service-item {
+        background-color: $white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        .service-number {
+          position: absolute;
+          top: 10%;
+          left: 10px;
+          @include responsive-font(1.2rem, 1.5rem); // Responsive font size
+          color: $primary-color;
+          font-weight: bold;
+
+          .highlight {
+            color: $secondary-color;
+            font-weight: 600;
+          }
+        }
+
+        h3 {
+          @include responsive-font(1.1rem, 1.3rem); // Responsive font size
+          color: $primary-color;
+          margin-bottom: 10px;
+          margin-left: 14px;
+        }
+
+        p {
+          @include responsive-font(0.9rem, 1rem); // Responsive font size
+        }
+      }
+    }
+
+    // Growth Steps Section Styles
+    .growth-steps {
+      padding: 0 20px;
+
+      @media (max-width: $breakpoint-md) {
+        padding: 0 10px; // Reduce padding on smaller screens
+      }
+
+      h2 {
+        @include responsive-font(2rem, 4.3rem); // Responsive font size
+        font-weight: 600;
+        margin: 3rem 0rem;
+        padding: 3rem 0rem;
+        text-align: left;
+
+        @media (max-width: $breakpoint-md) {
+          margin: 1.5rem 0rem;
+          padding: 1.5rem 0rem;
+        }
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+
+        @media (max-width: $breakpoint-md) {
+          grid-template-columns: 1fr; // Single column on smaller screens
+        }
+
+        .step-item {
+          background: $white;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          .step-number {
+            display: inline-block;
+            @include responsive-font(1.2rem, 1.5rem); // Responsive font size
+            font-weight: bold;
+            color: $primary-color;
+            background: $background-color;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+          }
+
+          h3 {
+            @include responsive-font(1rem, 1.2rem); // Responsive font size
+            font-weight: 600;
+            margin: 10px 0;
+            color: $text-color;
+          }
+
+          p {
+            @include responsive-font(0.85rem, 0.95rem); // Responsive font size
+            line-height: 1.6;
+            color: $text-color;
+
+            .highlight {
+              color: $secondary-color;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .faq-section {
+    padding: 2rem;
+
+    @media (max-width: $breakpoint-md) {
+      padding: 1rem; // Reduce padding on smaller screens
+    }
+
+    h2 {
+      text-align: center;
+      @include responsive-font(2rem, 3rem); // Responsive font size
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .faq-question {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+          @include responsive-font(0.9rem, 1rem); // Responsive font size
+          font-weight: bold;
+          color: #555;
+          background-color: #f1f1f1;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          width: 100%;
+          text-align: left;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #e0e0e0;
+          }
+
+          .question-number {
+            @include responsive-font(1rem, 1.2rem); // Responsive font size
+            color: #5ec3ff;
+            margin-right: 0.5rem;
+          }
+
+          .icon {
+            @include responsive-font(1rem, 1.2rem); // Responsive font size
+            color: var(--bg-color);
+            margin-left: auto;
+            transition: transform 0.3s ease;
+
+            [aria-expanded="true"] & {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .faq-answer {
+          overflow: hidden;
+          max-height: 0;
+          padding: 0 1rem;
+          background-color: #f9f9f9;
+          transition: max-height 0.4s ease, padding 0.3s ease;
+
+          &[style*="maxHeight: 500px"] {
+            padding: 1rem;
+          }
+
+          p {
+            margin: 0;
+            @include responsive-font(0.85rem, 0.95rem); // Responsive font size
+            color: #333;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}

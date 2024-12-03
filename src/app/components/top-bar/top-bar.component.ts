@@ -16,11 +16,23 @@ export class TopBarComponent {
   navItems = [
     { name: 'home', route: '/' },
     { name: 'about', route: '/about' },
-    { name: 'AI products', route: '/ai-products' },
+    {
+      name: 'Verticals',
+      route: '/Verticals',
+      subItems: [
+        { name: 'Law Firms', route: '/services/law-firms' },
+        { name: 'Amazon', route: '/services/amazon' },
+        { name: 'ETSY', route: '/services/etsy' },
+        { name: 'EBay', route: '/services/eBay' },
+        { name: 'Shopify', route: '/services/shopify' },
+        { name: 'Walmart', route: '/services/walmart' },
+      ],
+    },
     { name: 'resources', route: '/ai-marketing-resources' },
     { name: 'pricing', route: 'https://zyper-ai.vercel.app/subscription' },
-    { name: 'contact us', route: '/contact' }
+    { name: 'contact us', route: '/contact' },
   ];
+
 
   constructor(private router: Router) { }
 

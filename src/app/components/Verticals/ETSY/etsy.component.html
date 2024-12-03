@@ -1,0 +1,170 @@
+<div class="services-etsy-container">
+
+    <app-top-bar></app-top-bar>
+
+    <app-hero-section title="AI-Powered Platform for Etsy Sellers: Transform Your Digital Marketing Strategy"
+        description="Zyper.ai is a dedicated digital marketing platform for Etsy sellers. By leveraging cutting-edge AI technology, we help you maximize your Etsy shop’s potential, optimize your SEO, and run more efficient ad campaigns. Our services ensure your Etsy shop thrives in a competitive marketplace.
+">
+    </app-hero-section>
+
+
+
+    <main class="etsy-platform">
+        <section class="hero">
+            <p class="hero-description">
+                Zyper.ai is a dedicated digital marketing platform for Etsy sellers. By leveraging cutting-edge AI
+                technology, we help
+                you maximize your Etsy shop’s potential, optimize your SEO, and run more efficient ad campaigns. Our
+                services ensure
+                your Etsy shop thrives in a competitive marketplace.
+            </p>
+
+            <!-- <div class="action-buttons">
+                    <button class="btn btn-primary">Start Trial</button>
+                    <button class="btn btn-secondary">View Demo</button>
+                    <button class="btn btn-secondary">Contact Us</button>
+                </div> -->
+        </section>
+
+        <section class="why-etsy">
+            <h2>Why Etsy Sellers Need a Digital Marketing Tool for Success</h2>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>8.3 million Etsy sellers</h3>
+                    <p>are competing for attention. To stand out, you need to leverage top-tier <span
+                            class="highlight">digital marketing services</span> that focus on Etsy SEO, paid ads, and
+                        optimization.</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>Over 90% of Etsy sellers</h3>
+                    <p>struggle with poorly optimized ad campaigns, resulting in wasted budgets. Partnering with a <span
+                            class="highlight">AI- driven digital marketing platform</span> helps you get the most out of
+                        every dollar spent.
+                    </p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>Sellers who leverage </h3>
+                    <p><span class="highlight">AI-driven digital marketing services</span> see up to
+                        <span class="highlight">50% higher ROAS</span>, improving their sales and overall visibility.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Comprehensive Digital Marketing Services for Etsy Sellers</h2>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <span class="service-number">1.</span>
+                    <h3>AI-Powered Etsy Ad Campaign Management</h3>
+                    <p>Our digital marketing services ensure that your Etsy ad campaigns are automatically optimized,
+                        targeting the right
+                        audience for maximum ROI..</p>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-number">2.</span>
+                    <h3>Etsy SEO Optimization</h3>
+                    <p> As an AI-first digital marketing platform, we provide expert Etsy SEO
+                        services, enhancing your listings by optimizing
+                        keywords, titles, descriptions, and tags to increase visibility and drive organic traffic.</p>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-number">3.</span>
+                    <h3>Automated Product Listing Optimization</h3>
+                    <p>We help you enhance your Etsy product listings with optimized titles, descriptions, and imagery
+                        to ensure your products
+                        stand out in search results and attract potential buyers.</p>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-number">4.</span>
+                    <h3>Integrated Social Media & SEO Marketing</h3>
+                    <p>Our digital marketing company connects your Etsy shop with social media platforms and performs
+                        comprehensive SEO audits,
+                        improving your shop’s visibility and sales.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <span class="service-number">5.</span>
+                    <h3>Google Ads Integration for Etsy</h3>
+                    <p>We offer Google Ads integration alongside Etsy, ensuring that your products are visible not only
+                        on Etsy but across the
+                        web, attracting a larger audience through paid search ads.
+                    </p>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-number">6.</span>
+                    <h3>Continuous Campaign Refinement</h3>
+                    <p>Our AI constantly monitors your Etsy campaigns, continuously refining them to ensure your digital
+                        marketing efforts stay
+                        effective in an ever-changing marketplace.</p>
+                </div>
+            </div>
+            <!-- Add new section for growth steps -->
+            <section class="growth-steps">
+                <h2>Four Key Steps to Grow Your Etsy Business with Our AI-Driven Digital Marketing</h2>
+
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <span class="step-number">1.</span>
+                        <h3>Create Your Etsy Profile</h3>
+                        <p>Share key details about your shop and goals, and we’ll begin optimizing your listings and ads
+                            with our digital marketing
+                            services.
+                        </p>
+                    </div>
+
+                    <div class="step-item">
+                        <span class="step-number">2.</span>
+                        <h3>Optimize Your Product Listings</h3>
+                        <p>We use advanced digital marketing strategies to enhance your Etsy product listings, ensuring
+                            they are fully optimized
+                            for Etsy’s search engine.</p>
+                    </div>
+
+                    <div class="step-item">
+                        <span class="step-number">3.</span>
+                        <h3>Automate Your Ads and SEO</h3>
+                        <p>Let us manage your Etsy ad campaigns and SEO optimization so you can focus on what you do
+                            best—creating amazing
+                            products.</p>
+                    </div>
+
+                    <div class="step-item">
+                        <span class="step-number">4.</span>
+                        <h3>Watch Your Shop Grow</h3>
+                        <p>Our platform continually monitors and adjusts your marketing strategy, ensuring that your
+                            shop stays at the forefront of
+                            Etsy’s marketplace.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item" *ngFor="let item of faqs; let i = index">
+                    <button class="faq-question" [attr.aria-expanded]="item.expanded" (click)="toggleFaq(i)">
+                        <span class="question-number">{{ i + 1 }}.</span>
+                        {{ item.question }}
+                        <span class="icon">{{ item.expanded ? "-" : "+" }}</span>
+                    </button>
+                    <div class="faq-answer" [style.maxHeight]="item.expanded ? '500px' : '0'">
+                        <p>{{ item.answer }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+</div>

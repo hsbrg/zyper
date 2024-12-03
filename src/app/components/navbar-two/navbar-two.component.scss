@@ -1,16 +1,21 @@
+$transition-duration: 0.3s;
+
 .nav-container {
   color: white;
-  font-family: var(--font_mona_sans);
+  font-family: var(--font_inter);
   // width: 100%;
 
   .navbar {
     display: flex;
     flex-direction: column;
-
     .bottombar-web {
-      min-height: 60px;
+      min-height: 75px;
       padding: 0 20px !important;
-      background-color: var(--bg-color1);
+      background-color: var(--nav-bg1);
+      // background-color: var(--bg-color1);
+      .navbar-brand {
+        margin-left: 2.4rem;
+      }
     }
     #bottombar-web {
       transition: all 0.3s ease;
@@ -18,7 +23,7 @@
     .navbar-mobile {
       // height: 80px;
       padding: 10px 20px !important;
-      background-color: var(--bg-color1);
+      background-color: var(--nav-bg1);
     }
     #ecell-logo {
       height: 40px;
@@ -40,15 +45,16 @@
       width: 100%;
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding-right: 20px;
+      justify-content: center;
+      gap: 3rem;
+      padding-right: 1rem;
 
       @media screen and (max-width: 1252px) {
         gap: 10px;
-        padding-right: 0;
+        padding-right: 1rem;
       }
       &:last-child {
-        padding-right: 0;
+        padding-right: 2rem;
       }
 
       li.nav-item {
@@ -57,12 +63,24 @@
           display: flex;
           align-items: center;
           height: 100%;
-          font-size: 14px;
+          font-size: clamp(14px, 2vw, 16px);
+          font-family: var(--font_inter, Arial, sans-serif);
+          font-weight: 500;
           text-decoration: none;
-          color: white;
+          color: var(--white-color);
+          cursor: pointer;
           text-transform: capitalize;
           cursor: pointer;
           user-select: none;
+          padding: 10px 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          transition: opacity $transition-duration ease,
+            background-color $transition-duration ease;
+
+          &:hover {
+            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.1);
+          }
 
           @media screen and (max-width: 1050px) {
             font-size: 16px;
@@ -81,7 +99,8 @@
         // }
 
         p {
-          font-size: 14px;
+          font-size: 16px;
+          font-weight: 500;
           height: 100%;
           display: flex;
           align-items: center;
@@ -94,11 +113,20 @@
           color: white;
           text-transform: capitalize;
           cursor: pointer;
+
+          .bi-caret-down-fill {
+            transition: transform 0.3s ease; /* Smooth rotation animation */
+          }
+
+          .bi-caret-down-fill.rotated {
+            transform: rotate(180deg); /* Rotates the arrow upwards */
+          }
         }
         .idropdown-content {
           // display: none;
           position: absolute;
-          background-color: var(--bg-color1);
+          background-color: var(--bg-color3);
+          color: var(--accent-color);
           // min-width: 180px;
           width: 400px;
           box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.562);
@@ -125,7 +153,8 @@
             font-size: 14px;
             cursor: pointer;
             &:hover {
-              background-color: var(--bg-color2);
+              background-color: var(--nav-bg1);
+              color: var(--white-color) !important;
             }
           }
         }

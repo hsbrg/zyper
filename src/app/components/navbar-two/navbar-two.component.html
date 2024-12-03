@@ -1,5 +1,5 @@
 <div class="nav-container" [ngClass]="{ 'active-navbar': scrolled == true }">
-    <nav class="navbar bg-transparent p-0" [class.navbar-expand]="isCollapsed">
+    <nav class="navbar p-0" [class.navbar-expand]="isCollapsed">
         <div class="container-fluid bottombar-web m-0 p-0 sticky-top" id="bottombar-web">
             <a class="navbar-brand" routerLink="/">
                 <img id="ecell-logo" src="assets/images/logo.png" alt="" />
@@ -17,9 +17,12 @@
                     <li class="nav-item">
                         <a routerLink="/landing">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a routerLink="/about">About</a>
+                    </li>
                     <li class="dropdown">
                         <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
-                            AI Products &nbsp;<i class="bi bi-caret-down-fill"></i>
+                            AI Products &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisible"></i>
                         </p>
                         <div class="idropdown-content" *ngIf="isDropdownVisible">
                             <a routerLink="/services/performance" class="text-reset">Performance marketing and PPC</a>
@@ -38,38 +41,56 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="navigateToSub()">
-                            Pricing &nbsp;
+                        <p class="dropbtn m-0 p-0" (click)="toggleDropdownVerticals()">
+                            Verticals &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisibleV"></i>
                         </p>
-                        <!-- <div class="idropdown-content" *ngIf="isPricingDropdownVisible">
+                        <div class="idropdown-content" *ngIf="isDropdownVisibleV">
+                            <a routerLink="/services/law-firms" class="text-reset">Law Firms</a>
+                            <a routerLink="/services/amazon" class="text-reset">Amazon</a>
+                            <a routerLink="/services/etsy" class="text-reset">Etsy</a>
+                            <a routerLink="/services/eBay" class="text-reset">eBay</a>
+                            <a routerLink="/services/shopify" class="text-reset">Shopify</a>
+                            <a routerLink="/services/walmart" class="text-reset">Walmart</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/ai-marketing-resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/ai-technology">AI Technology</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a routerLink="/landing" (click)="navigateToSub()">Pricing</a>
+                    </li>
+                    <!-- <li class="dropdown">
+                    
+                        <div class="idropdown-content" *ngIf="isPricingDropdownVisible">
               <a routerLink="/pricing/gmb" class="text-reset"
                 >Google Business Profile</a
               >
               <a routerLink="/pricing" class="text-reset"
                 >Google ads setup  </a
-              > -->
+              >
 
-                        <!-- <a routerLink="/services/website-build" class="text-reset"
+                        <a routerLink="/services/website-build" class="text-reset"
                 >Free Website Build in 24 Hours</a
-              > -->
+              >
 
-                        <!-- </div> -->
-                    </li>
+                        </div>
+                    </li> -->
                     <!-- <li class="nav-item">
               <a href="sponsor">SPONSORS</a>
             </li> -->
 
-                    <li class="nav-item">
-                        <a routerLink="/ai-technology">AI Technology</a>
-                    </li>
-                    <li class="nav-item">
-                        <a routerLink="/about">About</a>
-                    </li>
+
+
                     <!-- <li class="nav-item">
                         <a routerLink="/knowledge-center">Knowledge Center</a>
                     </li> -->
+
                     <li class="nav-item">
-                        <a routerLink="/ai-marketing-resources">Resources</a>
+                        <a routerLink="/contact">Contact us</a>
                     </li>
                     <!-- <li class="dropdown">
                         <p class="dropbtn m-0 p-0" (click)="toggleResourcesDropdown()">
@@ -85,14 +106,15 @@
                         <a routerLink="/contact">Contact Us</a>
                     </li> -->
                 </ul>
-                <ul class="buttons m-0">
+                <!-- Starting Using and Watch Demo  -->
+                <!-- <ul class="buttons m-0">
                     <li class="nav-item">
                         <a id="apply-now" (click)="navigateToSub()">Start Using</a>
                     </li>
                     <li class="nav-item">
                         <a id="apply-now" routerLink="/demo">Watch Demo</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
         <div class="container-fluid navbar-mobile m-0 p-0">
@@ -113,6 +135,8 @@
                         <a routerLink="/landing">Home</a>
                     </li>
 
+
+
                     <li class="dropdown">
                         <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
                             Services &nbsp;<i class="bi bi-caret-down-fill"></i>
@@ -131,6 +155,22 @@
                             <a routerLink="/services/email-marketing" class="text-reset">Email Marketing</a>
                         </div>
                     </li>
+
+
+                    <li class="dropdown">
+                        <p class="dropbtn m-0 p-0" (click)="toggleDropdownVerticals()">
+                            Verticals &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisibleV"></i>
+                        </p>
+                        <div class="idropdown-content" *ngIf="isDropdownVisibleV">
+                            <a routerLink="/services/law-firms" class="text-reset">Law Firms</a>
+                            <a routerLink="/services/amazon" class="text-reset">Amazon</a>
+                            <a routerLink="/services/etsy" class="text-reset">Etsy</a>
+                            <a routerLink="/services/eBay" class="text-reset">eBay</a>
+                            <a routerLink="/services/shopify" class="text-reset">Shopify</a>
+                            <a routerLink="/services/walmart" class="text-reset">Walmart</a>
+                        </div>
+                    </li>
+
                     <!-- <li class="nav-item">
               <a href="sponsor">SPONSORS</a>
             </li> -->
@@ -167,14 +207,14 @@
                         <a routerLink="/about">About</a>
                     </li>
                 </ul>
-                <ul class="buttons m-0">
+                <!-- <ul class="buttons m-0">
                     <li class="nav-item">
                         <a id="apply-now" (click)="navigateToSub()">Start Using</a>
                     </li>
                     <li class="nav-item">
                         <a id="apply-now" routerLink="/demo">Watch Demo</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </nav>

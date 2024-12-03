@@ -59,6 +59,12 @@ import { ResourcesThirteenthComponent, } from './pages/resources/resources-thirt
 import { ResourcesFourteenthComponent, } from './pages/resources/resources-fourteenthPage/resources-fourteenthPage.component';
 import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteenthPage/resources.fifteenthPage.component';
 import { ResourcesSixteenthComponent } from './pages/resources/resources-sixteenthPage/resources-sixteenthPage.component';
+import { ServicesAmazonComponent } from './components/Verticals/Amazon/serviceAmazon.component';
+import { ServicesETSYComponent } from './components/Verticals/ETSY/etsy.component';
+import { ServicesEBayComponent } from './components/Verticals/EBay/servicesEBay.component';
+import { ServicesShopifyComponent } from './components/Verticals/Shopify/servicesShopify.component';
+import { ServicesWalmartComponent } from './components/Verticals/Walmart/servicesWalmart.component';
+import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/servicesLawFirms.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +101,12 @@ import { ResourcesSixteenthComponent } from './pages/resources/resources-sixteen
     ResourcesFourteenthComponent,
     ResourcesFifteenthComponent,
     ResourcesSixteenthComponent,
+    ServicesLawFirmsComponent,
+    ServicesAmazonComponent,
+    ServicesETSYComponent,
+    ServicesEBayComponent,
+    ServicesShopifyComponent,
+    ServicesWalmartComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,

@@ -1,0 +1,131 @@
+<div class="services-shopify-container">
+
+    <app-top-bar></app-top-bar>
+
+    <app-hero-section title="Maximize Your Shopify Business Growth with Expert Digital Marketing Solutions" description="Welcome to your dedicated digital marketing platform for Shopify sellers. With a comprehensive range of AI-powered tools, we help you optimize your Shopify store, enhance your ad efficiency, and drive sales with ease. Whether you’re running Shopify ads or focusing on SEO optimization, our platform is designed to help your e-commerce business thrive in a highly competitive market.
+">
+    </app-hero-section>
+
+
+
+    <main class="shopify-marketing">
+        <header class="hero">
+            <div class="container">
+                <p class="hero-description">A comprehensive digital marketing platform for Shopify sellers. With a
+                    comprehensive range of AI-powered tools, we help you optimize your Shopify store, enhance your ad
+                    efficiency, and drive sales with ease.</p>
+            </div>
+        </header>
+
+        <section class="why-shopify">
+            <div class="container">
+                <h2>Why Shopify Sellers Need AI-Driven Digital Marketing Solutions</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Competing for Attention</h3>
+                        <p>With millions of Shopify stores, standing out requires a sophisticated marketing approach.
+                            Our
+                            platform helps optimize your Shopify listings, ads, and overall marketing strategy.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Maximize Your Ad Spend Efficiency</h3>
+                        <p>Over 40% of Shopify store owners struggle with ad spend optimization. Our AI tools ensure
+                            that
+                            your budget is spent effectively, improving your Return on Ad Spend (ROAS).</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Improved Sales and Visibility</h3>
+                        <p>Sellers using AI-powered tools report up to 50% higher ROAS, driving more traffic to their
+                            stores
+                            and boosting conversions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>Comprehensive Digital Marketing Services for Shopify Sellers</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>1. AI-Powered Shopify Ad Campaign Management</h3>
+                        <p>Our platform optimizes your Shopify Ads by analyzing customer behavior and adjusting bidding
+                            strategies to ensure you get the most out of your budget. We monitor your business while we
+                            manage your ad spend efficiently.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>2. Shopify SEO Optimization</h3>
+                        <p>Our AI team provides specialized Shopify SEO services, refining your product listings to
+                            enhance
+                            keywords, titles, descriptions, and backend search terms, boosting organic traffic and
+                            improving
+                            visibility.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>3. Automated Product Listing Optimization</h3>
+                        <p>We optimize your Shopify product listings by enhancing images, titles, bullet points, and
+                            descriptions, ensuring your products appear in search results and attract more buyers.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>4. Multi-Platform Marketing Integration</h3>
+                        <p>Our platform integrates your Shopify marketing strategy with Google Ads, social media, and
+                            email
+                            campaigns, helping you reach a broader audience and grow your customer base.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="growth-steps">
+            <div class="container">
+                <h2>Four Key Steps to Grow Your Shopify Business with AI-Driven Digital Marketing</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3>Create Your Shopify Profile</h3>
+                        <p>Provide key details about your Shopify store and business goals. Our platform uses this data
+                            to
+                            create customized ad campaigns and optimize listings.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3>Optimize Your Product Listings</h3>
+                        <p>Our advanced Shopify SEO strategies ensure your product listings rank higher on search
+                            results,
+                            improving visibility and attracting more potential buyers.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3>Automate Your Ads and SEO</h3>
+                        <p>Our platform manages your ad campaigns and SEO efforts, saving you time and effort while
+                            maximizing your business growth.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3>Scale Your Shopify Business</h3>
+                        <p>AI constantly monitors your marketing campaigns, adjusting strategies to help your Shopify
+                            business run efficiently and succeed in the competitive e-commerce landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item" *ngFor="let item of faqs; let i = index">
+                    <button class="faq-question" [attr.aria-expanded]="item.expanded" (click)="toggleFaq(i)">
+                        <span class="question-number">{{ i + 1 }}.</span>
+                        {{ item.question }}
+                        <span class="icon">{{ item.expanded ? "-" : "+" }}</span>
+                    </button>
+                    <div class="faq-answer" [style.maxHeight]="item.expanded ? '500px' : '0'">
+                        <p>{{ item.answer }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>

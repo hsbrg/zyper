@@ -1,5 +1,5 @@
-$primary-color: #2a4b6f;
-$secondary-color: #2a4b6f;
+$primary-color: #7a7ccb;
+$secondary-color: #7a7ccb;
 $text-color: #ffffff;
 $button-color: #d7e6ff;
 $button-hover-color: #c5d9fc;
@@ -47,6 +47,7 @@ $transition-duration: 0.3s;
       }
     }
 
+    // default code
     .nav-menu {
       display: none;
       list-style: none;
@@ -60,16 +61,141 @@ $transition-duration: 0.3s;
         cursor: pointer;
         text-transform: capitalize;
         padding: 10px 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(#d7e6ff, 0.2);
         transition: opacity $transition-duration ease,
           background-color $transition-duration ease;
-
         &:hover {
-          opacity: 0.8;
-          background-color: rgba(255, 255, 255, 0.1);
+          background-color: inherit;
+        }
+
+        & > ul {
+          display: none;
+          position: absolute;
+          list-style: none;
+          margin: 0;
+          padding: 10px 0;
+          background-color: #d7e6ff;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+
+          li {
+            padding: 8px 12px;
+            border-bottom: none;
+            white-space: nowrap;
+            gap: 20px;
+            transition: background-color 0.3s ease;
+            color: #000000;
+
+            &:hover {
+              background-color: var(--bg-color);
+            color: #fff;
+            }
+          }
+        }
+
+        &:hover > ul {
+          display: block;
+        }
+      }
+
+      @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        background: none;
+        border: none;
+
+        li {
+          border-bottom: none;
+          padding: 0;
         }
       }
     }
+
+    // .nav-menu {
+    //   display: none;
+    //   list-style: none;
+    //   margin: 0;
+    //   padding: 0;
+
+    //   li {
+    //     font-size: clamp(14px, 2vw, 16px);
+    //     font-weight: 200;
+    //     font-family: var(--font_inter, Arial, sans-serif);
+    //     cursor: pointer;
+    //     text-transform: capitalize;
+    //     padding: 10px 15px;
+    //     border-bottom: 1px solid rgba(#d7e6ff, 0.2);
+    //     transition: opacity $transition-duration ease,
+    //       background-color $transition-duration ease;
+
+    //     &:hover {
+    //       background-color: inherit;
+    //     }
+
+    //     // Submenu styling
+    //     & > ul {
+    //       display: none;
+    //       position: absolute;
+    //       list-style: none;
+    //       margin: 0;
+    //       padding: 10px 0;
+    //       background-color: #d7e6ff;
+    //       border-radius: 8px;
+    //       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    //       z-index: 10;
+
+    //       li {
+    //         padding: 8px 12px;
+    //         border-bottom: none;
+    //         white-space: nowrap;
+    //         gap: 20px;
+    //         transition: background-color 0.3s ease;
+    //         color: #000000;
+
+    //         &:hover {
+    //           background-color: var(--bg-color);
+    //           color: #fff;
+    //         }
+    //       }
+    //     }
+
+    //     // Show submenu for 'Verticals' only on hover
+    //     &:hover > ul {
+    //       display: block;
+    //     }
+
+    //     // Add specific targeting for the 'Verticals' item
+    //     &.verticals-item {
+    //       position: relative;
+
+    //       &:hover > ul {
+    //         display: block;
+    //       }
+    //     }
+    //   }
+
+    //   @media (min-width: 768px) {
+    //     display: flex;
+    //     flex-direction: row;
+    //     align-items: center;
+    //     gap: 1rem;
+    //     background: none;
+    //     border: none;
+
+    //     li {
+    //       border-bottom: none;
+    //       padding: 0;
+
+    //       & > ul {
+    //         padding: 10px 0;
+    //         margin-top: 10px;
+    //       }
+    //     }
+    //   }
+    // }
 
     .top-right {
       display: none; // Hidden for small devices
@@ -173,7 +299,7 @@ $transition-duration: 0.3s;
 
     .top-bar {
       .nav-menu {
-        gap: 25px;
+        gap: 4rem;
 
         li {
           font-size: clamp(16px, 2vw, 18px);

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-smb',
@@ -7,6 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmbComponent implements OnInit {
   activeWhatsapp: boolean = false;
+
+  @Input() socialLinks: { icon: string; url: string }[] = [
+    { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
+    { icon: 'linkedin', url: 'https://www.linkedin.com/in/zyper-ai/' },
+    {
+      icon: 'facebook',
+      url: 'https://www.facebook.com/people/Zyper-AI/pfbid02YqykNfVMEYU6Q9QaU2PvnJK5GPeeLywvwmTM5np6VYc7KTRMPmheuVUSCzjdC38tl/',
+    },
+    {
+      icon: 'twitter',
+      url: 'https://x.com/i/flow/login?redirect_after_login=%2Fzyper_ai',
+    },
+  ];
+
+
+  getIconPath(iconName: string): string {
+    return `assets/images/svg/${iconName}.svg`;
+  }
 
   constructor() { }
   ngOnInit(): void { }
@@ -28,7 +46,7 @@ export class SmbComponent implements OnInit {
   navigateToSub() {
     window.location.href = 'https://zyper-ai.vercel.app/subscription';
   }
-  
+
   products = [
     {
       title: 'Website Build & Launch',

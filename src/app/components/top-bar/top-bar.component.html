@@ -1,0 +1,58 @@
+<div class="hero-top-bar">
+  <div class="top-bar">
+    <!-- Logo Section -->
+    <div class="top-left" [routerLink]="['/']">
+      <img src="../../../../assets/images/svg/zyper-logo.svg" alt="logo" />
+    </div>
+
+    <!-- Hamburger Menu (Visible on Small Devices) -->
+    <div class="hamburger md:hidden" (click)="toggleSidebar()" aria-label="Toggle menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu hidden md:flex md:items-center space-x-5 text-white text-base font-light">
+      <li *ngFor="let item of navItems" class="relative group hover:opacity-80 cursor-pointer"
+        (click)="!item.subItems?.length && navigateTo(item.route)">
+        {{ item.name }}
+        <span *ngIf="item.name === 'Verticals'" class="ml-1">
+          <i class="bi bi-caret-down-fill"></i>
+        </span>
+        <!-- Dropdown for sub-items -->
+        <ul *ngIf="item.subItems"
+          class="absolute hidden group-hover:block top-full left-0 bg-gray-800 text-white space-y-2 p-2 shadow-lg rounded-md">
+          <li *ngFor="let subItem of item.subItems" class="hover:bg-gray-700 px-4 py-2 cursor-pointer"
+            (click)="navigateTo(subItem.route)">
+            {{ subItem.name }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar-mobile" [ngClass]="{ open: isSidebarOpen }">
+      <button class="close-btn" (click)="toggleSidebar()">✕</button>
+      <ul class="nav-menu">
+        <li *ngFor="let item of navItems" class="menu-item" [class.has-dropdown]="item.name === 'Verticals'">
+          <span (click)="navigateTo(item.route)">{{ item.name }}</span>
+          <ul *ngIf="item.name === 'Verticals'" class="submenu">
+            <li *ngFor="let subItem of item.subItems" (click)="navigateTo(subItem.route)">
+              {{ subItem.name }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+    <!-- Button Section -->
+    <div class="top-right hidden md:flex">
+      <button class="top-bar-button" (click)="navigateToLink()" aria-label="Help">
+        {{ buttonText }}
+      </button>
+    </div>
+  </div>
+</div>

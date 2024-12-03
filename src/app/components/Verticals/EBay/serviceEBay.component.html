@@ -1,0 +1,191 @@
+<div class="services-eBay-container">
+  <app-top-bar></app-top-bar>
+
+  <app-hero-section
+    title="Elevate Your eBay Business with Strategic Digital Marketing"
+    description="Are you an eBay seller looking to scale your business? Unlock the power of advanced marketing techniques tailored specifically for eBay sellers. From eBay promoted listings to full-fledged advertising campaigns, we’re here to help you boost visibility, drive sales, and dominate the marketplace."
+  >
+  </app-hero-section>
+
+  <main class="eBay-platform">
+    <section class="hero">
+      <p class="hero-description">
+        Are you an eBay seller looking to scale your business? Unlock the power
+        of advanced marketing techniques tailored specifically for eBay sellers.
+        From eBay promoted listings to full-fledged advertising campaigns, we’re
+        here to help you boost visibility, drive sales, and dominate the
+        marketplace.
+      </p>
+    </section>
+
+    <div class="services-container">
+      <section class="services-header">
+        <h2>Why Choose Our Marketing Services for eBay Sellers?</h2>
+        <p>
+          Leveraging eBay’s competitive landscape demands strategies tailored to
+          its unique ecosystem. Whether you’re promoting listings or optimizing
+          for organic visibility, our team specializes in:
+        </p>
+        <ul class="services-list">
+          <li>
+            <strong>eBay Promoted Listings Mastery:</strong> Stand out in search
+            results and increase sales with expertly managed promoted campaigns.
+          </li>
+          <li>
+            <strong>Custom Advertising Campaigns:</strong> Build impactful ad
+            campaigns across platforms like Instagram, Facebook, and Twitter to
+            target buyers where they spend the most time.
+          </li>
+          <li>
+            <strong>SEO Optimization for eBay Listings:</strong> Optimize
+            titles, descriptions, and categories to boost organic traffic to
+            your eBay store.
+          </li>
+          <li>
+            <strong>Multi-Channel Integration:</strong> Maximize reach with
+            integrated marketing across platforms, including LinkedIn ads,
+            YouTube advertising, and more.
+          </li>
+          <li>
+            <strong>Data-Driven Decisions:</strong> Use advanced analytics to
+            refine strategies, ensuring high ROI.
+          </li>
+        </ul>
+      </section>
+
+      <section class="core-services">
+        <h3>Our Core Services</h3>
+
+        <div class="service-group">
+          <h4>1. Advertising Campaigns Across Platforms</h4>
+          <p>
+            From Instagram advertising to Twitter ads, we craft campaigns
+            designed to attract the right buyers for your products.
+          </p>
+          <ul>
+            <li>
+              <strong>eBay Promoted Listings:</strong> Optimize visibility
+              within eBay’s marketplace.
+            </li>
+            <li>
+              <strong>Social Media Advertising:</strong> Engage customers on
+              platforms like Instagram, Facebook, and LinkedIn.
+            </li>
+            <li>
+              <strong>Amazon and eBay Combined Strategies:</strong> For sellers
+              operating on both platforms, we offer cohesive strategies to
+              maximize success.
+            </li>
+          </ul>
+        </div>
+
+        <div class="service-group">
+          <h4>2. Full-Service Digital Marketing</h4>
+          <p>
+            Our team functions as your full-service partner, offering everything
+            from SEO and PPC to content creation.
+          </p>
+          <ul>
+            <li>
+              <strong>SEO Optimization for eBay:</strong> Boost organic traffic
+              with keyword-rich listings tailored to eBay’s search engine.
+            </li>
+            <li>
+              <strong>Amazon and eBay Synergy:</strong> Combine our expertise in
+              Amazon advertising and eBay promoted listings to dominate both
+              marketplaces.
+            </li>
+            <li>
+              <strong>Competitive Ad Strategies:</strong> Stand out with custom
+              product ads tailored to your niche.
+            </li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h4>3. Advanced Analytics and Insights</h4>
+          <p>Our campaigns are backed by data-driven insights that help you:</p>
+          <ul>
+            <li>
+              Understand what’s working and refine strategies accordingly.
+            </li>
+            <li>
+              Track and improve Return on Ad Spend (ROAS) for every platform,
+              and learn how to grow further.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="advertising-container">
+        <section class="advertising-section">
+          <h2>Why We’re the Best Advertising Partner for eBay Sellers</h2>
+          <ul>
+            <li>
+              <strong>eBay Expertise:</strong> With experience managing eBay
+              promoted listings and tailored ad campaigns, we know what works on
+              this platform.
+            </li>
+            <li>
+              <strong>Custom Marketing Solutions:</strong> We adapt our
+              strategies to suit your unique needs, whether you’re selling niche
+              products or trending items.
+            </li>
+            <li>
+              <strong>Multi-Channel Advertising Knowledge:</strong> Beyond eBay,
+              we offer strategies for Instagram and advertising, LinkedIn ads,
+              and more.
+            </li>
+          </ul>
+        </section>
+
+        <section class="advertising-section">
+          <h2>Boost Sales with eBay Promoted Listings</h2>
+          <p>Promoted listings are a powerful tool to:</p>
+          <ul>
+            <li>Increase product visibility in eBay search results.</li>
+            <li>Improve sales through data-backed targeting.</li>
+            <li>Drive performance without overloading your budget.</li>
+          </ul>
+          <p>
+            Let us handle the technicalities while you focus on growing your
+            business.
+          </p>
+        </section>
+
+        <section class="advertising-footer">
+          <h3>Ready to Advertise on eBay? Let’s Get Started.</h3>
+          <p>
+            Partner with the best in the business. Our team combines years of
+            experience with cutting-edge tools to provide you with unparalleled
+            marketing solutions for your eBay store.
+            <span class="contact-us" (click)="navigateToContact()">📩 Contact us today</span> to grow your
+            eBay sales and build a thriving online business!
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div class="faq-container">
+        <div class="faq-item" *ngFor="let item of faqs; let i = index">
+          <button
+            class="faq-question"
+            [attr.aria-expanded]="item.expanded"
+            (click)="toggleFaq(i)"
+          >
+            <span class="question-number">{{ i + 1 }}.</span>
+            {{ item.question }}
+            <span class="icon">{{ item.expanded ? "-" : "+" }}</span>
+          </button>
+          <div
+            class="faq-answer"
+            [style.maxHeight]="item.expanded ? '500px' : '0'"
+          >
+            <p>{{ item.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

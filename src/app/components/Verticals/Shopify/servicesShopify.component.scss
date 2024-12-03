@@ -1,0 +1,337 @@
+// Variables
+$primary-color: #5c6ac4;
+$secondary-color: #202e78;
+$accent-color: #5c6ac4;
+$background-color: #f4f6f8;
+$text-color: #212b36;
+$light-text: #637381;
+$white: #ffffff;
+$spacing: 1rem;
+$border-radius: 8px;
+$container-width: 1200px;
+$transition: all 0.3s ease;
+
+// Mixins
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $spacing * 2;
+}
+
+@mixin card {
+  background: $white;
+  border-radius: $border-radius;
+  padding: $spacing * 2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.container {
+  @include container;
+}
+
+// Typography
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: $spacing * 2;
+}
+
+h2 {
+  font-size: 3.3rem;
+  margin-bottom: $spacing * 3;
+  text-align: center;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: $spacing;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: $spacing $spacing * 2;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: 600;
+  transition: $transition;
+
+  &-primary {
+    background: $primary-color;
+    color: $white;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+  &-secondary {
+    background: $secondary-color;
+    color: $white;
+
+    &:hover {
+      background: darken($secondary-color, 10%);
+    }
+  }
+
+  &-outline {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  padding: 5rem 0rem 3rem 0rem;
+
+  .hero-description {
+    margin: 0 auto $spacing * 3;
+    font-size: 24px;
+    color: #000;
+    opacity: 0.9;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: $spacing;
+    justify-content: center;
+
+    .btn {
+      margin: 0 $spacing/2;
+    }
+  }
+}
+
+// Grid Layouts
+.benefits-grid,
+.services-grid,
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: $spacing * 2;
+  margin-top: $spacing * 3;
+}
+
+// Cards
+.benefit-card,
+.service-card,
+.step-card {
+  @include card;
+
+  h3 {
+    color: $primary-color;
+  }
+}
+
+// Step Cards
+.step-card {
+  position: relative;
+  padding-top: $spacing * 4;
+
+  .step-number {
+    position: absolute;
+    top: -$spacing;
+    left: $spacing;
+    width: 40px;
+    height: 40px;
+    background: $accent-color;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+
+// Sections
+.why-shopify,
+.services,
+.growth-steps {
+  padding: $spacing * 4 0;
+
+  .container {
+    > h2 {
+      position: relative;
+      margin-bottom: $spacing * 4;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: $primary-color;
+        margin: $spacing auto 0;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.faq-section {
+  padding: 2rem;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #555;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+
+        .question-number {
+          font-size: 1.2rem;
+          color: #5ec3ff; // Add a theme color
+          margin-right: 0.5rem;
+        }
+
+        .icon {
+          font-size: 1.2rem;
+          color: var(--bg-color);
+          margin-left: auto;
+          transition: transform 0.3s ease;
+
+          // Rotate icon on expanded
+          [aria-expanded="true"] & {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .faq-answer {
+        overflow: hidden;
+        max-height: 0; // Default state
+        padding: 0 1rem;
+        background-color: #f9f9f9;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+
+        // Adjust padding and height for expanded state
+        &[style*="maxHeight: 500px"] {
+          padding: 1rem;
+        }
+
+        p {
+          margin: 0;
+          font-size: 0.95rem;
+          color: #333;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .container {
+    padding: 0 $spacing;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero {
+    padding: $spacing * 4 0;
+
+    .hero-description {
+      font-size: 1.1rem;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+      align-items: stretch;
+
+      .btn {
+        margin: $spacing/2 0;
+      }
+    }
+  }
+
+  .benefits-grid,
+  .services-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-card,
+.service-card,
+.step-card {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.1s;
+    }
+  }
+}

@@ -43,6 +43,12 @@ import { ResourcesThirteenthComponent } from './pages/resources/resources-thirte
 import { ResourcesFourteenthComponent } from './pages/resources/resources-fourteenthPage/resources-fourteenthPage.component';
 import { ResourcesFifteenthComponent } from './pages/resources/resources.fifteenthPage/resources.fifteenthPage.component';
 import { ResourcesSixteenthComponent } from './pages/resources/resources-sixteenthPage/resources-sixteenthPage.component';
+import { ServicesAmazonComponent } from './components/Verticals/Amazon/serviceAmazon.component';
+import { ServicesETSYComponent } from './components/Verticals/ETSY/etsy.component';
+import { ServicesEBayComponent } from './components/Verticals/EBay/servicesEBay.component';
+import { ServicesShopifyComponent } from './components/Verticals/Shopify/servicesShopify.component';
+import { ServicesWalmartComponent } from './components/Verticals/Walmart/servicesWalmart.component';
+import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/servicesLawFirms.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -97,6 +103,30 @@ const routes: Routes = [
   {
     path: 'services/social-media',
     component: SocialMediaComponent,
+  },
+  {
+    path: "services/law-firms",
+    component: ServicesLawFirmsComponent,
+  },
+  {
+    path: "services/amazon",
+    component: ServicesAmazonComponent,
+  },
+  {
+    path: "services/etsy",
+    component: ServicesETSYComponent,
+  },
+  {
+    path: "services/eBay",
+    component: ServicesEBayComponent,
+  },
+  {
+    path: "services/shopify",
+    component: ServicesShopifyComponent,
+  },
+  {
+    path: "services/walmart",
+    component: ServicesWalmartComponent,
   },
   {
     path: 'legal',
@@ -228,4 +258,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

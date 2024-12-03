@@ -6,12 +6,12 @@ $secondary-text: #71717a;
 $background-dark: #2a2a2a;
 $background-bg-primary: #d7e6ff;
 $background-light: #f0f0f0;
-$primary-color: #007bff;
+$primary-color: #7A7CCB;
 $text-dark: #000000;
 $font-bebas: "Bebas Neue", sans-serif;
 
 // Cube Colors and Properties
-$cube-base-color: #2a4b6f;
+$cube-base-color: #7A7CCB;
 $cube-colors: (
   front: $cube-base-color,
   side: darken($cube-base-color, 10%),
@@ -231,7 +231,7 @@ $cube-sizes: (
     }
 
     @media (min-width: 1200px) {
-      font-size: 4.5rem;
+      font-size: 4rem;
     }
   }
 
@@ -261,7 +261,7 @@ $cube-sizes: (
       position: relative;
       height: 100%;
       padding: 1.5rem;
-      background: linear-gradient(135deg, #2a4b6f 0%, #2a4b6f 95%);
+      background: linear-gradient(135deg, #7A7CCB 0%, #7A7CCB 95%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -285,8 +285,9 @@ $cube-sizes: (
         }
       }
       .resources-card-date {
-        font-size: 0.9rem;
-        color: #888;
+        font-size: 1rem;
+        opacity: 85%;
+        color: #fff;
         margin-top: 0.5rem;
       }
       .resources-card-content:hover {

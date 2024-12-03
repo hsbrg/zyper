@@ -1,0 +1,408 @@
+// Variables
+$primary-color: #2a4b6f;
+$secondary-color: #f2f5fc;
+$text-color: #333;
+$heading-color: #222;
+$border-color: #e6e9f1;
+$spacing-unit: 1rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+
+
+h2 {
+  font-size: 3rem; // Default font size for large screens
+  font-weight: 600;
+
+  @media (max-width: 1200px) { // Large tablets and desktops
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 992px) { // Medium-sized tablets
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 768px) { // Small tablets and large smartphones
+    font-size: 2rem;
+  }
+
+  @media (max-width: 576px) { // Smartphones
+    font-size: 1.8rem !important;
+  }
+
+  @media (max-width: 400px) { // Small smartphones
+    font-size: 1.5rem !important;
+  }
+}
+
+
+// Mixins
+@mixin card-style {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid $border-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin gradient-bg {
+  background: linear-gradient(
+    135deg,
+    $primary-color,
+    darken($primary-color, 15%)
+  );
+}
+
+@mixin responsive-font($min-size, $max-size, $min-width: $breakpoint-sm, $max-width: $breakpoint-xl) {
+  font-size: calc(#{$min-size} + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-width}) / #{strip-unit($max-width - $min-width)}));
+
+  @media (max-width: #{$min-width}) {
+    font-size: $min-size;
+  }
+  @media (min-width: #{$max-width}) {
+    font-size: $max-size;
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+.services-eBay-container {
+  font-family: var(--font-inter);
+
+  // Main Styles
+  .eBay-platform {
+    color: $text-color;
+    line-height: 1.6;
+    padding: $spacing-unit * 2;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-unit;
+    }
+
+    .hero {
+      text-align: center;
+      padding: $spacing-unit * 4;
+      border-radius: 16px;
+      margin-bottom: $spacing-unit * 3;
+
+      @media (max-width: $breakpoint-md) {
+        padding: $spacing-unit * 2;
+      }
+
+      .hero-description {
+        @include responsive-font(1rem, 1.5rem);
+        line-height: 1.8;
+      }
+    }
+
+    .services-container {
+      .services-header {
+        text-align: center;
+        margin-bottom: $spacing-unit * 3;
+
+        h2 {
+          @include responsive-font(1.5rem, 3.3rem);
+          font-weight: 700;
+          color: $heading-color;
+          margin-bottom: $spacing-unit;
+          line-height: 1.2;
+        }
+
+        p {
+          width: 85%;
+          @include responsive-font(1rem, 1.25rem);
+          color: darken($text-color, 10%);
+          margin: 0 auto $spacing-unit * 2;
+
+          @media (max-width: $breakpoint-md) {
+            width: 100%;
+          }
+        }
+
+        .services-list {
+          list-style: none;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: $spacing-unit * 2;
+
+          @media (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+          }
+
+          li {
+            @include card-style;
+            padding: $spacing-unit * 1.5;
+            @include responsive-font(0.9rem, 1.25rem);
+
+            strong {
+              color: $primary-color;
+              display: block;
+              margin-bottom: $spacing-unit / 2;
+              @include responsive-font(1rem, 1.25rem);
+            }
+          }
+        }
+      }
+
+      .core-services {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-unit;
+
+        h3 {
+          text-align: center;
+          @include responsive-font(1.8rem, 3.3rem);
+          margin: 3rem 0 2rem;
+          padding: 1rem 0;
+          font-weight: 700;
+          color: $heading-color;
+        }
+
+        .service-group {
+          @include card-style;
+          padding: $spacing-unit * 2;
+          margin-bottom: $spacing-unit * 3;
+
+          @media (max-width: $breakpoint-md) {
+            padding: $spacing-unit * 1.5;
+          }
+
+          h4 {
+            @include responsive-font(1.3rem, 1.8rem);
+            color: $primary-color;
+            margin-bottom: $spacing-unit * 1.5;
+          }
+
+          p {
+            @include responsive-font(0.9rem, 1.125rem);
+            color: darken($text-color, 15%);
+            margin-bottom: $spacing-unit;
+          }
+
+          ul {
+            padding-left: $spacing-unit * 2;
+
+            @media (max-width: $breakpoint-md) {
+              padding-left: $spacing-unit;
+            }
+
+            li {
+              margin-bottom: $spacing-unit;
+              position: relative;
+
+              &::before {
+                content: "•";
+                color: $primary-color;
+                font-size: 20px;
+                position: absolute;
+                left: -$spacing-unit * 1.5;
+                top: -5px;
+
+                @media (max-width: $breakpoint-md) {
+                  left: -$spacing-unit;
+                }
+              }
+
+              strong {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .advertising-container {
+      .advertising-section {
+        width: 85%;
+        margin: 0 auto;
+        padding: $spacing-unit * 3;
+        margin-bottom: $spacing-unit * 3;
+
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+          padding: $spacing-unit * 2;
+        }
+
+        h2 {
+          @include responsive-font(1.5rem, 3rem);
+          color: $heading-color;
+          margin-bottom: $spacing-unit * 1.5;
+          border-bottom: 2px solid $primary-color;
+          padding-bottom: $spacing-unit / 2;
+          display: inline-block;
+        }
+
+        p {
+          @include responsive-font(0.9rem, 1.1rem);
+          color: darken($text-color, 10%);
+          line-height: 1.7;
+          margin-bottom: $spacing-unit * 1.5;
+        }
+
+        ul {
+          list-style: none;
+          padding-left: 0;
+
+          li {
+            margin-bottom: $spacing-unit;
+            padding-left: $spacing-unit * 1.5;
+            position: relative;
+
+            &::before {
+              content: "✓";
+              color: $primary-color;
+              position: absolute;
+              left: 0;
+              top: 2px;
+              font-weight: bold;
+            }
+
+            strong {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      .advertising-footer {
+        text-align: center;
+        background: lighten($primary-color, 48%);
+        padding: $spacing-unit * 4;
+        border-radius: 16px;
+        color: $primary-color;
+
+        @media (max-width: $breakpoint-md) {
+          padding: $spacing-unit * 2;
+        }
+
+        h3 {
+          @include responsive-font(1.5rem, 2rem);
+          margin-bottom: $spacing-unit * 1.5;
+        }
+
+        p {
+          @include responsive-font(0.9rem, 1.2rem);
+          max-width: 700px;
+          margin: 0 auto;
+          line-height: 1.8;
+
+          .contact-us {
+            font-weight: bold;
+            color: darken($primary-color, 10%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: darken($primary-color, 20%);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .faq-section {
+      padding: 2rem;
+
+      @media (max-width: $breakpoint-md) {
+        padding: 1rem;
+      }
+
+      h2 {
+        text-align: center;
+        @include responsive-font(1.8rem, 3rem);
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .faq-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .faq-item {
+          margin-bottom: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          overflow: hidden;
+          background-color: #fff;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            @include responsive-font(0.9rem, 1rem);
+            font-weight: bold;
+            color: #555;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #e0e0e0;
+            }
+
+            .question-number {
+              @include responsive-font(1rem, 1.2rem);
+              color: $primary-color;
+              margin-right: 0.5rem;
+            }
+
+            .icon {
+              @include responsive-font(1rem, 1.2rem);
+              color: var(--bg-color);
+              margin-left: auto;
+              transition: transform 0.3s ease;
+
+              [aria-expanded="true"] & {
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          .faq-answer {
+            overflow: hidden;
+            max-height: 0;
+            padding: 0 1rem;
+            background-color: #f9f9f9;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+
+            &[style*="maxHeight: 500px"] {
+              padding: 1rem;
+            }
+
+            p {
+              margin: 0;
+              @include responsive-font(0.85rem, 0.95rem);
+              color: #333;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

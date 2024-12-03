@@ -9,6 +9,7 @@ import { ssrWindow, getWindow } from 'ssr-window';
 export class NavbarTwoComponent implements OnInit {
   isCollapsed = false;
   isDropdownVisible = false;
+  isDropdownVisibleV = false;
   isPricingDropdownVisible = false;
   isResourcesDropdownVisible = false;
   constructor() {}
@@ -42,6 +43,11 @@ export class NavbarTwoComponent implements OnInit {
 
   toggleDropdown() {
     this.isDropdownVisible = !this.isDropdownVisible;
+    this.isPricingDropdownVisible = false;
+    // console.log(this.isDropdownVisible);
+  }
+  toggleDropdownVerticals() {
+    this.isDropdownVisibleV = !this.isDropdownVisibleV;
     this.isPricingDropdownVisible = false;
     // console.log(this.isDropdownVisible);
   }

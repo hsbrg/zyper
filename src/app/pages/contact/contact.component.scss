@@ -1,3 +1,41 @@
+// CSS Variables
+:root {
+  --text-color1: #f4f4f4;
+  --text-color: #333;
+  --white-color: #ffffff;
+  --bg-color: #6c5ce7;
+  --bg-color1: #f8f8f8;
+  --bg-color2: rgba(108, 92, 231, 0.2);
+  --font_inter: "Inter", sans-serif;
+  --font_popins: "Poppins", sans-serif;
+}
+
+// Responsive Mixins
+@mixin responsive($breakpoint) {
+  @if $breakpoint == extra-small {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == extra-large {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+// Base Styles
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -6,139 +44,216 @@
   background-color: var(--text-color1);
   padding-top: 50px;
   color: var(--text-color);
-  font-family: var(--font_mona_sans);
+  font-family: var(--font_inter);
+  overflow-x: hidden;
 
+  // Navbar
   .contact-navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: var(--bg-color1);
   }
+
+  // Header Section
   .header {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0;
     width: 100%;
+    min-height: 100dvh;
+
+    // Background Shapes (Responsive)
+    .mask-shape-left,
+    .mask-shape,
+    .small-shape {
+      @include responsive(large) {
+        display: none;
+      }
+    }
+
+    .mask-shape-left {
+      position: absolute;
+      top: 8%;
+      left: 0;
+      width: clamp(200px, 30vw, 413px);
+      height: clamp(200px, 30vh, 385px);
+      background: url(../../../assets/images/mask-shapes/left-shape.svg);
+      background-size: contain;
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+
+    .mask-shape {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: clamp(300px, 50vw, 673px);
+      height: clamp(300px, 50vh, 686px);
+      background: url(../../../assets/images/mask-shapes/mask-shape.svg);
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .small-shape {
+      position: absolute;
+      bottom: 22px;
+      right: 5%;
+      width: 85px;
+      height: 85px;
+      background: url(../../../assets/images/mask-shapes/small-shape.svg);
+      background-color: #494981;
+      border-radius: 60%;
+      background-size: cover;
+      background-position: right;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    // Top Section
     .top {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      z-index: 2;
+
       h1 {
         font-weight: 700;
         font-size: 40px;
+        text-align: center;
 
-        @media screen and (max-width: 768px) {
+        @include responsive(medium) {
           font-size: 30px;
         }
+
+        @include responsive(small) {
+          font-size: 24px;
+        }
       }
+
       p {
         text-align: center;
         padding: 0 20px;
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 20px 0;
 
-        @media screen and (max-width: 768px) {
+        @include responsive(medium) {
           font-size: 18px;
         }
-        @media screen and (max-width: 480px) {
+
+        @include responsive(small) {
           font-size: 16px;
         }
       }
     }
+
+    // Contact Card
     .contact-card {
-      position: sticky;
-      top: 0;
+      position: relative;
       width: 70%;
-      max-width: 900px;
-      background-color: var(--bg-color1);
+      max-width: 1021px;
+      height: auto;
+      background-color: var(--white-color);
       padding: 10px;
-      border-radius: 8px;
+      border-radius: 20px;
       display: flex;
+      box-shadow: 2px 2px 2px 2px rgba(0.1, 0.1, 0.1, 0.1);
+      z-index: 1;
 
-      @media screen and (max-width: 885px) {
-        //   flex-direction: column;
-        width: 90%;
+      @include responsive(extra-large) {
+        width: 80%;
       }
-      @media screen and (max-width: 786px) {
-        //   flex-direction: column;
-        width: 95%;
-      }
-      @media screen and (max-width: 576px) {
-        flex-direction: column;
-        width: 70%;
-      }
-      @media screen and (max-width: 478px) {
+
+      @include responsive(large) {
         width: 90%;
       }
 
-      //   gap: 20px;
-      .left {
-        width: 40%;
-        min-width: 250px;
-        height: 550px;
-        display: flex;
+      @include responsive(small) {
         flex-direction: column;
-        justify-content: space-between;
-        background-color: var(--bg-color2);
+        width: 90%;
+        height: auto;
+      }
+
+      // Left Contact Info
+      .contact-card-left {
+        background: linear-gradient(135deg, #8b7cff 0%, #6c5ce7 100%);
         color: white;
-        padding: 25px;
-        border-radius: 8px;
-        @media screen and (max-width: 576px) {
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 40%;
+        box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+
+        @include responsive(small) {
           width: 100%;
-          align-items: center;
+          padding: 1.5rem;
+          border-radius: 1rem 1rem 0 0;
         }
-        .info {
-          p {
+
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+
+          @include responsive(small) {
+            text-align: center;
+            font-size: 1.2rem;
+          }
+        }
+
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+
+          @include responsive(small) {
+            gap: 1rem;
+          }
+
+          .info-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            // margin: 0;
-            @media screen and (max-width: 400px) {
+            gap: 1rem;
+
+            @include responsive(small) {
+              flex-direction: column;
               text-align: center;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
             }
-            i.bi {
-              font-size: 20px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-            span {
-              display: flex;
-              flex-direction: column;
-              p {
-                margin: 0;
-                span {
-                  font-weight: 500;
-                }
+
+            .icon {
+              font-size: 1.25rem;
+              width: 40px;
+              height: 40px;
+
+              @include responsive(small) {
+                margin-bottom: 0.5rem;
               }
             }
-          }
-        }
-        .icons {
-          display: flex;
-          gap: 15px;
-          font-size: 20px;
 
-          a {
-            color: white;
-            text-decoration: none;
+            .details {
+              display: flex;
+              flex-direction: column;
+              gap: 0.25rem;
+            }
           }
         }
       }
-      .right {
-        width: 70%;
-        // min-width: 300px;
+
+      // Right Contact Form
+      .contact-card-right {
+        width: 60%;
         padding: 25px;
-        @media screen and (max-width: 576px) {
-          flex-direction: column;
+
+        @include responsive(small) {
           width: 100%;
+          padding: 15px;
         }
 
         .form {
@@ -147,57 +262,137 @@
           height: 100%;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+
           form {
             width: 100%;
+
             label {
-              font-size: 16px;
-              margin: 0;
-              color: white;
+              font-size: 24px;
+              font-weight: 600;
+              margin-bottom: 10px;
+
+              @include responsive(small) {
+                font-size: 18px;
+                text-align: center;
+              }
             }
+
             input,
             textarea {
               width: 100%;
-              //   padding: 10px;
               border: none;
               border-radius: 0;
               font-size: 14px;
-              color: white;
               outline: none;
               background-color: transparent;
-              border-bottom: 1px solid white;
-              // color: var(--text-color);
+              border-bottom: 1px solid rgba(#45464b, 0.2);
               font-family: var(--font_popins);
+
+              @include responsive(small) {
+                font-size: 12px;
+              }
+
               &::placeholder {
-                color: #ffffffb6;
+                color: #000;
                 font-style: italic;
                 font-size: 12px;
                 font-weight: 300;
               }
-              &:focus {
-                box-shadow: none;
-              }
             }
+
             .button {
               width: 100%;
               display: flex;
               justify-content: flex-end;
+              margin-top: 3rem;
+
+              @include responsive(small) {
+                justify-content: center;
+                margin-top: 1.5rem;
+              }
+
               button {
-                margin-top: 25px;
-                padding: 7px 25px;
+                padding: 0.4rem 2.8rem;
                 border: none;
                 outline: none;
-                background-color: var(--text-color1);
-                // color: var(--bg-color);
-                font-size: 16px;
+                background-color: var(--bg-color);
+                color: var(--white-color);
+                font-size: 24px;
                 font-weight: 600;
                 box-shadow: 0 0 5px var(--bg-color2);
                 border-radius: 5px;
                 cursor: pointer;
                 transition: all 0.3s ease;
+
+                @include responsive(small) {
+                  font-size: 18px;
+                  padding: 0.4rem 2rem;
+                  width: 100%;
+                }
               }
             }
           }
+        }
+      }
+    }
+
+    // Social Media Section
+    .social-media-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1rem 3.75rem;
+      width: 100%;
+
+      @include responsive(small) {
+        position: relative;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .social-icons {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+
+        @include responsive(small) {
+          justify-content: center;
+        }
+
+        a {
+          color: #45464b;
+          font-size: 1.25rem;
+          opacity: 0.9;
+          transition: opacity 0.2s ease;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          @include responsive(small) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Additional Mobile Refinements
+@include responsive(extra-small) {
+  .contact-container {
+    padding-top: 20px;
+
+    .header {
+      padding: 20px 0;
+
+      .contact-card {
+        width: 95%;
+        padding: 5px;
+
+        .contact-card-left,
+        .contact-card-right {
+          padding: 10px;
         }
       }
     }
