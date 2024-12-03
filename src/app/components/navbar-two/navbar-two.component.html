@@ -20,26 +20,7 @@
                     <li class="nav-item">
                         <a routerLink="/about">About</a>
                     </li>
-                    <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
-                            AI Products &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisible"></i>
-                        </p>
-                        <div class="idropdown-content" *ngIf="isDropdownVisible">
-                            <a routerLink="/services/performance" class="text-reset">Performance marketing and PPC</a>
-                            <!-- <a routerLink="/services/social-media" class="text-reset"
-                >Social Media Management</a
-              > -->
-                            <a routerLink="/services/bussiness" class="text-reset">Business & Maps Listings</a>
-                            <a routerLink="/services/performance" class="text-reset">Tag Management and Account
-                                Setup</a>
-                            <a routerLink="/services/whatsapp-marketing" class="text-reset">Whatsapp Marketing</a>
-                            <a routerLink="/services/email-marketing" class="text-reset">Email Marketing</a>
-                            <!-- <a routerLink="/services/website-build" class="text-reset">Free Website Build in 24
-                                Hours</a> -->
 
-                            <a routerLink="/services/seo" class="text-reset">Search Engine Optimization</a>
-                        </div>
-                    </li>
                     <li class="dropdown">
                         <p class="dropbtn m-0 p-0" (click)="toggleDropdownVerticals()">
                             Verticals &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisibleV"></i>
@@ -53,12 +34,32 @@
                             <a routerLink="/services/walmart" class="text-reset">Walmart</a>
                         </div>
                     </li>
+                    <li class="dropdown">
+                        <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
+                            AI Products &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisible"></i>
+                        </p>
+                        <div class="idropdown-content" *ngIf="isDropdownVisible">
+                            <a routerLink="/services/performance" class="text-reset">Performance marketing and PPC</a>
+                            <!-- <a routerLink="/services/social-media" class="text-reset"
+                                    >Social Media Management</a
+                                  > -->
+                            <a routerLink="/services/bussiness" class="text-reset">Business & Maps Listings</a>
+                            <!-- <a routerLink="/services/performance" class="text-reset">Tag Management and Account
+                                                    Setup</a> -->
+                            <a routerLink="/services/whatsapp-marketing" class="text-reset">Whatsapp Marketing</a>
+                            <a routerLink="/services/email-marketing" class="text-reset">Email Marketing</a>
+                            <!-- <a routerLink="/services/website-build" class="text-reset">Free Website Build in 24
+                                                    Hours</a> -->
+
+                            <a routerLink="/services/seo" class="text-reset">Search Engine Optimization</a>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a routerLink="/ai-marketing-resources">Resources</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a routerLink="/ai-technology">AI Technology</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a routerLink="/landing" (click)="navigateToSub()">Pricing</a>
@@ -191,9 +192,9 @@
                     <li class="nav-item">
                         <a routerLink="/knowledge-center">Knowledge Center</a>
                     </li> -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a routerLink="/ai-technology">AI Technology</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a routerLink="/ai-marketing-resources">Resources</a>
                     </li>

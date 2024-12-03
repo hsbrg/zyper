@@ -19,6 +19,7 @@ export class TopBarComponent {
     {
       name: 'Verticals',
       route: '/Verticals',
+
       subItems: [
         { name: 'Law Firms', route: '/services/law-firms' },
         { name: 'Amazon', route: '/services/amazon' },
@@ -26,6 +27,18 @@ export class TopBarComponent {
         { name: 'EBay', route: '/services/eBay' },
         { name: 'Shopify', route: '/services/shopify' },
         { name: 'Walmart', route: '/services/walmart' },
+      ],
+
+    },
+    {
+      name: 'AI Products',
+      route: '/AI Products',
+      subItems2: [
+        { name: 'Performance marketing and PPC', route: '/services/performance' },
+        { name: 'Business & Maps Listings', route: '/services/bussiness' },
+        { name: 'Whatsapp Marketing', route: '/services/whatsapp-marketing' },
+        { name: 'Email Marketing', route: '/services/email-marketing' },
+        { name: 'Search Engine Optimization', route: '/services/seo' },
       ],
     },
     { name: 'resources', route: '/ai-marketing-resources' },
@@ -55,7 +68,7 @@ export class TopBarComponent {
       window.open(route, '_blank'); // Opens the URL in a new tab (_blank)
     } else {
       // Handle internal route
-      this.router.navigate([route]); 
+      this.router.navigate([route]);
     }
     this.closeSidebar();
   }
