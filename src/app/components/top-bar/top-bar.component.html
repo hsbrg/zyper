@@ -55,6 +55,11 @@
               {{ subItem.name }}
             </li>
           </ul>
+            <ul *ngIf="item.name === 'AI Products'" class="submenu">
+              <li *ngFor="let subItems2 of item.subItems2" (click)="navigateTo(subItems2.route)">
+                {{ subItems2.name }}
+              </li>
+            </ul>
         </li>
       </ul>
 
