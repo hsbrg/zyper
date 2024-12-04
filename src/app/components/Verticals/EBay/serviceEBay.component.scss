@@ -1,408 +1,435 @@
-// Variables
-$primary-color: #2a4b6f;
-$secondary-color: #f2f5fc;
-$text-color: #333;
-$heading-color: #222;
-$border-color: #e6e9f1;
-$spacing-unit: 1rem;
+.services-eBay-container {
+  font-family: var(--font-inter);
+}
 
-// Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+.eBay-platform {
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
 
-
-
-h2 {
-  font-size: 3rem; // Default font size for large screens
-  font-weight: 600;
-
-  @media (max-width: 1200px) { // Large tablets and desktops
-    font-size: 2.5rem;
-  }
-
-  @media (max-width: 992px) { // Medium-sized tablets
-    font-size: 2.2rem;
-  }
-
-  @media (max-width: 768px) { // Small tablets and large smartphones
-    font-size: 2rem;
-  }
-
-  @media (max-width: 576px) { // Smartphones
-    font-size: 1.8rem !important;
-  }
-
-  @media (max-width: 400px) { // Small smartphones
-    font-size: 1.5rem !important;
+@media (max-width: 768px) {
+  .eBay-platform {
+    padding: 1rem;
   }
 }
 
+.hero {
+  text-align: center;
+  padding: 4rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
 
-// Mixins
-@mixin card-style {
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem;
+  }
+}
+
+.hero-description {
+  font-size: calc(1rem + 0.5 * ((100vw - 576px) / 624));
+  line-height: 1.8;
+}
+
+@media (max-width: 576px) {
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+.services-container .services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 0rem;
+}
+
+.services-container .services-header h2 {
+  font-size: calc(1.5rem + 1.8 * ((100vw - 576px) / 624));
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+  .services-container .services-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-container .services-header h2,
+  .services-container .core-services h2 {
+    font-size: 3.3rem;
+  }
+}
+
+.services-container .services-header p {
+  width: 85%;
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  color: #1a1a1a;
+  margin: 0 auto 2rem;
+}
+
+@media (max-width: 768px) {
+  .services-container .services-header p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-container .services-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-container .services-header p {
+    font-size: 1.25rem;
+  }
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 576px) {
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.services-list li {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid $border-color;
+  border: 1px solid #e6e9f1;
   transition: all 0.3s ease;
+  padding: 1.5rem;
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+.services-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services-list li strong {
+  color: var(--heading-color1);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+}
+
+.core-services {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+.core-services h2 {
+  text-align: center;
+  font-size: calc(1.8rem + 1.5 * ((100vw - 576px) / 624));
+  margin: 3rem 0 2rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  color: #222;
+}
+
+.service-group {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6e9f1;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .service-group {
+    padding: 1.5rem;
   }
 }
 
-@mixin gradient-bg {
-  background: linear-gradient(
-    135deg,
-    $primary-color,
-    darken($primary-color, 15%)
-  );
+.service-group:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-@mixin responsive-font($min-size, $max-size, $min-width: $breakpoint-sm, $max-width: $breakpoint-xl) {
-  font-size: calc(#{$min-size} + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-width}) / #{strip-unit($max-width - $min-width)}));
+.service-group h4 {
+  font-size: calc(1.3rem + 0.5 * ((100vw - 576px) / 624));
+  color: var(--heading-color1);
+  margin-bottom: 1.5rem;
+}
 
-  @media (max-width: #{$min-width}) {
-    font-size: $min-size;
+.service-group p {
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.service-group ul {
+  padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .service-group ul {
+    padding-left: 1rem;
   }
-  @media (min-width: #{$max-width}) {
-    font-size: $max-size;
+}
+
+.service-group ul li {
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.service-group ul li::before {
+  content: "•";
+  color: var(--heading-color1);
+   font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  position: absolute;
+  left: -1.5rem;
+  top: -5px;
+}
+
+@media (max-width: 768px) {
+  .service-group ul li::before {
+    left: -1rem;
   }
 }
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+.service-group ul li strong {
+  color: var(--heading-color1);
 }
 
-.services-eBay-container {
-  font-family: var(--font-inter);
+.advertising-container .advertising-section {
+  width: 85%;
+  padding:3rem;
+  margin: 3rem auto;
+}
 
-  // Main Styles
-  .eBay-platform {
-    color: $text-color;
-    line-height: 1.6;
-    padding: $spacing-unit * 2;
+@media (max-width: 768px) {
+  .advertising-container .advertising-section {
+    width: 100%;
+    padding: 2rem;
+  }
+}
 
-    @media (max-width: $breakpoint-md) {
-      padding: $spacing-unit;
-    }
+.advertising-container .advertising-section h2 {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #2a4b6f;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
 
-    .hero {
-      text-align: center;
-      padding: $spacing-unit * 4;
-      border-radius: 16px;
-      margin-bottom: $spacing-unit * 3;
+.advertising-container .advertising-section p {
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  color: #1a1a1a;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
 
-      @media (max-width: $breakpoint-md) {
-        padding: $spacing-unit * 2;
-      }
+.advertising-container .advertising-section ul {
+  list-style: none;
+  padding-left: 0;
+}
 
-      .hero-description {
-        @include responsive-font(1rem, 1.5rem);
-        line-height: 1.8;
-      }
-    }
+.advertising-container .advertising-section ul li {
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
 
-    .services-container {
-      .services-header {
-        text-align: center;
-        margin-bottom: $spacing-unit * 3;
+.advertising-container .advertising-section ul li::before {
+  content: "✓";
+  color: var(--heading-color1);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-weight: bold;
+}
 
-        h2 {
-          @include responsive-font(1.5rem, 3.3rem);
-          font-weight: 700;
-          color: $heading-color;
-          margin-bottom: $spacing-unit;
-          line-height: 1.2;
-        }
+.advertising-container .advertising-section ul li strong {
+  color: var(--heading-color1);
+}
 
-        p {
-          width: 85%;
-          @include responsive-font(1rem, 1.25rem);
-          color: darken($text-color, 10%);
-          margin: 0 auto $spacing-unit * 2;
+.advertising-container .advertising-footer {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: #edf2f7;
+  padding: 4rem;
+  border-radius: 16px;
+  color: var(--heading-color1);
+}
 
-          @media (max-width: $breakpoint-md) {
-            width: 100%;
-          }
-        }
+@media (max-width: 768px) {
+  .advertising-container .advertising-footer {
+    padding: 2rem;
+  }
+}
 
-        .services-list {
-          list-style: none;
-          padding: 0;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: $spacing-unit * 2;
+.advertising-container .advertising-footer h3 {
+  font-size: calc(1.5rem + 0.5 * ((100vw - 576px) / 624));
+  margin-bottom: 1.5rem;
+}
 
-          @media (max-width: $breakpoint-sm) {
-            grid-template-columns: 1fr;
-          }
+.advertising-container .advertising-footer p {
+  font-size: calc(0.9rem + 0.3 * ((100vw - 576px) / 624));
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
 
-          li {
-            @include card-style;
-            padding: $spacing-unit * 1.5;
-            @include responsive-font(0.9rem, 1.25rem);
+.advertising-container .advertising-footer p .contact-us {
+  font-weight: bold;
+  color: var(--heading-color1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-            strong {
-              color: $primary-color;
-              display: block;
-              margin-bottom: $spacing-unit / 2;
-              @include responsive-font(1rem, 1.25rem);
-            }
-          }
-        }
-      }
+.advertising-container .advertising-footer p .contact-us:hover {
+  color: #0d1824;
+  text-decoration: underline;
+}
 
-      .core-services {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 $spacing-unit;
+.faq-section {
+  margin: 3rem 0rem;
+  padding: 3rem 2rem;
+}
 
-        h3 {
-          text-align: center;
-          @include responsive-font(1.8rem, 3.3rem);
-          margin: 3rem 0 2rem;
-          padding: 1rem 0;
-          font-weight: 700;
-          color: $heading-color;
-        }
+.faq-section h2 {
+  text-align: center;
+  font-size: calc(1.8rem + 1.2 * ((100vw - 576px) / 624));
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
 
-        .service-group {
-          @include card-style;
-          padding: $spacing-unit * 2;
-          margin-bottom: $spacing-unit * 3;
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-          @media (max-width: $breakpoint-md) {
-            padding: $spacing-unit * 1.5;
-          }
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
 
-          h4 {
-            @include responsive-font(1.3rem, 1.8rem);
-            color: $primary-color;
-            margin-bottom: $spacing-unit * 1.5;
-          }
+.faq-item:last-child {
+  margin-bottom: 0;
+}
 
-          p {
-            @include responsive-font(0.9rem, 1.125rem);
-            color: darken($text-color, 15%);
-            margin-bottom: $spacing-unit;
-          }
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: calc(0.9rem + 0.1 * ((100vw - 576px) / 624));
+  font-weight: bold;
+  color: #555;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
 
-          ul {
-            padding-left: $spacing-unit * 2;
+.faq-question:hover {
+  background-color: #e0e0e0;
+}
 
-            @media (max-width: $breakpoint-md) {
-              padding-left: $spacing-unit;
-            }
+.faq-question .question-number {
+  font-size: calc(1rem + 0.25 * ((100vw - 576px) / 624));
+  color: var(--heading-color1);
+  margin-right: 0.5rem;
+}
 
-            li {
-              margin-bottom: $spacing-unit;
-              position: relative;
+.faq-question .icon {
+  font-size: calc(1rem + 0.2 * ((100vw - 576px) / 624));
+  color: var(--bg-color);
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
 
-              &::before {
-                content: "•";
-                color: $primary-color;
-                font-size: 20px;
-                position: absolute;
-                left: -$spacing-unit * 1.5;
-                top: -5px;
+[aria-expanded="true"] .faq-question .icon {
+  transform: rotate(180deg);
+}
 
-                @media (max-width: $breakpoint-md) {
-                  left: -$spacing-unit;
-                }
-              }
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1rem;
+  background-color: #f9f9f9;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
 
-              strong {
-                color: $primary-color;
-              }
-            }
-          }
-        }
-      }
-    }
+.faq-answer[style*="maxHeight: 500px"] {
+  padding: 1rem;
+}
 
-    .advertising-container {
-      .advertising-section {
-        width: 85%;
-        margin: 0 auto;
-        padding: $spacing-unit * 3;
-        margin-bottom: $spacing-unit * 3;
+.faq-answer p {
+  margin: 0;
+  font-size: calc(0.85rem + 0.1 * ((100vw - 576px) / 624));
+  color: #333;
+  line-height: 1.6;
+}
 
-        @media (max-width: $breakpoint-md) {
-          width: 100%;
-          padding: $spacing-unit * 2;
-        }
+/* Responsive font sizes for h2 */
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
 
-        h2 {
-          @include responsive-font(1.5rem, 3rem);
-          color: $heading-color;
-          margin-bottom: $spacing-unit * 1.5;
-          border-bottom: 2px solid $primary-color;
-          padding-bottom: $spacing-unit / 2;
-          display: inline-block;
-        }
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
 
-        p {
-          @include responsive-font(0.9rem, 1.1rem);
-          color: darken($text-color, 10%);
-          line-height: 1.7;
-          margin-bottom: $spacing-unit * 1.5;
-        }
+@media (max-width: 992px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+}
 
-        ul {
-          list-style: none;
-          padding-left: 0;
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 
-          li {
-            margin-bottom: $spacing-unit;
-            padding-left: $spacing-unit * 1.5;
-            position: relative;
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
 
-            &::before {
-              content: "✓";
-              color: $primary-color;
-              position: absolute;
-              left: 0;
-              top: 2px;
-              font-weight: bold;
-            }
-
-            strong {
-              color: $primary-color;
-            }
-          }
-        }
-      }
-
-      .advertising-footer {
-        text-align: center;
-        background: lighten($primary-color, 48%);
-        padding: $spacing-unit * 4;
-        border-radius: 16px;
-        color: $primary-color;
-
-        @media (max-width: $breakpoint-md) {
-          padding: $spacing-unit * 2;
-        }
-
-        h3 {
-          @include responsive-font(1.5rem, 2rem);
-          margin-bottom: $spacing-unit * 1.5;
-        }
-
-        p {
-          @include responsive-font(0.9rem, 1.2rem);
-          max-width: 700px;
-          margin: 0 auto;
-          line-height: 1.8;
-
-          .contact-us {
-            font-weight: bold;
-            color: darken($primary-color, 10%);
-            cursor: pointer;
-            transition: all 0.3s ease;
-
-            &:hover {
-              color: darken($primary-color, 20%);
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-
-    .faq-section {
-      padding: 2rem;
-
-      @media (max-width: $breakpoint-md) {
-        padding: 1rem;
-      }
-
-      h2 {
-        text-align: center;
-        @include responsive-font(1.8rem, 3rem);
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 1.5rem;
-      }
-
-      .faq-container {
-        max-width: 1200px;
-        margin: 0 auto;
-
-        .faq-item {
-          margin-bottom: 1rem;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          overflow: hidden;
-          background-color: #fff;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-
-          .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            @include responsive-font(0.9rem, 1rem);
-            font-weight: bold;
-            color: #555;
-            background-color: #f1f1f1;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            width: 100%;
-            text-align: left;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-              background-color: #e0e0e0;
-            }
-
-            .question-number {
-              @include responsive-font(1rem, 1.2rem);
-              color: $primary-color;
-              margin-right: 0.5rem;
-            }
-
-            .icon {
-              @include responsive-font(1rem, 1.2rem);
-              color: var(--bg-color);
-              margin-left: auto;
-              transition: transform 0.3s ease;
-
-              [aria-expanded="true"] & {
-                transform: rotate(180deg);
-              }
-            }
-          }
-
-          .faq-answer {
-            overflow: hidden;
-            max-height: 0;
-            padding: 0 1rem;
-            background-color: #f9f9f9;
-            transition: max-height 0.4s ease, padding 0.3s ease;
-
-            &[style*="maxHeight: 500px"] {
-              padding: 1rem;
-            }
-
-            p {
-              margin: 0;
-              @include responsive-font(0.85rem, 0.95rem);
-              color: #333;
-              line-height: 1.6;
-            }
-          }
-        }
-      }
-    }
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.5rem !important;
   }
 }
