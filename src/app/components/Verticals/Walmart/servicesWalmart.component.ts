@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-walmart',
     templateUrl: './servicesWalmart.component.html',
@@ -7,7 +8,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class ServicesWalmartComponent implements OnInit {
     activeWhatsapp: boolean = false;
-    constructor(private meta: Meta) { }
+    constructor(private meta: Meta, private router: Router) { }
 
 
     @Input() faqs: { question: string; answer: string; expanded: boolean }[] = [
@@ -48,6 +49,9 @@ export class ServicesWalmartComponent implements OnInit {
     }
 
 
+    navigateToContact() {
+        this.router.navigate(['/contact']);
+    }
 
     SwitchWhatsappState() {
         this.activeWhatsapp = !this.activeWhatsapp;
