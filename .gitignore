@@ -42,7 +42,6 @@ Thumbs.db
 
 
 deploy.sh
-browser/*
-server/*
+
 3rdpartylicenses.txt
 prerendered-routes.json
