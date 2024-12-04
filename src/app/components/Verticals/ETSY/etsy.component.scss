@@ -1,381 +1,609 @@
-// Variables
-$primary-color: #4a90e2;
-$secondary-color: #34c759;
-$text-color: #333;
-$background-color: #f8f9fa;
-$white: #ffffff;
+.etsy-platform {
+  padding: 5rem 3.75rem;
+  font-family: var(--font_inter) !important;
+}
 
-// Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+@media (max-width: 768px) {
+  .etsy-platform {
+    padding: 2rem 1rem;
+  }
+}
 
-// Mixins
-@mixin flex-center {
+.etsy-platform .hero {
+  text-align: center;
+  margin: 5rem 0rem !important;
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .hero {
+    margin: 2rem 0rem !important;
+  }
+}
+
+.etsy-platform .hero .hero-description {
+  font-size: calc(1rem + 0.5 * ((100vw - 576px) / 624));
+  margin: 4rem 0rem;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .hero .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .hero .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .hero .hero-description {
+    margin: 2rem 0rem;
+  }
+}
+
+.etsy-platform .hero .action-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
-@mixin button($bg-color, $text-color) {
-  background-color: $bg-color;
-  color: $text-color;
+@media (max-width: 576px) {
+  .etsy-platform .hero .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.etsy-platform .hero .action-buttons .btn {
+  color: var(--heading-color1);
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
 
-  &:hover {
-    background-color: darken($bg-color, 10%);
+.etsy-platform .hero .action-buttons .btn:hover {
+  background-color: #3a73b4;
+}
+
+.etsy-platform .hero .action-buttons .btn.btn-secondary {
+  background-color: #ffffff;
+  color: var(--heading-color1);
+  border: 1px solid var(--heading-color1);
+}
+
+.etsy-platform .hero .action-buttons .btn.btn-secondary:hover {
+  background-color: #f2f2f2;
+}
+
+.etsy-platform .why-etsy {
+  margin: 5rem 0rem !important;
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .why-etsy {
+    margin: 3rem 0rem !important;
   }
 }
 
-@mixin responsive-font($min-size, $max-size, $min-width: $breakpoint-sm, $max-width: $breakpoint-xl) {
-  font-size: calc(#{$min-size} + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-width}) / #{strip-unit($max-width - $min-width)}));
-
-  @media (max-width: #{$min-width}) {
-    font-size: $min-size;
-  }
-  @media (min-width: #{$max-width}) {
-    font-size: $max-size;
-  }
+.etsy-platform .why-etsy h2 {
+  font-size: calc(2rem + 2.3 * ((100vw - 576px) / 624));
+  font-weight: 600;
+  text-align: left;
+  margin: 3rem 0rem;
+  padding: 3rem 0rem;
 }
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-.etsy-platform {
-  padding: 5rem 3.75rem;
-  font-family: var(--font_inter) !important;
-
-  @media (max-width: $breakpoint-md) {
-    padding: 2rem 1rem; // Reduce padding on smaller screens
-  }
-
-  // Hero section
-  .hero {
+@media (max-width: 576px) {
+  .etsy-platform .why-etsy h2 {
+    font-size: 2rem;
     text-align: center;
-    margin: 5rem 0rem !important;
-
-    @media (max-width: $breakpoint-md) {
-      margin: 2rem 0rem !important; // Reduce margin on smaller screens
-    }
-
-    .hero-description {
-      @include responsive-font(1rem, 1.5rem); // Responsive font size
-      margin: 4rem 0rem;
-
-      @media (max-width: $breakpoint-md) {
-        margin: 2rem 0rem; // Reduce margin on smaller screens
-      }
-    }
-
-    .action-buttons {
-      @include flex-center;
-      gap: 15px;
-
-      @media (max-width: $breakpoint-sm) {
-        flex-direction: column; // Stack buttons vertically on small screens
-        align-items: stretch;
-      }
-
-      .btn {
-        @include button($primary-color, $white);
-
-        &.btn-secondary {
-          @include button($white, $primary-color);
-          border: 1px solid $primary-color;
-        }
-      }
-    }
   }
+}
 
-  // Why AI section
-  .why-etsy {
-    margin: 5rem 0rem !important;
-
-    @media (max-width: $breakpoint-md) {
-      margin: 3rem 0rem !important; // Reduce margin on smaller screens
-    }
-
-    h2 {
-      @include responsive-font(2rem, 4.3rem); // Responsive font size
-      font-weight: 600;
-      text-align: left;
-      margin: 3rem 0rem;
-      padding: 3rem 0rem;
-
-      @media (max-width: $breakpoint-md) {
-        margin: 1.5rem 0rem;
-        padding: 1.5rem 0rem;
-      }
-    }
-
-    .stats-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-
-      @media (max-width: $breakpoint-md) {
-        grid-template-columns: 1fr; // Single column on smaller screens
-      }
-
-      .stat-item {
-        background-color: $white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-        h3 {
-          @include responsive-font(1.1rem, 1.3rem); // Responsive font size
-          color: $primary-color;
-          margin-bottom: 10px;
-        }
-
-        p {
-          @include responsive-font(0.9rem, 1rem); // Responsive font size
-        }
-
-        .highlight {
-          color: $secondary-color;
-          font-weight: bold;
-        }
-      }
-    }
+@media (min-width: 1200px) {
+  .etsy-platform .why-etsy h2 {
+    font-size: 4.3rem;
   }
+}
 
-  // Services section
-  .services {
-    margin: 5rem 0rem !important;
-
-    @media (max-width: $breakpoint-md) {
-      margin: 3rem 0rem !important; // Reduce margin on smaller screens
-    }
-
-    h2 {
-      @include responsive-font(2rem, 4.3rem); // Responsive font size
-      font-weight: 600;
-      margin: 3rem 0rem;
-      padding: 3rem 0rem;
-      text-align: left;
-
-      @media (max-width: $breakpoint-md) {
-        margin: 1.5rem 0rem;
-        padding: 1.5rem 0rem;
-      }
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-
-      @media (max-width: $breakpoint-md) {
-        grid-template-columns: 1fr; // Single column on smaller screens
-      }
-
-      .service-item {
-        background-color: $white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: relative;
-
-        .service-number {
-          position: absolute;
-          top: 10%;
-          left: 10px;
-          @include responsive-font(1.2rem, 1.5rem); // Responsive font size
-          color: $primary-color;
-          font-weight: bold;
-
-          .highlight {
-            color: $secondary-color;
-            font-weight: 600;
-          }
-        }
-
-        h3 {
-          @include responsive-font(1.1rem, 1.3rem); // Responsive font size
-          color: $primary-color;
-          margin-bottom: 10px;
-          margin-left: 14px;
-        }
-
-        p {
-          @include responsive-font(0.9rem, 1rem); // Responsive font size
-        }
-      }
-    }
-
-    // Growth Steps Section Styles
-    .growth-steps {
-      padding: 0 20px;
-
-      @media (max-width: $breakpoint-md) {
-        padding: 0 10px; // Reduce padding on smaller screens
-      }
-
-      h2 {
-        @include responsive-font(2rem, 4.3rem); // Responsive font size
-        font-weight: 600;
-        margin: 3rem 0rem;
-        padding: 3rem 0rem;
-        text-align: left;
-
-        @media (max-width: $breakpoint-md) {
-          margin: 1.5rem 0rem;
-          padding: 1.5rem 0rem;
-        }
-      }
-
-      .steps-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-
-        @media (max-width: $breakpoint-md) {
-          grid-template-columns: 1fr; // Single column on smaller screens
-        }
-
-        .step-item {
-          background: $white;
-          border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-          &:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-          }
-
-          .step-number {
-            display: inline-block;
-            @include responsive-font(1.2rem, 1.5rem); // Responsive font size
-            font-weight: bold;
-            color: $primary-color;
-            background: $background-color;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-          }
-
-          h3 {
-            @include responsive-font(1rem, 1.2rem); // Responsive font size
-            font-weight: 600;
-            margin: 10px 0;
-            color: $text-color;
-          }
-
-          p {
-            @include responsive-font(0.85rem, 0.95rem); // Responsive font size
-            line-height: 1.6;
-            color: $text-color;
-
-            .highlight {
-              color: $secondary-color;
-              font-weight: 600;
-            }
-          }
-        }
-      }
-    }
+@media (max-width: 768px) {
+  .etsy-platform .why-etsy h2 {
+    margin: 1.5rem 0rem;
+    padding: 1.5rem 0rem;
   }
+}
 
-  .faq-section {
-    padding: 2rem;
+.etsy-platform .why-etsy .stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
 
-    @media (max-width: $breakpoint-md) {
-      padding: 1rem; // Reduce padding on smaller screens
-    }
+@media (max-width: 768px) {
+  .etsy-platform .why-etsy .stats-container {
+    grid-template-columns: 1fr;
+  }
+}
 
-    h2 {
-      text-align: center;
-      @include responsive-font(2rem, 3rem); // Responsive font size
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 1.5rem;
-    }
+.etsy-platform .why-etsy .stats-container .stat-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .faq-container {
-      max-width: 1200px;
-      margin: 0 auto;
+.etsy-platform .why-etsy .stats-container .stat-item h3 {
+  font-size: calc(1.1rem + 0.2 * ((100vw - 576px) / 624));
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
 
-      .faq-item {
-        margin-bottom: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-        background-color: #fff;
+@media (max-width: 576px) {
+  .etsy-platform .why-etsy .stats-container .stat-item h3 {
+    font-size: 1.1rem;
+  }
+}
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+@media (min-width: 1200px) {
+  .etsy-platform .why-etsy .stats-container .stat-item h3 {
+    font-size: 1.3rem;
+  }
+}
 
-        .faq-question {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem;
-          @include responsive-font(0.9rem, 1rem); // Responsive font size
-          font-weight: bold;
-          color: #555;
-          background-color: #f1f1f1;
-          cursor: pointer;
-          border: none;
-          outline: none;
-          width: 100%;
-          text-align: left;
-          transition: background-color 0.3s ease;
+.etsy-platform .why-etsy .stats-container .stat-item p {
+  font-size: calc(0.9rem + 0.1 * ((100vw - 576px) / 624));
+}
 
-          &:hover {
-            background-color: #e0e0e0;
-          }
+@media (max-width: 576px) {
+  .etsy-platform .why-etsy .stats-container .stat-item p {
+    font-size: 0.9rem;
+  }
+}
 
-          .question-number {
-            @include responsive-font(1rem, 1.2rem); // Responsive font size
-            color: #5ec3ff;
-            margin-right: 0.5rem;
-          }
+@media (min-width: 1200px) {
+  .etsy-platform .why-etsy .stats-container .stat-item p {
+    font-size: 1rem;
+  }
+}
 
-          .icon {
-            @include responsive-font(1rem, 1.2rem); // Responsive font size
-            color: var(--bg-color);
-            margin-left: auto;
-            transition: transform 0.3s ease;
+.etsy-platform .why-etsy .stats-container .stat-item .highlight {
+  color: #34c759;
+  font-weight: bold;
+}
 
-            [aria-expanded="true"] & {
-              transform: rotate(180deg);
-            }
-          }
-        }
+.etsy-platform .services {
+  margin: 5rem 0rem !important;
+}
 
-        .faq-answer {
-          overflow: hidden;
-          max-height: 0;
-          padding: 0 1rem;
-          background-color: #f9f9f9;
-          transition: max-height 0.4s ease, padding 0.3s ease;
+@media (max-width: 768px) {
+  .etsy-platform .services {
+    margin: 3rem 0rem !important;
+  }
+}
 
-          &[style*="maxHeight: 500px"] {
-            padding: 1rem;
-          }
+.etsy-platform .services h2 {
+  font-size: calc(2rem + 2.3 * ((100vw - 576px) / 624));
+  font-weight: 600;
+  margin: 3rem 0rem;
+  padding: 3rem 0rem;
+  text-align: left;
+}
 
-          p {
-            margin: 0;
-            @include responsive-font(0.85rem, 0.95rem); // Responsive font size
-            color: #333;
-            line-height: 1.6;
-          }
-        }
-      }
-    }
+@media (max-width: 576px) {
+  .etsy-platform .services h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services h2 {
+    font-size: 4.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .services h2 {
+    margin: 1.5rem 0rem;
+    padding: 1.5rem 0rem;
+  }
+}
+
+.etsy-platform .services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .services .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.etsy-platform .services .services-grid .service-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.etsy-platform .services .services-grid .service-item .service-number {
+  position: absolute;
+  top: 9%;
+  left: 10px;
+  font-size: calc(1.2rem + 0.3 * ((100vw - 576px) / 624));
+  color: var(--heading-color1);
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .services-grid .service-item .service-number {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .services-grid .service-item .service-number {
+    font-size: 1.5rem;
+  }
+}
+
+.etsy-platform
+  .services
+  .services-grid
+  .service-item
+  .service-number
+  .highlight {
+  color: #34c759;
+  font-weight: 600;
+}
+
+.etsy-platform .services .services-grid .service-item h3 {
+  font-size: calc(1.1rem + 0.2 * ((100vw - 576px) / 624));
+  color: var(--heading-color1);
+  margin-bottom: 10px;
+  margin-left: 22px;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .services-grid .service-item h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .services-grid .service-item h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.etsy-platform .services .services-grid .service-item p {
+  font-size: calc(0.9rem + 0.1 * ((100vw - 576px) / 624));
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .services-grid .service-item p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .services-grid .service-item p {
+    font-size: 1rem;
+  }
+}
+
+.etsy-platform .services .growth-steps {
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .services .growth-steps {
+    padding: 0 10px;
+  }
+}
+
+.etsy-platform .services .growth-steps h2 {
+  font-size: calc(2rem + 2.3 * ((100vw - 576px) / 624));
+  font-weight: 600;
+  margin: 3rem 0rem;
+  padding: 3rem 0rem;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .growth-steps h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .growth-steps h2 {
+    font-size: 4.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .services .growth-steps h2 {
+    margin: 1.5rem 0rem;
+    padding: 1.5rem 0rem;
+  }
+}
+
+.etsy-platform .services .growth-steps .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .services .growth-steps .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.etsy-platform .services .growth-steps .steps-grid .step-item {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etsy-platform .services .growth-steps .steps-grid .step-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.etsy-platform .services .growth-steps .steps-grid .step-item .step-number {
+  display: inline-block;
+  font-size: calc(1.2rem + 0.3 * ((100vw - 576px) / 624));
+  font-weight: bold;
+  color: var(--heading-color1);
+  background: #f8f9fa;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .growth-steps .steps-grid .step-item .step-number {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .growth-steps .steps-grid .step-item .step-number {
+    font-size: 1.5rem;
+  }
+}
+
+.etsy-platform .services .growth-steps .steps-grid .step-item h3 {
+  font-size: calc(1rem + 0.2 * ((100vw - 576px) / 624));
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .growth-steps .steps-grid .step-item h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .growth-steps .steps-grid .step-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.etsy-platform .services .growth-steps .steps-grid .step-item p {
+  font-size: calc(0.85rem + 0.1 * ((100vw - 576px) / 624));
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .services .growth-steps .steps-grid .step-item p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .services .growth-steps .steps-grid .step-item p {
+    font-size: 0.95rem;
+  }
+}
+
+.etsy-platform .services .growth-steps .steps-grid .step-item p .highlight {
+  color: #34c759;
+  font-weight: 600;
+}
+
+.etsy-platform .faq-section {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .etsy-platform .faq-section {
+    padding: 1rem;
+  }
+}
+
+.etsy-platform .faq-section h2 {
+  text-align: center;
+  font-size: calc(2rem + 1 * ((100vw - 576px) / 624));
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .faq-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .faq-section h2 {
+    font-size: 3rem;
+  }
+}
+
+.etsy-platform .faq-section .faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.etsy-platform .faq-section .faq-container .faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.etsy-platform .faq-section .faq-container .faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.etsy-platform .faq-section .faq-container .faq-item .faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: calc(0.9rem + 0.1 * ((100vw - 576px) / 624));
+  font-weight: bold;
+  color: #555;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .faq-section .faq-container .faq-item .faq-question {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .faq-section .faq-container .faq-item .faq-question {
+    font-size: 1rem;
+  }
+}
+
+.etsy-platform .faq-section .faq-container .faq-item .faq-question:hover {
+  background-color: #e0e0e0;
+}
+
+.etsy-platform
+  .faq-section
+  .faq-container
+  .faq-item
+  .faq-question
+  .question-number {
+  font-size: calc(1rem + 0.2 * ((100vw - 576px) / 624));
+  color: var(--heading-color1);
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform
+    .faq-section
+    .faq-container
+    .faq-item
+    .faq-question
+    .question-number {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform
+    .faq-section
+    .faq-container
+    .faq-item
+    .faq-question
+    .question-number {
+    font-size: 1.2rem;
+  }
+}
+
+.etsy-platform .faq-section .faq-container .faq-item .faq-question .icon {
+  font-size: calc(1rem + 0.2 * ((100vw - 576px) / 624));
+  color: var(--bg-color);
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .faq-section .faq-container .faq-item .faq-question .icon {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .faq-section .faq-container .faq-item .faq-question .icon {
+    font-size: 1.2rem;
+  }
+}
+
+.etsy-platform
+  .faq-section
+  .faq-container
+  .faq-item
+  .faq-question[aria-expanded="true"]
+  .icon {
+  transform: rotate(180deg);
+}
+
+.etsy-platform .faq-section .faq-container .faq-item .faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1rem;
+  background-color: #f9f9f9;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.etsy-platform
+  .faq-section
+  .faq-container
+  .faq-item
+  .faq-answer[style*="maxHeight: 500px"] {
+  padding: 1rem;
+}
+
+.etsy-platform .faq-section .faq-container .faq-item .faq-answer p {
+  margin: 0;
+  font-size: calc(0.85rem + 0.1 * ((100vw - 576px) / 624));
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .etsy-platform .faq-section .faq-container .faq-item .faq-answer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etsy-platform .faq-section .faq-container .faq-item .faq-answer p {
+    font-size: 0.95rem;
   }
 }
