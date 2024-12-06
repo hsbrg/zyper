@@ -49,13 +49,20 @@
       font-size: 1.3rem;
     }
 
-    .common-section-required-steps > ol {
-      padding-left: 0px !important;
-      font-size: 1.3rem;
+    .common-section-required-steps {
+      width: 100%;
+      ol {
+        padding-left: 0px !important;
+        font-size: 1.3rem;
+      }
+      li {
+        padding-left: 0px !important;
+        font-size: 1.3rem;
+      }
     }
-    .common-section-required-steps > li {
-      padding-left: 0px !important;
-      font-size: 1.3rem;
+
+    .ul-left {
+      padding-left: 1.2rem !important;
     }
 
     .client-success-container {
@@ -80,7 +87,7 @@
       #example-trip {
         max-width: 100%;
         padding-left: 1.3rem;
-        font-weight: 500 !important;
+        font-weight: 700 !important;
       }
 
       .example-trip-container-steps {
@@ -250,6 +257,188 @@
         li {
           margin-bottom: 0.8rem;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .resources-sixth-container {
+    .common-section-structure {
+      h6 {
+        width: 100% !important;
+        padding-left: 0rem !important;
+        font-size: 1rem;
+      }
+
+      padding: 1.5rem 1rem 1.5rem 1rem;
+      .intro {
+        p {
+          font-size: 1rem;
+          padding-left: 0rem !important;
+        }
+      }
+
+      .common-section-title {
+        margin: 4rem 0rem 1rem 0rem;
+        font-size: 2.4rem;
+        text-align: center;
+        font-weight: 800;
+        padding-left: 0rem !important;
+      }
+
+      .client-success-container {
+        .client-success-container-steps > ol {
+          width: 100%;
+          padding-left: 0rem !important;
+          font-size: 1rem !important;
+        }
+      }
+
+      .example-trip-container {
+        #example-trip {
+          max-width: 100%;
+          font-size: 1.125rem !important;
+          padding-left: 0rem !important;
+          font-weight: 700 !important;
+        }
+
+        .example-trip-container-steps > ol {
+          width: 100%;
+          padding-left: 0rem !important;
+          font-size: 1rem !important;
+        }
+      }
+      #amazon-feed-case {
+        padding-left: 0rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+      #Benefits {
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+      .common-section-required-steps > li {
+        font-size: 1rem !important;
+      }
+
+      #benchmark {
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding-left: 0rem !important;
+      }
+
+      .benchmark-text {
+        font-size: 1rem !important;
+        padding-left: 0rem !important;
+      }
+    }
+
+    .common-section-structure {
+      #case,
+      #client-success {
+        padding-left: 0rem;
+        font-size: 1.125rem;
+      }
+    }
+
+    .common-section-required-steps {
+      padding-left: 0rem;
+    }
+    .common-section-required-steps > ol {
+      font-size: 1rem !important;
+    }
+
+    .section-challenges,
+    .section-roas-tips {
+      margin-bottom: 3rem;
+      padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .section-challenges {
+      .section-title {
+        font-size: 2.4rem !important;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .section-text {
+        font-size: 1rem;
+      }
+
+      .section-list {
+        padding-left: 0rem !important;
+        & > li {
+          font-size: 1rem !important;
+        }
+      }
+
+      .section-solution {
+        font-size: 1rem !important;
+      }
+    }
+
+    .section-roas-tips {
+      .section-title {
+        font-size: 2.4rem !important;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .tips-list {
+        width: 85%;
+        padding-left: 1.4rem !important;
+        & > li {
+          font-size: 1rem !important;
+        }
+      }
+    }
+
+    .zyper-performance {
+      padding: 1.5rem 1rem 1.5rem 1rem;
+
+      .section-title {
+        font-size: 2.4rem !important;
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .section-text {
+        font-size: 1rem;
+      }
+
+      .key-features {
+        h4 {
+          font-size: 1.125rem;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        p::before {
+          content: "--> ";
+        }
+      }
+      .client-testimonial {
+        margin: 4rem 0rem 0rem 0rem;
+        padding: 1rem 0rem;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .amazon-adv {
+      padding: 1.5rem 1rem 1.5rem 1rem;
+      h1 {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      .amazon-adv-para {
+        font-size: 1rem;
       }
     }
   }

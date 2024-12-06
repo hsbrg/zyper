@@ -4,58 +4,54 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.scss'],
+  styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent {
-  isSidebarOpen: boolean = false;
+  isSidebarOpen = false;
+  isVerticalsDropdownOpen = false;
+  isAIProductsDropdownOpen = false;
+  closeDropdownTimer: any;
 
-  @Input() trialText?: string = '';
-  @Input() buttonText: string = 'GET STARTED';
-  @Input() buttonLink: string = 'https://zyper-ai.vercel.app/subscription';
-
-  navItems = [
-    { name: 'home', route: '/' },
-    { name: 'about', route: '/about' },
-    {
-      name: 'Verticals',
-      route: '/Verticals',
-
-      subItems: [
-        { name: 'Law Firms', route: '/services/law-firms' },
-        { name: 'Amazon', route: '/services/amazon' },
-        { name: 'ETSY', route: '/services/etsy' },
-        { name: 'EBay', route: '/services/eBay' },
-        { name: 'Shopify', route: '/services/shopify' },
-        { name: 'Walmart', route: '/services/walmart' },
-      ],
-
-    },
-    {
-      name: 'AI Products',
-      route: '/AI Products',
-      subItems2: [
-        { name: 'Performance marketing and PPC', route: '/services/performance' },
-        { name: 'Business & Maps Listings', route: '/services/bussiness' },
-        { name: 'Whatsapp Marketing', route: '/services/whatsapp-marketing' },
-        { name: 'Email Marketing', route: '/services/email-marketing' },
-        { name: 'Search Engine Optimization', route: '/services/seo' },
-      ],
-    },
-    { name: 'resources', route: '/ai-marketing-resources' },
-    { name: 'pricing', route: 'https://zyper-ai.vercel.app/subscription' },
-    { name: 'contact us', route: '/contact' },
-  ];
-
+  @Input() trialText = '';
+  @Input() buttonText = 'GET STARTED';
+  @Input() buttonLink = 'https://zyper-ai.vercel.app/subscription';
 
   constructor(private router: Router) { }
 
   toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen;
+
+    // Prevent body scrolling when sidebar is open
     if (this.isSidebarOpen) {
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = '';
+      this.resetBodyStyles();
+      // Reset dropdowns when sidebar closes
+      this.closeDropdowns();
     }
+  }
+
+  openVerticalsDropdown(): void {
+    clearTimeout(this.closeDropdownTimer);
+    this.isVerticalsDropdownOpen = !this.isVerticalsDropdownOpen;
+  }
+
+  closeVerticalsDropdown(): void {
+    this.closeDropdownTimer = setTimeout(() => {
+      this.isVerticalsDropdownOpen = false;
+    }, 0); // Small delay to allow moving to the dropdown content
+  }
+
+  closeAIProductsDropdown(): void {
+    this.closeDropdownTimer = setTimeout(() => {
+      this.isAIProductsDropdownOpen = false;
+    }, 0); // Small delay to allow moving to the dropdown content
+  }
+
+  openAIProductsDropdown(): void {
+    this.isAIProductsDropdownOpen = !this.isAIProductsDropdownOpen;
   }
 
   navigateToLink(): void {
@@ -63,31 +59,51 @@ export class TopBarComponent {
   }
 
   navigateTo(route: string): void {
-    if (route.startsWith('https')) {
-      // Handle external URL
-      window.open(route, '_blank'); // Opens the URL in a new tab (_blank)
+    // Check if the route is an external link
+    if (route.startsWith('http://') || route.startsWith('https://')) {
+      window.open(route, '_blank');
     } else {
-      // Handle internal route
       this.router.navigate([route]);
     }
     this.closeSidebar();
   }
 
-
   closeSidebar(): void {
     this.isSidebarOpen = false;
+    this.closeDropdowns();
+    this.resetBodyStyles();
+  }
+
+  private closeDropdowns(): void {
+    this.isVerticalsDropdownOpen = false;
+    this.isAIProductsDropdownOpen = false;
+  }
+
+  private resetBodyStyles(): void {
+    document.body.style.position = '';
+    document.body.style.width = '';
     document.body.style.overflow = '';
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: Event): void {
+  onResize(): void {
+    // Close sidebar on desktop/tablet view
     if (window.innerWidth >= 768) {
       this.closeSidebar();
     }
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscKeydown(event: KeyboardEvent) {
+  @HostListener('document:keydown.escape')
+  onEscKeydown(): void {
     this.closeSidebar();
+  }
+
+  @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent): void {
+    const target = event.target as HTMLElement;
+    // Only close dropdowns if the touch is outside the dropdown or button
+    if (!target.closest('.dropdown-content') && !target.closest('.dropbtn')) {
+      this.closeDropdowns();
+    }
   }
 }

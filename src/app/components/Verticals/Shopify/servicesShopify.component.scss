@@ -115,7 +115,7 @@ h3 {
     justify-content: center;
 
     .btn {
-      margin: 0 $spacing/2;
+      margin: 0 calc($spacing/2);
     }
   }
 }
@@ -299,7 +299,7 @@ h3 {
       align-items: stretch;
 
       .btn {
-        margin: $spacing/2 0;
+        margin: calc($spacing/2) 0;
       }
     }
   }

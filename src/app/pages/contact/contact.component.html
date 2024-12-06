@@ -5,11 +5,7 @@
   </div>
   <div class="float-icons">
     <button (click)="SwitchWhatsappState()">
-      <img
-        src="assets/images/whatsapp_icon.png"
-        alt=""
-        *ngIf="!activeWhatsapp"
-      />
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
       <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
     </button>
     <i class="bi bi-chat" style="filter: opacity(0)"></i>
@@ -28,17 +24,14 @@
       </div>
       <p>
         <span> OR</span> <br />
-        <a
-          href="https://wa.me/+919266373451"
-          class="text-decoration-underline"
-          target="_blank"
-          >click here to start chat</a
-        >
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
+          chat</a>
       </p>
     </div>
   </div>
   <div class="contact-navbar">
-    <app-navbar-two></app-navbar-two>
+    <app-top-bar></app-top-bar>
+    <!-- <app-navbar-two></app-navbar-two> -->
   </div>
   <div class="header">
     <div class="mask-shape-left"></div>
@@ -54,41 +47,22 @@
           <div class="info-item">
             <!-- location svg  -->
             <div class="icon">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M12.293 8.09859C14.4258 6.03285 16.9947 5 20 5C23.0052 5 25.562 6.02112 27.6705 8.06338C29.7791 10.1056 30.8333 12.5821 30.8333 15.493C30.8333 16.9484 30.4576 18.615 29.7063 20.493C28.955 22.3709 28.0462 24.1314 26.9798 25.7746C25.9135 27.4178 24.8592 28.9554 23.8171 30.3873C22.7749 31.8193 21.8903 32.9577 21.1633 33.8028L20 35C19.7091 34.6714 19.3214 34.2371 18.8366 33.6972C18.3519 33.1573 17.4795 32.0775 16.2192 30.4577C14.9589 28.838 13.8562 27.2653 12.911 25.7394C11.9658 24.2136 11.1055 22.4883 10.3299 20.5634C9.55439 18.6385 9.16663 16.9484 9.16663 15.493C9.16663 12.5821 10.2087 10.1174 12.293 8.09859Z"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path
                   d="M21.6666 15.8333C21.6666 16.7538 20.9204 17.5 20 17.5C19.0795 17.5 18.3333 16.7538 18.3333 15.8333C18.3333 14.9129 19.0795 14.1667 20 14.1667C20.9204 14.1667 21.6666 14.9129 21.6666 15.8333Z"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="details">
               <div class="location">
-                <span class="country">USA</span>
-                <span class="address"
-                  >San Francisco 166 Geary Str STE 1500 San Francisco, CA
-                  94108</span
-                >
+                <span class="country"><Strong>USA:</Strong></span>&nbsp;
+                <span>San 94108 Francisco 166 Geary Str STE 1500 San Francisco, CA</span>
               </div>
               <div class="location">
-                <span class="country">India</span>
+                <span class="country"><Strong>India:</Strong></span>&nbsp;
                 <span class="address">A4/1 Vasant Vihar, New Delhi 110057</span>
               </div>
             </div>
@@ -97,30 +71,20 @@
           <div class="info-item">
             <div class="icon">
               <!-- contact svg  -->
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.72234 8.30586C7.60122 21.2401 18.7599 32.3987 31.6941 33.2776C32.6453 33.3423 33.4679 32.6604 33.6548 31.7256L34.7004 26.4979C34.8773 25.6135 34.4403 24.7202 33.6336 24.3168L29.8262 22.4131C28.9617 21.9809 27.9117 22.2287 27.3318 23.002L26.4333 24.2C26.0556 24.7036 25.454 25.0176 24.853 24.8302C21.5792 23.8091 16.1908 18.4207 15.1698 15.1469C14.9824 14.546 15.2963 13.9444 15.8 13.5667L16.998 12.6682C17.7712 12.0882 18.0191 11.0383 17.5868 10.1737L15.6831 6.36632C15.2798 5.55963 14.3864 5.12271 13.502 5.29959L8.27439 6.34511C7.33955 6.53208 6.6577 7.3547 6.72234 8.30586Z"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
 
             <div class="details">
               <div class="phone">
-                <span class="country">USA</span>
+                <span class="country"><Strong>USA:</Strong></span>&nbsp;
                 <span class="usa-contact">+1 331 230 7437</span>
               </div>
               <div class="phone">
-                <span class="country">India</span>
+                <span class="country"><Strong>India:</Strong></span>&nbsp;
                 <span class="in-contact">+91 9266373451</span>
               </div>
             </div>
@@ -129,22 +93,11 @@
           <div class="info-item">
             <div class="icon">
               <!-- message svg  -->
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 120 120"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="40" height="40" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="mail">
-                  <path
-                    id="Icon"
+                  <path id="Icon"
                     d="M15 40L56.6718 67.781C58.6872 69.1246 61.3128 69.1246 63.3282 67.781L105 40M21 95H99C102.314 95 105 92.3135 105 89V31C105 27.686 102.314 25 99 25H21C17.6863 25 15 27.6861 15 31V89C15 92.3135 17.6863 95 21 95Z"
-                    stroke="white"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                    stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                 </g>
               </svg>
             </div>
@@ -158,113 +111,51 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="mb-3">
-                  <label for="name" class="form-label"
-                    >First Name<span
-                      class="error"
-                      *ngIf="
+                  <label for="name" class="form-label">First Name<span class="error" *ngIf="
                         firstName && firstName.invalid && firstName.touched
-                      "
-                      >*</span
-                    ></label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    formControlName="firstName"
-                    placeholder="Enter Your First Name"
-                  />
+                      ">*</span></label>
+                  <input type="text" class="form-control" id="name" formControlName="firstName"
+                    placeholder="Enter Your First Name" />
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="mb-3">
-                  <label for="name" class="form-label"
-                    >Last Name<span
-                      class="error"
-                      *ngIf="lastName && lastName.invalid && lastName.touched"
-                      >*</span
-                    ></label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    formControlName="lastName"
-                    placeholder="Enter Your Last Name"
-                  />
+                  <label for="name" class="form-label">Last Name<span class="error"
+                      *ngIf="lastName && lastName.invalid && lastName.touched">*</span></label>
+                  <input type="text" class="form-control" id="name" formControlName="lastName"
+                    placeholder="Enter Your Last Name" />
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="mb-3">
-                  <label for="email" class="form-label"
-                    >Email<span
-                      class="error"
-                      *ngIf="email && email.invalid && email.touched"
-                      >*</span
-                    ></label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    formControlName="email"
-                    placeholder="Enter Your Email"
-                  />
+                  <label for="email" class="form-label">Email<span class="error"
+                      *ngIf="email && email.invalid && email.touched">*</span></label>
+                  <input type="email" class="form-control" id="email" formControlName="email"
+                    placeholder="Enter Your Email" />
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="mb-3">
-                  <label for="phone" class="form-label"
-                    >Phone<span
-                      class="error"
-                      *ngIf="phone && phone.invalid && phone.touched"
-                      >*</span
-                    ></label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="phone"
-                    formControlName="phone"
-                    placeholder="Enter Your Phone"
-                  />
+                  <label for="phone" class="form-label">Phone<span class="error"
+                      *ngIf="phone && phone.invalid && phone.touched">*</span></label>
+                  <input type="text" class="form-control" id="phone" formControlName="phone"
+                    placeholder="Enter Your Phone" />
                 </div>
               </div>
             </div>
             <div class="mb-3">
-              <label for="subject" class="form-label"
-                >Subject<span
-                  class="error"
-                  *ngIf="subject && subject.invalid && subject.touched"
-                  >*</span
-                ></label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="subject"
-                formControlName="subject"
-                placeholder="Enter Your Subject"
-              />
+              <label for="subject" class="form-label">Subject<span class="error"
+                  *ngIf="subject && subject.invalid && subject.touched">*</span></label>
+              <input type="text" class="form-control" id="subject" formControlName="subject"
+                placeholder="Enter Your Subject" />
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label"
-                >Message<span
-                  class="error"
-                  *ngIf="message && message.invalid && message.touched"
-                  >*</span
-                ></label
-              >
-              <textarea
-                class="form-control"
-                id="message"
-                rows="1"
-                maxrows="5"
-                formControlName="message"
-                placeholder="Write Your Message ..."
-              ></textarea>
+              <label for="message" class="form-label">Message<span class="error"
+                  *ngIf="message && message.invalid && message.touched">*</span></label>
+              <textarea class="form-control" id="message" rows="1" maxrows="5" formControlName="message"
+                placeholder="Write Your Message ..."></textarea>
             </div>
             <div class="button">
               <button type="submit" class="submit-button" (click)="submit()">
@@ -287,17 +178,10 @@
           <i class="bi bi-facebook"></i>
         </a>
         <a href="https://twitter.com/zyper_ai">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17.751 3H20.818L14.118 10.625L22 21H15.828L10.995 14.707L5.464 21H2.394L9.561 12.845L2 3H8.328L12.698 8.752L17.751 3ZM16.675 19.172H18.375L7.404 4.732H5.58L16.675 19.172Z"
-              fill="black"
-            />
+              fill="black" />
           </svg>
         </a>
       </div>
