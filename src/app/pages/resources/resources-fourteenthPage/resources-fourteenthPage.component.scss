@@ -19,10 +19,6 @@
 .resources-fourteenth-container {
   width: 100%;
   background-color: #d7e6ff;
-
-  @include respond-to("small") {
-    padding: 1rem;
-  }
 }
 
 .resources-fourteenth-section {
@@ -57,6 +53,7 @@
     padding-bottom: 1rem;
     width: 100%;
     place-content: center;
+    overflow-x: auto;
     .grid-header,
     .grid-item {
       padding: 1rem;

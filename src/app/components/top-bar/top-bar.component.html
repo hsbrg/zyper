@@ -1,75 +1,112 @@
 <div class="hero-top-bar">
   <div class="top-bar">
-    <!-- Logo Section -->
-    <div class="top-left" [routerLink]="['/']">
-      <img src="../../../../assets/images/svg/zyper-logo.svg" alt="logo" />
+    <div class="top-left" (click)="navigateTo('/')">
+      <img src="assets/images/svg/zyper-logo.svg" alt="logo" />
     </div>
 
-    <!-- Hamburger Menu (Visible on Small Devices) -->
-    <div class="hamburger md:hidden" (click)="toggleSidebar()" aria-label="Toggle menu">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
+    <ul class="nav-menu" [class.active]="isSidebarOpen">
+      <li>
+        <a (click)="navigateTo('/')" routerLink="/landing" routerLinkActive="active-link">Home</a>
+      </li>
+      <li>
+        <a (click)="navigateTo('/about')" routerLink="/about" routerLinkActive="active-link">About</a>
+      </li>
+      <li class="relative group" (click)="openVerticalsDropdown()" (mouseleave)="closeVerticalsDropdown()">
+        <div class="dropbtn">
+          Verticals
+          <i class="bi" [class.bi-caret-down-fill]="!isVerticalsDropdownOpen"
+            [class.bi-caret-up-fill]="isVerticalsDropdownOpen"></i>
+        </div>
+        <div class="dropdown-content" [class.show]="isVerticalsDropdownOpen">
+          <div class="sub-section">
+            <h3>Ecommerce Services</h3>
+            <div class="gg">
+              <a (click)="navigateTo('/ecommerce-services/ai-powered-platform-amazon-sellers-marketing-potential')"
+                routerLink="/ecommerce-services/ai-powered-platform-amazon-sellers-marketing-potential"
+                routerLinkActive="active-link">
+                Amazon
+              </a>
+              <a (click)="navigateTo('/ecommerce-services/ai-powered-platform-etsy-sellers-digital-marketing-strategy')"
+                routerLink="/ecommerce-services/ai-powered-platform-etsy-sellers-digital-marketing-strategy"
+                routerLinkActive="active-link">
+                Etsy
+              </a>
+              <a (click)="navigateTo('/ecommerce-services/elevate-ebay-business-strategic-digital-marketing')"
+                routerLink="/ecommerce-services/elevate-ebay-business-strategic-digital-marketing"
+                routerLinkActive="active-link">
+                eBay
+              </a>
+              <a (click)="navigateTo('/ecommerce-services/maximize-shopify-business-growth-digital-marketing-solutions')"
+                routerLink="/ecommerce-services/maximize-shopify-business-growth-digital-marketing-solutions"
+                routerLinkActive="active-link">
+                Shopify
+              </a>
+              <a (click)="navigateTo('/ecommerce-services/elevate-walmart-business-digital-marketing-services')"
+                routerLink="/ecommerce-services/elevate-walmart-business-digital-marketing-services"
+                routerLinkActive="active-link">
+                Walmart
+              </a>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="sub-section">
+            <h3>Professional Services</h3>
+            <div class="gg">
+              <a (click)="navigateTo('/professional-services/law-firm-legal-attorney-lawyer-digital-marketing-guide')"
+                routerLink="/professional-services/law-firm-legal-attorney-lawyer-digital-marketing-guide"
+                routerLinkActive="active-link">
+                Law Firms
+              </a>
+              <a (click)="navigateTo('/professional-services/real-estate-digital-marketing-guide-ai-platforms')"
+                routerLink="/professional-services/real-estate-digital-marketing-guide-ai-platforms"
+                routerLinkActive="active-link">
+                Real Estate
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <div class="dropbtn" (click)="openAIProductsDropdown()" (mouseleave)="closeAIProductsDropdown()">
+          AI Products
+          <i class="bi" [class.bi-caret-down-fill]="!isAIProductsDropdownOpen"
+            [class.bi-caret-up-fill]="isAIProductsDropdownOpen"></i>
+        </div>
+        <div class="dropdown-content" [class.show]="isAIProductsDropdownOpen">
+          <a routerLink="/services/performance" routerLinkActive="active-link">Performance marketing and PPC</a>
+          <a routerLink="/services/bussiness" routerLinkActive="active-link">Business & Maps Listings</a>
+          <a routerLink="/services/whatsapp-marketing" routerLinkActive="active-link">Whatsapp Marketing</a>
+          <a routerLink="/services/email-marketing" routerLinkActive="active-link">Email Marketing</a>
+          <a routerLink="/services/seo" routerLinkActive="active-link">Search Engine Optimization</a>
+        </div>
+      </li>
+      <li>
+        <a (click)="navigateTo('/ai-marketing-resources')" routerLink="/ai-marketing-resources"
+          routerLinkActive="active-link">Resources</a>
+      </li>
+      <li>
+        <a href="https://zyper-ai.vercel.app/subscription" target="_blank" rel="noopener noreferrer"
+          aria-label="Pricing page opens in a new tab">
+          Pricing <i class="bi bi-box-arrow-up-right"></i>
+        </a>
 
-    <!-- Navigation Menu -->
-    <ul class="nav-menu hidden md:flex md:items-center space-x-5 text-white text-base font-light">
-      <li *ngFor="let item of navItems" class="relative group hover:opacity-80 cursor-pointer"
-        (click)="!item.subItems?.length && navigateTo(item.route)">
-        {{ item.name }}
-        <span *ngIf="item.name === 'AI Products'" class="ml-1">
-          <i class="bi bi-caret-down-fill"></i>
-        </span>
-        <span *ngIf="item.name === 'Verticals'" class="ml-1">
-          <i class="bi bi-caret-down-fill"></i>
-        </span>
-
-        <!-- Dropdown for sub-items -->
-
-        <ul *ngIf="item.subItems2"
-          class="absolute hidden group-hover:block top-full left-0 bg-gray-800 text-white space-y-2 p-2 shadow-lg rounded-md">
-          <li *ngFor="let subItem2 of item.subItems2" class="hover:bg-gray-700 px-4 py-2 cursor-pointer"
-            (click)="navigateTo(subItem2.route)">
-            {{ subItem2.name }}
-          </li>
-        </ul>
-        <ul *ngIf="item.subItems"
-          class="absolute hidden group-hover:block top-full left-0 bg-gray-800 text-white space-y-2 p-2 shadow-lg rounded-md">
-          <li *ngFor="let subItem of item.subItems" class="hover:bg-gray-700 px-4 py-2 cursor-pointer"
-            (click)="navigateTo(subItem.route)">
-            {{ subItem.name }}
-          </li>
-        </ul>
+      </li>
+      <li>
+        <a (click)="navigateTo('/contact')" routerLink="/contact" routerLinkActive="active-link">Contact Us</a>
       </li>
     </ul>
 
+    <div class="top-right">
+      <div class="d-flex gap-2">
+        <button routerLink="demo">WATCH DEMO</button>
+        <button (click)="navigateTo('https://zyper-ai.vercel.app/subscription')">GET STARTED</button>
+      </div>
 
-    <!-- Sidebar -->
-    <div class="sidebar-mobile" [ngClass]="{ open: isSidebarOpen }">
-      <button class="close-btn" (click)="toggleSidebar()">✕</button>
-      <ul class="nav-menu">
-        <li *ngFor="let item of navItems" class="menu-item" [class.has-dropdown]="item.name === 'Verticals'">
-          <span (click)="navigateTo(item.route)">{{ item.name }}</span>
-          <ul *ngIf="item.name === 'Verticals'" class="submenu">
-            <li *ngFor="let subItem of item.subItems" (click)="navigateTo(subItem.route)">
-              {{ subItem.name }}
-            </li>
-          </ul>
-            <ul *ngIf="item.name === 'AI Products'" class="submenu">
-              <li *ngFor="let subItems2 of item.subItems2" (click)="navigateTo(subItems2.route)">
-                {{ subItems2.name }}
-              </li>
-            </ul>
-        </li>
-      </ul>
-
-    </div>
-
-    <!-- Button Section -->
-    <div class="top-right hidden md:flex">
-      <button class="top-bar-button" (click)="navigateToLink()" aria-label="Help">
-        {{ buttonText }}
-      </button>
+      <div class="hamburger" (click)="toggleSidebar()">
+        <div class="line" [class.transform]="isSidebarOpen"></div>
+        <div class="line" [class.transform]="isSidebarOpen"></div>
+        <div class="line" [class.transform]="isSidebarOpen"></div>
+      </div>
     </div>
   </div>
 </div>

@@ -542,6 +542,14 @@
 
 @media (max-width: 400px) {
   .resources-eighth-container {
+    .table-of-contents {
+      padding: 4rem 2rem 0rem 2rem;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+    }
     .section {
       padding: 3rem 2rem 0rem 2rem;
 

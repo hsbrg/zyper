@@ -4,11 +4,7 @@
   </div>
   <div class="float-icons">
     <button (click)="SwitchWhatsappState()">
-      <img
-        src="assets/images/whatsapp_icon.png"
-        alt=""
-        *ngIf="!activeWhatsapp"
-      />
+      <img src="assets/images/whatsapp_icon.png" alt="" *ngIf="!activeWhatsapp" />
       <i class="bi bi-x-circle" *ngIf="activeWhatsapp"></i>
     </button>
     <i class="bi bi-chat" style="filter: opacity(0);"></i>
@@ -27,18 +23,15 @@
       </div>
       <p>
         <span> OR</span> <br />
-        <a
-          href="https://wa.me/+919266373451"
-          class="text-decoration-underline"
-          target="_blank"
-          >click here to start chat</a
-        >
+        <a href="https://wa.me/+919266373451" class="text-decoration-underline" target="_blank">click here to start
+          chat</a>
       </p>
     </div>
   </div>
-  <div class="nav-container">
+  <!-- <div class="nav-container">
     <app-navbar-two></app-navbar-two>
-  </div>
+  </div> -->
+  <app-top-bar></app-top-bar>
   <div class="hero-section">
     <h2>Business & Maps Listings</h2>
     <p>

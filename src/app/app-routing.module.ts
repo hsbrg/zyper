@@ -49,6 +49,7 @@ import { ServicesEBayComponent } from './components/Verticals/EBay/servicesEBay.
 import { ServicesShopifyComponent } from './components/Verticals/Shopify/servicesShopify.component';
 import { ServicesWalmartComponent } from './components/Verticals/Walmart/servicesWalmart.component';
 import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/servicesLawFirms.component';
+import { ServicesRealEstateComponent } from './components/Verticals/Real-Estate/servicesRealEstate.component';
 
 const routes: Routes = [
   { path: 'navbar-two', component: NavbarTwoComponent },
@@ -104,28 +105,36 @@ const routes: Routes = [
     path: 'services/social-media',
     component: SocialMediaComponent,
   },
+  // <=========== Professional Services =======>
   {
-    path: "services/law-firms",
+    path: "professional-services/law-firm-legal-attorney-lawyer-digital-marketing-guide",
     component: ServicesLawFirmsComponent,
   },
   {
-    path: "services/amazon",
+    path: "professional-services/real-estate-digital-marketing-guide-ai-platforms",
+    component: ServicesRealEstateComponent,
+  },
+
+  // <=========== Ecommerce Services =======>
+
+  {
+    path: "ecommerce-services/ai-powered-platform-amazon-sellers-marketing-potential",
     component: ServicesAmazonComponent,
   },
   {
-    path: "services/etsy",
+    path: "ecommerce-services/ai-powered-platform-etsy-sellers-digital-marketing-strategy",
     component: ServicesETSYComponent,
   },
   {
-    path: "services/eBay",
+    path: "ecommerce-services/elevate-ebay-business-strategic-digital-marketing",
     component: ServicesEBayComponent,
   },
   {
-    path: "services/shopify",
+    path: "ecommerce-services/maximize-shopify-business-growth-digital-marketing-solutions",
     component: ServicesShopifyComponent,
   },
   {
-    path: "services/walmart",
+    path: "ecommerce-services/elevate-walmart-business-digital-marketing-services",
     component: ServicesWalmartComponent,
   },
   {

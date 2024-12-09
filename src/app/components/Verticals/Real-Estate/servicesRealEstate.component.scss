@@ -1,0 +1,379 @@
+// Variables
+$primary-color: #000;
+$background-color: #d7e6ff;
+$spacing-unit: 1rem;
+$border-radius: 8px;
+$primary: #7a7ccb;
+$light-purple: #e6e4ff;
+$grey-bg: #d9d9d9;
+$white: #fff;
+$text-dark: #333;
+$spacing: 1rem;
+
+// Mixins
+@mixin section-padding {
+  margin-bottom: $spacing-unit * 2;
+}
+
+@mixin list-style {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: $spacing-unit;
+    padding-left: $spacing-unit * 1.5;
+    position: relative;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+
+    &:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: $primary-color;
+    }
+  }
+}
+
+.real-estate-container {
+  padding: clamp(2rem, 5vw, 5rem);
+  background-color: $background-color;
+  section {
+    margin: 2rem 0;
+    padding: 2rem 0;
+  }
+}
+
+// Section styles
+.marketing-section,
+.ai-section {
+  @include section-padding;
+  background-color: $background-color;
+  border-radius: $border-radius;
+}
+
+h1,
+h2 {
+  width: 100%;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: $spacing-unit * 2;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: $spacing-unit;
+}
+
+.intro,
+.subtitle {
+  width: 85%;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  margin-bottom: $spacing-unit * 1.5;
+}
+
+.benefits,
+.features ul,
+.listings ul {
+  @include list-style;
+}
+
+.features p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+.reviews p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.features,
+.listings,
+.reviews {
+  margin-bottom: $spacing-unit * 2;
+}
+
+@mixin table-cell {
+  padding: $spacing;
+  text-align: left;
+  border: 1px solid rgba($primary, 0.2);
+}
+
+.budget-allocation-And-ROI-container {
+  h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    margin-bottom: $spacing;
+    color: $text-dark;
+  }
+
+  .subtitle {
+    margin-bottom: $spacing * 2;
+    color: rgba($text-dark, 0.8);
+  }
+
+  // Table styles
+  .table-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    margin-bottom: $spacing * 2;
+    border-radius: 8px;
+  }
+
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      @include table-cell;
+      border: 10px solid #d7e6ff;
+    }
+
+    th:first-child,
+    td:first-child {
+      background-color: $primary;
+      color: var(--white-color);
+    }
+
+    th {
+      height: 100px;
+      background: $primary;
+      color: $white;
+      text-align: center;
+      font-weight: 700;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      white-space: nowrap;
+    }
+
+    tr {
+      background: #d9d9d9;
+    }
+
+    td {
+      text-align: center;
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(5) {
+        white-space: nowrap;
+      }
+      font-size: clamp(0.9rem, 2vw, 1.25rem);
+    }
+  }
+
+  // Footnotes styles
+  .footnotes {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    border-radius: 8px;
+
+    .para {
+      margin-bottom: 0;
+    }
+
+    .calculation {
+      font-weight: 600;
+    }
+  }
+}
+
+.keywords-opti-and-content-container {
+  border-radius: $border-radius;
+
+  // Typography
+  h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    margin-bottom: $spacing;
+    color: $primary-color;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    margin-bottom: $spacing;
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: rgba($primary-color, 0.8);
+    margin-bottom: $spacing * 2;
+  }
+
+  // Sections
+  .intro {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: rgba($primary-color, 0.9);
+  }
+
+  .keyword-section {
+    ol,
+    ul {
+      list-style-position: inside;
+      padding-left: $spacing;
+    }
+
+    li {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      margin-bottom: $spacing * 0.5;
+      color: rgba($primary-color, 0.9);
+    }
+  }
+
+  .note {
+    padding: $spacing;
+    border-radius: $border-radius;
+    font-style: italic;
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+    }
+  }
+
+  .content-creation {
+    ul {
+      list-style-type: none;
+      padding-left: $spacing;
+    }
+
+    li {
+      margin-bottom: $spacing * 0.5;
+      position: relative;
+      font-size: clamp(1rem, 2vw, 1.125rem);
+
+      &:before {
+        content: "•";
+        position: absolute;
+        left: -$spacing;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.role-review-response {
+  h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 700;
+  }
+
+  .benefits-active-engagement,
+  .automated-review-management,
+  .consistent-posting {
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 600;
+    }
+
+    ul > li {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+  }
+}
+
+.performance-metrics-benchmarks {
+  h1 {
+    width: 100% !important;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    margin-bottom: $spacing * 2;
+    color: $text-dark;
+    font-weight: 700;
+  }
+
+  // Table styles
+  .table-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      @include table-cell;
+      border: 10px solid #d7e6ff;
+      font-size: clamp(0.9rem, 2vw, 1.25rem);
+      text-align: center;
+      height: 100px;
+    }
+
+    th {
+      background: $primary;
+      color: $white;
+      font-weight: 700;
+      padding: $spacing 1.5rem;
+      white-space: nowrap;
+    }
+
+    td {
+      background: $grey-bg;
+
+      &.metric {
+        background: $primary;
+        color: $white;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.case-studies-and-success-stories {
+  h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 700;
+  }
+
+  ul {
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    li {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+  }
+}
+
+.Conclusion {
+  h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 700;
+  }
+  p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .real-estate-container {
+    padding: $spacing-unit;
+  }
+
+  .marketing-section,
+  .ai-section {
+    padding: $spacing-unit;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .real-estate-container {
+    padding: $spacing-unit * 1;
+  }
+
+  .table-container {
+    font-size: 0.9rem;
+  }
+}
+

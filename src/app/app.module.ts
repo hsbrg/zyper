@@ -65,6 +65,7 @@ import { ServicesEBayComponent } from './components/Verticals/EBay/servicesEBay.
 import { ServicesShopifyComponent } from './components/Verticals/Shopify/servicesShopify.component';
 import { ServicesWalmartComponent } from './components/Verticals/Walmart/servicesWalmart.component';
 import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/servicesLawFirms.component';
+import { ServicesRealEstateComponent } from './components/Verticals/Real-Estate/servicesRealEstate.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +102,10 @@ import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/serv
     ResourcesFourteenthComponent,
     ResourcesFifteenthComponent,
     ResourcesSixteenthComponent,
+    // <============ Professional Services ===========>
     ServicesLawFirmsComponent,
+    ServicesRealEstateComponent,
+    // <========================================-======>,
     ServicesAmazonComponent,
     ServicesETSYComponent,
     ServicesEBayComponent,
