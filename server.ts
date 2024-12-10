@@ -4,6 +4,7 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
+import 
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -23,6 +24,10 @@ export function app(): express.Express {
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
+
+    server.get('/sitemap.xml', (req, res) => {
+    res.sendFile(join(browserDistFolder, 'sitemap.xml'));
+  });
 
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
