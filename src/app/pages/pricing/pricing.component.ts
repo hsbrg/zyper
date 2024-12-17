@@ -221,7 +221,7 @@ export class PricingComponent implements OnInit {
   }
 
   navigateToSub() {
-    window.location.href = "https://zyper-ai.vercel.app/subscription";
+    window.location.href = "https://app.zyper.ai/subscription";
   }
 
   calculatePriceOnLoad() {

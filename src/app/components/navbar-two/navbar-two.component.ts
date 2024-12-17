@@ -62,6 +62,6 @@ export class NavbarTwoComponent implements OnInit {
   //   // console.log(this.isDropdownVisible);
   // }
   navigateToSub() {
-    window.location.href = 'https://zyper-ai.vercel.app/subscription';
+    window.location.href = 'https://app.zyper.ai/subscription';
   }
 }

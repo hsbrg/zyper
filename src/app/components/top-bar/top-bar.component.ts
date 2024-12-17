@@ -14,7 +14,7 @@ export class TopBarComponent {
 
   @Input() trialText = '';
   @Input() buttonText = 'GET STARTED';
-  @Input() buttonLink = 'https://zyper-ai.vercel.app/subscription';
+  @Input() buttonLink = 'https://app.zyper.ai/subscription';
 
   constructor(private router: Router) { }
 

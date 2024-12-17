@@ -11,7 +11,7 @@ export class HeroSectionComponent implements OnInit {
   @Input() description: string = '';
   @Input() trialText: string = '';
   @Input() buttonText: string = 'GET STARTED';
-  @Input() buttonLink: string = 'https://zyper-ai.vercel.app/subscription';
+  @Input() buttonLink: string = 'https://app.zyper.ai/subscription';
   @Input() socialLinks: { icon: string; url: string }[] = [
     { icon: 'instagram', url: 'https://www.instagram.com/zyper_ai/' },
     { icon: 'linkedin', url: 'https://www.linkedin.com/in/zyper-ai/' },
