@@ -101,7 +101,7 @@ export class PricingTableComponent implements OnInit {
   }
 
   navigateToSub() {
-    window.location.href = "https://zyper-ai.vercel.app/subscription";
+    window.location.href = "https://app.zyper.ai/subscription";
   }
 
   SwitchWhatsappState() {
