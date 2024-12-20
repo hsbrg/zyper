@@ -1,0 +1,358 @@
+import { Navigation } from '@/components/navigation'
+import { HeroSection } from '@/components/hero-section'
+import { SocialLinks } from '@/components/social-links'
+import { Button } from '@/components/ui/button'
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Link from "next/link"
+import { PrivateEducationPageProps, GMBMetrics, MarketingStrategy, ComplianceItem } from '@/types/private-education'
+
+const gmbMetrics: GMBMetrics[] = [
+  {
+    actionType: "Profile Views",
+    averageMonthlyPerformance: "2,000–5,000",
+    impactOnConversion: "25–35% increase in inquiry calls"
+  },
+  {
+    actionType: "Direction Requests",
+    averageMonthlyPerformance: "200–500",
+    impactOnConversion: "40–60% visitation conversion"
+  },
+  {
+    actionType: "Phone Calls",
+    averageMonthlyPerformance: "100–250",
+    impactOnConversion: "60–75% admissions inquiry rate"
+  },
+  {
+    actionType: "Website Clicks",
+    averageMonthlyPerformance: "300–800",
+    impactOnConversion: "10–15% application form submissions"
+  },
+  {
+    actionType: "Photo Views",
+    averageMonthlyPerformance: "4,000–10,000",
+    impactOnConversion: "20–30% engagement boost"
+  }
+]
+
+const marketingStrategies: MarketingStrategy[] = [
+  {
+    level: "Early Childhood Education",
+    strategies: [
+      "Highlight nurturing environments and foundational learning",
+      "Promote special events: 'Open House for New Families' or 'Parent-Child Play Sessions'",
+      "Share content like 'Why Early Childhood Education Matters'",
+      "Keywords: 'preschool near me,' 'kindergarten readiness,' 'early learning program'"
+    ]
+  },
+  {
+    level: "Elementary Schools",
+    strategies: [
+      "Emphasize small class sizes, personalized attention, and enrichment programs",
+      "Offer virtual or in-person tours to parents",
+      "Share success stories and parent testimonials",
+      "Keywords: 'private elementary school,' 'small class size education,' 'enrichment programs for kids'"
+    ]
+  },
+  {
+    level: "Middle Schools",
+    strategies: [
+      "Focus on preparing students for high school with advanced curriculums and extracurricular opportunities",
+      "Showcase STEM and arts programs through case studies",
+      "Promote content like 'How Middle School Prepares Students for Academic Success'",
+      "Keywords: 'middle school near me,' 'STEM programs for kids,' 'extracurricular activities'"
+    ]
+  },
+  {
+    level: "High Schools",
+    strategies: [
+      "Highlight college-prep programs, AP/IB courses, and career-oriented training",
+      "Share student success stories: 'Our Graduates at Ivy League Universities'",
+      "Run campaigns for scholarships or financial aid options",
+      "Keywords: 'private high school near me,' 'college prep school,' 'AP courses and college readiness'"
+    ]
+  },
+  {
+    level: "Specialized Programs",
+    strategies: [
+      "Use multimedia content: Virtual performances for arts, lab demos for STEM, or highlight reels for sports",
+      "Create seasonal promotions: 'Summer STEM Camp' or 'Fall Arts Showcase'",
+      "Keywords: 'STEM school,' 'arts-focused education,' 'sports scholarship programs'"
+    ]
+  }
+]
+
+const complianceAndEthics: ComplianceItem[] = [
+  {
+    category: "Marketing Compliance",
+    items: [
+      "Comply with local education laws regarding claims about academic programs, extracurriculars, and student outcomes",
+      "Avoid misleading statements about college admissions rates or student achievements",
+      "Steer clear of exaggerated claims like 'Guaranteed Ivy League admissions'",
+      "Use disclaimers for testimonials, such as 'Results may vary depending on individual effort and circumstances'",
+      "Do not use student photos, testimonials, or case studies in marketing materials without explicit parental consent"
+    ]
+  },
+  {
+    category: "Best Practices",
+    items: [
+      "Obtain signed release forms for all student-related stories, photos, or videos featured in campaigns or on social media",
+      "Highlight teacher qualifications, certifications, and achievements to reinforce the quality of education",
+      "Refrain from guarantees like '100% college acceptance'",
+      "Use language like 'Our students are well-prepared for...' or 'Most graduates achieve...'",
+      "Clearly outline tuition fees, payment plans, and available scholarships or financial aid options"
+    ]
+  }
+]
+
+export default function PrivateEducationLandingPage() {
+  return (
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900">
+      <Navigation items={[
+        { label: "About", href: "/about" },
+        { 
+          label: "Programs", 
+          items: [
+            { label: "Early Childhood", href: "/programs/early-childhood" },
+            { label: "Elementary", href: "/programs/elementary" },
+            { label: "Middle School", href: "/programs/middle-school" },
+            { label: "High School", href: "/programs/high-school" },
+            { label: "Specialized", href: "/programs/specialized" },
+          ]
+        },
+        { label: "Admissions", href: "/admissions" },
+        { label: "Resources", href: "/resources" },
+        { label: "Contact", href: "/contact" },
+      ]} />
+      
+      <main className="container relative pt-32 pb-16">
+        <HeroSection 
+          title="Elevate Your Institution's Digital Presence"
+          description="Comprehensive AI-powered digital marketing solutions tailored for private education institutes. Maximize your online visibility while maintaining compliance and ethical standards."
+          ctaPrimary={{ text: "Get Started", href: "#" }}
+          ctaSecondary={{ text: "Watch Demo", href: "#" }}
+        />
+
+        <section id="need" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">1. The Need for Digital Marketing in Private Education</h2>
+          <p className="mb-4 text-white/80">In today's competitive landscape, private education institutes must establish a robust online presence to attract and engage prospective students and parents.</p>
+          <h3 className="text-xl font-semibold mb-2 text-white">Key Drivers:</h3>
+          <ul className="list-disc pl-6 mb-4 text-white/80 space-y-2">
+            <li>Over 90% of parents and students research educational institutions online before making enrollment decisions.</li>
+            <li>Local search importance: Families prioritize schools within their locality.</li>
+            <li>Trust and credibility building through professional online presence and testimonials.</li>
+            <li>Platform to showcase unique programs, extracurricular activities, and academic achievements.</li>
+            <li>Compliance with educational advertising guidelines and data privacy laws.</li>
+          </ul>
+        </section>
+
+        <section id="gmb" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">2. Optimizing GMB Profiles for Private Education Institutes</h2>
+          <p className="mb-4 text-white/80">A well-optimized Google My Business (GMB) profile is essential to attract local families and drive inquiries for admissions.</p>
+          <h3 className="text-xl font-semibold mb-2 text-white">Profile Optimization Tips</h3>
+          <ul className="list-disc pl-6 mb-4 text-white/80 space-y-2">
+            <li>Complete all sections with school name, address, phone number, operating hours, and key educational offerings.</li>
+            <li>Showcase professional photos of campus, classrooms, library, and sports facilities.</li>
+            <li>Highlight specific programs such as advanced placement courses or extracurricular clubs.</li>
+            <li>Clearly mention enrollment deadlines, fee structures, and scholarship options.</li>
+            <li>Promote virtual campus tours or online consultations for prospective families.</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2 text-white">GMB Performance Metrics</h3>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Action Type</TableHead>
+                <TableHead>Average Monthly Performance</TableHead>
+                <TableHead>Impact on Conversion</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {gmbMetrics.map((metric, index) => (
+                <TableRow key={index}>
+                  <TableCell>{metric.actionType}</TableCell>
+                  <TableCell>{metric.averageMonthlyPerformance}</TableCell>
+                  <TableCell>{metric.impactOnConversion}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </section>
+
+        <section id="keywords" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">3. Specialty-Specific Keywords and Content</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Primary/Elementary Education</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-6 text-black space-y-2">
+                  <li>Keywords: "best primary schools near me," "early childhood education," "affordable elementary schools"</li>
+                  <li>Content: Importance of early learning, curriculum comparisons, choosing the right school</li>
+                  <li>Seasonal: Admission deadlines (spring), orientation programs (summer)</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Secondary Education</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-6 text-black space-y-2">
+                  <li>Keywords: "top high schools near me," "secondary school admissions," "affordable schools"</li>
+                  <li>Content: College preparation, benefits of extracurriculars, entrance exam guides</li>
+                  <li>Seasonal: Back-to-school campaigns (autumn), exam preparation tips (winter)</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Specialized Programs</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-6 text-black space-y-2">
+                  <li>Keywords: "STEM programs for kids," "top curriculum schools," "coding classes for kids"</li>
+                  <li>Content: Benefits of STEM education, curriculum comparisons, success stories</li>
+                  <li>Seasonal: Summer enrichment camps, winter science fairs</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section id="reviews" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">4. FERPA-Compliant Review Management</h2>
+          <h3 className="text-xl font-semibold mb-2 text-white">Review Management Guidelines</h3>
+          <ul className="list-disc pl-6 mb-4 text-white/80 space-y-2">
+            <li>Never confirm or disclose details that might identify a specific student or family.</li>
+            <li>Focus on institutional values and policies in responses.</li>
+            <li>Use standardized templates for positive and negative reviews.</li>
+            <li>Address concerns professionally without disclosing private information.</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2 text-white">Social Media Best Practices</h3>
+          <ul className="list-disc pl-6 mb-4 text-white/80 space-y-2">
+            <li>Share educational tips and resources.</li>
+            <li>Announce news about programs, facilities, and expansions.</li>
+            <li>Celebrate staff achievements and student successes (with consent).</li>
+            <li>Engage with educational awareness campaigns.</li>
+          </ul>
+        </section>
+
+        <section id="metrics" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">5. Performance Metrics for Private Education Institutes</h2>
+          <h3 className="text-xl font-semibold mb-2 text-white">Key Performance Indicators (KPIs):</h3>
+          <div className="grid md:grid-cols-3 gap-4 mb-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Google Business Profile Metrics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-6 text-black space-y-2">
+                  <li>Profile views</li>
+                  <li>Direction requests</li>
+                  <li>Phone call clicks</li>
+                  <li>Website visits</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Website Analytics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-6 text-black space-y-2">
+                  <li>Application form submissions</li>
+                  <li>New parent inquiry rate</li>
+                  <li>Page views by program</li>
+                  <li>Mobile vs desktop usage</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Ad Performance Metrics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-6 text-black space-y-2">
+                  <li>Cost per new student enrollment</li>
+                  <li>Conversion rate by program</li>
+                  <li>Geographic performance</li>
+                  <li>Scholarship campaign performance</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section id="strategies" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">6. Marketing Strategies for Private Education Institutes</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {marketingStrategies.map((strategy, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle>{strategy.level}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-6 text-black space-y-2">
+                    {strategy.strategies.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section id="compliance" className="mb-12 bg-white/5 rounded-xl p-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">7. Compliance and Ethics for Private Education Institutes</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {complianceAndEthics.map((item, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle>{item.category}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-6 text-black space-y-2">
+                    {item.items.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-12 bg-white/10 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-white">Get Your Customized Marketing Plan</h2>
+          <p className="mb-4 text-white/80">For a tailored marketing strategy designed for your private education institute, visit:</p>
+          <Link href="https://zyper-ai.vercel.app/subscription" className="text-blue-300 hover:text-blue-200">
+            https://zyper-ai.vercel.app/subscription
+          </Link>
+          <p className="mt-4 text-white/80">Our AI-powered platform will analyze your institution's unique offerings and target audience, providing actionable strategies to enhance enrollment and engagement.</p>
+          <Button className="mt-4 bg-white text-indigo-900 hover:bg-white/90">Get Your Custom Plan</Button>
+        </section>
+      </main>
+
+      <footer className="bg-indigo-900 py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-4">
+              <SocialLinks links={[
+                { platform: "Facebook", url: "https://facebook.com/zyper.ai" },
+                { platform: "Twitter", url: "https://twitter.com/zyper_ai" },
+                { platform: "LinkedIn", url: "https://linkedin.com/company/zyper-ai" },
+                { platform: "Instagram", url: "https://instagram.com/zyper.ai" },
+              ]} />
+            </div>
+            <p className="text-white/60 text-sm">
+              &copy; {new Date().getFullYear()} Zyper.ai - AI-Powered Digital Marketing Solutions for Private Education Institutes. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+

@@ -1,0 +1,147 @@
+// Custom variables
+$primary-color: #2D2171;
+$secondary-color: #4B3BBF;
+$text-light: #ffffff;
+$text-dark: #333333;
+
+// Mixins
+@mixin gradient-background {
+  background: linear-gradient(to bottom right, $primary-color, $secondary-color);
+}
+
+@mixin card-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Global styles
+body {
+  font-family: 'Inter', sans-serif;
+  color: $text-light;
+  background-color: $primary-color;
+}
+
+// Hero section
+.hero {
+  @include gradient-background;
+  padding: 6rem 0;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+}
+
+// Features section
+.features {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6rem 0;
+
+  .feature-card {
+    @include card-hover;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    height: 100%;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+// Comparison table
+.comparison-table {
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+      font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// CTA section
+.cta {
+  padding: 6rem 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .features {
+    .feature-card {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .comparison-table {
+    font-size: 0.875rem;
+  }
+
+  .cta {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
