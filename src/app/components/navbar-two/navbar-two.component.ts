@@ -1,22 +1,32 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { ssrWindow, getWindow } from 'ssr-window';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import { ssrWindow, getWindow, getDocument } from 'ssr-window';
 
 @Component({
   selector: 'app-navbar-two',
   templateUrl: './navbar-two.component.html',
   styleUrls: ['./navbar-two.component.scss'],
 })
-export class NavbarTwoComponent implements OnInit {
+export class NavbarTwoComponent implements OnInit, OnDestroy {
   isCollapsed = false;
   isDropdownVisible = false;
   isDropdownVisibleV = false;
   isPricingDropdownVisible = false;
   isResourcesDropdownVisible = false;
-  constructor() {}
+  scrolled: boolean = false;
+  private doc = getDocument();
+
+  constructor() {
+    // We'll add the event listener in ngOnInit instead
+  }
 
   ngOnInit(): void {
     if (getWindow().innerWidth > 1050) {
       this.isCollapsed = true;
+    }
+
+    // Add click event listener for handling clicks outside dropdown
+    if (typeof window !== 'undefined') {
+      this.doc.addEventListener('click', this.handleClickOutside.bind(this));
     }
 
     getWindow().addEventListener('scroll', function () {
@@ -29,39 +39,68 @@ export class NavbarTwoComponent implements OnInit {
     });
   }
 
-  scrolled: boolean = false;
+  ngOnDestroy(): void {
+    // Remove event listener only if we're in the browser
+    if (typeof window !== 'undefined') {
+      this.doc.removeEventListener('click', this.handleClickOutside.bind(this));
+    }
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollY = getWindow().scrollY;
-    if (scrollY > 50) {
-      this.scrolled = true;
-    } else {
-      this.scrolled = false;
+    this.scrolled = scrollY > 50;
+  }
+
+  // Handle clicks outside dropdown
+  handleClickOutside(event: MouseEvent): void {
+    if (typeof window === 'undefined') return; // Guard for SSR
+    
+    const target = event.target as HTMLElement;
+    if (!target.closest('.dropdown')) {
+      this.closeAllDropdowns();
     }
   }
 
-  toggleDropdown() {
-    this.isDropdownVisible = !this.isDropdownVisible;
+  // Close all dropdowns
+  closeAllDropdowns(): void {
+    this.isDropdownVisible = false;
+    this.isDropdownVisibleV = false;
     this.isPricingDropdownVisible = false;
-    // console.log(this.isDropdownVisible);
-  }
-  toggleDropdownVerticals() {
-    this.isDropdownVisibleV = !this.isDropdownVisibleV;
-    this.isPricingDropdownVisible = false;
-    // console.log(this.isDropdownVisible);
+    this.isResourcesDropdownVisible = false;
   }
 
-  toggleResourcesDropdown() {
+  toggleDropdown(event: Event): void {
+    event.stopPropagation(); // Prevent event bubbling
+    // Close other dropdowns
+    this.isDropdownVisibleV = false;
+    this.isPricingDropdownVisible = false;
+    this.isResourcesDropdownVisible = false;
+    // Toggle current dropdown
+    this.isDropdownVisible = !this.isDropdownVisible;
+  }
+
+  toggleDropdownVerticals(event: Event): void {
+    event.stopPropagation(); // Prevent event bubbling
+    // Close other dropdowns
+    this.isDropdownVisible = false;
+    this.isPricingDropdownVisible = false;
+    this.isResourcesDropdownVisible = false;
+    // Toggle current dropdown
+    this.isDropdownVisibleV = !this.isDropdownVisibleV;
+  }
+
+  toggleResourcesDropdown(event: Event): void {
+    event.stopPropagation(); // Prevent event bubbling
+    // Close other dropdowns
+    this.isDropdownVisible = false;
+    this.isDropdownVisibleV = false;
+    this.isPricingDropdownVisible = false;
+    // Toggle current dropdown
     this.isResourcesDropdownVisible = !this.isResourcesDropdownVisible;
   }
 
-  //   priceingtoggleDropdown() {
-  //     this.isPricingDropdownVisible = !this.isPricingDropdownVisible;
-  //     this.isDropdownVisible =false
-  //   // console.log(this.isDropdownVisible);
-  // }
-  navigateToSub() {
+  navigateToSub(): void {
     window.location.href = 'https://app.zyper.ai/subscription';
   }
 }

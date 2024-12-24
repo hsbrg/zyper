@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agency',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AgencyComponent implements OnInit {
   activeWhatsapp: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
   ngOnInit(): void { }
 
   SwitchWhatsappState() {
@@ -27,6 +28,10 @@ export class AgencyComponent implements OnInit {
 
   navigateToSub() {
     window.location.href = 'https://app.zyper.ai/subscription';
+  }
+
+  navigateToDemo() {
+    this.router.navigate(['/demo']);
   }
 
   products = [

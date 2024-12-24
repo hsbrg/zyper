@@ -1,0 +1,141 @@
+<div class="flex flex-col min-h-screen bg-primary">
+  <!-- Navigation -->
+  <header class="sticky top-0 w-full z-50 bg-primary/90 backdrop-blur-sm border-b border-white/10">
+    <div class="container mx-auto flex items-center justify-between h-16 px-4">
+      <a routerLink="/" class="flex items-center">
+        <img 
+          src="/assets/images/zyper-logo.svg" 
+          alt="Zyper.ai" 
+          width="120" 
+          height="32" 
+          loading="eager"
+        />
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <ng-container *ngFor="let item of navigationItems">
+          <a [routerLink]="item.href" 
+             class="text-sm font-medium text-white/70 hover:text-white transition-colors">
+            {{item.label}}
+          </a>
+        </ng-container>
+        <button 
+          class="btn btn-outline text-white border-white/20 hover:bg-white/10"
+          aria-label="Watch Demo">
+          WATCH DEMO
+        </button>
+        <button 
+          class="btn bg-white text-primary hover:bg-white/90"
+          aria-label="Get Started">
+          GET STARTED
+        </button>
+      </nav>
+      <button 
+        (click)="toggleMenu()"
+        class="md:hidden text-white btn-ghost"
+        aria-label="Toggle Menu">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 overflow-hidden">
+    <div class="container mx-auto px-4 py-32 relative z-10">
+      <div class="max-w-4xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+          Auto Dealership Digital Marketing Guide {{currentYear}}
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-white/80">
+          A comprehensive AI-powered digital marketing solution specifically designed for auto dealerships. 
+          Maximize your dealership's online presence while maintaining compliance and ethical standards.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button 
+            class="btn btn-lg bg-white text-primary hover:bg-white/90"
+            aria-label="Get Started">
+            Get Started
+          </button>
+          <button 
+            class="btn btn-lg btn-outline text-white border-white/20 hover:bg-white/10"
+            aria-label="Watch Demo Video">
+            Watch Demo
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Geometric Shapes -->
+    <div class="absolute top-0 right-0 w-1/2 h-full pointer-events-none">
+      <div class="relative w-full h-full">
+        <div class="absolute top-1/4 right-1/4 w-32 h-32 bg-blue-400/20 rounded-xl transform rotate-45 animate-float"></div>
+        <div class="absolute top-1/3 right-1/3 w-24 h-24 bg-indigo-400/20 rounded-full animate-float-delay"></div>
+        <div class="absolute top-1/2 right-1/2 w-40 h-40 border-4 border-blue-300/20 rounded-full animate-spin-slow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <!-- GMB Metrics Section -->
+    <section class="mb-12 bg-white/5 rounded-xl p-8">
+      <h2 class="text-2xl font-bold mb-4 text-white">GMB Performance Metrics</h2>
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="text-left p-2 text-white">Action Type</th>
+            <th class="text-left p-2 text-white">Average Monthly Performance</th>
+            <th class="text-left p-2 text-white">Impact on Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let metric of gmbMetrics">
+            <td class="p-2 text-white/80">{{metric.actionType}}</td>
+            <td class="p-2 text-white/80">{{metric.averageMonthlyPerformance}}</td>
+            <td class="p-2 text-white/80">{{metric.impactOnConversion}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Additional sections would go here -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary-dark py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-4">
+          <!-- Social Media Links -->
+          <a href="https://instagram.com/zyper.ai" 
+             class="text-white/70 hover:text-white"
+             aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram h-6 w-6"></i>
+          </a>
+          <!-- Add other social media links -->
+        </div>
+        <p class="text-white/60 text-sm">
+          &copy; {{currentYear}} Zyper.ai - AI-Powered Digital Marketing Solutions for Auto Dealerships. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp button -->
+  <a href="https://wa.me/your-number"
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp h-6 w-6"></i>
+  </a>
+</div>

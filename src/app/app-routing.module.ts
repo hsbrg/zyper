@@ -50,13 +50,8 @@ import { ServicesShopifyComponent } from './components/Verticals/Shopify/service
 import { ServicesWalmartComponent } from './components/Verticals/Walmart/servicesWalmart.component';
 import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/servicesLawFirms.component';
 import { ServicesRealEstateComponent } from './components/Verticals/Real-Estate/servicesRealEstate.component';
-
+import {AutoDealershipsComponent} from './components/Verticals/AutoDealerships/AutoDealerships.component'
 const routes: Routes = [
-  { path: 'navbar-two', component: NavbarTwoComponent },
-  {
-    path: 'landing',
-    component: SmbComponent,
-  },
   {
     path: 'agency',
     component: AgencyComponent,
@@ -113,6 +108,10 @@ const routes: Routes = [
   {
     path: "professional-services/real-estate-digital-marketing-guide-ai-platforms",
     component: ServicesRealEstateComponent,
+  },
+  {
+    path: "professional-services/Auto-Dealership-Digital-Marketing-Guide-2024",
+    component: AutoDealershipsComponent,
   },
 
   // <=========== Ecommerce Services =======>

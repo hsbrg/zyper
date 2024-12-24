@@ -1,241 +1,92 @@
 <div class="nav-container" [ngClass]="{ 'active-navbar': scrolled == true }">
     <nav class="navbar p-0" [class.navbar-expand]="isCollapsed">
         <div class="container-fluid bottombar-web m-0 p-0 sticky-top" id="bottombar-web">
+            <!-- Logo -->
             <a class="navbar-brand" routerLink="/">
-                <img id="ecell-logo" src="assets/images/logo.png" alt="" />
+                <img src="assets/images/svg/zyper-logo.svg" alt="logo" />
             </a>
-            <div class="combine d-flex justify-content-center align-items-center">
-                <!-- <a *ngIf="mobile" id="apply-now" routerLink="/reg">Apply Now</a> -->
-                <button class="navbar-toggler no-hightlight" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="bi bi-list"></i>
-                </button>
-            </div>
+
+            <!-- Main Navigation -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav links me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a routerLink="/landing">Home</a>
+                        <a routerLink="" routerLinkActive="active-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="/about">About</a>
+                        <a routerLink="/about" routerLinkActive="active-link">About</a>
                     </li>
 
-                    <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="toggleDropdownVerticals()">
-                            Verticals &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisibleV"></i>
-                        </p>
-                        <div class="idropdown-content" *ngIf="isDropdownVisibleV">
+                    <!-- Verticals Dropdown -->
+                  <li class="dropdown">
+                        <p class="dropbtn m-0 p-0" (click)="toggleDropdownVerticals($event)">
+        Verticals &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisibleV"></i>
+    </p>
+                            <div class="idropdown-content" *ngIf="isDropdownVisibleV" (click)="$event.stopPropagation()">
+
                             <div class="sub-section">
                                 <h3>Ecommerce Services</h3>
                                 <div class="gg">
-                                    <a routerLink="/services/amazon" class="text-reset">Amazon</a>
-                                    <a routerLink="/services/etsy" class="text-reset">Etsy</a>
-                                    <a routerLink="/services/eBay" class="text-reset">eBay</a>
-                                    <a routerLink="/services/shopify" class="text-reset">Shopify</a>
-                                    <a routerLink="/services/walmart" class="text-reset">Walmart</a>
+                                    <a routerLink="/ecommerce-services/ai-powered-platform-amazon-sellers-marketing-potential" routerLinkActive="active-link">Amazon</a>
+                                    <a routerLink="/ecommerce-services/ai-powered-platform-etsy-sellers-digital-marketing-strategy" routerLinkActive="active-link">Etsy</a>
+                                    <a routerLink="/ecommerce-services/elevate-ebay-business-strategic-digital-marketing" routerLinkActive="active-link">eBay</a>
+                                    <a routerLink="/ecommerce-services/maximize-shopify-business-growth-digital-marketing-solutions" routerLinkActive="active-link">Shopify</a>
+                                    <a routerLink="/ecommerce-services/elevate-walmart-business-digital-marketing-services" routerLinkActive="active-link">Walmart</a>
                                 </div>
                             </div>
                             <div class="sub-section">
                                 <h3>Professional Services</h3>
                                 <div class="gg">
-                                    <a routerLink="/services/law-firms" class="text-reset">Law Firms</a>
+                                    <a routerLink="/professional-services/law-firm-legal-attorney-lawyer-digital-marketing-guide" routerLinkActive="active-link">Law Firms</a>
+                                    <a routerLink="/professional-services/real-estate-digital-marketing-guide-ai-platforms" routerLinkActive="active-link">Real Estate</a>
                                 </div>
                             </div>
                         </div>
                     </li>
+
+                    <!-- AI Products Dropdown -->
                     <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
-                            AI Products &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisible"></i>
-                        </p>
-                        <div class="idropdown-content" *ngIf="isDropdownVisible">
-                            <a routerLink="/services/performance" class="text-reset">Performance marketing and PPC</a>
-                            <!-- <a routerLink="/services/social-media" class="text-reset"
-                                    >Social Media Management</a
-                                  > -->
-                            <a routerLink="/services/bussiness" class="text-reset">Business & Maps Listings</a>
-                            <!-- <a routerLink="/services/performance" class="text-reset">Tag Management and Account
-                                                    Setup</a> -->
-                            <a routerLink="/services/whatsapp-marketing" class="text-reset">Whatsapp Marketing</a>
-                            <a routerLink="/services/email-marketing" class="text-reset">Email Marketing</a>
-                            <!-- <a routerLink="/services/website-build" class="text-reset">Free Website Build in 24
-                                                    Hours</a> -->
+                         <p class="dropbtn m-0 p-0" (click)="toggleDropdown($event)">
+        AI Products &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisible"></i>
+    </p>
+                            <div class="idropdown-content" *ngIf="isDropdownVisible" (click)="$event.stopPropagation()">
 
-                            <a routerLink="/services/seo" class="text-reset">Search Engine Optimization</a>
+                            <a routerLink="/services/performance" routerLinkActive="active-link">Performance marketing and PPC</a>
+                            <a routerLink="/services/bussiness" routerLinkActive="active-link">Business & Maps Listings</a>
+                            <a routerLink="/services/whatsapp-marketing" routerLinkActive="active-link">Whatsapp Marketing</a>
+                            <a routerLink="/services/email-marketing" routerLinkActive="active-link">Email Marketing</a>
+                            <a routerLink="/services/seo" routerLinkActive="active-link">Search Engine Optimization</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a routerLink="/ai-marketing-resources">Resources</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a routerLink="/ai-technology">AI Technology</a>
-                    </li> -->
+                    </li>  
 
                     <li class="nav-item">
-                        <a routerLink="/landing" (click)="navigateToSub()">Pricing</a>
+                        <a routerLink="/ai-marketing-resources" routerLinkActive="active-link">Resources</a>
                     </li>
-                    <!-- <li class="dropdown">
-                    
-                        <div class="idropdown-content" *ngIf="isPricingDropdownVisible">
-              <a routerLink="/pricing/gmb" class="text-reset"
-                >Google Business Profile</a
-              >
-              <a routerLink="/pricing" class="text-reset"
-                >Google ads setup  </a
-              >
-
-                        <a routerLink="/services/website-build" class="text-reset"
-                >Free Website Build in 24 Hours</a
-              >
-
-                        </div>
-                    </li> -->
-                    <!-- <li class="nav-item">
-              <a href="sponsor">SPONSORS</a>
-            </li> -->
-
-
-
-                    <!-- <li class="nav-item">
-                        <a routerLink="/knowledge-center">Knowledge Center</a>
-                    </li> -->
 
                     <li class="nav-item">
-                        <a routerLink="/contact">Contact us</a>
+                        <a href="https://app.zyper.ai/subscription" target="_blank" rel="noopener noreferrer">
+                            Pricing <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                     </li>
-                    <!-- <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="toggleResourcesDropdown()">
-                            resources &nbsp;<i class="bi bi-caret-down-fill"></i>
-                        </p>
-                        <div class="idropdown-content" *ngIf="isResourcesDropdownVisible">
-                            <a routerLink="/resources-firstPage" class="text-reset">Resources Page 1</a>
-                            <a routerLink="/resources-secondPage" class="text-reset">Resources Page 2</a>
-                            <a routerLink="/resources-thirdPage" class="text-reset">Resources Page 3</a>
-                        </div>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a routerLink="/contact">Contact Us</a>
-                    </li> -->
+
+                    <li class="nav-item">
+                        <a routerLink="/contact" routerLinkActive="active-link">Contact us</a>
+                    </li>
                 </ul>
-                <!-- Starting Using and Watch Demo  -->
-                <!-- <ul class="buttons m-0">
-                    <li class="nav-item">
-                        <a id="apply-now" (click)="navigateToSub()">Start Using</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="apply-now" routerLink="/demo">Watch Demo</a>
-                    </li>
-                </ul> -->
+
+                <!-- Action Buttons -->
+                <div class="d-flex gap-2">
+                    <button routerLink="/demo">WATCH DEMO</button>
+                    <button (click)="navigateToSub()">GET STARTED</button>
+                </div>
             </div>
-        </div>
-        <div class="container-fluid navbar-mobile m-0 p-0">
-            <a class="navbar-brand" href="/">
-                <img id="ecell-logo" src="assets/images/logo.png" alt="" />
-            </a>
+
+            <!-- Mobile Menu Toggle -->
             <div class="combine d-flex justify-content-center align-items-center">
-                <!-- <a *ngIf="mobile" id="apply-now" routerLink="/reg">Apply Now</a> -->
                 <button class="navbar-toggler no-hightlight" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
                 </button>
-            </div>
-            <div class="collapse navbar-collapse pb-3" id="navbarSupportedContent">
-                <ul class="navbar-nav links me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a routerLink="/landing">Home</a>
-                    </li>
-
-
-
-                    <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="toggleDropdown()">
-                            Services &nbsp;<i class="bi bi-caret-down-fill"></i>
-                        </p>
-                        <div class="idropdown-content" *ngIf="isDropdownVisible">
-                            <!-- <a routerLink="/services/website-build" class="text-reset"
-                >Free Website Build in 24 Hours</a
-              > -->
-                            <a routerLink="/services/performance" class="text-reset">Performance marketing and PPC</a>
-                            <a routerLink="/services/bussiness" class="text-reset">Business & Maps Listings</a>
-                            <a routerLink="/services/performance" class="text-reset">Tag Management and Account
-                                Setup</a>
-                            <a routerLink="/services/social-media" class="text-reset">Social Media Management</a>
-                            <a routerLink="/services/seo" class="text-reset">Search Engine Optimization</a>
-                            <a routerLink="/services/whatsapp-marketing" class="text-reset">Whatsapp Marketing</a>
-                            <a routerLink="/services/email-marketing" class="text-reset">Email Marketing</a>
-                        </div>
-                    </li>
-
-
-                    <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="toggleDropdownVerticals()">
-                            Verticals &nbsp;<i class="bi bi-caret-down-fill" [class.rotated]="isDropdownVisibleV"></i>
-                        </p>
-                        <div class="idropdown-content" *ngIf="isDropdownVisibleV">
-                            <div class="sub-section">
-                                <h3>Ecommerce Services</h3>
-                                <div class="gg">
-                                    <a routerLink="/services/amazon" class="text-reset">Amazon</a>
-                                    <a routerLink="/services/etsy" class="text-reset">Etsy</a>
-                                    <a routerLink="/services/eBay" class="text-reset">eBay</a>
-                                    <a routerLink="/services/shopify" class="text-reset">Shopify</a>
-                                    <a routerLink="/services/walmart" class="text-reset">Walmart</a>
-                                </div>
-                            </div>
-                            <div class="sub-section">
-                                <h3>Professional Services</h3>
-                                <div class="gg">
-                                    <a routerLink="/services/law-firms" class="text-reset">Law Firms</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- <li class="nav-item">
-              <a href="sponsor">SPONSORS</a>
-            </li> -->
-                    <li class="dropdown">
-                        <p class="dropbtn m-0 p-0" (click)="navigateToSub()">
-                            Pricing &nbsp;
-                        </p>
-                        <div class="idropdown-content" *ngIf="isPricingDropdownVisible">
-                            <a routerLink="/pricing/gmb" class="text-reset">Google Business Profile</a>
-                            <a routerLink="/pricing" class="text-reset">Google ads setup </a>
-
-                            <!-- <a routerLink="/services/website-build" class="text-reset"
-                >Free Website Build in 24 Hours</a
-              > -->
-                        </div>
-                    </li>
-                    <!-- 
-                    <li class="nav-item">
-                        <a routerLink="/knowledge-center">Knowledge Center</a>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a routerLink="/ai-technology">AI Technology</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a routerLink="/ai-marketing-resources">Resources</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a routerLink="/contact">Contact Us</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a routerLink="/contact">Customers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a routerLink="/about">About</a>
-                    </li>
-                </ul>
-                <!-- <ul class="buttons m-0">
-                    <li class="nav-item">
-                        <a id="apply-now" (click)="navigateToSub()">Start Using</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="apply-now" routerLink="/demo">Watch Demo</a>
-                    </li>
-                </ul> -->
             </div>
         </div>
     </nav>

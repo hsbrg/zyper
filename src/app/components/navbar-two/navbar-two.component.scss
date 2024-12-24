@@ -327,3 +327,38 @@ $transition-duration: 0.3s;
     display: none;
   }
 }
+
+.demo-btn, .start-btn {
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.demo-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.start-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+// For mobile responsiveness
+@media (max-width: 768px) {
+    .demo-btn, .start-btn {
+        padding: 6px 20px;
+        font-size: 12px;
+    }
+}

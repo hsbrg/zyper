@@ -66,7 +66,7 @@ import { ServicesShopifyComponent } from './components/Verticals/Shopify/service
 import { ServicesWalmartComponent } from './components/Verticals/Walmart/servicesWalmart.component';
 import { ServicesLawFirmsComponent } from './components/Verticals/Law-firms/servicesLawFirms.component';
 import { ServicesRealEstateComponent } from './components/Verticals/Real-Estate/servicesRealEstate.component';
-
+import { AutoDealershipsComponent } from './components/Verticals/AutoDealerships/AutoDealerships.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -111,6 +111,7 @@ import { ServicesRealEstateComponent } from './components/Verticals/Real-Estate/
     ServicesEBayComponent,
     ServicesShopifyComponent,
     ServicesWalmartComponent,
+    AutoDealershipsComponent,
     FeatureCardsComponent,
     HeroSectionComponent,
     TopBarComponent,
