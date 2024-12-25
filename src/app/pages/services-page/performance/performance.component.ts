@@ -47,4 +47,8 @@ export class PerformanceComponent implements OnInit {
   SwitchWhatsappState() {
     this.activeWhatsapp = !this.activeWhatsapp;
   }
+
+  navigateToApp() {
+    window.location.href = 'https://app.zyper.ai';
+  }
 }

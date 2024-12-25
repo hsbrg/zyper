@@ -33,7 +33,7 @@ export class WebsiteComponent implements OnInit {
       console.log(this.show_button_text);
       return;
     } else if (this.show_more == true) {
-      this.show_button_text = 'Show More ⬇️';
+      this.show_button_text = 'Show More ��️';
       this.show_more = false;
       console.log(this.show_button_text);
       return;
@@ -41,5 +41,9 @@ export class WebsiteComponent implements OnInit {
   }
   SwitchWhatsappState() {
     this.activeWhatsapp = !this.activeWhatsapp;
+  }
+
+  navigateToApp() {
+    window.location.href = 'https://app.zyper.ai';
   }
 }

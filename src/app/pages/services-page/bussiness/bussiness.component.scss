@@ -11,6 +11,7 @@
     color: white;
     padding: 10px 0;
   }
+  
   .float-icons {
     position: fixed;
     bottom: 30px;
@@ -247,4 +248,11 @@
       }
     }
   }
+}
+
+.button {
+  // Copy your existing button styles here
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }
